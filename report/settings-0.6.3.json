@@ -1,0 +1,42 @@
+{
+  "version": "0.6.3-dev",
+  "date": "2026-10-26",
+  "device": "Pixel 8 Pro, Android 17 API 37 / CP3A.261005.005",
+  "photos": "7.97.0.1000520730 / 52549361",
+  "vector": "API 102",
+  "module_loaded": true,
+  "startup_fatal_or_anr": 0,
+  "startup_module_log_lines": {"0.6.2": 14, "0.6.3": 12},
+  "startup_identity_log_lines": {"0.6.2": 7, "0.6.3": 1},
+  "profile_menu": {
+    "own_card_above_your_data": true,
+    "your_data_card_unchanged": true,
+    "entries_after_reopen": 1,
+    "icon_distinct_from_photos_settings": true
+  },
+  "settings_page": {
+    "opens_inside_photos": true,
+    "back_returns_to_profile_menu": true,
+    "status_lines_separated": true,
+    "status_text": "Pixel Photos Evolved 0.6.3 is active. / Video Boost recordings on this phone: 2. / No Video Boost activity yet. Open a Video Boost video in Google Photos to check its status. / Video Boost uploads are ready. They may count toward your storage.",
+    "backup_status": "Pixel XL backup is active. Google Photos shows the Pixel XL storage offer."
+  },
+  "persistence": {
+    "toggled": "Diagnostic logging",
+    "persisted_after_back_and_reopen": true,
+    "restored_to_false": true,
+    "verbose_log_only_when_enabled": true,
+    "preference_file_keys": ["pixel_xl_backup", "detect_video_boost", "enabled", "verbose"]
+  },
+  "themes": {
+    "dark": "checked",
+    "light": "checked (uimode night no), restored to dark",
+    "font_scale_1_3": "checked, no clipping or overlap, restored to 1.0"
+  },
+  "not_tested": [
+    "rotation and activity recreation",
+    "TalkBack traversal",
+    "dynamic colour with other wallpapers",
+    "uploads, Video Boost processing and editing tools (backend/editing code paths unchanged from 0.6.1/0.6.2)"
+  ]
+}
