@@ -30,9 +30,15 @@ languages used by external test tooling are not application source.
 3. Call xax_android_libxposed_jvm.build_module with that executable supplied under
    its BLAKE3 digest. Compare with module/pixel_photos_module-unsigned.apk and run
    xax_vector against the pinned API 102 table.
-4. Sign externally with a chosen capability. The supplied installable APK uses
+4. Add the label, description, icon and versionName. The pinned XAX target emits a
+   manifest without them and no resource table, so compile [module/res](../module/res)
+   with aapt2 (build-tools 36.0.0, android-37.0 android.jar), link it with a manifest
+   that repeats the XAX manifest values plus `android:label`, `android:description`,
+   `android:icon`/`roundIcon` and `versionName`, and replace only AndroidManifest.xml
+   while adding resources.arsc and res/. Every XAX entry stays byte for byte.
+5. Sign externally with a chosen capability. The supplied installable APK uses
    the SDK's **public fixture test key**. Verify with Android apksigner v2 checks.
-5. Compare roots/hashes with [build evidence](../report/build-0.6.1.json), then
+6. Compare roots/hashes with [build evidence](../report/build-0.6.1.json), then
    verify [SHA256SUMS](../SHA256SUMS). The unsigned artifact and native executable
    reproduce exactly; signed and unsigned APKs serve different purposes.
 

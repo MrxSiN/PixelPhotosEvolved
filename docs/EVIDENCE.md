@@ -1,6 +1,6 @@
 # Evidence index
 
-Current build: **0.6.3-dev / 20**, verified 2026-10-26 (settings and copy; backend evidence from 0.6.1-dev / 18, 2026-10-23). The
+Current build: **0.6.4-dev / 21**, verified 2026-10-26 (settings and copy; backend evidence from 0.6.1-dev / 18, 2026-10-23). The
 [status](../report/STATUS.md) distinguishes current checks, retained older checks,
 user confirmation and untested behavior. The repository contains current evidence
 and the small baseline set still needed to substantiate claims.
@@ -9,6 +9,8 @@ and the small baseline set still needed to substantiate claims.
 
 | Report | What it establishes |
 |---|---|
+| [Build 0.6.4](../report/build-0.6.4.json) | Settings redesign, diagnostics page, resource packaging for label/description/icon/versionName, artifact hashes |
+| [Settings 0.6.4](../report/settings-0.6.4.json) | Segmented tiles, diagnostics values, Back from both pages, row-tap persistence, light/dark, App info icon and label |
 | [Build 0.6.3](../report/build-0.6.3.json) | 0.6.2 store recovery, exact round trip, 0.6.3 carrier edit, artifact hashes and install |
 | [Settings 0.6.3](../report/settings-0.6.3.json) | Own profile card, distinct icon, rewritten copy, Back/reopen, persistence, light/dark and 1.3 font scale |
 | [Build](../report/build-0.6.1.json) | Canonical roots, current artifact hashes, Vector API check, v2 signing, exact unsigned rebuild and installed artifact match |

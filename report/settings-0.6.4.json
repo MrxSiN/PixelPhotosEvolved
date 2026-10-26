@@ -1,0 +1,26 @@
+{
+  "version": "0.6.4-dev",
+  "date": "2026-10-26",
+  "device": "Pixel 8 Pro, Android 17 API 37",
+  "photos": "7.97.0.1000520730 / 52549361",
+  "module_loaded": true,
+  "fatal_exceptions": 0,
+  "app_info": {"label": "Pixel Photos Evolved", "icon": "adaptive icon rendered", "version_name": "0.6.4-dev"},
+  "main_page": {
+    "sections": ["Backup", "Video Boost", "Advanced"],
+    "backup_summary_live": "Active",
+    "master_switch_present": false,
+    "editing_section_present": false,
+    "experimental_notice_present": false
+  },
+  "diagnostics_page": {
+    "values": {"Module": "Active", "Version": "0.6.4", "Android": "17 (SDK 37)", "Device": "Pixel 8 Pro",
+               "Google Photos": "7.97.0.1000520730", "libxposed API": "102", "Framework": "Vector 2.2"},
+    "feature_compatibility": {"Pixel XL backup": "Compatible", "Video Boost status": "Compatible", "Video Boost uploads": "Compatible"},
+    "latest_video": "No activity yet"
+  },
+  "navigation": {"back_from_diagnostics_to_main": true, "back_from_main_to_menu": true},
+  "row_tap_toggles_switch_and_persists": true,
+  "themes": {"dark": "checked", "light": "checked, restored to dark"},
+  "not_tested": ["font scaling on 0.6.4", "rotation", "TalkBack", "uploads and Video Boost processing (backend unchanged)"]
+}
