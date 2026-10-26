@@ -1,0 +1,355 @@
+{
+  "module_sdk_revision": "0876b591f39908e98aa31f746ae2e26bb88c837e",
+  "module_root": "958409048b029ad85c58365a40c5befa71215d25fe2444d3bc77c68e6cb90fbc",
+  "policy_root": "54224e4041441a3168272d14dc38f2cf0bebfbe92f22db9ef8c6299b1483b802",
+  "host_root": "5c9b68f7abb873bae13a7b59db962bde1e98d649861831407d8ee2b5c5a6dcb4",
+  "package": {
+    "package": "io.github.pixelphotosevolved",
+    "module_class": "ppe.Module",
+    "scopes": [
+      "com.google.android.apps.photos"
+    ],
+    "version_code": 18,
+    "version_name": "0.6.1-dev",
+    "min_sdk": 33,
+    "target_sdk": 37,
+    "dex": [],
+    "libraries": {
+      "lib/arm64-v8a/libppepolicy.so": "02dab7bcd83384ea76fa998ef60ca26991c1ddbcd9a8931120c166cd35010b2b"
+    },
+    "natives": [],
+    "fields": [
+      [
+        "Lppe/State;",
+        "api",
+        "Lio/github/libxposed/api/XposedInterface;"
+      ],
+      [
+        "Lppe/State;",
+        "back",
+        "Landroid/window/OnBackInvokedCallback;"
+      ],
+      [
+        "Lppe/State;",
+        "backupBoundary",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "backupObserved",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "backupPolicy",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "backupSnapshotObserved",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "backupStatus",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "backupStatusView",
+        "Ljava/lang/ref/WeakReference;"
+      ],
+      [
+        "Lppe/State;",
+        "backupVerified",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "boostHookHandle",
+        "Lio/github/libxposed/api/XposedInterface$HookHandle;"
+      ],
+      [
+        "Lppe/State;",
+        "boostHookInstalled",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "dispatcher",
+        "Landroid/window/OnBackInvokedDispatcher;"
+      ],
+      [
+        "Lppe/State;",
+        "identityApplied",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "identityStatus",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "initialized",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "nativeBoostObservedAt",
+        "J"
+      ],
+      [
+        "Lppe/State;",
+        "nativeBoostState",
+        "I"
+      ],
+      [
+        "Lppe/State;",
+        "nativeManufacturer",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "nativeModel",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "nativePath",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "nativeUploadAgent",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "nativeUploadProfile",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "page",
+        "Ljava/lang/ref/WeakReference;"
+      ],
+      [
+        "Lppe/State;",
+        "pending",
+        "Ljava/lang/ref/WeakReference;"
+      ],
+      [
+        "Lppe/State;",
+        "pixel2016",
+        "Ljava/lang/Object;"
+      ],
+      [
+        "Lppe/State;",
+        "pixelFeatures",
+        "Ljava/util/Set;"
+      ],
+      [
+        "Lppe/State;",
+        "routeFacts",
+        "Ljava/util/Map;"
+      ],
+      [
+        "Lppe/State;",
+        "routeHeaders",
+        "Ljava/util/Map;"
+      ],
+      [
+        "Lppe/State;",
+        "routeJobs",
+        "Ljava/util/Map;"
+      ],
+      [
+        "Lppe/State;",
+        "routeRequests",
+        "Ljava/util/Map;"
+      ],
+      [
+        "Lppe/State;",
+        "routerHandles",
+        "Ljava/util/List;"
+      ],
+      [
+        "Lppe/State;",
+        "routerInstalled",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "routerStatus",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "running",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "scanCursor",
+        "Landroid/database/Cursor;"
+      ],
+      [
+        "Lppe/State;",
+        "selfTested",
+        "Z"
+      ],
+      [
+        "Lppe/State;",
+        "status",
+        "Ljava/lang/String;"
+      ],
+      [
+        "Lppe/State;",
+        "statusView",
+        "Ljava/lang/ref/WeakReference;"
+      ],
+      [
+        "Lppe/State;",
+        "sysProps",
+        "Ljava/util/Map;"
+      ],
+      [
+        "Lppe/State;",
+        "workSignals",
+        "Ljava/util/concurrent/atomic/AtomicInteger;"
+      ]
+    ]
+  },
+  "native": {
+    "elf_type": 2,
+    "machine": 183,
+    "transport": "stdio executable; not JNI",
+    "sha256": "3fb4d2f1fa565362ebbf7724c52befd4c251b7e87e6e349be7875000dec2ce41"
+  },
+  "unsigned_sha256": "d2abb99081d430c38013b95975caab17ab44f0faef31436da471e4ed26610ae2",
+  "vector_static": {
+    "module_prop": {
+      "minApiVersion": "102",
+      "targetApiVersion": "102",
+      "staticScope": "true"
+    },
+    "java_entries": [
+      "ppe.Module"
+    ],
+    "native_entries": [],
+    "scopes": [
+      "com.google.android.apps.photos"
+    ],
+    "api_members": [
+      [
+        "field",
+        "Lio/github/libxposed/api/XposedInterface$ExceptionMode;",
+        "PROTECTIVE",
+        "Lio/github/libxposed/api/XposedInterface$ExceptionMode;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "getArg",
+        "(I)Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "getThisObject",
+        "()Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "proceed",
+        "()Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "proceed",
+        "([Ljava/lang/Object;)Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "proceedWith",
+        "(Ljava/lang/Object;)Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        "intercept",
+        "(Lio/github/libxposed/api/XposedInterface$Hooker;)Lio/github/libxposed/api/XposedInterface$HookHandle;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        "setExceptionMode",
+        "(Lio/github/libxposed/api/XposedInterface$ExceptionMode;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        "setId",
+        "(Ljava/lang/String;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        102
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface;",
+        "getModuleApplicationInfo",
+        "()Landroid/content/pm/ApplicationInfo;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface;",
+        "hook",
+        "(Ljava/lang/reflect/Executable;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedModule;",
+        "<init>",
+        "()V",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedModuleInterface$PackageReadyParam;",
+        "getPackageName",
+        "()Ljava/lang/String;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedModuleInterface;",
+        "onPackageReady",
+        "(Lio/github/libxposed/api/XposedModuleInterface$PackageReadyParam;)V",
+        101
+      ]
+    ],
+    "required_api": 102,
+    "violations": []
+  },
+  "reproducibility_checked": true,
+  "on_device_this_run": true,
+  "signed_sha256": "8164434d2126ba7498492bc71abc47261d5022a5072c83c93fac65cb1be7865b",
+  "signer": "XAX public fixture TEST key; local development only",
+  "adb_install_success": true,
+  "installed_sha256": "8164434d2126ba7498492bc71abc47261d5022a5072c83c93fac65cb1be7865b",
+  "installed_apk_matches": true,
+  "official_apksigner_v2_verified": true
+}

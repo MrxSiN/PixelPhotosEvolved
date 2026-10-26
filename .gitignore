@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+build/
+*.pyc
+*.provenance
+*.edit
+*.keystore
+*.jks

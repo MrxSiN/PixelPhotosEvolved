@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-23",
+  "before_fixture_remote_rows": 0,
+  "after_fixture_remote_rows": 3,
+  "fixture_charge_sum_bytes": 0,
+  "fixtures": [
+    {
+      "filename": "PPE_Verify_20261023_photo.jpg",
+      "width": 1024,
+      "height": 768,
+      "size_bytes": 87734,
+      "upload_status": 100,
+      "partial_backup": 0,
+      "server_creation_timestamp": 1792718362257,
+      "quota_charged_bytes": 0,
+      "is_backup_processed": 1,
+      "input_sha256": "7df166ac458350e2351c23520090e80c4f20d43edc2d2ee32d78e1bc0059e354"
+    },
+    {
+      "filename": "PPE_Verify_20261023_video.mp4",
+      "width": 720,
+      "height": 1280,
+      "size_bytes": 57934,
+      "upload_status": 100,
+      "partial_backup": 0,
+      "server_creation_timestamp": 1792718365759,
+      "quota_charged_bytes": 0,
+      "is_backup_processed": 1,
+      "input_sha256": "88b5e0b5f543f0a43cf13a0ee58d8151a9ac6532b8587382e2a3b5bd160e5aa1"
+    },
+    {
+      "filename": "PPE_Verify_20261023_video_motion.mp4",
+      "width": 720,
+      "height": 1280,
+      "size_bytes": 8831819,
+      "upload_status": 100,
+      "partial_backup": 0,
+      "server_creation_timestamp": 1792718462666,
+      "quota_charged_bytes": 0,
+      "is_backup_processed": 1,
+      "input_sha256": "52022d864ea211f7da132be6d59c78a926bce2f918583a721dfd324bb4a17775"
+    }
+  ],
+  "valid_motion_video_duration_ms": 4083,
+  "static_video_note": "First MP4 was a static one-frame screen recording with MediaStore duration 0; the 4083ms motion clip is the normal video check",
+  "source_original_jpeg_preserved": true,
+  "account_level_meter_reconciled": false,
+  "native_identity_control_upload": false,
+  "downloaded_original_byte_comparison": false,
+  "heic_tested": false,
+  "interpretation": "Completed Photos remote records report zero per-item charged bytes for these generated fixtures; no general unlimited-storage or server entitlement claim",
+  "privacy": "Read-only on-device SQL selected only generated fixture rows. No account identifiers, tokens, remote URLs, media keys or personal media are recorded.",
+  "jpeg_details_ui": {
+    "backed_up": true,
+    "quality": "Original quality",
+    "storage_message": "This item doesn't take up space in your account storage."
+  }
+}

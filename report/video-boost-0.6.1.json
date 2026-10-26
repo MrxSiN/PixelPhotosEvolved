@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-23",
+  "version": "0.6.1-dev",
+  "version_code": 18,
+  "module_root": "958409048b029ad85c58365a40c5befa71215d25fe2444d3bc77c68e6cb90fbc",
+  "installed_apk_sha256": "8164434d2126ba7498492bc71abc47261d5022a5072c83c93fac65cb1be7865b",
+  "installed_apk_matches_delivered": true,
+  "runtime": {
+    "photos_name": "7.97.0.1000520730",
+    "photos_code": 52549361,
+    "android_api": 37,
+    "real_device": "Pixel 8 Pro",
+    "vector_api": 102
+  },
+  "native_action": {
+    "native_action": "Back up now",
+    "selected_recording": "second newly authorized genuine pair",
+    "entire_account_backup_enabled": false
+  },
+  "genuine_recording": {
+    "new_capture_user_authorized": true,
+    "unbacked_assets_before": 2,
+    "assets": [
+      {
+        "variant": "cover",
+        "bytes": 13899113,
+        "duration_ms": 5422
+      },
+      {
+        "variant": "main",
+        "bytes": 160149892,
+        "duration_ms": 5222
+      }
+    ],
+    "after_upload": [
+      {
+        "blanford_format": 1,
+        "is_backup_processed": 1,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": 160149892,
+        "upload_status": 100,
+        "quota_charged_bytes": 0,
+        "remote_blanford_format": 1,
+        "asset": "main"
+      },
+      {
+        "blanford_format": null,
+        "is_backup_processed": 0,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": null,
+        "upload_status": null,
+        "quota_charged_bytes": null,
+        "remote_blanford_format": null,
+        "asset": "cover"
+      }
+    ],
+    "native_states_observed": [
+      "NeedsUpload",
+      "Uploading",
+      "Processing"
+    ],
+    "native_ui_after": "Boosting video quality. This may take some time. A notification will be sent when your video is ready.",
+    "ready_to_play_observed": false,
+    "boosted_output_verified": false,
+    "final_boosted_result_quota_verified": false,
+    "temporary_raw_quota_bytes": 0,
+    "quota_interpretation": "Temporary processing data is distinct from the final boosted result; zero does not prove unlimited storage"
+  },
+  "routing": {
+    "hooks": 6,
+    "methods": [
+      "ccdb.c(cccq,ccai):void",
+      "cdbs.a():Map",
+      "ccdb.j(ccbx,cccx):void",
+      "ccad.c(ccbu,Runnable):void",
+      "bnwx.g():cqfs",
+      "ccdb.f(cccx,String,cccj):ccbx"
+    ],
+    "eligibility": "Native BLANFORD hint, strict VB-02.MAIN grammar, trusted nonempty video/mp4 MediaStore asset, controls and compiled ARM64 BF policy 2",
+    "request_identity": "Captured actual model/manufacturer, cloned immutable cmvu in cloned cqfs",
+    "header_identity": "Host-generated pre-spoof user agent in copied per-uploader headers",
+    "operation_correlation": "Opaque immutable native cqfp.e upload token; no fingerprint correlation; never decoded/logged/exported/rewritten",
+    "async_context": "Synchronized weak maps keyed by uploader provider, native job, upload token and request owner; immutable identity retained across RPC retries",
+    "mixed_batch_handling": "Verified temporary job gets separate native finalization queue; unknown mixed requests pass through unchanged",
+    "global_build_toggles_per_upload": false,
+    "media_payload_changed": false,
+    "processing_flags_forced": false
+  },
+  "sanitized_events": [
+    {
+      "time": "15:18:54.012",
+      "message": "Scoped Video Boost router installed; native identity limited to verified temporary jobs"
+    },
+    {
+      "time": "15:18:54.736",
+      "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+    },
+    {
+      "time": "15:18:54.951",
+      "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+    },
+    {
+      "time": "15:20:02.713",
+      "message": "Last native Video Boost state: needs upload (reported by Photos). Native uploads: ready; quota may apply."
+    },
+    {
+      "time": "15:20:02.823",
+      "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+    },
+    {
+      "time": "15:27:34.942",
+      "message": "Last native Video Boost state: uploading (reported by Photos). Native uploads: ready; quota may apply."
+    },
+    {
+      "time": "15:27:35.065",
+      "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+    },
+    {
+      "time": "15:27:35.690",
+      "message": "Video Boost upload: native header context attached; BF policy 2"
+    },
+    {
+      "time": "15:27:55.577",
+      "message": "Video Boost upload: verified native finalization context retained"
+    },
+    {
+      "time": "15:27:55.587",
+      "message": "Video Boost upload: isolated native finalization queue"
+    },
+    {
+      "time": "15:27:55.614",
+      "message": "Video Boost upload: immutable native client identity attached; quota may apply"
+    },
+    {
+      "time": "15:28:00.230",
+      "message": "Last native Video Boost state: processing (reported by Photos). Native uploads: native client prepared; quota may apply."
+    },
+    {
+      "time": "15:28:00.341",
+      "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+    },
+    {
+      "time": "15:32:43.971",
+      "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+    }
+  ],
+  "event_provenance": "Continuously archived filtered ADB logcat stream; only whitelisted module messages retained here",
+  "original_files": {
+    "files": 2,
+    "sha256_unchanged": true,
+    "size_unchanged": true,
+    "mtime_unchanged": true,
+    "scope": "Before and after temporary raw upload; cloud completion not yet observed"
+  },
+  "ordinary_control": {
+    "generated_fixture": "PPE_Verify_20261023_v061_control.jpg",
+    "unique_remote_records": 1,
+    "width": 1024,
+    "height": 768,
+    "size_bytes": 125270,
+    "quota_charged_bytes": 0,
+    "upload_status": 100,
+    "is_backup_processed": 1,
+    "reported_dimensions_and_size_match_source": true,
+    "source_sha256": "2fdac080340b0a01d3548f81f72c532fba8736817f5f5c312734e93a6e83420b",
+    "device_source_sha256_matches": true,
+    "native_action": {
+      "native_action": "Back up now",
+      "selected_generated_items": 1,
+      "entire_account_backup_enabled": false
+    },
+    "native_boost_routing_event_during_control": false,
+    "identity_evidence": "Process Pixel XL probe passed after Boost finalization; ordinary original-object pass-through tested in actual compiled callbacks. No direct wire capture.",
+    "limits": "Per-item database accounting, not independent account-meter or downloaded-original comparison"
+  },
+  "account_wide_backup_left_paused": true,
+  "privacy": "No personal filenames, paths, media contents, content fingerprints, upload tokens, dedup keys, account identifiers or remote URLs retained in delivered evidence",
+  "limits": [
+    "Playable boosted output and final quota accounting unverified",
+    "Live retry/cancel/failure injection and simultaneous ordinary/Boost network uploads untested",
+    "Version-pinned experimental router; exact six method signatures checked",
+    "Restart Photos after code updates; hot reload unsupported"
+  ]
+}

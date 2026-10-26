@@ -1,0 +1,14 @@
+{
+  "version": "0.6.1-dev",
+  "date": "2026-10-23",
+  "all_three_controls_enabled": {
+    "Enable module": true,
+    "Pixel XL backup identity": true,
+    "Video Boost detection and native uploads": true
+  },
+  "back_and_reopen": true,
+  "single_profile_entry": true,
+  "native_status_display": "PPE 0.6.1 | BF baseline pass-through. Video Boost candidate recordings: 1 Last native Video Boost state: processing (reported by Photos). Native uploads: native client prepared; quota may apply.",
+  "account_wide_backup_left_off_verified_before_opening": true,
+  "rotation_and_themes": "Not repeated for 0.6.1; historical 0.4 checks retained"
+}

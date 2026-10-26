@@ -1,0 +1,20 @@
+{
+  "module_root": "958409048b029ad85c58365a40c5befa71215d25fe2444d3bc77c68e6cb90fbc",
+  "jvm_classifier": {
+    "vectors": 14,
+    "class": "xax/Pe942a75ea4cffbfd",
+    "bytecode_verifier": "-Xverify:all"
+  },
+  "jvm_runtime_gate": {
+    "vectors": 8,
+    "class": "xax/P4814a2c0c2c7850e",
+    "execution": "compiled canonical gate against host-only Android fixtures; not a device test"
+  },
+  "native_state_decoder_vectors": 10,
+  "native_state_label_vectors": 10,
+  "bytecode_verifier": "-Xverify:all",
+  "failures": 0,
+  "policy_unchanged": true,
+  "policy_prior_evidence": "baseline/offline-0.4.0.json and baseline/device-policy-0.4.0.json",
+  "full_hook_mocked": false
+}

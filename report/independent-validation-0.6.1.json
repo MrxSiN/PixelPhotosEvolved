@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-23",
+  "timezone": "UTC+08:00",
+  "version": "0.6.1-dev",
+  "runtime": {
+    "installed_apk_sha256": "8164434d2126ba7498492bc71abc47261d5022a5072c83c93fac65cb1be7865b",
+    "installed_apk_matches_delivered": true,
+    "photos_version_code": 52549361,
+    "photos_version_name": "7.97.0.1000520730",
+    "android_api": 37,
+    "native_model": "Pixel 8 Pro"
+  },
+  "recordings": [
+    {
+      "recording": "A",
+      "module_enabled_at_capture": false,
+      "module_state_provenance": "User explicitly confirmed 4:03 PM disabled and 4:21 PM enabled; historical framework state not independently reconstructed",
+      "original": {
+        "local_format": null,
+        "is_backup_processed": 1,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": 11401750,
+        "width": 1080,
+        "height": 1920,
+        "duration": 4462,
+        "upload_status": 100,
+        "quota_charged_bytes": 11401750,
+        "remote_format": null,
+        "can_play_video": 1,
+        "partial_backup": 0,
+        "recording": "A",
+        "variant": "01.COVER",
+        "local_bytes": 11401750
+      },
+      "boosted": {
+        "local_format": 2,
+        "is_backup_processed": 0,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": 8176531,
+        "width": 2160,
+        "height": 3840,
+        "duration": 4266,
+        "upload_status": 100,
+        "quota_charged_bytes": 8176531,
+        "remote_format": 2,
+        "can_play_video": 1,
+        "partial_backup": 0,
+        "recording": "A",
+        "variant": "03.MAIN",
+        "local_bytes": 8176531
+      },
+      "boosted_decode": {
+        "mime": "video/av01",
+        "width": 2160,
+        "height": 3840,
+        "duration_us": 4266666,
+        "decoded_frames": 128,
+        "first_pts_us": 0,
+        "last_pts_us": 4233333,
+        "end_of_stream": true,
+        "recording": "A",
+        "file_sha256_unchanged_during_decode": true,
+        "video_content_exported": false
+      }
+    },
+    {
+      "recording": "B",
+      "module_enabled_at_capture": true,
+      "module_state_provenance": "User explicitly confirmed 4:03 PM disabled and 4:21 PM enabled; historical framework state not independently reconstructed",
+      "original": {
+        "local_format": null,
+        "is_backup_processed": 1,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": 11704640,
+        "width": 1080,
+        "height": 1920,
+        "duration": 4636,
+        "upload_status": 100,
+        "quota_charged_bytes": 0,
+        "remote_format": null,
+        "can_play_video": 1,
+        "partial_backup": 0,
+        "recording": "B",
+        "variant": "01.COVER",
+        "local_bytes": 11704640
+      },
+      "boosted": {
+        "local_format": 2,
+        "is_backup_processed": 0,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": 7039859,
+        "width": 2160,
+        "height": 3840,
+        "duration": 4466,
+        "upload_status": 100,
+        "quota_charged_bytes": 7039859,
+        "remote_format": 2,
+        "can_play_video": 1,
+        "partial_backup": 0,
+        "recording": "B",
+        "variant": "03.MAIN",
+        "local_bytes": 7039859
+      },
+      "boosted_decode": {
+        "mime": "video/av01",
+        "width": 2160,
+        "height": 3840,
+        "duration_us": 4466666,
+        "decoded_frames": 134,
+        "first_pts_us": 0,
+        "last_pts_us": 4433333,
+        "end_of_stream": true,
+        "recording": "B",
+        "file_sha256_unchanged_during_decode": true,
+        "video_content_exported": false
+      }
+    }
+  ],
+  "findings": {
+    "completed_boosted_outputs_independently_verified": true,
+    "original_boosted_per_item_quota_split_independently_verified": true,
+    "boosted_output_identification": "Matching recording groups, native local/remote Blanford format 2, completed remote records, existing downloaded output and full native decoder end-of-stream",
+    "quota_source": "Photos remote_media.quota_charged_bytes, joined to the selected local assets by dedup_key; keys not exported",
+    "boosted_decoder": "Read-only MediaExtractor + MediaCodec on phone, actual AV1 output drained to end-of-stream; no re-encoding or frame/content export",
+    "original_and_boosted_remote_sizes_match_local_files": true,
+    "boosted_files_hashes_unchanged_during_decode": true
+  },
+  "limits": {
+    "original_quality_ui_label_rechecked": false,
+    "original_quality_label_source": "Prior user report; independently checked original quota and reported byte size here",
+    "cloud_download_byte_comparison": false,
+    "account_meter_reconciliation": false,
+    "native_ReadyToPlay_enum_captured_this_run": false,
+    "visual_enhancement_quality_assessed": false,
+    "historical_module_switch_state_source": "User confirmation",
+    "result_scope": "These two recordings on this account/build; not a universal storage entitlement"
+  },
+  "application_source_or_apk_changed": false,
+  "backup_or_module_settings_changed_by_agent": false,
+  "privacy": "No personal filenames, paths, media content/fingerprints, dedup keys, upload tokens, account details or service URLs retained in delivered evidence"
+}

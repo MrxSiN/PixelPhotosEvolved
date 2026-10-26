@@ -1,0 +1,10 @@
+{
+  "before": "23a6d25347cad45d5e96520e030434a06fa2511c7b02758ad9222401735556c3",
+  "generator_base": "119feae2bfac93c396c2ba128f8628f6513033759eea891c306416092fa9088d",
+  "after": "958409048b029ad85c58365a40c5befa71215d25fe2444d3bc77c68e6cb90fbc",
+  "function_count": 69,
+  "source_sha256": "bb13293836ad4eb5fb5a2d00a63fb3cf8a2d05724652a16a839e107aa0448c84",
+  "workflow": "Pinned verified carrier structural-edit fallback and atomic Workspace.save",
+  "operation_key": "Opaque native cqfp.e upload token; never decoded/exported/changed. Missing tokens pass through.",
+  "status": "Experimental; genuine upload verified in video-boost-0.6.1.json; subsequent completed output decoding and per-item quota verification in independent-validation-0.6.1.json"
+}

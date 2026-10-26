@@ -1,0 +1,27 @@
+{
+  "bf_vectors": 18187,
+  "failures": 0,
+  "bf_seconds": 87.146,
+  "packaged_host_contains_policy": true,
+  "on_device_this_run": false,
+  "jvm_classifier": {
+    "vectors": 14,
+    "class": "xax/Pe942a75ea4cffbfd",
+    "bytecode_verifier": "-Xverify:all"
+  },
+  "jvm_runtime_gate": {
+    "vectors": 8,
+    "class": "xax/P4814a2c0c2c7850e",
+    "execution": "compiled canonical gate against host-only Android fixtures; not a device test"
+  },
+  "compiled_policy": {
+    "status": "verified on ARM64 device",
+    "vectors": 128,
+    "evidence": "device-policy-0.4.0.json",
+    "windows_backend": "Pinned SDK declines 8-bit arithmetic; not used as execution evidence"
+  },
+  "initial_module_root": "ad939983f96de18f5b8f8146adfc49d01fe2381447f8761aa9540a7204a4d4d2",
+  "final_module_root": "265f8f97951b917a4f159358529bec2bbf1189651a45321fa441245e405dd189",
+  "bf_source_sha256": "b72b8d33ebd6d179b8bced0988014b4b7713df7df6aa647cc79b651156b02b7f",
+  "policy_note": "BF source and imported/packaged decision unchanged by final diagnostics-only edit; independent policy results apply to identical bytes"
+}

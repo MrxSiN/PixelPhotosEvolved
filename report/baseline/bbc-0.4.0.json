@@ -1,0 +1,8 @@
+{
+  "compiler_sha256": "89e87c42d870e879c4dbbf2ec578da2823351566d3e7d25801f29b5804446b2a",
+  "bfx_sha256": "619eac095405e7efb2401983c07ff71e8bc1c433c8ed0a476cbf2b0cbb149898",
+  "instructions": 3279,
+  "fresh_compilation_byte_identical": true,
+  "frontend": "BBC pinned bounded compiler.bf evaluated by host-only reference interpreter",
+  "modern_native_cli": "not used; historical module's reproducible frontend retained"
+}

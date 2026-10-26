@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-23",
+  "timezone": "UTC+08:00",
+  "version": "0.6.1-dev",
+  "module_root": "958409048b029ad85c58365a40c5befa71215d25fe2444d3bc77c68e6cb90fbc",
+  "installed_apk_sha256": "8164434d2126ba7498492bc71abc47261d5022a5072c83c93fac65cb1be7865b",
+  "application_source_changed_for_this_test": false,
+  "backup_mode": {
+    "native_backup_switch_checked": true,
+    "native_headline": "Backup is on",
+    "native_queue_complete": true,
+    "backup_left_on": true,
+    "enabled_by_agent": false,
+    "initial_state": "Already on at first native overview inspection",
+    "manual_per_item_backup_actions_by_agent": 0
+  },
+  "test_clip_selection": {
+    "new_genuine_recording_confirmed_by_user": true,
+    "user_confirmed_approximately_three_second_automatic_clip": true,
+    "recorded_and_uploaded_before_monitor_baseline": true,
+    "manual_backup_action_by_agent": false,
+    "pre_upload_unbacked_database_snapshot_available": false
+  },
+  "genuine_recording": {
+    "assets": [
+      {
+        "variant": "main",
+        "bytes": 84246305,
+        "duration_ms": 2753
+      },
+      {
+        "variant": "cover",
+        "bytes": 7529799,
+        "duration_ms": 2951
+      }
+    ],
+    "after_automatic_backup": [
+      {
+        "blanford_format": null,
+        "is_backup_processed": 1,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": 7529799,
+        "upload_status": 100,
+        "quota_charged_bytes": 0,
+        "remote_blanford_format": null,
+        "asset": "cover"
+      },
+      {
+        "blanford_format": 1,
+        "is_backup_processed": 1,
+        "has_upload_permanently_failed": 0,
+        "size_bytes": 84246305,
+        "upload_status": 100,
+        "quota_charged_bytes": 0,
+        "remote_blanford_format": 1,
+        "asset": "main"
+      }
+    ],
+    "raw_upload_remote_format": 1,
+    "native_process_observer_state": "Processing",
+    "observer_limit": "Last recognized state in the Photos process; not a per-file cloud completion tracker",
+    "ready_to_play_observed": false,
+    "playable_boosted_output_verified": false,
+    "final_boosted_output_quota_verified": false,
+    "raw_quota_interpretation": "Zero temporary-raw charge does not determine final boosted output charge"
+  },
+  "routing_evidence": {
+    "event_source": "Continuously archived filtered ADB module log stream; selected operation preceded recording-monitor baseline",
+    "exactly_one_observed_native_route_sequence": true,
+    "sanitized_events": [
+      {
+        "time": "15:42:38.017",
+        "message": "Last native Video Boost state: needs upload (reported by Photos). Native uploads: native client prepared; quota may apply."
+      },
+      {
+        "time": "15:42:38.130",
+        "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+      },
+      {
+        "time": "15:42:38.272",
+        "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+      },
+      {
+        "time": "15:42:38.491",
+        "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+      },
+      {
+        "time": "15:42:44.934",
+        "message": "Video Boost upload: native header context attached; BF policy 2"
+      },
+      {
+        "time": "15:42:58.398",
+        "message": "Video Boost upload: verified native finalization context retained"
+      },
+      {
+        "time": "15:42:58.399",
+        "message": "Video Boost upload: isolated native finalization queue"
+      },
+      {
+        "time": "15:43:00.836",
+        "message": "Video Boost upload: immutable native client identity attached; quota may apply"
+      },
+      {
+        "time": "15:45:15.252",
+        "message": "Last native Video Boost state: processing (reported by Photos). Native uploads: native client prepared; quota may apply."
+      },
+      {
+        "time": "15:45:15.367",
+        "message": "Backup probe passed: Pixel XL offer, native generation and Build identity"
+      }
+    ],
+    "operation_correlation": "Existing opaque native upload-token implementation; no global Build toggle",
+    "identity_evidence": "Native-header/client preparation events and matching completed raw remote record; no direct wire capture",
+    "baseline_pixel_xl_probe_passed_after_native_finalization": true
+  },
+  "genuine_originals": {
+    "post_upload_hashes_captured_on_device": true,
+    "post_upload_hashes_sizes_mtimes_stable_across_verification": true,
+    "pre_upload_hashes_available": false,
+    "pre_vs_post_upload_unchanged_claim": false,
+    "media_content_exported": false
+  },
+  "ordinary_automatic_control": {
+    "generated_fixture": "PPE_Verify_20261023_auto_control.jpg",
+    "unique_remote_records": 1,
+    "width": 1024,
+    "height": 768,
+    "size_bytes": 126900,
+    "quota_charged_bytes": 0,
+    "upload_status": 100,
+    "is_backup_processed": 1,
+    "manual_backup_action": false,
+    "native_boost_routing_event_during_control": false,
+    "source_device_hash_matches": true,
+    "source_sha256": "f99f7f98256a0c133ec6b9d3671d5e4ec35882ebf4daff922e494dd8d1de44fc",
+    "reported_dimensions_and_size_match_source": true
+  },
+  "limits": [
+    "Playable boosted output and final output quota remain unverified",
+    "No pre-upload hashes or unbacked database snapshot for this newly confirmed automatic clip",
+    "No direct wire capture or account-meter reconciliation",
+    "Boost and ordinary uploads occurred at separate times; live simultaneous-upload test not claimed"
+  ],
+  "privacy": "Delivered evidence excludes personal filenames, paths, media content/fingerprints, account details, dedup keys, upload tokens and service URLs"
+}

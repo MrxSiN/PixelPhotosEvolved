@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-23",
+  "module_version_code": 15,
+  "module_root": "265f8f97951b917a4f159358529bec2bbf1189651a45321fa441245e405dd189",
+  "installed_apk_sha256": "e4fd84cf8fd134dd9722e8b0d3e4200f43bc05afb6e3ec8753b4583100b6e985",
+  "installed_apk_matches_delivered": true,
+  "android": {
+    "model": "Pixel 8 Pro",
+    "sdk": 37,
+    "build": "CP3A.261005.005/16271449"
+  },
+  "photos": {
+    "version_name": "7.97.0.1000520730",
+    "version_code": 52549361
+  },
+  "vector": {
+    "version": "2.2",
+    "build": 3080,
+    "api": 102
+  },
+  "runtime_checks": {
+    "identity: fields written": false,
+    "Policy self-tests passed (6); filename classifier passed (6)": false,
+    "Backup probe passed: Pixel XL offer, native generation and Build identity": false,
+    "Backup probe passed: disabled, native offer restored": false,
+    "process identity pending Photos restart": false,
+    "Compiled policy executed; native fallback retained": false
+  },
+  "current_process_crash_record": false,
+  "controls": {
+    "master_live_disable_restore": true,
+    "backup_off_restart_native": true,
+    "live_reenable_reports_pending_restart": true,
+    "restart_restores_identity": true,
+    "detection_disable_restore": true,
+    "final_preferences": {
+      "pixel_xl_backup": "true",
+      "detect_video_boost": "true",
+      "enabled": "true"
+    }
+  },
+  "ui": {
+    "in_photos_profile": true,
+    "back_returns_profile": true,
+    "entry_count_after_reopen": 1,
+    "light_and_dark_rendered": true,
+    "rotation_1_observed": true,
+    "recreation_reopens_safely": true,
+    "preferences_preserved": true,
+    "initial_and_final_night_mode": "yes",
+    "rotation_restored": {
+      "accelerometer_rotation": 1,
+      "user_rotation": 0
+    }
+  },
+  "editing": {
+    "Magic Eraser": {
+      "open": true,
+      "act": true,
+      "save_copy": true,
+      "copy": "PPE_Verify_20261023_photo~2.jpg"
+    },
+    "Photo Unblur": {
+      "open": true,
+      "act": true,
+      "save_copy": true,
+      "copy": "PPE_Verify_20261023_photo~3.jpg"
+    },
+    "other_tools": "not end-to-end verified",
+    "original_jpeg_sha256_unchanged": true
+  },
+  "video_boost": {
+    "synthetic_valid_siblings": 3,
+    "unknown_suffix_files": 1,
+    "recording_groups_observed": 1,
+    "contains_genuine_capture_data": false,
+    "processing_state": "unverified",
+    "upload_scoped_routing": "unsupported/pass-through"
+  },
+  "limits": [
+    "No independent account-wide quota reconciliation",
+    "No original download byte comparison or HEIC fixture",
+    "No genuine Boost workflow or per-upload identity boundary",
+    "No code hot reload/unload implementation"
+  ],
+  "tooling_location": "D:\\Codex\\ppe-work-20261023",
+  "conventional_source_files_in_repository": 0
+}
