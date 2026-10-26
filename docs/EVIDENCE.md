@@ -1,6 +1,6 @@
 # Evidence index
 
-Current build: **0.6.5-dev / 22**, verified 2026-10-26 (settings and copy; backend evidence from 0.6.1-dev / 18, 2026-10-23). The
+Current build: **0.6.6-dev / 23**, verified 2026-10-26 (settings and copy; backend evidence from 0.6.1-dev / 18, 2026-10-23). The
 [status](../report/STATUS.md) distinguishes current checks, retained older checks,
 user confirmation and untested behavior. The repository contains current evidence
 and the small baseline set still needed to substantiate claims.
@@ -9,6 +9,7 @@ and the small baseline set still needed to substantiate claims.
 
 | Report | What it establishes |
 |---|---|
+| [Build 0.6.6](../report/build-0.6.6.json) | Video Boost description spacing, artifact hashes |
 | [Build 0.6.5](../report/build-0.6.5.json) | Storage Saver profiles, profile-aware probe and snapshot flag, artifact hashes |
 | [Storage Saver sweep](../report/storage-saver-0.6.5.json) | All eight profiles applied on-device; probe result per model; Pixel 5a ineligible per Photos |
 | [Settings 0.6.5](../report/settings-0.6.5.json) | Photos type scale, new sections, exclusive switches, model picker, transitions |

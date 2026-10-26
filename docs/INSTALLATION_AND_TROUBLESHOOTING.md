@@ -1,6 +1,6 @@
 # Installation and troubleshooting
 
-Use the [0.6.5-dev APK](../module/pixel_photos_module-signed.apk) with Vector
+Use the [0.6.6-dev APK](../module/pixel_photos_module-signed.apk) with Vector
 2.2 / API 102 on the tested Pixel 8 Pro, Android 17 API 37 and Photos
 7.97.0.1000520730 / 52549361. Enable the module in Vector and scope it to
 `com.google.android.apps.photos` for the intended Android user. Force-stop and

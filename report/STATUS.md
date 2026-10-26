@@ -1,4 +1,4 @@
-# Status — 0.6.5-dev / 22
+# Status — 0.6.6-dev / 23
 
 Verified on 2026-10-23, UTC+08:00. Pixel 8 Pro, Android 17 API 37 /
 CP3A.261005.005 / 16271449; Photos 7.97.0.1000520730 / 52549361;
