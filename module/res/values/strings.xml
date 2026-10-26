@@ -5,5 +5,5 @@
 -->
 <resources>
     <string name="app_name">Pixel Photos Evolved</string>
-    <string name="module_description">Xposed module that adds Pixel XL backup and Video Boost support to Google Photos on Android 17. Settings are in Google Photos.</string>
+    <string name="module_description">Unlimited backup and Video Boost controls for Google Photos, inside Google Photos itself. Open them from your profile picture in Photos.</string>
 </resources>

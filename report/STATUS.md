@@ -1,4 +1,4 @@
-# Status — 0.6.6-dev / 23
+# Status — 1.0.0 / 24
 
 Verified on 2026-10-23, UTC+08:00. Pixel 8 Pro, Android 17 API 37 /
 CP3A.261005.005 / 16271449; Photos 7.97.0.1000520730 / 52549361;
@@ -6,7 +6,8 @@ Vector 2.2 / 3080 / API 102.
 
 | Area | Current evidence |
 |---|---|
-| Build | 69-function canonical module; installed APK matches delivered artifact; unsigned APK and ARM64 input reproduce exactly; API 102 static check and v2 signature pass |
+| 1.0.0 release | Package io.github.mrxsin.pixelphotosevolved, versionCode 24; v2 signature verified; loaded by Vector with policy self-tests and backup probe passing and settings preserved, checked 2026-10-26; module code unchanged from 0.6.6 |
+| Build | 69-function canonical module (0.6.1); installed APK matches delivered artifact; unsigned APK and ARM64 input reproduce exactly; API 102 static check and v2 signature pass |
 | Source constraint | Only Brainfuck/canonical XAX source; conventional tooling external; all retained paths scanned |
 | Compiled checks | 42 classifier/gate/state/label vectors; 60 router invariants; 400 concurrent host operations |
 | Brainfuck policy | Unchanged bytes: 18,187 independent offline vectors and 128 exact packaged ARM64 device vectors retained from 0.4; fresh BBC output matched |

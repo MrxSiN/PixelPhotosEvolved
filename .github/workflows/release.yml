@@ -1,0 +1,57 @@
+name: Release
+
+# The APK is built outside CI with the pinned XAX toolchain (docs/REPRODUCE.md)
+# and committed. On a v* tag this workflow re-signs the committed APK with the
+# release key and publishes it as a GitHub release.
+on:
+  push:
+    tags: [ "v*" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      APK_IN: module/pixel_photos_module-signed.apk
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version from APK
+        id: meta
+        run: |
+          bt=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          echo "BT=$bt" >> "$GITHUB_ENV"
+          name=$("$bt/aapt" dump badging "$APK_IN" | sed -n "1s/.*versionName='\([^']*\)'.*/\1/p")
+          test -n "$name"
+          echo "version=$name" >> "$GITHUB_OUTPUT"
+          if [[ "$GITHUB_REF" == refs/tags/v* && "$GITHUB_REF_NAME" != "v$name" ]]; then
+            echo "Tag $GITHUB_REF_NAME does not match APK version v$name." >&2
+            exit 1
+          fi
+
+      - name: Sign with release key
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          ALIAS: ${{ secrets.ALIAS }}
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          printf '%s' "$SIGNING_KEY" | base64 --decode > "$RUNNER_TEMP/release.keystore"
+          out="PixelPhotosEvolved-v${{ steps.meta.outputs.version }}.apk"
+          "$BT/apksigner" sign --ks "$RUNNER_TEMP/release.keystore" --ks-key-alias "$ALIAS" \
+            --ks-pass env:STORE_PASSWORD --key-pass env:KEY_PASSWORD --out "$out" "$APK_IN"
+          rm "$RUNNER_TEMP/release.keystore"
+          "$BT/apksigner" verify --print-certs "$out"
+          echo "APK=$out" >> "$GITHUB_ENV"
+
+      - name: Publish GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Pixel Photos Evolved v${{ steps.meta.outputs.version }}
+          body_path: RELEASE_NOTES.md
+          files: ${{ env.APK }}
+          fail_on_unmatched_files: true

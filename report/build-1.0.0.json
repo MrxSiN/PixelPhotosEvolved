@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "version_code": 24,
+  "date": "2026-10-26",
+  "package": "io.github.mrxsin.pixelphotosevolved",
+  "previous_package": "io.github.pixelphotosevolved",
+  "module_sdk_revision": "0876b591f39908e98aa31f746ae2e26bb88c837e",
+  "module_root": "4eba1abf0ffe69435c9af31161c57afa3950928ac0d9826e4f793e25e9277649",
+  "module_store_sha256": "afdc7e9ccdfdca251a69e4ece0bcc66b20ba4ce49bf51adabd3111c12cecf89a",
+  "policy_executable_sha256": "3fb4d2f1fa565362ebbf7724c52befd4c251b7e87e6e349be7875000dec2ce41",
+  "xax_unsigned_sha256": "e3c3478a811f5dc04531226be7250a69c52345140f169b68e78eb926fb3c39e7",
+  "packaged_unsigned_sha256": "fcaec2b56c0752153ac9aa0420244dba3c6666f7265fd27999a78fac28e432a8",
+  "signed_sha256": "bbe261aa617f9f84b2a7724714c4c99448e0ec5865a40d5c9572a0f1d8282a62",
+  "signer": "XAX public fixture test key for the repository APK; GitHub releases are re-signed with the release key by CI",
+  "change": "Version 1.0.0 / 24; package renamed to io.github.mrxsin.pixelphotosevolved for the Xposed Modules Repository; module description updated. Module code and policy executable unchanged from 0.6.6-dev.",
+  "history": {
+    "0.6.6-dev": "Video Boost description split into two paragraphs",
+    "0.6.5-dev": "Unlimited Storage Saver with Pixel 2 to Pixel 5a profiles, Photos type scale, shared-axis transitions",
+    "0.6.4-dev": "Segmented settings tiles, Compatibility & diagnostics page, aapt2 resource packaging (label, description, icon, versionName)",
+    "0.6.3-dev": "Own profile-menu card, production copy, quieter startup logging"
+  },
+  "checked_on_device": [
+    "apksigner v2 verification passes; aapt2 badging shows package, versionCode 24 and versionName 1.0.0",
+    "enabled through Vector CLI and scoped to com.google.android.apps.photos; Vector reports the module loaded",
+    "policy self-tests (6) and filename classifier (6) pass; backup probe passes; existing settings preserved",
+    "no fatal exceptions"
+  ]
+}

@@ -10,7 +10,7 @@ Google Photos → your profile picture → **Pixel Photos Evolved**.
 
 <br>
 
-[![Version](https://img.shields.io/badge/version-0.6.6--dev-5B3DF5?style=for-the-badge)](module/pixel_photos_module-signed.apk)
+[![Version](https://img.shields.io/badge/version-1.0.0-5B3DF5?style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases/latest)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
 [![Google Photos](https://img.shields.io/badge/Google%20Photos-7.97.0-3DDC84?style=for-the-badge)](#compatibility)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
@@ -97,7 +97,7 @@ recognised and routed.
 
 | Device | Android build | Google Photos | Checked | Not yet checked |
 |---|---|---|---|---|
-| Pixel 8 Pro | CP3A.261005.005 (Android 17) | 7.97.0.1000520730 / 52549361 | profile-menu card, settings page, diagnostics, Back from every page, light and dark themes, 130% text (0.6.3), backup probe, Video Boost manual and automatic uploads (0.6.1) | TalkBack end to end, rotation, other Photos builds, other devices |
+| Pixel 8 Pro | CP3A.261005.005 (Android 17) | 7.97.0.1000520730 / 52549361 | profile-menu card, settings page, diagnostics, Back from every page, light and dark themes, 130% text (0.6.3), Storage Saver profiles (0.6.5), backup probe (1.0.0), Video Boost manual and automatic uploads (0.6.1) | TalkBack end to end, rotation, other Photos builds, other devices |
 
 - **Version gate.** At start the module checks the Photos version, Android API level and ABI.
   An unknown combination installs nothing that changes behaviour.
@@ -126,7 +126,8 @@ recognised and routed.
 
 ## Install
 
-1. Install the [development APK](module/pixel_photos_module-signed.apk).
+1. Install the APK from the [latest release](https://github.com/MrxSiN/PixelPhotosEvolved/releases/latest)
+   or the [Xposed Modules Repository](https://modules.lsposed.org/module/io.github.mrxsin.pixelphotosevolved).
 2. Enable **Pixel Photos Evolved** in your Xposed manager, scoped to **Google Photos**
    (`com.google.android.apps.photos`).
 3. Force-stop Google Photos and open it again.
@@ -136,7 +137,14 @@ To turn it off, disable the module in your Xposed manager and restart Google Pho
 [installation and troubleshooting](docs/INSTALLATION_AND_TROUBLESHOOTING.md).
 
 > [!WARNING]
-> The APK is signed with XAX's **public test key**. It is a development build, not a release.
+> **Upgrading from 0.6.x?** 1.0.0 changed the package to `io.github.mrxsin.pixelphotosevolved`
+> and is signed with the release key. Uninstall `io.github.pixelphotosevolved` first. Your
+> settings are kept, since they are stored in Google Photos.
+
+Release APKs are built here and re-signed with the release key by the
+[release workflow](.github/workflows/release.yml), which also mirrors each release to the
+Xposed Modules Repository. [module/pixel_photos_module-signed.apk](module/pixel_photos_module-signed.apk)
+is the same build signed with XAX's public test key, for reproducing it.
 
 ## How it works
 

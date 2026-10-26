@@ -1,4 +1,4 @@
-# Video Boost behavior — 0.6.1
+# Video Boost behavior
 
 Ordinary uploads retain the process-start Pixel XL baseline. Verified temporary
 Video Boost uploads use captured real-device headers/client information. Global

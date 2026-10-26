@@ -1,6 +1,6 @@
 # Evidence index
 
-Current build: **0.6.6-dev / 23**, verified 2026-10-26 (settings and copy; backend evidence from 0.6.1-dev / 18, 2026-10-23). The
+Current build: **1.0.0 / 24**, verified 2026-10-26 (load, policy self-tests and backup probe; settings and copy from 0.6.3-0.6.6; backend evidence from 0.6.1-dev / 18, 2026-10-23). The
 [status](../report/STATUS.md) distinguishes current checks, retained older checks,
 user confirmation and untested behavior. The repository contains current evidence
 and the small baseline set still needed to substantiate claims.
@@ -9,15 +9,12 @@ and the small baseline set still needed to substantiate claims.
 
 | Report | What it establishes |
 |---|---|
-| [Build 0.6.6](../report/build-0.6.6.json) | Video Boost description spacing, artifact hashes |
-| [Build 0.6.5](../report/build-0.6.5.json) | Storage Saver profiles, profile-aware probe and snapshot flag, artifact hashes |
+| [Build 1.0.0](../report/build-1.0.0.json) | Release version and package, artifact hashes, on-device load check, 0.6.3-0.6.6 change history |
 | [Storage Saver sweep](../report/storage-saver-0.6.5.json) | All eight profiles applied on-device; probe result per model; Pixel 5a ineligible per Photos |
 | [Settings 0.6.5](../report/settings-0.6.5.json) | Photos type scale, new sections, exclusive switches, model picker, transitions |
-| [Build 0.6.4](../report/build-0.6.4.json) | Settings redesign, diagnostics page, resource packaging for label/description/icon/versionName, artifact hashes |
 | [Settings 0.6.4](../report/settings-0.6.4.json) | Segmented tiles, diagnostics values, Back from both pages, row-tap persistence, light/dark, App info icon and label |
-| [Build 0.6.3](../report/build-0.6.3.json) | 0.6.2 store recovery, exact round trip, 0.6.3 carrier edit, artifact hashes and install |
 | [Settings 0.6.3](../report/settings-0.6.3.json) | Own profile card, distinct icon, rewritten copy, Back/reopen, persistence, light/dark and 1.3 font scale |
-| [Build](../report/build-0.6.1.json) | Canonical roots, current artifact hashes, Vector API check, v2 signing, exact unsigned rebuild and installed artifact match |
+| [Build 0.6.1](../report/build-0.6.1.json) | 0.6.1 canonical roots and artifact hashes, Vector API check, v2 signing, exact unsigned rebuild and installed artifact match |
 | [Offline](../report/offline-0.6.1.json) | Actual compiled classifier 14, runtime gate 8, native state decoder 10 and labels 10; JVM verification |
 | [Router](../report/router-offline-0.6.1.json) | 60 invariants and 400 concurrent host operations; ordinary pass-through, request copies, queue isolation, settings, retry identity and token isolation |
 | [Semantic edit](../report/semantic-edit-0.6.1.json) | Verified canonical graph/root, 69 functions, source hash and atomic carrier-edit workflow |
@@ -25,7 +22,6 @@ and the small baseline set still needed to substantiate claims.
 | [Manual native upload](../report/video-boost-0.6.1.json) | New genuine raw upload, remote format 1, native routing stages, unchanged original hashes/sizes/mtimes, ordinary JPEG control |
 | [Automatic backup](../report/automatic-backup-0.6.1.json) | User-confirmed fresh recording uploaded automatically with native routing; cover/JPEG completed; native backup on and queue complete |
 | [Independent completion/quota](../report/independent-validation-0.6.1.json) | Four selected remote records and full native decoding of both completed 4K AV1 boosted outputs |
-| [Repository audit](../report/repository-audit-0.6.1.json) | Canonical store verification, source restriction, artifact hashes and checksum manifest |
 
 The [independent validation narrative](../report/INDEPENDENT_VALIDATION_0.6.1.md)
 contains the exact quota values and decoding results. The user identified which

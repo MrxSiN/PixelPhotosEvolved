@@ -1,4 +1,4 @@
-# Pinned references — 0.6.1
+# Pinned references
 
 | Component | Exact pin | Use |
 |---|---|---|

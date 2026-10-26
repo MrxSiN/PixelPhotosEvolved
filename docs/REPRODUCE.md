@@ -1,4 +1,4 @@
-# Reproducing 0.6.1
+# Reproducing a build
 
 The repository's application source is canonical XAX and Brainfuck. Keep all
 compiler/edit/build/test drivers, fixtures and temporary carriers **outside** it,
@@ -36,9 +36,11 @@ languages used by external test tooling are not application source.
    that repeats the XAX manifest values plus `android:label`, `android:description`,
    `android:icon`/`roundIcon` and `versionName`, and replace only AndroidManifest.xml
    while adding resources.arsc and res/. Every XAX entry stays byte for byte.
-5. Sign externally with a chosen capability. The supplied installable APK uses
-   the SDK's **public fixture test key**. Verify with Android apksigner v2 checks.
-6. Compare roots/hashes with [build evidence](../report/build-0.6.1.json), then
+5. Sign externally with a chosen capability. The committed signed APK uses
+   the SDK's **public fixture test key**; the [release workflow](../.github/workflows/release.yml)
+   re-signs it with the release key on a `v*` tag, publishes the GitHub release and
+   mirrors it to the Xposed Modules Repository. Verify with Android apksigner v2 checks.
+6. Compare roots/hashes with [build evidence](../report/build-1.0.0.json), then
    verify [SHA256SUMS](../SHA256SUMS). The unsigned artifact and native executable
    reproduce exactly; signed and unsigned APKs serve different purposes.
 

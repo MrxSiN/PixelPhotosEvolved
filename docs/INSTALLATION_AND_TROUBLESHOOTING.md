@@ -1,27 +1,32 @@
 # Installation and troubleshooting
 
-Use the [0.6.6-dev APK](../module/pixel_photos_module-signed.apk) with Vector
-2.2 / API 102 on the tested Pixel 8 Pro, Android 17 API 37 and Photos
+Install the APK from the [latest release](https://github.com/MrxSiN/PixelPhotosEvolved/releases/latest)
+or the [Xposed Modules Repository](https://modules.lsposed.org/module/io.github.mrxsin.pixelphotosevolved).
+Tested with Vector 2.2 / API 102 on a Pixel 8 Pro, Android 17 API 37 and Photos
 7.97.0.1000520730 / 52549361. Enable the module in Vector and scope it to
 `com.google.android.apps.photos` for the intended Android user. Force-stop and
 reopen Photos after installation or updates.
 
-The APK uses a public development test key. It is not a production release.
-Unsupported host combinations retain native behavior; the temporary-upload
-native profile additionally requires the captured physical Pixel 8 Pro model.
+Release APKs are signed with the release key. Version 1.0.0 changed the package
+from `io.github.pixelphotosevolved` to `io.github.mrxsin.pixelphotosevolved`:
+uninstall the old package before installing. Settings live in Photos' data and
+are kept. Unsupported host combinations retain native behavior; the
+temporary-upload native profile additionally requires the captured physical
+Pixel 8 Pro model.
 
 ## In-Photos controls
 
-Open Photos → profile/account menu → **Pixel Photos Evolved**, immediately
-before **Your data in Google Photos**. There is no separate launcher or settings
+Open Photos → profile picture → **Pixel Photos Evolved**, its own card above
+**Your data in Google Photos**. There is no separate launcher or settings
 Activity. Preferences persist in Photos' pixel_photos_evolved namespace.
 
 | Control | Effect |
 |---|---|
-| Enable module | Master for overrides and scanning; startup identity already applied persists until Photos restarts |
-| Pixel XL backup identity | Startup identity, local backup offer, property reads and additive feature flags; changes require Photos restart |
-| Video Boost detection and native uploads | Candidate diagnostics, native state observation and experimental operation-scoped native routing for verified temporary assets |
-| Verbose diagnostics | Extra sanitized policy messages |
+| Unlimited Original Quality | Pixel XL startup identity, local backup offer, property reads and additive feature flags; changes require a Photos restart |
+| Unlimited Storage Saver | Same, with the identity of the selected **Pixel model** (Pixel 2 to Pixel 5a); turns Unlimited Original Quality off and the reverse |
+| Video Boost | Detection, native state observation and operation-scoped native routing for verified temporary Video Boost uploads |
+| Latest video | Last Video Boost state Photos reported |
+| Compatibility & diagnostics | Module, system and per-feature compatibility; **Diagnostic logging** adds sanitized policy messages |
 
 Native Google Photos **Backup** is a separate setting. Automatic backup was
 tested with it on; manual per-recording backup was tested with it off. The module
