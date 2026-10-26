@@ -1,0 +1,59 @@
+{
+  "version": "0.6.5-dev",
+  "date": "2026-10-26",
+  "device": "Pixel 8 Pro, Android 17 API 37",
+  "photos": "7.97.0.1000520730 / 52549361",
+  "method": "for each profile: write the module preferences, restart Photos, read the identity log line and the backup probe result; Photos' Backup settings checked for offer text",
+  "results": [
+    {
+      "profile": "off",
+      "probe": "passed: disabled, native offer restored"
+    },
+    {
+      "profile": "Pixel XL",
+      "reported": "Pixel XL / marlin QP1A.191005.007.A3",
+      "probe": "passed",
+      "photos_offer_text": "This Pixel XL can back up unlimited photos & videos at no charge."
+    },
+    {
+      "profile": "Pixel 2",
+      "reported": "Pixel 2 / walleye OPM1.171019.021",
+      "probe": "passed"
+    },
+    {
+      "profile": "Pixel 3 XL",
+      "reported": "Pixel 3 XL / crosshatch RQ3A.211001.001",
+      "probe": "passed"
+    },
+    {
+      "profile": "Pixel 3a XL",
+      "reported": "Pixel 3a XL / bonito RQ3A.211001.001",
+      "probe": "passed"
+    },
+    {
+      "profile": "Pixel 4 XL",
+      "reported": "Pixel 4 XL / coral SP1A.211105.002",
+      "probe": "passed"
+    },
+    {
+      "profile": "Pixel 4a",
+      "reported": "Pixel 4a / sunfish RQ3A.211001.001",
+      "probe": "passed"
+    },
+    {
+      "profile": "Pixel 5",
+      "reported": "Pixel 5 / redfin SP1A.211105.003",
+      "probe": "passed"
+    },
+    {
+      "profile": "Pixel 5a",
+      "reported": "Pixel 5a / barbet RD2A.211001.002",
+      "probe": "failed: Photos marks PIXEL_2021_MIDYEAR as not Storage saver eligible (baxa.w false)"
+    }
+  ],
+  "storage_saver_offer_text": "Not shown during the sweep: Photos shows 'This %s can back up unlimited photos & videos in Storage saver quality at no charge' only when backup quality is not Original (wqb.a). The account's quality was left at Original.",
+  "not_tested": [
+    "uploads and storage accounting under any Storage Saver profile",
+    "the Storage saver banner with Storage saver quality selected"
+  ]
+}

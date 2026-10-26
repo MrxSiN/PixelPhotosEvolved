@@ -1,0 +1,20 @@
+{
+  "version": "0.6.5-dev",
+  "date": "2026-10-26",
+  "typography": "HeadlineMedium title, BodyLarge tile titles, BodyMedium summaries/values/headers, 16dp tile padding, headers aligned to the card edge",
+  "main_page": [
+    "Backup: Unlimited Original Quality, Unlimited Storage Saver, Pixel model",
+    "Video Boost: Video Boost (two-line description), Latest video",
+    "Advanced: Compatibility & diagnostics"
+  ],
+  "mutual_exclusion": "turning one unlimited option on turned the other off in the UI and in preferences",
+  "model_picker": "rounded colorSurfaceContainer list popup; selection persisted and updated the tile",
+  "transitions": "shared axis X (30dp shift with fade) using Photos' m3_sys_motion_easing_emphasized_decelerate, 400 ms; a mid-transition frame was captured",
+  "back": "diagnostics -> main -> profile menu",
+  "fatal_exceptions": 0,
+  "not_tested": [
+    "light theme and font scaling on 0.6.5",
+    "TalkBack",
+    "rotation"
+  ]
+}

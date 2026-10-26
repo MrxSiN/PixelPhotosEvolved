@@ -22,7 +22,7 @@ native behavior.
 | 3 | ws | 1 metadata validated; 2 temporary request confirmed; 3 result confirmed |
 | 4 | cap | 1 native capability; 2 verified modern path |
 | 5 | m | master switch, exactly 1 |
-| 6 | x | Pixel XL preference, exactly 1 |
+| 6 | x | Unlimited-backup preference (Original Quality or Storage Saver; 0.6.5+), exactly 1 |
 | 7 | s | smart routing preference, exactly 1 |
 | 8 | b | verified operation boundary: local offer for op5, scoped request for op3/4 |
 | 9 | xb | distinct verified Pixel XL upload boundary, exactly 1 |
@@ -68,3 +68,7 @@ Current retained independent policy verification: **18,187 BF vectors and
 128 exact packaged ARM64 vectors**, zero failures. The 0.6.1 native temporary
 upload also exercised actual compiled policy 2 on-device. Smaller scaffold counts
 were superseded and their reports removed during cleanup.
+
+From 0.6.5 the runtime sets x when either unlimited backup option is on. The policy bytes and ABI
+are unchanged: the compiled decision still only says whether the startup identity applies. Which
+profile (Pixel XL, or the selected Storage Saver model) applies is chosen in XAX from the settings.

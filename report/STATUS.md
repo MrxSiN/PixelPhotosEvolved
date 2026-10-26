@@ -1,4 +1,4 @@
-# Status — 0.6.1-dev / 18
+# Status — 0.6.5-dev / 22
 
 Verified on 2026-10-23, UTC+08:00. Pixel 8 Pro, Android 17 API 37 /
 CP3A.261005.005 / 16271449; Photos 7.97.0.1000520730 / 52549361;
@@ -16,6 +16,8 @@ Vector 2.2 / 3080 / API 102.
 | Completed output | Two independent local/remote format-2 matches; both 2160×3840 AV1 files fully decoded on-device, 128 and 134 frames, clean end-of-stream |
 | Per-item quota | Disabled original/boosted: 11,401,750 / 8,176,531 charged bytes. Enabled: 0 / 7,039,859. Capture-time module states confirmed by user |
 | Ordinary backup | Generated JPEGs uploaded manually and automatically with matching reported dimensions/size and zero charged bytes; prior generated MP4 checks retained |
+| 0.6.5 Storage Saver | Pixel 2, 3 XL, 3a XL, 4 XL, 4a, 5 and 5a identities applied on-device; Photos client eligibility confirmed for Pixel 2 to Pixel 5; Pixel 5a not eligible per Photos (PIXEL_2021_MIDYEAR); uploads and quota untested |
+| 0.6.5 settings | Photos type scale; Unlimited Original Quality / Unlimited Storage Saver (mutually exclusive) with model picker; Video Boost section with latest status; shared-axis transitions |
 | 0.6.4 settings | Pixel Launcher Evolved-style segmented tiles; Backup, Video Boost and Compatibility & diagnostics only; master switch and Editing removed; diagnostics page with module, system and per-feature compatibility; checked 2026-10-26 |
 | 0.6.4 package | App label, description, adaptive icon and versionName packaged from module/res with aapt2; shown in App info |
 | 0.6.3 settings | Own profile card above Your data with a distinct icon; rewritten production copy; status lines separated; Back/reopen, single entry, persistence, light/dark and 1.3 font scale checked 2026-10-26 |

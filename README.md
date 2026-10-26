@@ -1,7 +1,7 @@
 # Pixel Photos Evolved
 
 Google Photos Xposed module written in **canonical XAX and compiled Brainfuck**.
-Current development build: **0.6.4-dev / versionCode 21**, ARM64, libxposed API 102.
+Current development build: **0.6.5-dev / versionCode 22**, ARM64, libxposed API 102.
 
 The module applies the Pixel XL (2016) backup baseline at Photos startup and
 uses the real device identity for verified temporary Video Boost uploads.
