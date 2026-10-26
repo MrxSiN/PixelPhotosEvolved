@@ -4,7 +4,7 @@
 
 # Pixel Photos Evolved
 
-**Unlimited Original Backup with Video Boost for Google Photos**
+**Unlimited Original Backup with Video Boost**
 
 Google Photos → your profile picture → **Pixel Photos Evolved**.
 
