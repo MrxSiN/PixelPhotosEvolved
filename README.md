@@ -4,7 +4,7 @@
 
 # Pixel Photos Evolved
 
-**Backup and Video Boost controls for Google Photos, in Google Photos itself.**
+**Unlimited Original Backup with Video Boost for Google Photos**
 
 Google Photos → your profile picture → **Pixel Photos Evolved**.
 
