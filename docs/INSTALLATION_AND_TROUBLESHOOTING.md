@@ -7,10 +7,7 @@ Tested with Vector 2.2 / API 102 on a Pixel 8 Pro, Android 17 API 37 and Photos
 `com.google.android.apps.photos` for the intended Android user. Force-stop and
 reopen Photos after installation or updates.
 
-Release APKs are signed with the release key. Version 1.0.0 changed the package
-from `io.github.pixelphotosevolved` to `io.github.mrxsin.pixelphotosevolved`:
-uninstall the old package before installing. Settings live in Photos' data and
-are kept. Unsupported host combinations retain native behavior; the
+Release APKs are signed with the release key. Unsupported host combinations retain native behavior; the
 temporary-upload native profile additionally requires the captured physical
 Pixel 8 Pro model.
 
