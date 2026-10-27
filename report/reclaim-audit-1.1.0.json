@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-27",
+  "baseline_module_root": "4eba1abf0ffe69435c9af31161c57afa3950928ac0d9826e4f793e25e9277649",
+  "module_root": "9602b4fff270db1b05c7a10c6ccf2c52f93d8f92b3885520eae133d030a44277",
+  "baseline_root_checked_before_atomic_save": true,
+  "verified_carrier_roundtrip": true,
+  "edit_workflow": "Pinned verified carrier construction and Workspace.save fallback; not an expected-root semantic transaction",
+  "function_count": 140,
+  "new_reclaim_routines": 35,
+  "unchanged_native_routing_and_gate_function_cids": {
+    "f0": true,
+    "f1": true,
+    "f2": true,
+    "f3": true,
+    "f4": true,
+    "f5": true,
+    "f6": true,
+    "f7": true,
+    "f8": true,
+    "f9": true,
+    "f10": true,
+    "f11": true,
+    "f12": true,
+    "f13": true,
+    "f14": true,
+    "f15": true,
+    "f16": true,
+    "f17": true,
+    "f18": true,
+    "f95": true
+  },
+  "unchanged_policy_and_pin_files": [
+    "policy/ABI.md",
+    "policy/pixel_photos_policy.bf",
+    "policy/pixel_photos_policy.bfx",
+    "policy/pixel_photos_policy.xax",
+    "module/policy_process.xax",
+    "module/libppepolicy.so",
+    "toolchain.lock.json"
+  ],
+  "cloud_mutation_methods_in_new_routines": [],
+  "database_open_flags": 1,
+  "database_mode": "OPEN_READONLY",
+  "library_source": "account-scoped remote_media cache, not full cloud enumeration",
+  "cloud_network_bindings_added": false,
+  "media_exported": false,
+  "delete_action_enabled": false,
+  "source_languages": [
+    "canonical XAX",
+    "Brainfuck"
+  ],
+  "external_transport_directory": "D:\\Codex\\ppe-reclaim-20261027",
+  "github_push_or_release": false,
+  "repository_source_language_scan_passed": true,
+  "relative_documentation_links_passed": true,
+  "tracked_remote_repositories_unchanged": [
+    "XAX",
+    "BBC",
+    "XAX-MCP"
+  ]
+}

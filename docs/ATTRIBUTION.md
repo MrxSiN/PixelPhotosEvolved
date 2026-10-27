@@ -1,5 +1,12 @@
 # Attribution and dependency boundaries
 
+Google Photos Toolkit, xob0t/Google-Photos-Toolkit, revision
+6db9ab355e4797327e4078cf87a2b6994d36cf73, was inspected for paginated web RPCs,
+media/deduplication identity, extended metadata, quota and physical size parsing.
+It is MIT licensed, copyright (c) 2024 xob0t. No implementation or authentication
+code was copied or bundled. Its browser RPCs are not used by PPE; the Android
+preview independently reads Photos' existing account-scoped metadata cache.
+
 Pixelify Infinity, samson910022/pixelify-google-photos-modern, revision
 c4094f597ad6f8e0eab3a3653c4108279470cf62, was inspected for device profiles,
 feature checks, Android 17 compatibility and backup verification. Its MIT notice

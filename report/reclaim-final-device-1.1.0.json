@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-27",
+  "module_root": "9602b4fff270db1b05c7a10c6ccf2c52f93d8f92b3885520eae133d030a44277",
+  "installed_apk_sha256": "1138358311d08f39f032dd7265c935bc4bc665df5547fbef9bb4196ef0caf773",
+  "checks": [
+    "Final native page opens with no automatic scan",
+    "Final build cache scan completes",
+    "Final build classifies four active processed candidates",
+    "Final build selects all four identities",
+    "Final build clears review selection",
+    "Normal account observer retains valid scan",
+    "Final Back/reopen clears cache and review state",
+    "Theme no native page remains usable",
+    "Theme yes native page remains usable",
+    "Original system night mode restored",
+    "PPE stored settings preserved across final install",
+    "Installed final APK matches delivered build",
+    "Final startup policy self-tests pass",
+    "Final Pixel XL startup backup probe passes",
+    "Final native Video Boost router starts",
+    "No Photos fatal exception in current process"
+  ],
+  "night_mode_restored": true,
+  "settings_unchanged": true,
+  "cloud_mutations": 0,
+  "scope": "Final actual Android artifact cache/UI smoke; not cloud upload or fresh quota verification",
+  "live_account_switch_injection": false,
+  "device_reboot_test": false,
+  "theme_screenshots_visually_checked": true
+}

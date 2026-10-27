@@ -1,4 +1,21 @@
-# Status — 1.0.0 / 24
+# Status — 1.1.0-dev / 25
+
+Checked 2026-10-27, UTC+08:00. The requested full Video Boost Storage Reclaim
+workflow is **incomplete**. The new native page performs a real read-only audit
+of the selected account's cached cloud records, with review selection, sorting,
+filters and cancellation. A device scan inspected 74,145 cached rows, identifying
+four active native processed candidates with 528,120,956 cached charged bytes.
+This does not establish current server quota, ownership or full cloud coverage.
+
+Full cloud refresh, cloud thumbnails, full-quality download, controlled reclaim
+upload, independent zero-charge replacement and safe Trash/restore are blocked.
+Reclaim selected remains disabled. No media mutation or storage recovery was
+performed. The existing native upload callbacks, policy ABI and native policy
+executable remain unchanged. See the [acceptance report](reclaim-1.1.0.md) and
+[current evidence index](../docs/EVIDENCE.md) for detailed tests, artifact provenance
+and the completion checklist. Prior evidence below retains its original scope.
+
+## Retained release and backend evidence
 
 Verified on 2026-10-23, UTC+08:00. Pixel 8 Pro, Android 17 API 37 /
 CP3A.261005.005 / 16271449; Photos 7.97.0.1000520730 / 52549361;

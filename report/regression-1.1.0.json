@@ -1,0 +1,21 @@
+{
+  "module_root": "58b0bed38050307da6713c7ed0f2dbc8b4e7b9920010e276a112fdeaf0fe989d",
+  "bf_vectors": 18187,
+  "failures": 0,
+  "bf_seconds": 67.199,
+  "packaged_host_contains_policy": true,
+  "on_device_this_run": false,
+  "jvm_classifier": {
+    "vectors": 14,
+    "class": "xax/Pe942a75ea4cffbfd",
+    "bytecode_verifier": "-Xverify:all"
+  },
+  "jvm_runtime_gate": {
+    "vectors": 8,
+    "class": "xax/P4814a2c0c2c7850e",
+    "execution": "compiled canonical gate against host-only Android fixtures; not a device test"
+  },
+  "compiled_policy": {
+    "status": "not run; requires Windows x86-64"
+  }
+}

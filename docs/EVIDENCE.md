@@ -1,6 +1,10 @@
 # Evidence index
 
-Current build: **1.0.0 / 24**, verified 2026-10-26 (load, policy self-tests and backup probe; settings and copy from 0.6.3-0.6.6; backend evidence from 0.6.1-dev / 18, 2026-10-23). The
+Current development build: **1.1.0-dev / 25**, checked 2026-10-27. It adds a
+read-only cached-cloud Reclaim audit; full cloud scanning and automatic reclaim
+are blocked. Prior release **1.0.0 / 24** was checked 2026-10-26 (load, policy
+self-tests and backup probe; settings/copy from 0.6.3-0.6.6; backend evidence from
+0.6.1-dev / 18, 2026-10-23). The
 [status](../report/STATUS.md) distinguishes current checks, retained older checks,
 user confirmation and untested behavior. The repository contains current evidence
 and the small baseline set still needed to substantiate claims.
@@ -9,6 +13,16 @@ and the small baseline set still needed to substantiate claims.
 
 | Report | What it establishes |
 |---|---|
+| [Reclaim acceptance report](../report/reclaim-1.1.0.md) | Actual implementation, modified files, blocked stages and requirement checklist |
+| [Build 1.1.0](../report/build-1.1.0.json) | Verified canonical root, development artifact hashes, unchanged pinned SDK, API 102 check |
+| [Reclaim source/safety audit](../report/reclaim-audit-1.1.0.json) | Baseline-root check, atomic canonical save, unchanged routing/policy, read-only SQL, no mutation bindings |
+| [Reclaim compiled checks](../report/reclaim-offline-1.1.0.json) | 224 actual JVM classification, comparator, filter and identity-selection checks; host fixtures |
+| [Current router checks](../report/router-offline-1.1.0.json) | 60 compiled invariants and 400 concurrent host operations |
+| [Current regression checks](../report/regression-1.1.0.json) | 18,187 BF vectors, 14 filename vectors and eight compatibility vectors; tested subjects unchanged in final build |
+| [Fresh policy device vectors](../report/policy-device-1.1.0.json) | 128 executed vectors on the exact packaged ARM64 stdio executable |
+| [Fresh BBC reproduction](../report/bbc-1.1.0.json) | Byte-identical 3,279-instruction BFX from pinned BBC frontend |
+| [Reclaim device UI](../report/reclaim-device-1.1.0.json) | Real cache scan and selection/sort/filter/cancel/back checks; exact tested development artifact provenance |
+| [Final installed build](../report/reclaim-final-device-1.1.0.json) | Final artifact match, cache/UI smoke, account observer normal path, themes, settings and startup probes |
 | [Build 1.0.0](../report/build-1.0.0.json) | Release version and package, artifact hashes, on-device load check, 0.6.3-0.6.6 change history |
 | [Storage Saver sweep](../report/storage-saver-0.6.5.json) | All eight profiles applied on-device; probe result per model; Pixel 5a ineligible per Photos |
 | [Settings 0.6.5](../report/settings-0.6.5.json) | Photos type scale, new sections, exclusive switches, model picker, transitions |

@@ -82,11 +82,19 @@ Identity changes apply when Google Photos starts: force-stop and reopen Photos a
 | Setting | What it does |
 |---|---|
 | **Video Boost** | Detects Video Boost recordings and uploads them with the phone's real identity, so Google can process them while other backups keep the backup identity. Only on phones that record Video Boost: Pixel 8 Pro and the Pixel 9–11 Pro series, including XL and Fold models. |
-| **Latest video** | The last Video Boost state Photos reported: waiting to upload, uploading, processing, ready to play or failed. |
+| **Video Boost Storage Reclaim** | Development preview: scan Photos' cached cloud records, review processed candidates and their cached charges, select, sort and filter. Full cloud refresh and automatic reclaim are unavailable; originals are preserved. |
 
 Videos processed with Video Boost count toward your Google Account storage, even when an
 unlimited backup option is on. See [Video Boost](docs/VIDEO_BOOST.md) for how an upload is
 recognised and routed.
+
+The local development build is **1.1.0-dev / 25**. Its new
+[Reclaim page](docs/VIDEO_BOOST_RECLAIM.md) is a read-only cache audit, not the
+complete download → re-upload → verify → Trash workflow. Opening the page does
+not scan automatically. **Reclaim selected** stays disabled until independent
+zero-charge replacement and source safety can be verified. The previous latest
+processing state is retained on this subpage. See the
+[implementation and test report](report/reclaim-1.1.0.md).
 
 </details>
 

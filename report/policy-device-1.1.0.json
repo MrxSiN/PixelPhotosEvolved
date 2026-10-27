@@ -1,0 +1,8 @@
+{
+  "vectors": 128,
+  "failures": 0,
+  "on_device": true,
+  "binary_sha256": "3fb4d2f1fa565362ebbf7724c52befd4c251b7e87e6e349be7875000dec2ce41",
+  "transport": "Exact APK input executed as ARM64 stdio process through ADB",
+  "bridge_size_validation": "Truncated vectors exercise EOF behavior of native core; module bridge separately requires exactly eleven bytes"
+}

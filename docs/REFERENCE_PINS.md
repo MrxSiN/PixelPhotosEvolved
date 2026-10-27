@@ -2,6 +2,7 @@
 
 | Component | Exact pin | Use |
 |---|---|---|
+| Google Photos Toolkit research | `6db9ab355e4797327e4078cf87a2b6994d36cf73` | Web enumeration/metadata identity and quota concepts inspected for Reclaim; no code or browser authentication copied; Android cache access independently verified |
 | XAX module/native SDK | `0876b591f39908e98aa31f746ae2e26bb88c837e` | Historical JVM/libxposed profile, DEX/APK and AArch64 lowering; exact files in `toolchain.lock.json` |
 | BBC | `compiler/compiler.bf`, SHA-256 `89e87c42d870e879c4dbbf2ec578da2823351566d3e7d25801f29b5804446b2a` | Reproducible bounded BF → BFX frontend; local BBC directory has no Git metadata |
 | XAX BFX importer | entry `cbbd3d0c7dcc26908b6b967d8792b2dbc7c4cda8d3180276588ae04a8e1c50b5` | Historical BFX → canonical decision import |
