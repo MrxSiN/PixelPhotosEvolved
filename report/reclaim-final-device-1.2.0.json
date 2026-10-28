@@ -1,0 +1,42 @@
+{
+  "checks": [
+    "Final APK scan finishes using the real account cache",
+    "Four remote aliases produce two unique chargeable videos",
+    "Unique cached charge is 264060478 bytes, displayed as 264 MB",
+    "No selection disables reclaim",
+    "Exactly two unique selectable rows rendered",
+    "Checking one row enables reclaim",
+    "Confirmation explains selected-only permanent Trash deletion",
+    "Confirmation warns that Video Boost processing flag is lost",
+    "Cancel preserves selection without starting a job",
+    "Invert uses unique identities",
+    "Select all selects exactly two unique videos",
+    "Sorting preserves logical selections",
+    "Filter retains hidden selections",
+    "Deselect clears hidden selections and disables action",
+    "Back returns to PPE settings",
+    "Feature description states the automatic process",
+    "Feature description warns about losing processing flags",
+    "Development dummy transaction control is absent",
+    "Installed package is 1.2.0-dev / 26",
+    "Installed APK matches the final retained candidate",
+    "Existing six module settings are preserved",
+    "Final startup policy self-tests and backup probe pass"
+  ],
+  "module_root": "67c4be62d7af424c920cacc95fac0b524cd04755bde60fe33cd5185a3aab01c3",
+  "signed_sha256": "f07860afebbb196f125c99b37a0bfa88ef651e259c7e20c9ed3ecd799816a6d6",
+  "unique_chargeable_candidates": 2,
+  "cached_charged_bytes": 264060478,
+  "real_chargeable_videos_reclaimed_by_ui_test": 0,
+  "confirmation_canceled": true,
+  "settings_preserved": {
+    "enabled": "true",
+    "pixel_xl_backup": "true",
+    "detect_video_boost": "true",
+    "storage_saver_backup": "false",
+    "storage_saver_model": "6",
+    "verbose": "false"
+  },
+  "cache_scope": "Existing active-account cache, not fresh complete server enumeration",
+  "screenshot": "reclaim-final.png"
+}

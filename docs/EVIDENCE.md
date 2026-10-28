@@ -1,19 +1,31 @@
 # Evidence index
 
-Current development build: **1.1.0-dev / 25**, checked 2026-10-27. It adds a
-read-only cached-cloud Reclaim audit; full cloud scanning and automatic reclaim
-are blocked. Prior release **1.0.0 / 24** was checked 2026-10-26 (load, policy
-self-tests and backup probe; settings/copy from 0.6.3-0.6.6; backend evidence from
-0.6.1-dev / 18, 2026-10-23). The
-[status](../report/STATUS.md) distinguishes current checks, retained older checks,
-user confirmation and untested behavior. The repository contains current evidence
-and the small baseline set still needed to substantiate claims.
+Current development build: **1.2.0-dev / 26**, checked 28 October 2026. It implements
+automatic selected-video download, protection, source-only permanent deletion and ordinary
+reupload, with native backup and zero-charge completion checks. Scan results and selections
+use logical content identity. Reuploaded videos lose their Video Boost processing flag.
+The [current report](../report/reclaim-1.2.0.md) distinguishes final UI checks, a temporary
+development artifact's automatic dummy transaction and retained older backend evidence.
 
 ## Current build
 
+The [automatic native dummy transaction](../report/reclaim-automatic-device-1.2.0.json)
+completed with zero cached charge; the published 4K AV1 file matches the protected copy's
+SHA-256. It began with
+an ordinary zero-charge dummy after the [earlier charged-dummy UI experiment](../report/reclaim-dummy-20261028.md).
+The final artifact removes the development entry and was separately checked for scan,
+selection, enabled action, confirmation notices, preserved settings and artifact identity.
+
 | Report | What it establishes |
 |---|---|
-| [Reclaim acceptance report](../report/reclaim-1.1.0.md) | Actual implementation, modified files, blocked stages and requirement checklist |
+| [Automatic reclaim report](../report/reclaim-1.2.0.md) | Final implementation, native boundaries, tests and limitations |
+| [Build 1.2.0](../report/build-1.2.0.json) | Final root, artifact hashes and Vector API 102 check |
+| [Source audit 1.2.0](../report/reclaim-audit-1.2.0.json) | Verified canonical source, removed test controls, read-only SQL surface, unchanged router/policy |
+| [Compiled reclaim 1.2.0](../report/reclaim-offline-1.2.0.json) | 225 actual compiled classification, sort/filter and logical-selection checks |
+| [Router 1.2.0](../report/router-offline-1.2.0.json) | 60 compiled invariants and 400 concurrent host operations |
+| [Automatic dummy 1.2.0](../report/reclaim-automatic-device-1.2.0.json) | Native transaction, restart recovery, exact SHA-256, full decoding and zero cached charge; temporary test artifact |
+| [Final device 1.2.0](../report/reclaim-final-device-1.2.0.json) | Exact installed final APK, unique rows, button state, notices, navigation and settings |
+| [Earlier Reclaim acceptance report](../report/reclaim-1.1.0.md) | Actual implementation, modified files, blocked stages and requirement checklist |
 | [Build 1.1.0](../report/build-1.1.0.json) | Verified canonical root, development artifact hashes, unchanged pinned SDK, API 102 check |
 | [Reclaim source/safety audit](../report/reclaim-audit-1.1.0.json) | Baseline-root check, atomic canonical save, unchanged routing/policy, read-only SQL, no mutation bindings |
 | [Reclaim compiled checks](../report/reclaim-offline-1.1.0.json) | 224 actual JVM classification, comparator, filter and identity-selection checks; host fixtures |

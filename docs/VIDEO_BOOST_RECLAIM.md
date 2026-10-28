@@ -1,142 +1,89 @@
-# Video Boost Storage Reclaim — development preview
+# Video Boost Storage Reclaim
 
-Version **1.1.0-dev / 25** adds a working, read-only **cached cloud record audit**.
-The requested automatic reclaim workflow is **not complete**. Full server-side
-library scanning, downloads, replacement uploads and Trash operations are disabled.
-No storage recovery is claimed.
+Development build **1.2.0-dev / 26** implements the automatic selected-video process:
+download → protect a verified recovery copy → delete the cloud original → permanently
+delete only its matching Trash item → reupload the same bytes as an ordinary backup.
 
-Open Photos → profile picture → Pixel Photos Evolved → Video Boost →
-**Video Boost Storage Reclaim**. This replaces **Latest video**. The last observed
-native processing state remains below the new page's capability explanation.
-Existing backup settings and temporary Video Boost routing are unchanged.
+**Reuploaded videos lose their Video Boost processing flag.** Google Photos grouping,
+playback indicators and processing-state labels may change. The video is not re-encoded.
+The notice appears on the feature page and again before confirming permanent deletion.
 
-## Using the preview
+## Use
 
-1. Press **Scan for boosted videos**. The page explicitly explains that it reads
-   Photos' existing account-scoped cloud metadata cache; it does not refresh the
-   complete cloud library. Opening the page starts no media scan.
-2. Review the cached processed candidates. Rows show the stored filename,
-   capture time, duration in milliseconds, dimensions, physical file size and
-   cached charged storage separately. Missing dimensions/duration show Unknown.
-3. Check chargeable candidates for review. The summary shows selected count
-   and their **cached charge**, not promised recoverable storage.
-4. Use the three-dot menu to select all, invert or deselect; sort by date, charge
-   or filename; filter by positive, zero or unknown cached charge; or rescan.
-   Select all/invert cover all completed cached results in the active filter,
-   including candidates beyond the current 50-row display page. Deselect all
-   clears hidden selections too. Sorting preserves selection by media identity.
-5. **Reclaim selected — unavailable** remains disabled regardless of selection.
+1. Enable PPE and **Unlimited Original Quality**, restart Photos, and enable Photos
+   backup with its backup quality set to **Original quality**.
+2. Open Photos → profile picture → Pixel Photos Evolved → **Video Boost Storage Reclaim**.
+3. Press **Scan for boosted videos**. This reads the active account's existing cloud
+   metadata cache; opening the page does not start a scan or refresh the full library.
+4. Select processed videos with positive cached charges. Remote aliases with the same
+   content identity appear once and share one selection. **Reclaim selected** enables
+   when at least one selectable video is checked. Sort, filter and bulk selection remain
+   available; only 50 rows are displayed per page.
+5. Press **Reclaim selected**, review the permanent-deletion and processing-flag notice,
+   then confirm **Reclaim**. Work runs off the UI thread, one logical video at a time.
+6. Keep Photos running and online. **Pause reclaim** stops at a safe checkpoint.
+   After an interruption, return to this page and choose **Resume reclaim** with the
+   original account active. Completed items are removed from the current selection.
 
-The list renders at most 50 candidates at once. Previous/Next change the display
-page; selection applies to the full result set. Back or closing PPE cancels the
-scan and clears review state. Reopening starts with no scan or selection. A cheap
-account observer invalidates cached results and selection if the account changes
-or account access becomes unavailable while this page is open. It enumerates no
-media. No selected item is authorized for an upload or deletion.
+The summary separates file size from cached charged storage. Cached charges are estimates,
+not a promise of recovered quota. Zero/unknown-charge records are not selectable.
 
-## Verified Android access path
+## Implemented workflow
 
-The pinned Photos **7.97.0.1000520730 / 52549361**, Android **API 37**, ARM64
-compatibility gate runs before reading metadata. Within the Photos process,
-reflection resolves its existing `cdmo.a(Context).h(Class,Object)` service scope
-and `noz.i():int` active account lookup. Pinned DEX inspection established that
-Photos names its databases `gphotos` + internal account number + `.db`.
-The module opens the corresponding existing database through Android
-`SQLiteDatabase.openDatabase` with **OPEN_READONLY**. It creates no database and
-does not modify Photos' schema or cache.
+The Photos/API/ABI gate remains pinned to Photos **7.97.0.1000520730 / 52549361**,
+Android API 37, ARM64. Account lookup uses Photos' native account service. Metadata reads
+use the existing account database with Android SQLite **OPEN_READONLY**; PPE does not
+write Photos' database or extract account credentials.
 
-Enumeration uses `remote_media`, ordered by its numeric primary key, in keyset
-pages of 200 rows. It does **not** reuse the 500-row local MediaStore diagnostic
-scan. Cloud metadata rows do not require a local file or MediaStore match.
-The worker checks account identity and cancellation between pages, closes its
-cursors/database on normal completion and handled failures, deduplicates candidate
-media keys, and bounds retained candidates to 2,000 (checked after each page,
-so one page can exceed that threshold). Reaching the bound reports an incomplete
-scan. UI publication is separated from worker mutation; a page generation check
-discards completion from a page that has been closed/reopened.
+The scanner pages through `remote_media` in batches of 200, retaining at most roughly
+2,000 candidates (the limit is checked after each batch). Native processed format 2,
+video type 2, active state, completed upload, playable flag, unhidden/unshared/full-backup
+status and nonempty cloud/content identity are required. Deduplication and selection use
+the content `dedup_key`, rather than the individual cloud alias `media_key`.
 
-This is **cache enumeration**, not authenticated network pagination. It cannot
-establish full library coverage, current server state, network availability,
-current ownership, download accessibility, or deletion independence. The scan
-timestamp is when PPE inspected the cache, not the cache's server freshness.
-The cache may be populated or changed by Photos while PPE is scanning; this is
-not a transactionally frozen full-library snapshot. There are no network retries,
-rate-limit claims, cached transaction journals or automatic restart/resume.
+For each confirmed selection the worker:
 
-## Classification and storage accounting
+1. Rechecks account, supported build, backup settings, file size and source aliases.
+2. Uses a matching full local copy or Photos' native full-quality download task.
+3. Copies the bytes to Photos' private `files/ppe_reclaim_recovery/` directory, fsyncs
+   them, checks exact length and re-reads their SHA-256. Source identity comes from
+   Photos' selected native media/local mapping, not an assumed checksum encoding.
+   Failure stops before cloud deletion.
+4. Saves a durable journal before each destructive step. Calls Photos' native
+   **REMOTE_ONLY** Trash operation for that logical video, then its selected-item
+   permanent Trash deletion. It never calls Empty Trash or deletes other Trash items.
+5. Waits for source disappearance and Photos' account action queue to drain before
+   publishing the verified bytes to `DCIM/Camera/` through MediaStore.
+6. Resolves the replacement's own Photos identity from the exact published MediaStore
+   URI and requests native **manual backup for that selected replacement**. Verification
+   follows this stable URI if Photos changes a provisional key after upload. Completion
+   requires native local upload processing with no permanent failure and matching
+   active, uploaded cloud records reporting the exact size and explicit zero charge.
 
-Cached review candidates require all of:
+A protected copy is verified again before destructive actions. Stages are persisted in
+the private `ppe_reclaim_journal_v1` preferences. The worker can resume after an APK update
+or Photos restart, including after deletion but before upload. Network/native failures
+retain the journal and copies and expose **Resume reclaim**. Download waits are bounded
+at five minutes, source/action waits at three minutes and replacement verification at
+ten minutes per attempt; Photos owns its network retries.
 
-- Photos' native `blanford_format = 2` (processed output), video type `2`;
-- active media state `0`, upload status `100`, playable video flag `1`;
-- no partial backup, hidden or shared flags;
-- nonempty cloud media key, deduplication key and filename.
+## Limits and recovery
 
-Only a known positive `quota_charged_bytes` permits review selection. Explicit
-zero-charge records can be displayed with the zero-charge filter and cannot be
-selected. NULL or negative quota is unknown and cannot be selected. Ordinary
-videos, cover/raw formats, pending/non-active records and missing identity fail
-closed. Filenames are display metadata, never completion evidence.
+- Permanent cloud deletion cannot be undone through Trash. Local recovery copies are
+  retained even after success and consume device space. Do not clear Photos app data
+  or uninstall Photos while recovering an interrupted job.
+- Reclaim is an in-process worker, not an Android foreground service. Closing its page
+  does not deliberately stop it, but Android may kill Photos; resume manually afterward.
+- Scans and quota verification use Photos' cache. No full fresh server-library scan,
+  account-wide quota guarantee, cloud thumbnail loader or independent server audit is
+  claimed. A stale/nonzero/unknown result stays pending instead of being called complete.
+- An ordinary reupload no longer has native processed format 2. Photos may still infer
+  a Boost-related state from a downloaded VB-02 filename/local metadata. This native
+  state mismatch was seen in the earlier dummy experiment; the app warns about losing
+  processing flags rather than trying to recreate them.
+- The automatic device test used only the explicitly authorized dummy. The two real
+  chargeable processed videos were scanned and selected for UI checks, not reclaimed.
 
-`size_bytes` describes the media file. `quota_charged_bytes` describes the charge
-stored by Photos for that record. They are never substituted for one another.
-A backup quality label, Pixel model or filename does not establish quota.
-Even these strict cached matches are **not automatic reclaim eligibility**:
-ownership, live metadata and replacement safety still need fresh verification.
-
-The current Android integration has no verified cloud thumbnail loader or cloud
-viewer binding. Such rows explicitly say that thumbnail/preview is unavailable.
-For a trusted `content://media/` local URI, the page can offer the normal Photos
-viewer; this branch has not been exercised with the detected cloud-cache rows.
-No media URLs, cookies or credentials are extracted, requested or exported.
-
-## What blocks automatic reclaim
-
-| Capability | Status |
-|---|---|
-| Native PPE page and explicit scan | Implemented; device tested |
-| Account-scoped cached cloud enumeration / quota parsing | Implemented; device tested |
-| Cached native processed-output classification | Implemented; compiled and device tested |
-| Review selection / sorting / filters | Implemented; see current device report |
-| Complete, freshly authenticated cloud enumeration | Blocked: no validated Android API binding |
-| Actual cloud thumbnails and cloud viewer | Blocked: no validated Android binding |
-| Original-quality download and integrity verification | Blocked: no validated download binding |
-| Controlled ordinary Pixel XL upload of a selected copy | Blocked: no validated scheduling/correlation binding |
-| Independent zero-charge replacement / deduplication proof | Blocked: no upload experiment or server proof |
-| Source-specific safe Trash / restore | Blocked; no mutation implementation |
-| Persistent reclaim journal, batch/retry/reboot recovery | Not implemented; depends on the preceding gates |
-
-The existing Pixel XL identity is process-wide and applied at startup. It is not
-a separately verified per-item reclaim upload boundary. Temporary Video Boost
-uploads retain their established native identity route. No global identity
-toggles, media rewriting, transcoding, token rewriting or new hooks were added.
-The existing Brainfuck policy and ABI 1 are unchanged.
-
-Identical reuploads may resolve to the original logical cloud object. Separate
-filenames or media keys would not prove safe independent deletion. A successful
-upload would not prove zero charge. A future implementation must demonstrate a
-full-quality independent replacement, fresh explicit zero quota, correct account,
-protected device copies and safe relationships **before** adding source Trash.
-There is no evidence for that gate in this preview, so neither Trash nor permanent
-deletion is callable. Trash is never emptied. No album/Video Boost relationship
-preservation or account-meter reconciliation is claimed.
-
-Cancellation or an error leaves every original untouched. If metadata access
-fails, the page reports an incomplete/unavailable scan, never a successful empty
-full-cloud scan. Retry starts a fresh cache inspection. Closing/restarting Photos
-discards this read-only review state; there is no partial mutation to recover.
-
-## Reference research and evidence
-
-[Google Photos Toolkit](https://github.com/xob0t/Google-Photos-Toolkit/tree/6db9ab355e4797327e4078cf87a2b6994d36cf73)
-was inspected at revision `6db9ab355e4797327e4078cf87a2b6994d36cf73`:
-`src/api/api.ts` and `src/api/parser.ts`, specifically `EzkLib`, `EWgK9e`,
-`fDcn4b`, media/dedup keys and file size versus quota metadata. Its browser RPCs
-are not invoked by PPE. No toolkit implementation or authentication code was
-copied. See [attribution](ATTRIBUTION.md).
-
-See [implementation and acceptance report](../report/reclaim-1.1.0.md),
-[build evidence](../report/build-1.1.0.json),
-[compiled checks](../report/reclaim-offline-1.1.0.json) and
-[device checks](../report/reclaim-device-1.1.0.json). Device results describe the
-cache audit, not Google server refreshes or actual storage recovery.
+See the [automatic implementation/device report](../report/reclaim-1.2.0.md),
+[earlier charged-dummy experiment](../report/reclaim-dummy-20261028.md) and
+[portable handoff](RECLAIM_HANDOFF.md).

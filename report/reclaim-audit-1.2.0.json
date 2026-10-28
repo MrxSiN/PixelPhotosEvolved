@@ -1,0 +1,57 @@
+{
+  "baseline_root": "923ae4c9fde7d6dc56652431a080cea67902d8d15631666ffb66452502aaad30",
+  "module_root": "67c4be62d7af424c920cacc95fac0b524cd04755bde60fe33cd5185a3aab01c3",
+  "function_count": 193,
+  "store_verification": true,
+  "carrier_roundtrip_root_equality": true,
+  "baseline_root_checked_before_atomic_save": true,
+  "development_probes_removed": [
+    "autoDebugError",
+    "autoDummyStart",
+    "autoProbeDownload",
+    "autoProbeFailure",
+    "autoProbeProcessed",
+    "autoProbeProcessedButton",
+    "autoProbeReplacement",
+    "autoProbeReplacementButton",
+    "autoTestButton",
+    "reclaimNativeProbe",
+    "reclaimProbeSelected"
+  ],
+  "hardcoded_dummy_filename_removed": true,
+  "sqlite_method_surface": [
+    "close()V",
+    "openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;",
+    "rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;"
+  ],
+  "sql_statements": [
+    "SELECT _id,media_key,dedup_key,filename,capture_timestamp,quota_charged_bytes,duration,width,height,size_bytes,blanford_format,upload_status,partial_backup,can_play_video,state,is_hidden,is_shared,type,local_content_uri,mime_type FROM remote_media WHERE _id > ",
+    "SELECT _id,utc_timestamp,timezone_offset,type,is_deleted FROM media WHERE dedup_key=? LIMIT 1",
+    "SELECT content_uri FROM local_media WHERE dedup_key=? AND size_bytes=? AND content_uri IS NOT NULL ORDER BY media_store_id DESC LIMIT 1",
+    "SELECT count(*) FROM action_queue",
+    "SELECT dedup_key,is_backup_processed,has_upload_permanently_failed FROM local_media WHERE media_store_id=? AND size_bytes=? LIMIT 1",
+    "SELECT media_key,state,blanford_format,size_bytes,quota_charged_bytes,upload_status,is_hidden,is_shared,partial_backup FROM remote_media WHERE dedup_key=?"
+  ],
+  "unchanged_router_function_cids": {
+    "f8": "f72602c368eddd1f188ab0c95f07aa1597f4679017c63fb6cb56891e41136e15",
+    "f9": "be46f9087473578677b9971eafda3bf9a41cdf27550908b5d37c46ce9baedbcc",
+    "f10": "affba78aa325730b4ab05ec3e9fee73e33c3d2f5b2db16dff824b010ce8a8114",
+    "f12": "8f84e99f8529129d54eb9a8f3120ccab620c6daa0159c2493b25d172daf554ef",
+    "f14": "bdeedcd0b4f420eac68a475381d325205cc649137488213863668ecafdddc046",
+    "f15": "67f68674281ef3210a8fb3af654a8218ca7b680f28fc0c2fda0cfc3fa0f7de10",
+    "f16": "132f627b3962c774ee4cff9366c3585c260c16902ba3749b87d0cb8a0207597b",
+    "f17": "2a5dd67d190ded879a73f13c4605c0e1653e4e621ab959e3901c9a802415861d"
+  },
+  "unchanged_inputs_sha256": {
+    "module/policy_process.xax": "bebfa9dff2b621c7909678ab45d85a90b348c9afabd4d6de1c12e0a85a0fa17a",
+    "module/libppepolicy.so": "3fb4d2f1fa565362ebbf7724c52befd4c251b7e87e6e349be7875000dec2ce41",
+    "policy/pixel_photos_policy.xax": "7eb04d3c0a63dd347402be5b20572aeef0a465b8f75b7db39b3c7d1189ae01d9",
+    "policy/pixel_photos_policy.bf": "b72b8d33ebd6d179b8bced0988014b4b7713df7df6aa647cc79b651156b02b7f",
+    "toolchain.lock.json": "2e61599be8b58770d2e4ec4a320bb87ecb07897ee3d42fc8e05f0f8ec41d0149"
+  },
+  "source": "Canonical XAX and Brainfuck only; external transport and test drivers are not runtime helpers or repository sources.",
+  "github_push_or_release": false,
+  "repository_baseline_root": "9602b4fff270db1b05c7a10c6ccf2c52f93d8f92b3885520eae133d030a44277",
+  "native_source_identity_treated_as_opaque": true,
+  "replacement_tracking": "Exact published MediaStore ID; current native key refreshed during verification to follow post-upload reconciliation"
+}

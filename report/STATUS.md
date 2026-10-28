@@ -1,19 +1,30 @@
-# Status — 1.1.0-dev / 25
+# Status — 1.2.0-dev / 26
 
-Checked 2026-10-27, UTC+08:00. The requested full Video Boost Storage Reclaim
-workflow is **incomplete**. The new native page performs a real read-only audit
-of the selected account's cached cloud records, with review selection, sorting,
-filters and cancellation. A device scan inspected 74,145 cached rows, identifying
-four active native processed candidates with 528,120,956 cached charged bytes.
-This does not establish current server quota, ownership or full cloud coverage.
+Checked 28 October 2026. Automatic Video Boost Storage Reclaim is implemented and installed
+on the connected Pixel 8 Pro. The workflow protects and verifies the download, deletes only
+the selected cloud source and its Trash item, publishes the same bytes and explicitly
+requests native backup. It waits for the uploaded replacement to report zero charged bytes.
+Reuploaded videos lose their Video Boost processing flag; the page and confirmation say so.
 
-Full cloud refresh, cloud thumbnails, full-quality download, controlled reclaim
-upload, independent zero-charge replacement and safe Trash/restore are blocked.
-Reclaim selected remains disabled. No media mutation or storage recovery was
-performed. The existing native upload callbacks, policy ABI and native policy
-executable remain unchanged. See the [acceptance report](reclaim-1.1.0.md) and
-[current evidence index](../docs/EVIDENCE.md) for detailed tests, artifact provenance
-and the completion checklist. Prior evidence below retains its original scope.
+The duplicate-list bug was two cloud aliases per logical video. Scan and selection now use
+`dedup_key`: four aliases become two videos and 264,060,478 unique cached charged bytes.
+Checking a row enables Reclaim; deselecting disables it. An interrupted journal enables
+Resume. The worker keeps protected local recovery files, including after success.
+
+The authorized dummy passed the automatic native transaction and restart recovery in a
+temporary development artifact. The restored cloud record reports zero charge, exact
+15,935,452-byte size and ordinary format; the published local file's SHA-256 matches the
+original and it fully decodes as 147 4K AV1 frames. This automatic run began after the earlier charged-dummy
+UI experiment, so it does not independently prove charged-positive automatic recovery.
+Real positive candidates were scanned and selected for final UI checks, not reclaimed.
+
+Final canonical source and APK checks pass, including Vector API 102, v2 signature,
+225 compiled reclaim checks and 60 router invariants / 400 concurrent operations.
+Routing/policy inputs and stored settings are preserved. Full fresh cloud enumeration,
+account-wide quota proof and an exhaustive network/disk/process failure matrix remain
+outside the demonstrated scope. See the [current report](reclaim-1.2.0.md),
+[feature guide](../docs/VIDEO_BOOST_RECLAIM.md) and [evidence index](../docs/EVIDENCE.md).
+Earlier reports remain dated snapshots of their own builds.
 
 ## Retained release and backend evidence
 

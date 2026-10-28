@@ -1,0 +1,143 @@
+{
+  "checked_at": "2026-10-28T11:52:24.323189+08:00",
+  "repository_baseline": "49b08b091229b278f7b2d24f00e9177123b9a7c3",
+  "environment": {
+    "device": "Pixel 8 Pro",
+    "android_api": 37,
+    "photos_version": "7.97.0.1000520730",
+    "photos_version_code": 52549361,
+    "module_version": "1.1.0-dev",
+    "module_version_code": 25,
+    "adb": "C:/platform-tools/adb.exe",
+    "explicit_transport_selected": true,
+    "experiment_module_sha256": "c47da7d2a59d419337bd9aa9b6057c34a335894cddaba89fd8b16536a313b58a",
+    "experiment_module_dex_differs_from_repository": true,
+    "repository_apk_installed_after_experiment": true,
+    "final_installed_module_matches_retained_apk": true,
+    "final_installed_module_sha256": "1138358311d08f39f032dd7265c935bc4bc665df5547fbef9bb4196ef0caf773"
+  },
+  "mode": "User-authorized ADB/native UI single-video experiment; no automatic PPE handler",
+  "repository_apk_final_smoke": {
+    "cache_rows_inspected": 74149,
+    "chargeable_processed_candidates": 4,
+    "reclaim_action_available": false,
+    "stored_module_settings_preserved": true,
+    "private_current_process_log_saved": true
+  },
+  "target_filename": "PXL_20261028_000544123.VB-02.MAIN.mp4",
+  "baseline_observed": {
+    "native_format": 2,
+    "state": 0,
+    "upload_status": 100,
+    "size_bytes": 15935452,
+    "quota_charged_bytes": 15935452,
+    "provenance": "Executed account-local read-only query in this session before mutation"
+  },
+  "executed_order": [
+    "protect_original_local_copies",
+    "native_cloud_download",
+    "verify_download_sha256_and_size",
+    "protect_download_on_pc_and_outside_mediastore",
+    "native_trash_current_video_only",
+    "native_trash_select_one",
+    "native_delete_permanently_selected_item",
+    "observe_source_absent_before_upload",
+    "restore_same_downloaded_bytes_and_scan",
+    "native_automatic_backup",
+    "check_zero_charge_and_native_item_details",
+    "remove_only_local_replacement",
+    "restart_photos",
+    "inspect_exact_cloud_target_details",
+    "download_replacement_and_compare_sha256",
+    "decode_to_eos",
+    "restore_original_local_processed_filename"
+  ],
+  "empty_trash_used": false,
+  "other_visible_trash_items_preserved": 8,
+  "final_remote_target": {
+    "filename": "PXL_20261028_000544123.VB-02.MAIN.mp4",
+    "blanford_format": "NULL",
+    "state": "0",
+    "upload_status": "100",
+    "size_bytes": "15935452",
+    "quota_charged_bytes": "0"
+  },
+  "final_remote_cover": {
+    "filename": "PXL_20261028_000544123.VB-01.COVER.mp4",
+    "blanford_format": "NULL",
+    "state": "0",
+    "upload_status": "100",
+    "size_bytes": "12990726",
+    "quota_charged_bytes": "0"
+  },
+  "final_local_records": [
+    {
+      "filename": "PXL_20261028_000544123.VB-01.COVER.mp4",
+      "blanford_format": "NULL",
+      "is_backup_processed": "1",
+      "has_upload_permanently_failed": "0"
+    },
+    {
+      "filename": "PXL_20261028_000544123.VB-03.MAIN.mp4",
+      "blanford_format": "2",
+      "is_backup_processed": "0",
+      "has_upload_permanently_failed": "0"
+    }
+  ],
+  "original_processed_sha256": "b6fce21218455c8a4dec36fa1204a51f1c3ef0277d1aa9145833c9c80e3b8b1c",
+  "first_cloud_download_sha256": "b6fce21218455c8a4dec36fa1204a51f1c3ef0277d1aa9145833c9c80e3b8b1c",
+  "second_cloud_download_sha256": "b6fce21218455c8a4dec36fa1204a51f1c3ef0277d1aa9145833c9c80e3b8b1c",
+  "second_cloud_download_provenance": "Executed sha256sum on DCIM/Restored target immediately after native download; matched original",
+  "original_cover_sha256": "2fc88f2b99c2b4051ed0d6cae42ee2a54dde5ee2e3b5aef2b4d5c7b9d36440b9",
+  "original_local_processed_path_restored": true,
+  "original_local_cover_hash_preserved": true,
+  "protected_verified_download_retained": true,
+  "exact_filename_and_no_storage_message_verified_after_restart": true,
+  "decode": {
+    "mime": "video/av01",
+    "width": 2160,
+    "height": 3840,
+    "duration_us": 4900000,
+    "decoded_frames": 147,
+    "first_pts_us": 0,
+    "last_pts_us": 4866666,
+    "end_of_stream": true
+  },
+  "observed_per_item_charge_reduction_bytes": 15935452,
+  "native_group_state_issue": {
+    "observed_after_replacement_download": "Boosting video quality",
+    "local_format": 2,
+    "remote_format": null,
+    "server_reprocessing_proven": false,
+    "cause_proven": false,
+    "restored_filename_proves_ui_fix": false
+  },
+  "implementation": {
+    "module_source_changed": false,
+    "repository_apk_changed": false,
+    "repository_apk_installed_after_experiment": true,
+    "automatic_reclaim_implemented": false,
+    "automatic_reclaim_enabled": false,
+    "durable_journal_implemented": false,
+    "native_mutation_bindings_validated": false
+  },
+  "not_verified": [
+    "fresh_independent_server_quota_api",
+    "account_meter_reconciliation",
+    "general_video_coverage",
+    "native_group_state_repair",
+    "album_relationship_preservation",
+    "concurrent_uploads",
+    "account_switches",
+    "network_failure_recovery",
+    "restart_recovery_during_destructive_sequence"
+  ],
+  "external_evidence_directory": "D:/Codex/ppe-reclaim-20261028",
+  "privacy": {
+    "authentication_extracted": false,
+    "app_database_writes": false,
+    "media_content_committed": false,
+    "account_identifiers_committed": false,
+    "temporary_host_helpers_committed": false
+  }
+}

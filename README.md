@@ -55,7 +55,7 @@ and motion, and stores its settings in Photos' own data directory.
 | 🎨 **Looks like Photos** | Photos' type scale, card colours, Material switch and its emphasized easing for page transitions. Light and dark themes follow Photos. |
 | 🛡 **Knows the Photos it runs in** | Every hook is checked against the running Photos build before it is installed. A missing or changed hook disables only its own feature. |
 | 🧠 **Policy in Brainfuck** | Backup and Video Boost decisions run as a compiled Brainfuck program (ARM64), called with a small fixed ABI. |
-| 🎞 **Media untouched** | Photos and videos are never renamed, rewritten, re-encoded or deleted. |
+| 🎞 **Original video bytes** | Reclaim verifies a recovery copy, permanently deletes only the selected cloud video and its Trash copy, then reuploads the same bytes without re-encoding. |
 | 🔒 **Scoped** | Only `com.google.android.apps.photos`. No system-wide hooks, no root needed by the module. |
 
 ---
@@ -82,19 +82,20 @@ Identity changes apply when Google Photos starts: force-stop and reopen Photos a
 | Setting | What it does |
 |---|---|
 | **Video Boost** | Detects Video Boost recordings and uploads them with the phone's real identity, so Google can process them while other backups keep the backup identity. Only on phones that record Video Boost: Pixel 8 Pro and the Pixel 9–11 Pro series, including XL and Fold models. |
-| **Video Boost Storage Reclaim** | Development preview: scan Photos' cached cloud records, review processed candidates and their cached charges, select, sort and filter. Full cloud refresh and automatic reclaim are unavailable; originals are preserved. |
+| **Video Boost Storage Reclaim** | Scan cached processed videos, select unique chargeable items, then automatically download, verify, delete the selected cloud originals and their Trash copies, and reupload. Reuploaded videos lose their Video Boost processing flag. |
 
 Videos processed with Video Boost count toward your Google Account storage, even when an
 unlimited backup option is on. See [Video Boost](docs/VIDEO_BOOST.md) for how an upload is
 recognised and routed.
 
-The local development build is **1.1.0-dev / 25**. Its new
-[Reclaim page](docs/VIDEO_BOOST_RECLAIM.md) is a read-only cache audit, not the
-complete download → re-upload → verify → Trash workflow. Opening the page does
-not scan automatically. **Reclaim selected** stays disabled until independent
-zero-charge replacement and source safety can be verified. The previous latest
-processing state is retained on this subpage. See the
-[implementation and test report](report/reclaim-1.1.0.md).
+The local development build is **1.2.0-dev / 26**. The
+[Reclaim page](docs/VIDEO_BOOST_RECLAIM.md) runs download → protect and verify →
+cloud deletion → permanent deletion of that selected Trash item → ordinary reupload.
+It reports completion after Photos records an uploaded replacement with zero charged
+bytes. The scan uses Photos' cache and cannot establish full library coverage.
+Reuploaded videos **lose their Video Boost processing flag**; grouping and playback
+indicators may change. An interrupted job keeps a recovery copy and can be resumed.
+See the [implementation and device report](report/reclaim-1.2.0.md).
 
 </details>
 

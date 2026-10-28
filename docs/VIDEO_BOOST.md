@@ -1,13 +1,14 @@
 # Video Boost behavior
 
-Development build 1.1.0-dev adds [Video Boost Storage Reclaim](VIDEO_BOOST_RECLAIM.md).
-It replaces Latest video with a read-only cached-cloud audit page; the latest
-native state remains inside it. Full server scanning, replacement upload and
-source removal are unavailable. The established routing described below is unchanged.
+Development build **1.2.0-dev** adds automatic [Video Boost Storage Reclaim](VIDEO_BOOST_RECLAIM.md).
+After explicit selection and confirmation, it verifies a full-quality recovery copy,
+deletes only the selected cloud original and its Trash copy, then reuploads the same
+bytes. The replacement loses its Video Boost processing flag. The scan uses cached
+cloud metadata. The established upload routing described below is unchanged.
 
 Ordinary uploads retain the process-start Pixel XL baseline. Verified temporary
 Video Boost uploads use captured real-device headers/client information. Global
-Build values never toggle per upload. The module does not alter media or force
+Build values never toggle per upload. The upload router does not alter video bytes or force
 processing flags; Google Photos owns the upload protocol and cloud workflow.
 
 ## Eligibility and scope

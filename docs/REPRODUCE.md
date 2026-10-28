@@ -1,37 +1,29 @@
 # Reproducing a build
 
-## Reclaim development build (1.1.0-dev / 25)
+## Reclaim development build (1.2.0-dev / 26)
 
-For another machine, start with the [portable handoff](RECLAIM_HANDOFF.md).
-The absolute tool paths below describe the original build machine; its external
-drivers are not shipped in Git. The canonical stores and pinned SDK define the build.
+Start with the [portable handoff](RECLAIM_HANDOFF.md). The canonical module and both APKs
+now include the automatic selected-video workflow, deduplicated scan and enabled action.
+The build uses the same historical pinned SDK and unchanged ARM64 policy executable.
+Current roots, hashes and static checks are in [build-1.2.0.json](../report/build-1.2.0.json).
+The direct unsigned APK and resource-packaged signed APK use versionCode **26** and
+versionName **1.2.0-dev**. The signed APK uses the public development fixture key.
 
-The current source and both APKs include the read-only cached-cloud audit. New
-external SDK transport and test drivers are in
-`D:/Codex/ppe-reclaim-20261027/`: `edit.py`, `build-candidate.py`,
-`test-candidate.py`, `test-router.py`, `device-checks.py`. They are not runtime
-helpers or application sources. The canonical module is authoritative. Rebuild
-it with the unchanged pinned SDK below; `build-candidate.py` verifies the module,
-checks the Vector API 102 surface, adds existing resources with aapt2, zipaligns
-the uncompressed resource table and signs with the public development fixture key.
-Unsigned XAX APK entries other than the manifest are preserved byte for byte in
-the packaged signed APK. The retained unsigned APK is the direct XAX build.
+Original-machine compiler transport and test drivers are external in
+`D:/Codex/ppe-auto-20261028/`: `edit.py`, `build-candidate.py`, `test-candidate.py`,
+`test-router.py`, `final-ui.py`. They are not application sources or runtime helpers.
+The final source excludes development-only dummy controls and scan probes.
 
-Changes use the repository's documented verified-carrier construction and atomic
-Workspace.save fallback. Full graph verification and carrier roundtrip root
-equality pass; no claim is made that the current native XAX-MCP server edited
-the historical Android graph or that an expected-root transaction succeeded.
-The final save checks the existing baseline root before replacing the module.
-Brainfuck, the policy-process graph, the native executable and toolchain pins
-are unchanged. Current roots/hashes and tests are in
-[build-1.1.0.json](../report/build-1.1.0.json) and
-[the reclaim report](../report/reclaim-1.1.0.md). Earlier commands and reports below
-remain the baseline reproduction procedure.
+Verified-carrier construction, full store verification, carrier roundtrip root equality
+and atomic `Workspace.save` were used with an explicit baseline-root check. No claim is
+made that a current native XAX-MCP server edited the historical Android graph. Brainfuck,
+the policy process, native executable, router functions and SDK pins are unchanged.
+See [source audit](../report/reclaim-audit-1.2.0.json), [compiled checks](../report/reclaim-offline-1.2.0.json)
+and [device report](../report/reclaim-1.2.0.md). Older reports describe their dated builds.
 
-The repository's application source is canonical XAX and Brainfuck. Keep all
-compiler/edit/build/test drivers, fixtures and temporary carriers **outside** it,
-including anything that would otherwise be ignored. Documentation, JSON evidence
-and generated binary artifacts are retained here.
+Keep all transport scripts, temporary carriers, test fixtures and conventional-language
+tooling outside the repository, including ignored files. Canonical XAX and Brainfuck
+remain authoritative. The general reproduction steps below still apply.
 
 ## Toolchain
 

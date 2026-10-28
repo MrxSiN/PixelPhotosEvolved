@@ -1,0 +1,220 @@
+{
+  "checked_at": "2026-10-28T09:00:11.711849+00:00",
+  "test_artifact": {
+    "version": "1.2.0-dev",
+    "version_code": 26,
+    "module_root": "c3dd0f27be996a04e06b7c16179fdd308e66212dc69d48d0345071672ebee24c",
+    "module_sha256": "6950819af5e8f6b5f99d7365bf03d20e191f24d6b7806b5731f7ffad48072e0d",
+    "policy_executable_sha256": "3fb4d2f1fa565362ebbf7724c52befd4c251b7e87e6e349be7875000dec2ce41",
+    "unsigned_sha256": "0cdb56e28c4552d35111c743d5f4a6b984b919d266d758f6522dd900019108ee",
+    "signed_sha256": "aea178389e4741e19ccfd159e640d652866cb3c57065c4da6901323b3f702b50",
+    "vector_static": {
+      "module_prop": {
+        "minApiVersion": "102",
+        "targetApiVersion": "102",
+        "staticScope": "true"
+      },
+      "java_entries": [
+        "ppe.Module"
+      ],
+      "native_entries": [],
+      "scopes": [
+        "com.google.android.apps.photos"
+      ],
+      "api_members": [
+        [
+          "field",
+          "Lio/github/libxposed/api/XposedInterface$ExceptionMode;",
+          "PROTECTIVE",
+          "Lio/github/libxposed/api/XposedInterface$ExceptionMode;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$Chain;",
+          "getArg",
+          "(I)Ljava/lang/Object;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$Chain;",
+          "getThisObject",
+          "()Ljava/lang/Object;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$Chain;",
+          "proceed",
+          "()Ljava/lang/Object;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$Chain;",
+          "proceed",
+          "([Ljava/lang/Object;)Ljava/lang/Object;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$Chain;",
+          "proceedWith",
+          "(Ljava/lang/Object;)Ljava/lang/Object;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+          "intercept",
+          "(Lio/github/libxposed/api/XposedInterface$Hooker;)Lio/github/libxposed/api/XposedInterface$HookHandle;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+          "setExceptionMode",
+          "(Lio/github/libxposed/api/XposedInterface$ExceptionMode;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+          "setId",
+          "(Ljava/lang/String;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+          102
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface;",
+          "getApiVersion",
+          "()I",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface;",
+          "getFrameworkName",
+          "()Ljava/lang/String;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface;",
+          "getFrameworkVersion",
+          "()Ljava/lang/String;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface;",
+          "getModuleApplicationInfo",
+          "()Landroid/content/pm/ApplicationInfo;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedInterface;",
+          "hook",
+          "(Ljava/lang/reflect/Executable;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedModule;",
+          "<init>",
+          "()V",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedModuleInterface$PackageReadyParam;",
+          "getPackageName",
+          "()Ljava/lang/String;",
+          101
+        ],
+        [
+          "method",
+          "Lio/github/libxposed/api/XposedModuleInterface;",
+          "onPackageReady",
+          "(Lio/github/libxposed/api/XposedModuleInterface$PackageReadyParam;)V",
+          101
+        ]
+      ],
+      "required_api": 102,
+      "violations": []
+    },
+    "xax_apk_entries_preserved": true,
+    "signer": "XAX public development fixture key",
+    "sdk_pin": "0876b591f39908e98aa31f746ae2e26bb88c837e"
+  },
+  "scope": "Only the user-authorized dummy; already ordinary zero-charge cloud copy after the earlier charged-dummy experiment. Native processed-positive classification was not bypassed in production. A temporary development-only entry invoked the same transaction worker for this dummy.",
+  "filename": "PXL_20261028_000544123.VB-02.MAIN.mp4",
+  "automatic_transaction_complete": true,
+  "journal_final_stage": 7,
+  "native_download_forced_by_removing_dummy_local_copies": true,
+  "native_remote_only_trash": true,
+  "native_selected_item_permanent_deletion": true,
+  "native_action_queue_drained_before_publication": true,
+  "original_quality_preflight_passed": true,
+  "native_selected_item_manual_backup_requested": true,
+  "replacement_remote_records": [
+    {
+      "state": "0",
+      "upload_status": "100",
+      "size_bytes": "15935452",
+      "quota_charged_bytes": "0",
+      "blanford_format": "NULL"
+    }
+  ],
+  "published_local_backup_processed": true,
+  "replacement_and_private_copy_sha256": "b6fce21218455c8a4dec36fa1204a51f1c3ef0277d1aa9145833c9c80e3b8b1c",
+  "decoder_result": "{\"mime\":\"video/av01\",\"width\":2160,\"height\":3840,\"duration_us\":4900000,\"decoded_frames\":147,\"first_pts_us\":0,\"last_pts_us\":4866666,\"end_of_stream\":true}",
+  "cover_records_after": [
+    {
+      "state": "0",
+      "upload_status": "100",
+      "size_bytes": "12990726",
+      "quota_charged_bytes": "0"
+    }
+  ],
+  "trash_after": [
+    {
+      "count": "7"
+    }
+  ],
+  "positive_processed_after": [
+    {
+      "aliases": "4",
+      "logical_videos": "2"
+    }
+  ],
+  "resume_validation": "Earlier run stopped at stage 2 before mutation when a required native feature was missing; source and protected copy persisted. After fixing the binding, app restart/APK update resumed through deletion and publication; a second update resumed stage 6 and requested native backup. No repeated deletion was needed.",
+  "settings_preserved": true,
+  "temporary_instrumentation_failures": "Two early Photos crashes came from an unsupported Frida attachment; that server was stopped. Native canonical-graph probes and the final transactions completed without Frida.",
+  "limitations": [
+    "Automatic end-to-end transaction used ordinary dummy; charged processed dummy was validated with native UI in earlier experiment.",
+    "Local cache completion and quota evidence; no independent account-wide server storage audit.",
+    "Process-death recovery tested by restart/update; arbitrary network-loss and disk-full failure matrix not exercised."
+  ],
+  "native_source_keys_treated_as_opaque": true,
+  "replacement_identity_resolved_from_exact_published_uri": true,
+  "identity_resolution_checks": {
+    "replacement_identity_does_not_reuse_opaque_source_key": true,
+    "real_processed_video_download_and_protection_without_cloud_mutation": true
+  },
+  "replacement_native_key_reconciliation_observed": true,
+  "replacement_key_reconciliation_validation": "A published local key differed from the later key on the same MediaStore ID after native backup. An earlier fixed-key verification stayed pending; refreshing identity from the stable published URI completed the repeat automatic transaction and persisted stage 7.",
+  "processed_key_readonly_observation": {
+    "existing_protected_processed_files": [
+      {
+        "size_bytes": 64743523,
+        "cloud_key_length": 27,
+        "standard_alphabet": false,
+        "matching_fingerprint_formats": []
+      }
+    ],
+    "new_media_mutations": 0
+  }
+}
