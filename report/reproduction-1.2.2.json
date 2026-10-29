@@ -1,0 +1,8 @@
+{
+  "module_and_unsigned_and_signed_exact": true,
+  "sha256": {
+    "candidate.xax": "71e1419ab6b5b8508c3a5868ce6994c5193d900648337eacec0aff3b9760367a",
+    "candidate-unsigned.apk": "facdeeb4d80209e825f5f46b40cab45b86977717c20c3128c3476361b3f48bc1",
+    "candidate-signed.apk": "bdcf62a0b610febe091a516abc6ab6771b59da509be8b9dc8123785f760a0fdc"
+  }
+}

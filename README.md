@@ -27,6 +27,9 @@ Google Photos → your profile picture → **Pixel Photos Evolved**.
 > `CP3A.261005.005`, Pixel 8 Pro, Vector 2.2 / libxposed API 102.** Hooks are pinned to this
 > Photos build. On any other build, Photos keeps its own behaviour and
 > **Compatibility &amp; diagnostics** shows what is unavailable.
+> **1.2.2-dev** restores the profile/settings UI on Photos 7.98.0.1007591100 and adds
+> DexKit read-only status discovery. Backup identity, upload routing and Reclaim remain
+> inactive on 7.98. See the [compatibility report](report/profile-1.2.2.md).
 
 > [!IMPORTANT]
 > Google decides backup eligibility and how storage is counted, on its servers. This module
@@ -88,7 +91,7 @@ Videos processed with Video Boost count toward your Google Account storage, even
 unlimited backup option is on. See [Video Boost](docs/VIDEO_BOOST.md) for how an upload is
 recognised and routed.
 
-The local development build is **1.2.1-dev / 27**. The
+The local development build is **1.2.2-dev / 28**. The
 [Reclaim page](docs/VIDEO_BOOST_RECLAIM.md) runs download → protect and verify →
 cloud deletion → permanent deletion of that selected Trash item → ordinary reupload.
 It reports completion after Photos records an uploaded replacement with zero charged
@@ -108,7 +111,8 @@ See the [implementation and device report](report/reclaim-1.2.1.md).
 
 | Android | Google Photos | Device | Status |
 |---|---|---|---|
-| 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | ✅ Working |
+| 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | Backend evidence retained from earlier builds |
+| 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | Profile/settings and DexKit discovery verified; backup/upload/Reclaim inactive |
 
 - **Version gate.** At start the module checks the Photos version, Android API level and ABI.
   An unknown combination installs nothing that changes behaviour.
@@ -159,6 +163,7 @@ is the same build signed with XAX's public test key, for reproducing it.
 | Module | [module/pixel_photos_module.xax](module/pixel_photos_module.xax) | Canonical XAX store: lifecycle, hooks, settings UI and diagnostics, lowered to DEX by the XAX android-libxposed target |
 | Policy | [policy/](policy/) | Brainfuck policy compiled by BBC to BFX, imported into XAX and built as an ARM64 stdio executable ([ABI](policy/ABI.md)) |
 | Policy host | [module/policy_process.xax](module/policy_process.xax) | The ARM64 executable packaged as `lib/arm64-v8a/libppepolicy.so`. It is run through stdio and is not a JNI library |
+| DexKit dependency | [module/deps/](module/deps/) and `module/libdexkit.so` | Precompiled dependency DEX and ARM64 JNI for read-only state discovery; [notices](docs/THIRD_PARTY.md) |
 | Resources | [module/res/](module/res/) | Label, description and the adaptive icon |
 
 ## Build
@@ -178,6 +183,7 @@ what is untested. [Evidence index](docs/EVIDENCE.md) links every report.
 
 - [XAX](https://github.com/MrxSiN/XAX) — language, semantic store and Android target
 - [BBC](https://github.com/MrxSiN/BBC) — Brainfuck compiler
+- [DexKit](https://github.com/LuckyPray/DexKit) — runtime DEX discovery ([dependency notices](docs/THIRD_PARTY.md))
 - [libxposed](https://github.com/libxposed/api) and Vector
 
 See [attribution](docs/ATTRIBUTION.md). Pixel Photos Evolved is not affiliated with or endorsed by

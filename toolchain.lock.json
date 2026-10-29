@@ -1,6 +1,155 @@
 {
   "module_sdk": {
     "repository": "https://github.com/MrxSiN/XAX",
+    "revision": "054262b0af4b40d45b61feafa07612cf87708e7d",
+    "scope": "1.2.2 module compiler; exported candidate also verifies and roundtrips on this revision",
+    "files": {
+      "compiler/integration/android/vector/vector_runtime_pin.json": "2e9912f90e80f118532fdfe28759a459615be7960cd3530618ce71d79664b59a",
+      "compiler/src/blake3.py": "bc819aaf00be9054a88db0707c94bf0a535a6c538e2ab529788df8630ec7bd03",
+      "compiler/src/xax_aarch64.py": "acc639bbeba73fc4ef694da969485e3e49fe8b0cc3a28d53bae4c0aae87871dd",
+      "compiler/src/xax_aarch64_regalloc.py": "90c7401d162581fe18375b3e5c3d76e9bcdf2072d2d66589b542b4e30766b026",
+      "compiler/src/xax_accelerator.py": "cdb6cc11064124e3d3c143022777da16a76c9cab10cd59e987fcca5c35f9fcec",
+      "compiler/src/xax_android.py": "0be32dc660b468aaaffec5ea8d5effe6b1755282ec2897381575db45e8972fdb",
+      "compiler/src/xax_android_bfc.py": "91cb606ff7edf20d4c65ef88d9115770efee16c8ad17e89388cd136dc3821778",
+      "compiler/src/xax_android_components.py": "2e84847f6bb0c7622f44a4606b0295957555d7c641cdaf0a79fa1c8085131ffb",
+      "compiler/src/xax_android_counter.py": "cdb098670a11d7338ecda50b3f608d91b06b600e8721a973e7e0c398980109ab",
+      "compiler/src/xax_android_libxposed_jvm.py": "c00d2e2cfa044806a9b061e9f2803de65e31a4ee897279538f66403b97c0a601",
+      "compiler/src/xax_android_managed.py": "67fbd4fc9f9e1683f8f1c5633966765dd67fc920b907992ebe7a60ba47251938",
+      "compiler/src/xax_android_platform.py": "621f35a756e0e0348db44c383702a64503a532679ab6096bdb17f7c3ea5e9a6c",
+      "compiler/src/xax_android_sdk.py": "ab19aa21ad780a210cf2e1970d71926c55ed66e432d17bef6e7f7db14bb60307",
+      "compiler/src/xax_apk.py": "6b2ba17a2a44c183366d69e4d6c919fbe9f4274eab2071c27eedc9db519b46a4",
+      "compiler/src/xax_apk_signing.py": "4081b085f2cede18cf055436bb6eb695a8fb8ad15b1398d63b3477d15e547033",
+      "compiler/src/xax_artifact.py": "eca5b0a33adb11b5a6183418d7ad2cf9a7dd8bafe7eb9cf5d7bc45a4d576d676",
+      "compiler/src/xax_board.py": "60a02d438cca380436c6d044464cd61c355e1ee1fd91f1cf1b72fd8386d990ac",
+      "compiler/src/xax_bootstrap.py": "ae11727b40ffa3a7d42b4441794e74cc628e71d0fca553032c67bec6f20ce55d",
+      "compiler/src/xax_build.py": "dae04597d64f60587c92db289d0b9f49e4a548321d2093db7030a6b08f9b41a4",
+      "compiler/src/xax_c_import.py": "4631408ba4dc1e62c45d5d7ba4c7a6e169e62d7f5c2006dd43ae3dd41622fd76",
+      "compiler/src/xax_compiler.py": "91c2724efecb7433f78726dcd039a1f708879f5b9961f3b54b0b2c92fd059ab9",
+      "compiler/src/xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
+      "compiler/src/xax_contract.py": "2563fd7b790f2cb327ff98296d1fa7618c8aedefa47fef14e7495a6db20e283d",
+      "compiler/src/xax_dex.py": "18b4f6b20abd18f8a231059c82ff7b752ebd609f4ae4253df23b7f9f73b56f3a",
+      "compiler/src/xax_dex_jvm.py": "acc5e3d6116495e4bfd3a49634c5eb4a3bf5446f880c5d16c85bd8854b3c0f1e",
+      "compiler/src/xax_ed25519.py": "7b86174e16942e3c2a4cc6a0c042af479b729ee30a16e487d05a44eef71f4f44",
+      "compiler/src/xax_elf.py": "7a062aecbbcb9f66535ae54e430a748b87952281dd2304d0a57e066da6980eba",
+      "compiler/src/xax_elf_link.py": "1c7aa202e1898f1dd6d91455bd0841e114eb9b779826b7cbd4f76d94761f7f98",
+      "compiler/src/xax_graph_builder.py": "8a2a07f5fceb8379893c42f7e0996dcbea9120f0f850ce90120a089231a1963e",
+      "compiler/src/xax_inline.py": "828b0ce821110cc732c1992528267c68c2bc3519e660275d51915eb5ce697a0c",
+      "compiler/src/xax_jni.py": "46a1707045d7542c7ed991602b0e45eb75f3702385b500bf51ac99980d9f6100",
+      "compiler/src/xax_jvm.py": "0de9d7ded1be885ad095254e5c22c76cc31e366415730fa74befe31acc17a313",
+      "compiler/src/xax_jvm_bridge.py": "ef6bc96259d9a0652c889be1ca96d5e89b127fbda69b32d4b94429a2ec99b419",
+      "compiler/src/xax_jvm_import.py": "51f34e9e87d72536ac8a49213c2190b8429ffcf177c6d2c42d0c66ca929035f3",
+      "compiler/src/xax_libxposed.py": "40e9b2613882c0a12f8a593bee13e991413e833f7d550759f70d5f7e4ff05de2",
+      "compiler/src/xax_linux.py": "ac4c52e60285fa3914ba6cd56aead5f861ce8612a623cbd25b38c54c3c8eb232",
+      "compiler/src/xax_linux_aarch64.py": "6898764ae6627291207b067e8a184a2d4a285886d281948a8c184d9caa5ead24",
+      "compiler/src/xax_local_protocol.py": "86864aeba85af5cf629d362aaa24c757a2663751b28a616d85778f433a0fce8c",
+      "compiler/src/xax_manifest.py": "85ed75ea6812241d45ed92bdee2d5af866d6a3a9a007c3dff90d6dde1bd6f56f",
+      "compiler/src/xax_native.py": "5d803fcf68c64fe7ed5e2f314a481cb827fd312a43085dd172fda7e3b3e70490",
+      "compiler/src/xax_native_blake3.py": "60ae34d694091ddd47c4eb34879260360b1f8558d2444b0b89235607fc1c5699",
+      "compiler/src/xax_native_blake3_store.py": "0fdea2d3663efd477bd3305bdf79c38a22e6c540755304913eae4ee0158c8c15",
+      "compiler/src/xax_optimizer.py": "2a481ab96033cd9d60566230120a93b9c48ec0af2cb7a53dd628147312631043",
+      "compiler/src/xax_pe.py": "c6bb5ccea6ec434ceb2ca58e4b2cd5cdc15a4ede83a6b5ef0714588dbcc38f78",
+      "compiler/src/xax_platform.py": "639fbb9f33532afe458ef9d4dddf403110464c9d99bf701f93491aab8d8c8b6d",
+      "compiler/src/xax_prefetch.py": "70eb7ba0344819138f768a17626d28ac01d4b4c8d8dabf3f3fdeda608d6feed0",
+      "compiler/src/xax_ranges.py": "eb212e92c38bda63c8d5bd4612e67e24c99b6408b94946200b618f20af998d82",
+      "compiler/src/xax_replacement.py": "5c25dfb8645952a887c1cc962a9c339251a351c401d7c057f42e1253f8988373",
+      "compiler/src/xax_resources.py": "b4f971f49ace577c761a1d0792c0a083ab259968a4541d9d98686056c191e5f1",
+      "compiler/src/xax_riscv64.py": "01794d4d9f1b88765e1b12d9aeec91581b6457bdca93982914f8ce0698dbcb8a",
+      "compiler/src/xax_selfhost.py": "aaf85fa2663b2e0de00909391f892b24d888c24dfca12d78ac31ae1997e3b8e8",
+      "compiler/src/xax_selfhost_aarch64_emit.py": "83f87fa36b32b8334b4c49aef980e5d9958b92750bfdf3194da3e68d60b282be",
+      "compiler/src/xax_selfhost_aarch64_frame.py": "4b86970b021cf01f553efda3976ec6a762188139d630f9d58d07d407b6dfd7ad",
+      "compiler/src/xax_selfhost_aarch64_general.py": "7825fbb7e3d5b3dd07163e658769be305f3b02b8972f51412430006b211fe9f1",
+      "compiler/src/xax_selfhost_aarch64_image.py": "e80d4c38880df3103cd763ed83432955c975107cba8ca0c8f8a3f12877b346b2",
+      "compiler/src/xax_selfhost_aarch64_legacy.py": "18b05f7593f587ce9262a06a9b8886ee2717561c347c3a65d91e17d4b5d6e25c",
+      "compiler/src/xax_selfhost_aarch64_lower.py": "51b91c911ea22d252c0a2f0365ef3c21962041e880b8548ef96c5eb39af463bf",
+      "compiler/src/xax_selfhost_android.py": "460ce56bec509c945647d955e1ec057b9fdfc0adf954c3ad618d0e0ddf50f3a2",
+      "compiler/src/xax_selfhost_android_elf.py": "825d6531b9237b30c23868aa97b3f6d3734d3e064e9fda91787ba248622f107c",
+      "compiler/src/xax_selfhost_android_managed_rules.py": "779c2f8653f60a558fc7d6b9109849e8940feb3790c944718b2d56df6e0308aa",
+      "compiler/src/xax_selfhost_android_resources.py": "9dc08a3ab4caddcd01b488e21d96f2158412e92caf882a110f69d4b3e70bc6b4",
+      "compiler/src/xax_selfhost_android_rules.py": "465c96c4f5b1a1e3d91288d3a4f3dd1d2d52cad551b6d388f2aaf86d9ea701c2",
+      "compiler/src/xax_selfhost_apk.py": "478cfb40b599838d7982272bb17bf089ae59777009396aaa9164b46aaeb6cccd",
+      "compiler/src/xax_selfhost_apk_signing.py": "3a13ff9d804c7d97b95d29c170d79ed4c7d8bee6c7e22b4b97a807dfb8c5a8b5",
+      "compiler/src/xax_selfhost_blake3.py": "65a4dc4aa4679b35b9de0f9e8fc41a5fdebaf6ae110f671ea92c8a4d06e27fc9",
+      "compiler/src/xax_selfhost_cfg.py": "9e383fc81a6968fbfa398a75ad763dc9b5a4550870d5717d512f81b0bc03d9fa",
+      "compiler/src/xax_selfhost_compiler.py": "12834cc786279c6dc690d412c3713f208b129c0f7d6d984f37af2464af8faf1d",
+      "compiler/src/xax_selfhost_dex.py": "f5c6919837562ab165a0ab99394c201881579bc771cff1234d6d8bac0a7a5ecb",
+      "compiler/src/xax_selfhost_dex_jvm.py": "6fd614678ec3a0fdec502018fec303e4165365229a2511bc39095bea8011b07f",
+      "compiler/src/xax_selfhost_dex_writer.py": "6354b77efb944592d1eb119f04a1b2f23e39fc3df7f0d66ad4a4b82bd7be7dfa",
+      "compiler/src/xax_selfhost_diagnostics.py": "4523d32a34d48c25aebad6301951dbe5ca78e5d0ba301248088c48989e0ad9ec",
+      "compiler/src/xax_selfhost_driver.py": "1f146992d857587432c54a681dd50f81125ff5eb3d3cf84a196a89648d3e2b91",
+      "compiler/src/xax_selfhost_ed25519.py": "adc29e20b4ec980e0f9ea4df2d7f7db87c2cf09032d77c951b9498c6be3de629",
+      "compiler/src/xax_selfhost_edit.py": "eafc612809096a38c3e57b57139071ac178c16519232d7e15c283f308e5da2ed",
+      "compiler/src/xax_selfhost_evolution.py": "5184dac861547b1f38760305a529c927ef309bd041631f0b58add3e9314dd067",
+      "compiler/src/xax_selfhost_facts.py": "a1d314e3103d68b4f15e550537172ba5096362898938d9371afa059bb8c791ed",
+      "compiler/src/xax_selfhost_general_accel.py": "9cc97b325bade4abcd958544dd4b030bed28418710c33860f1e4f3ba707390cc",
+      "compiler/src/xax_selfhost_general_dll.py": "39df1690dac05a82e3e6087d5546f1519e81f9ad7d83bfdecf1187045046e0b6",
+      "compiler/src/xax_selfhost_general_emit.py": "a8d70c517d1d44488a087ca0b293c69dbb540ad555d5c8300c1bc2de89105663",
+      "compiler/src/xax_selfhost_general_frame.py": "4e2ac1f45335a6c8c60c3b418a95e8aa02746213e21ac8ed6776c2b676f041c4",
+      "compiler/src/xax_selfhost_general_image.py": "9dc6b278575069175cf591221abdbbbc7743c99f9e5b00f0dbdc86afdbaf3fc0",
+      "compiler/src/xax_selfhost_general_legacy.py": "2cb66e90c4d3bf2596c29184c081e451ad015f281f2404614404060d2a32dbbf",
+      "compiler/src/xax_selfhost_general_ranges.py": "c47a6de8c6e5381aec02194f92e891ac6b92878a73cc951686be3e854a382a1b",
+      "compiler/src/xax_selfhost_general_regalloc.py": "ecf8c5e3b92fc68505b9db39a5e781afb65cd3f9e7ccc35154810a37ad3b069e",
+      "compiler/src/xax_selfhost_general_rejects.py": "9f19c4bee979c2f4e90d3e7fddaf4c086f70585acc4a870882ef310976df1e06",
+      "compiler/src/xax_selfhost_general_spirv.py": "03fd08a6f498fa1fc0490fd7f9537f391a228f85cfd64887042619f205b17c54",
+      "compiler/src/xax_selfhost_general_view.py": "73addee685334e8dac2c1956f6ebef9611222ea5686b46330afb79d7d6920d10",
+      "compiler/src/xax_selfhost_general_wasm.py": "5c72d9d5be3bd192c15532661b7016ede53ec20a8fe7c4b6618523998d9ad0f2",
+      "compiler/src/xax_selfhost_graph.py": "de76604dd3791933f9fc78b429552899cd422756da73b300934bb85da01a091d",
+      "compiler/src/xax_selfhost_jvm.py": "ddf24bda5d416617f2f03b22f2a01a5172f7675610766aae9736d246e37ce79f",
+      "compiler/src/xax_selfhost_jvm_aggregate.py": "7dbbe966a33b7b4b0a676aa4b4e61998508e5ddece86c702355c50a332b49ee1",
+      "compiler/src/xax_selfhost_jvm_callback.py": "6d6ceb01537b2e65644f8cd57c8f347490665b8ac4d3bbc66c5cbfb025d2c0a9",
+      "compiler/src/xax_selfhost_jvm_class.py": "0777b0d7873556e2a3f52cee0a45c29f707a01983669142b0ee2b9aae4e80774",
+      "compiler/src/xax_selfhost_jvm_code.py": "e93a89734f15d2f13f2e56aca67599a5239cc6eb9411aaa9e3a65dd422fd79a3",
+      "compiler/src/xax_selfhost_jvm_emit.py": "cad12f27b791cd47d5d17a512d49fbd68bbc7ee71ad672e4275ce607a55c4583",
+      "compiler/src/xax_selfhost_jvm_foreign.py": "76e6bd5259039258bd65533843fad79219d02a530c493cb252f8c3f31528225b",
+      "compiler/src/xax_selfhost_jvm_indirect.py": "ee128b30c3a5b6fae2aca17f8bac936d5c03d7ce9156354970e97720094d4bb3",
+      "compiler/src/xax_selfhost_jvm_lower.py": "b2217249258bc85c266442e463ecea5b325a463b8515505395aa04b1c9259f2a",
+      "compiler/src/xax_selfhost_jvm_memory.py": "401949c31ae9435718bbde2469dcf32df4a73161c04d230cc26725aa98e26a8c",
+      "compiler/src/xax_selfhost_jvm_method.py": "b3f9c51e68371afef4cb427fd3edf3c308e0fa6ff364bd9e44c180470b684070",
+      "compiler/src/xax_selfhost_render.py": "7481c4d84610b2e8dd8e5d3fadcf454caf416a18ff73c2f7338f03f186b8e3b9",
+      "compiler/src/xax_selfhost_render_graph.py": "ebb819749784235a29f1acba53d26fdf74e85b6cb49ec982f95ce9a8b14628b2",
+      "compiler/src/xax_selfhost_render_types.py": "29dbcb8e59f04f6f5a4a5925a59b2083302274ec30b3c0a8a0eef65401f1f58d",
+      "compiler/src/xax_selfhost_request.py": "84721e9427a8b39697fdde9cb06d19e396a83813e512d2fa16f3c6731779c160",
+      "compiler/src/xax_selfhost_resolve.py": "365e6b8531acb1b62415a9afdd5d1fe5c924173398640b79b497618200f671ed",
+      "compiler/src/xax_selfhost_riscv64.py": "1c4864329a126b9b2aecaedbee0ee5960b9f3a79522ed2700500acff06a7aa0f",
+      "compiler/src/xax_selfhost_riscv64_backend.py": "1a29892efe76879673027c01df241a16c9e236570efef533c20b87cb794602c7",
+      "compiler/src/xax_selfhost_seed.py": "6db22700009fe9bf72ddb1c76b714e12e1bbfb57520d531571f661991734bdd8",
+      "compiler/src/xax_selfhost_semantic.py": "55586fe261417a77074152c5d67a2b4d9b4758a4219020867e1f797226cc0965",
+      "compiler/src/xax_selfhost_store.py": "0ffb58503a0e69d3d82c57236301ddf41b017ae8740dc10e5abad5f8fc58550f",
+      "compiler/src/xax_selfhost_target.py": "d28cc5cab0b0b779c3a6cfe35ed5280d1b63098ae35a0c6235710d36205ee1df",
+      "compiler/src/xax_selfhost_typing.py": "5f28e02f2604aac08370562cdb145ae42cb6cf09bacc9a53aa36d16209f469e6",
+      "compiler/src/xax_selfhost_verify.py": "09a8a78dfc56f6a83a3ebc5105ae523774b365423ecf9245e44c2b5722880304",
+      "compiler/src/xax_selfhost_views_backend.py": "debaaea92b99381b807d56efa6eeaecf454e160a4fbea3439d1fce8aec2dd2d7",
+      "compiler/src/xax_selfhost_writer.py": "ad2b1d38a6817cc9885ce9569705541f92af74fac656d26c138ffcd319e5ba37",
+      "compiler/src/xax_selfhost_x86_64_backend.py": "68d7f18e410022c45e1acf7bb6ef0b085e0af8542c4d8ce05c79cf87d648770c",
+      "compiler/src/xax_selfhost_x86_64_general.py": "042646092053514ce5ce38b34d5bb5e80c7114603edce25da9a1796c6bf95a66",
+      "compiler/src/xax_spirv.py": "9d8dae5bf7c160000e9053cec218012750fdc6c22a5a917aa2e4873a1782da05",
+      "compiler/src/xax_status_docs.py": "3005bfb5c6d7addb40db95cfcd5ffd7858524e0a9bd17471ada1fda0e31f0178",
+      "compiler/src/xax_stdlib.py": "be0162ac4de0a44bf6f734a8c48cc9d49b5f72e5f21ea52ec5702561ea3b789f",
+      "compiler/src/xax_strings.py": "f323ebef2d8bb3c54a3660d33ce7dcd1905b3e90f5d0a96267f1219f38774552",
+      "compiler/src/xax_structured.py": "fb3d32abc3f7f808691550756e866a13508c3e1debb3eb152bccd38537715146",
+      "compiler/src/xax_vector.py": "e600aa78a25dc57875d1577fe5cd1776679a466ea080d4870e21fbe5a6cb69bb",
+      "compiler/src/xax_views_lowering.py": "ffe13a7757be28d76138e6804b1e84f5ea0ab5208479fbdbbbfe98659b414a7f",
+      "compiler/src/xax_wasm.py": "bcca98369b988e59d546a1ad3fd3cd7f73a689d9e3c2e2c7d66a23a215eb9f4c",
+      "compiler/src/xax_wasm_legacy.py": "6537430c97363661f8918e61568937fe0a4081ac0c7e8f60b203c744cf304dfa",
+      "compiler/src/xax_web.py": "94df3382ec70c462b0c9cb0f168732d8e11eaed8f8207fac4623a05f3fd93378",
+      "compiler/src/xax_workspace.py": "ea751e2f56cfe560ea3cb981ca505bf4552c18636b32f34d0ba568727c112920",
+      "compiler/src/xax_x86_64.py": "c0c43abd17de7d096f36c6ba898650f9346d6464e46baecd6ef6b6974b60bc94",
+      "compiler/src/xax_x86_64_regalloc.py": "a1320312941df19887b62d7348df5d06235c401cfaa592165f8550b389c9b739",
+      "compiler/src/xax_x86_64_views.py": "2fa638e32ef7e41ec8fb625f86a080995e70f21fa586461298b04d0f8fed16a7",
+      "compiler/tests/fixtures/android_v2_test_signer.json": "cae344fcc6d7dbf7b6d442cb2ee314e964190c389969d431fb2a26ab430f25b8"
+    }
+  },
+  "bbc": {
+    "source": "compiler/compiler.bf",
+    "sha256": "89e87c42d870e879c4dbbf2ec578da2823351566d3e7d25801f29b5804446b2a",
+    "pipeline": "BBC bounded frontend -> BFX -> canonical XAX decision -> ARM64 stdio executable",
+    "scope": "Frozen historical BFX format 1 producer; current BBC checkout uses format 2 and is not substituted"
+  },
+  "references": {
+    "pixelify": "c4094f597ad6f8e0eab3a3653c4108279470cf62",
+    "youtubehideads": "8d059533c1ba12c27db46abb1eba9901a05df02d"
+  },
+  "policy_sdk": {
+    "repository": "https://github.com/MrxSiN/XAX",
     "revision": "0876b591f39908e98aa31f746ae2e26bb88c837e",
     "files": {
       "compiler/src/blake3.py": "bc819aaf00be9054a88db0707c94bf0a535a6c538e2ab529788df8630ec7bd03",
@@ -80,15 +229,92 @@
       "compiler/src/xax_x86_64_views.py": "a33ebfe0fed0dd710b09dd96b12742c04711d820a2b1688736ffe4fa86560cf9",
       "compiler/tests/fixtures/android_v2_test_signer.json": "cae344fcc6d7dbf7b6d442cb2ee314e964190c389969d431fb2a26ab430f25b8",
       "compiler/integration/android/vector/vector_runtime_pin.json": "2e9912f90e80f118532fdfe28759a459615be7960cd3530618ce71d79664b59a"
+    },
+    "scope": "Frozen BFX format 1 policy/process producer and historical module builds through 1.2.1"
+  },
+  "construction_sdk": {
+    "revision": "0876b591f39908e98aa31f746ae2e26bb88c837e",
+    "scope": "External initial semantic construction transport only; final store verifies/roundtrips on module_sdk"
+  },
+  "checkouts_checked_2026_10_29": {
+    "BBC": {
+      "path": "D:\\GitHub\\BBC",
+      "repository": "https://github.com/MrxSiN/BBC",
+      "before": "b96dd52752bffd497364d89562bd77eb39f071fc",
+      "after": "53783953fd87cbc9308b108d187b7f3fcfedc06d",
+      "action": "git pull --ff-only origin main",
+      "final_working_tree_clean": true
+    },
+    "XAX": {
+      "path": "D:\\GitHub\\XAX",
+      "repository": "https://github.com/MrxSiN/XAX",
+      "before": "af376e8a8a1ac5635bcad459cb7063ef0b326430",
+      "after": "054262b0af4b40d45b61feafa07612cf87708e7d",
+      "action": "git pull --ff-only origin main",
+      "final_working_tree_clean": true
+    },
+    "XAX-MCP": {
+      "path": "D:\\GitHub\\XAX-MCP",
+      "repository": "https://github.com/MrxSiN/XAX-MCP",
+      "before": "27ffb9491bfe69000b3ce9744b2b689a4d594a3e",
+      "after": "27ffb9491bfe69000b3ce9744b2b689a4d594a3e",
+      "action": "already current",
+      "final_working_tree_clean": true,
+      "embedded_xax_pin_unchanged": "af376e8a8a1ac5635bcad459cb7063ef0b326430",
+      "used_for_android_graph_edit": false
     }
   },
-  "bbc": {
-    "source": "compiler/compiler.bf",
-    "sha256": "89e87c42d870e879c4dbbf2ec578da2823351566d3e7d25801f29b5804446b2a",
-    "pipeline": "BBC bounded frontend -> BFX -> canonical XAX decision -> ARM64 stdio executable"
-  },
-  "references": {
-    "pixelify": "c4094f597ad6f8e0eab3a3653c4108279470cf62",
-    "youtubehideads": "8d059533c1ba12c27db46abb1eba9901a05df02d"
+  "dexkit": {
+    "artifacts": [
+      {
+        "coordinate": "org.luckypray:dexkit:2.3.0",
+        "file": "dexkit-2.3.0.aar",
+        "url": "https://repo.maven.apache.org/maven2/org/luckypray/dexkit/2.3.0/dexkit-2.3.0.aar",
+        "sha256": "8df532c4126b58490667f71127dc57aef62ccf3578d1d17330f2a1cb8836218e"
+      },
+      {
+        "coordinate": "com.google.flatbuffers:flatbuffers-java:23.5.26",
+        "file": "flatbuffers-java-23.5.26.jar",
+        "url": "https://repo.maven.apache.org/maven2/com/google/flatbuffers/flatbuffers-java/23.5.26/flatbuffers-java-23.5.26.jar",
+        "sha256": "8d10cac2ea9878896077ba437d76fdb1b9a07f55a863c560bb8a024b04103f8b"
+      },
+      {
+        "coordinate": "dev.rikka.ndk.thirdparty:cxx:1.2.0",
+        "file": "cxx-1.2.0.aar",
+        "url": "https://repo.maven.apache.org/maven2/dev/rikka/ndk/thirdparty/cxx/1.2.0/cxx-1.2.0.aar",
+        "sha256": "e5e4fdab7530f1ae5601c1458265e525f05bd43f885b691ee200d800fdd731f6"
+      },
+      {
+        "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:1.5.0",
+        "file": "kotlin-stdlib-1.5.0.jar",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.5.0/kotlin-stdlib-1.5.0.jar",
+        "sha256": "52283996fe4067cd7330288b96ae67ecd463614dc741172c54d9d349ab6a9cd7"
+      },
+      {
+        "coordinate": "org.jetbrains.kotlin:kotlin-stdlib-common:1.5.0",
+        "file": "kotlin-stdlib-common-1.5.0.jar",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.0/kotlin-stdlib-common-1.5.0.jar",
+        "sha256": "c14ce6720a487b5e238f1b0c30ac3ad73e45b90a40731ca0b1cfddec1a37682f"
+      },
+      {
+        "coordinate": "org.jetbrains:annotations:13.0",
+        "file": "annotations-13.0.jar",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.jar",
+        "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+      }
+    ],
+    "dependency_dex_sha256": "d94217d3d5832ab3b4ce373dcf7ecff310c78332ed7701c74201338c1cf321a9",
+    "native_libraries": {
+      "libdexkit.so": "0444cf15146c256e8bbd2154ae8b120130dab47e9226c7e853a7d653737a95cd"
+    },
+    "dependency_bytecode_tool": "Android build-tools 37.0.0 D8; application code remains XAX",
+    "source_checkout_inspected": "f86a036ef2f000e3b42a2e52a25ae3f27770e7f0",
+    "release_source_revision": "c9cd12a14b75409bebd2f73e4dfc5ff575df3eb8",
+    "release_sources": "https://github.com/LuckyPray/DexKit/tree/2.3.0",
+    "source_jar": "https://repo.maven.apache.org/maven2/org/luckypray/dexkit/2.3.0/dexkit-2.3.0-sources.jar",
+    "repo_inputs": {
+      "module/deps/dexkit-2.3.0.dex": "d94217d3d5832ab3b4ce373dcf7ecff310c78332ed7701c74201338c1cf321a9",
+      "module/libdexkit.so": "0444cf15146c256e8bbd2154ae8b120130dab47e9226c7e853a7d653737a95cd"
+    }
   }
 }

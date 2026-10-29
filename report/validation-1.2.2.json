@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-29",
+  "module_root": "b3e0625442a4cb43cd0b4206abd05dda0c2d5b7981299ddf9ccf9fdd65a08c34",
+  "verified_store_roots": {
+    "module/pixel_photos_module.xax": "b3e0625442a4cb43cd0b4206abd05dda0c2d5b7981299ddf9ccf9fdd65a08c34",
+    "module/policy_process.xax": "5c9b68f7abb873bae13a7b59db962bde1e98d649861831407d8ee2b5c5a6dcb4",
+    "policy/pixel_photos_policy.xax": "54224e4041441a3168272d14dc38f2cf0bebfbe92f22db9ef8c6299b1483b802"
+  },
+  "current_sdk_files_verified": 132,
+  "canonical_roundtrip_exact": true,
+  "all_retained_json_parse": true,
+  "authored_application_source_only_bf_xax": true,
+  "all_paths_including_ignored_scanned": true,
+  "new_document_local_links_resolve": true,
+  "native_inputs": {
+    "libppepolicy.so": {
+      "type": "ET_EXEC",
+      "machine": "AArch64"
+    },
+    "libdexkit.so": {
+      "type": "ET_DYN",
+      "machine": "AArch64"
+    }
+  },
+  "apk_dependency_and_license_bytes_match": true,
+  "apksigner_v2_verified": true,
+  "zipalign_16k_verified": true,
+  "installed_signed_apk_matches": true,
+  "compiled_checks": 392,
+  "concurrent_operations": 400,
+  "cloud_behavior_on_photos_7_98_tested": false,
+  "push_or_release": false,
+  "publication_scope": "Validation snapshot before subsequent user-authorized commit/push; no release or tag requested."
+}

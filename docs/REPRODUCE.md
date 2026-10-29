@@ -1,3 +1,55 @@
+# Current build — 1.2.2-dev / 28
+
+The current module uses XAX **054262b0af4b40d45b61feafa07612cf87708e7d**.
+Extract that exact Git revision outside this repository, and validate every file
+under `module_sdk.files` in [toolchain.lock.json](../toolchain.lock.json).
+The older `policy_sdk` pin reproduces the unchanged BFX-1 policy/process only.
+Use Python compiler transport externally with bytecode caches disabled. Authored
+application logic remains canonical XAX/Brainfuck; no transport or foreign-language
+source belongs inside this repo, including ignored paths.
+
+1. Verify all three canonical stores. The module root is recorded in
+   [build-1.2.2.json](../report/build-1.2.2.json); export/construct on the current SDK
+   preserves that root exactly. The initial edit transport used the older SDK.
+2. Supply these exact binary inputs to `xax_android_libxposed_jvm.build_module`,
+   keyed by each file's BLAKE3 digest: `module/libppepolicy.so`,
+   `module/libdexkit.so`, `module/deps/dexkit-2.3.0.dex`. Compare the raw output with
+   `module/pixel_photos_module-unsigned.apk`. Run the pinned Vector API 102 checker.
+3. Package `module/res` with aapt2 36.0.0 and platform android-37.0. Manifest:
+   package `io.github.mrxsin.pixelphotosevolved`, min SDK 33, target SDK 37,
+   versionCode 28, versionName `1.2.2-dev`, application hasCode true,
+   label `@string/app_name`, description `@string/module_description`, icon and
+   roundIcon `@mipmap/ic_launcher`. Preserve every XAX entry except replacing the
+   manifest; append the linked resources. Include `docs/THIRD_PARTY.md` as
+   `META-INF/ppe/THIRD_PARTY.md` and each `docs/licenses/*.md` under
+   `META-INF/ppe/licenses/`. Write entries stored, date 1980-01-01, Unix mode 100644;
+   preserve original XAX/resource entry order and sort license names.
+4. Align using build-tools 37.0.0 `zipalign -P 16 -f 4`, then sign using the pinned
+   SDK fixture with `sign_apk_v2` for the exact development artifact. Verify v2
+   signature, alignment, retained entry equality and installed APK hash. Use a
+   private signing capability for a release. No release was published by this task.
+
+DexKit bytes come from the exact Maven artifacts in `dexkit.artifacts` in the lock.
+Extract `classes.jar` from DexKit and cxx AARs. Run D8 37.0.0 outside the repo with
+`--min-api 33 --lib android-37.0/android.jar`, in order: DexKit classes, FlatBuffers,
+cxx classes (empty), Kotlin stdlib, stdlib-common, annotations. Its classes.dex must
+match the committed dependency DEX. Extract ARM64 `libdexkit.so` unchanged from
+the DexKit AAR. Do not compile upstream conventional source inside this project.
+Dependencies and their source/notice links are in [THIRD_PARTY.md](THIRD_PARTY.md).
+
+`libppepolicy.so` is ET_EXEC and runs through stdio. `libdexkit.so` is ET_DYN JNI
+and is loaded by absolute module-library path. These are different boundaries.
+Current BBC uses BFX format 2 (END FF, no count); the retained policy is format 1.
+Updating the BBC checkout does not migrate the validated policy automatically.
+
+Current external tools on the original machine: `D:/Codex/ppe-profile-20261029/`
+contains `build-candidate.py`, `test-profile.py`, `test-reclaim.py`, `test-progress.py`,
+`test-direct.py`, `test-router.py`, `device-check.py` and canonical construction
+transport. The module builds directly from XAX; D8 is used only for third-party
+dependency bytecode. Host fixtures do not prove Google cloud behavior on 7.98.
+
+## Historical instructions (through 1.2.1; use policy_sdk for old pins)
+
 # Reproducing a build
 
 ## Reclaim development build (1.2.1-dev / 27)

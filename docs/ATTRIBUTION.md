@@ -31,3 +31,7 @@ Exact reference and toolchain pins are in [REFERENCE_PINS.md](REFERENCE_PINS.md)
 and [toolchain.lock.json](../toolchain.lock.json). The repository's
 [LICENSE](../LICENSE) is retained unchanged. Cleanup of obsolete development
 reports does not change these attribution or upstream licensing boundaries.
+
+Bundled DexKit 2.3.0, FlatBuffers, Kotlin runtime, annotations and native dependency
+notices are recorded in [THIRD_PARTY.md](THIRD_PARTY.md), with full license copies.
+The application remains XAX/Brainfuck; upstream conventional source stays external.

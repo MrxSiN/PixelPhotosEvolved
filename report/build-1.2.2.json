@@ -1,0 +1,156 @@
+{
+  "version": "1.2.2-dev",
+  "version_code": 28,
+  "module_root": "b3e0625442a4cb43cd0b4206abd05dda0c2d5b7981299ddf9ccf9fdd65a08c34",
+  "module_sha256": "71e1419ab6b5b8508c3a5868ce6994c5193d900648337eacec0aff3b9760367a",
+  "policy_executable_sha256": "3fb4d2f1fa565362ebbf7724c52befd4c251b7e87e6e349be7875000dec2ce41",
+  "unsigned_sha256": "facdeeb4d80209e825f5f46b40cab45b86977717c20c3128c3476361b3f48bc1",
+  "signed_sha256": "bdcf62a0b610febe091a516abc6ab6771b59da509be8b9dc8123785f760a0fdc",
+  "vector_static": {
+    "module_prop": {
+      "minApiVersion": "102",
+      "targetApiVersion": "102",
+      "staticScope": "true"
+    },
+    "java_entries": [
+      "ppe.Module"
+    ],
+    "native_entries": [],
+    "scopes": [
+      "com.google.android.apps.photos"
+    ],
+    "api_members": [
+      [
+        "field",
+        "Lio/github/libxposed/api/XposedInterface$ExceptionMode;",
+        "PROTECTIVE",
+        "Lio/github/libxposed/api/XposedInterface$ExceptionMode;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "getArg",
+        "(I)Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "getThisObject",
+        "()Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "proceed",
+        "()Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "proceed",
+        "([Ljava/lang/Object;)Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$Chain;",
+        "proceedWith",
+        "(Ljava/lang/Object;)Ljava/lang/Object;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        "intercept",
+        "(Lio/github/libxposed/api/XposedInterface$Hooker;)Lio/github/libxposed/api/XposedInterface$HookHandle;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        "setExceptionMode",
+        "(Lio/github/libxposed/api/XposedInterface$ExceptionMode;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        "setId",
+        "(Ljava/lang/String;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        102
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface;",
+        "getApiVersion",
+        "()I",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface;",
+        "getFrameworkName",
+        "()Ljava/lang/String;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface;",
+        "getFrameworkVersion",
+        "()Ljava/lang/String;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface;",
+        "getModuleApplicationInfo",
+        "()Landroid/content/pm/ApplicationInfo;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedInterface;",
+        "hook",
+        "(Ljava/lang/reflect/Executable;)Lio/github/libxposed/api/XposedInterface$HookBuilder;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedModule;",
+        "<init>",
+        "()V",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedModuleInterface$PackageReadyParam;",
+        "getPackageName",
+        "()Ljava/lang/String;",
+        101
+      ],
+      [
+        "method",
+        "Lio/github/libxposed/api/XposedModuleInterface;",
+        "onPackageReady",
+        "(Lio/github/libxposed/api/XposedModuleInterface$PackageReadyParam;)V",
+        101
+      ]
+    ],
+    "required_api": 102,
+    "violations": []
+  },
+  "xax_apk_entries_preserved": true,
+  "signer": "XAX public development fixture key",
+  "sdk_pin": "054262b0af4b40d45b61feafa07612cf87708e7d",
+  "construction_sdk_pin": "0876b591f39908e98aa31f746ae2e26bb88c837e",
+  "latest_sdk_canonical_roundtrip_exact": true,
+  "third_party_notices_packaged": true,
+  "deterministic_zip_dates": "1980-01-01",
+  "dexkit_version": "2.3.0",
+  "dependency_dex_sha256": "d94217d3d5832ab3b4ce373dcf7ecff310c78332ed7701c74201338c1cf321a9",
+  "dexkit_native_sha256": "0444cf15146c256e8bbd2154ae8b120130dab47e9226c7e853a7d653737a95cd"
+}

@@ -1,3 +1,19 @@
+# Current compatibility evidence
+
+Development build **1.2.2-dev / 28** restores the profile entry and full settings
+page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a
+read-only native Video Boost state observer. Backup identity, selective upload routing
+and Storage Reclaim remain gated to **7.97.0.1000520730 / 52549361**; on 7.98 they are
+inactive. The settings page shows this limitation and disables the reclaim action.
+No upload, deletion or reclaim was initiated by this compatibility check.
+
+[Profile/DexKit report](../report/profile-1.2.2.md),
+[build](../report/build-1.2.2.json), [semantic audit](../report/profile-audit-1.2.2.json),
+[device checks](../report/profile-device-1.2.2.json),
+[compiled regressions](../report/regression-1.2.2.json),
+[dependency update](../report/dependency-update-20261029.json).
+Earlier reports below retain their original Photos version and scope.
+
 # Evidence index
 
 Current development build: **1.2.1-dev / 27**, checked 29 October 2026. Native SDK

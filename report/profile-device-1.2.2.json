@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-29",
+  "version": "1.2.2-dev",
+  "photos_version": "7.98.0.1007591100",
+  "profile_entry_count": 1,
+  "above_native_your_data": true,
+  "full_settings_page_opens": true,
+  "compatibility_banner": "This Google Photos version is not validated for backup identity, Video Boost uploads or Storage Reclaim. Those features are inactive; preferences remain saved. Supported Photos: 7.97.0.1000520730.\n\nVideo Boost status is available. Upload and reclaim hooks still require validation.",
+  "unsupported_reclaim_row_disabled": true,
+  "diagnostics_opens": true,
+  "diagnostics_version_correct": true,
+  "unsupported_feature_status_shown": true,
+  "back_and_reopen": true,
+  "settings_and_reclaim_journal_hashes_preserved": true,
+  "installed_sha256": "bdcf62a0b610febe091a516abc6ab6771b59da509be8b9dc8123785f760a0fdc",
+  "installed_matches_candidate": true,
+  "no_backup_or_reclaim_action_invoked": true,
+  "photos_version_code": 52591217,
+  "dexkit_read_only_observer_installed": true,
+  "dexkit_bridge_cleanup_logged": true,
+  "live_media_state_event_exercised": false,
+  "cloud_upload_or_reclaim_test": false,
+  "startup_events": [
+    "Unsupported Photos / Android / ABI; native behavior retained",
+    "DexKit read-only Video Boost observer installed; native upload and reclaim gates unchanged",
+    "DexKit compatibility scan finished; bridge cleanup complete",
+    "Profile card inserted above Your data"
+  ]
+}

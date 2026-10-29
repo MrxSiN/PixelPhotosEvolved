@@ -1,0 +1,8 @@
+{
+  "module_root": "b3e0625442a4cb43cd0b4206abd05dda0c2d5b7981299ddf9ccf9fdd65a08c34",
+  "result": "Compiled upload progress callback and account/pause cancellation checks: 15 passed",
+  "failures": 0,
+  "callback_body_unchanged": true,
+  "execution": "Compiled XAX callback, counter and cancel functions; UI-post seam replaced with no-op in an external fixture graph, host account/cancellation/clock fixtures. No Google cloud emulation or live network failure injection.",
+  "bytecode_verifier": "-Xverify:all"
+}

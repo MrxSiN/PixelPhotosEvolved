@@ -1,3 +1,22 @@
+# Status — 1.2.2-dev / 28
+
+Development build **1.2.2-dev / 28** restores the profile entry and full settings
+page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a
+read-only native Video Boost state observer. Backup identity, selective upload routing
+and Storage Reclaim remain gated to **7.97.0.1000520730 / 52549361**; on 7.98 they are
+inactive. The settings page shows this limitation and disables the reclaim action.
+No upload, deletion or reclaim was initiated by this compatibility check.
+
+The updated XAX compiler builds the 235-function canonical module. All 392 compiled
+checks and 400 concurrent router operations pass. Device checks confirm one profile
+card above Your data, full settings, diagnostics, disabled unsupported reclaim,
+Back/reopen and unchanged preferences/journal. DexKit closes its bridge after scan.
+No live native state event or cloud transaction on 7.98 was exercised.
+See [profile/device report](profile-1.2.2.md), [build](build-1.2.2.json),
+[regressions](regression-1.2.2.json) and [dependency update](dependency-update-20261029.json).
+
+## Retained 1.2.1 result (Photos 7.97)
+
 # Status — 1.2.1-dev / 27
 
 Checked 29 October 2026 via wireless ADB on Pixel 8 Pro. The failed real-video reclaim

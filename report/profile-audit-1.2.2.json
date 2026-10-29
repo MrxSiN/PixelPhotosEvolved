@@ -1,0 +1,50 @@
+{
+  "before": "e7501c953cfa6b8927405d184fb44408d4a30f56aa4297e0ab6a4087283f82d6",
+  "after": "b3e0625442a4cb43cd0b4206abd05dda0c2d5b7981299ddf9ccf9fdd65a08c34",
+  "function_count": 235,
+  "changed_existing_functions": [
+    "f52",
+    "f54",
+    "f83",
+    "f84",
+    "f86",
+    "f89",
+    "f101"
+  ],
+  "new_functions": [
+    "profileTitleId",
+    "profileStackId",
+    "profileIconId",
+    "profileHostSupported",
+    "profileOpen",
+    "dexkitFindLabel",
+    "dexkitClassify",
+    "dexkitObserve",
+    "dexkitWorker",
+    "dexkitFinish",
+    "dexkitStart",
+    "dexkitCaption",
+    "profileEnableIfSupported",
+    "profileRefreshSupported",
+    "profileReclaimAttach",
+    "profileBanner"
+  ],
+  "backend_function_bodies_unchanged": true,
+  "guard_7_97_unchanged": true,
+  "store_verification": true,
+  "carrier_roundtrip_root_equality": true,
+  "latest_sdk_roundtrip_root_equality": true,
+  "only_authored_application_languages": [
+    "canonical XAX",
+    "Brainfuck"
+  ],
+  "conventional_transport_and_fixtures_external": true,
+  "github_push_or_release": false,
+  "unchanged_policy_inputs_sha256": {
+    "module/policy_process.xax": "bebfa9dff2b621c7909678ab45d85a90b348c9afabd4d6de1c12e0a85a0fa17a",
+    "module/libppepolicy.so": "3fb4d2f1fa565362ebbf7724c52befd4c251b7e87e6e349be7875000dec2ce41",
+    "policy/pixel_photos_policy.xax": "7eb04d3c0a63dd347402be5b20572aeef0a465b8f75b7db39b3c7d1189ae01d9",
+    "policy/pixel_photos_policy.bf": "b72b8d33ebd6d179b8bced0988014b4b7713df7df6aa647cc79b651156b02b7f"
+  },
+  "publication_scope": "Validation snapshot before subsequent user-authorized commit/push; no release or tag requested."
+}

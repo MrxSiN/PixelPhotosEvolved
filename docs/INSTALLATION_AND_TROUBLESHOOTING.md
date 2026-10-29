@@ -1,5 +1,14 @@
 # Installation and troubleshooting
 
+Development build **1.2.2-dev / 28** restores the profile entry and full settings
+page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a
+read-only native Video Boost state observer. Backup identity, selective upload routing
+and Storage Reclaim remain gated to **7.97.0.1000520730 / 52549361**; on 7.98 they are
+inactive. The settings page shows this limitation and disables the reclaim action.
+No upload, deletion or reclaim was initiated by this compatibility check.
+
+The previously validated 7.97 behavior is described below.
+
 Install the APK from the [latest release](https://github.com/MrxSiN/PixelPhotosEvolved/releases/latest)
 or the [Xposed Modules Repository](https://modules.lsposed.org/module/io.github.mrxsin.pixelphotosevolved).
 Tested with Vector 2.2 / API 102 on a Pixel 8 Pro, Android 17 API 37 and Photos

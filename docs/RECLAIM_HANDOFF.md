@@ -1,3 +1,30 @@
+# Current handoff — 1.2.2-dev / 28
+
+Development build **1.2.2-dev / 28** restores the profile entry and full settings
+page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a
+read-only native Video Boost state observer. Backup identity, selective upload routing
+and Storage Reclaim remain gated to **7.97.0.1000520730 / 52549361**; on 7.98 they are
+inactive. The settings page shows this limitation and disables the reclaim action.
+No upload, deletion or reclaim was initiated by this compatibility check.
+
+Current canonical implementation: **235 functions**, root
+`b3e0625442a4cb43cd0b4206abd05dda0c2d5b7981299ddf9ccf9fdd65a08c34`.
+[Semantic index](../report/profile-symbols-1.2.2.json),
+[build evidence](../report/build-1.2.2.json),
+[profile report](../report/profile-1.2.2.md).
+Use current `module_sdk` in the lock (XAX `054262b0af4b40d45b61feafa07612cf87708e7d`), plus
+`module/libppepolicy.so`, `module/libdexkit.so` and `module/deps/dexkit-2.3.0.dex`.
+The historical policy compiler is separately pinned as `policy_sdk`.
+Original-machine construction/build/tests are external under
+`D:/Codex/ppe-profile-20261029/`; no runtime depends on those paths.
+`edit.py` expects the original 219-function baseline, so do not rerun it against
+the promoted store. Use the canonical source and semantic index for further work.
+The current signed APK uses the public development fixture key, not the release key.
+The reclaim native bindings, journal and recovery directory described below are
+unchanged, and must only run on the supported 7.97 host. Keep all recovery files.
+
+## Retained reclaim implementation handoff (1.2.1 / Photos 7.97)
+
 # Reclaim cross-machine handoff
 
 Current development build: **1.2.1-dev / 27**, checked 29 October 2026. Read the
