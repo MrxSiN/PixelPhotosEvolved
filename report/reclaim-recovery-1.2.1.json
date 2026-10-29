@@ -1,0 +1,42 @@
+{
+  "checked_date": "2026-10-29",
+  "transport": "Wireless ADB via C:/platform-tools/adb.exe",
+  "filename": "PXL_20261024_145453763.VB-02.MAIN.mp4",
+  "cloud_filename": "PXL_20261024_145453763.VB-03.MAIN.mp4",
+  "cloud_can_play_video": 1,
+  "cloud_width": 3840,
+  "cloud_height": 2160,
+  "cloud_duration_ms": 35266,
+  "cloud_capture_timestamp_ms": 1792882530000,
+  "exact_file_bytes": 64743523,
+  "sha256": "5f2f6916faee0526c9f13885d99d222753573d2e1d38e9f6e2190a3e6350102b",
+  "protected_copy_verified": true,
+  "published_copy_verified": true,
+  "journal_stage_before_repair": 6,
+  "journal_stage_after": 7,
+  "native_authenticated_upload_acknowledged": true,
+  "source_cloud_absent": true,
+  "replacement_remote_records": [
+    {
+      "state": "0",
+      "upload_status": "100",
+      "size_bytes": "64743523",
+      "quota_charged_bytes": "0",
+      "blanford_format": "NULL"
+    }
+  ],
+  "native_action_queue_empty": true,
+  "successful_upload_module_root": "93718184c11cd214772f1de38a7456fd53d08c440d23180ff89b696f252a52cf",
+  "final_installed_module_root": "e7501c953cfa6b8927405d184fb44408d4a30f56aa4297e0ab6a4087283f82d6",
+  "upload_progress_observed": "58.73 MB / 64.74 MB",
+  "source_deletion_repeated": false,
+  "other_videos_reclaimed": 0,
+  "bytes_reencoded_remuxed_or_metadata_stripped": false,
+  "local_legacy_backup_processed_flag": 0,
+  "completion_basis": "Authenticated native upload/finalization acknowledgement plus exact-size, active uploaded cloud record with explicit zero charge, keyed by returned server identity. Legacy local Boost key remains distinct.",
+  "limits": [
+    "Photos per-item metadata; no independent account-meter audit.",
+    "No cloud redownload checksum comparison or new full-decoder result.",
+    "Restart and callback fixtures do not constitute an exhaustive live failure matrix."
+  ]
+}

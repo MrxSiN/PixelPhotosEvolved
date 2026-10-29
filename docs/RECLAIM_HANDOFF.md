@@ -1,73 +1,54 @@
 # Reclaim cross-machine handoff
 
-Current development build: **1.2.0-dev / 26**, 28 October 2026. Read the
-[feature guide](VIDEO_BOOST_RECLAIM.md) and [implementation/device report](../report/reclaim-1.2.0.md).
+Current development build: **1.2.1-dev / 27**, checked 29 October 2026. Read the
+[feature guide](VIDEO_BOOST_RECLAIM.md) and [repair/device report](../report/reclaim-1.2.1.md).
 
-## Authoritative source and artifacts
+## Authoritative source and reproduction
 
-`module/pixel_photos_module.xax` is the canonical implementation, root
-`67c4be62d7af424c920cacc95fac0b524cd04755bde60fe33cd5185a3aab01c3`. It contains **193 functions**. The
-[semantic index](../report/reclaim-symbols-1.2.0.json) maps construction aliases to exact
-function CIDs for this root. Re-exporting a store may renumber generic handles; use CIDs
-for navigation. JSON evidence is not an alternative application source.
+`module/pixel_photos_module.xax` is the canonical **219-function** implementation,
+root `e7501c953cfa6b8927405d184fb44408d4a30f56aa4297e0ab6a4087283f82d6`. The [semantic index](../report/reclaim-symbols-1.2.1.json) maps external
+construction aliases to function CIDs; generic handles can change on export. JSON
+evidence is not application source. Keep all conventional tooling outside Git.
 
-The unsigned APK is the direct XAX build. The signed APK contains the existing Android
-resources and a v2 signature using XAX's public development fixture key. It is not signed
-with a release key. Both are retained with [build evidence](../report/build-1.2.0.json)
-and `SHA256SUMS`. Native router functions, Brainfuck policy, policy process and toolchain
-pins are unchanged. The final APK was installed and checked on the connected phone.
+Use XAX revision `0876b591f39908e98aa31f746ae2e26bb88c837e`, validated against
+`toolchain.lock.json`. Follow [REPRODUCE.md](REPRODUCE.md) to verify stores, compile with
+the unchanged ARM64 input, check API 102, package resources, align and sign. VersionCode
+is **27**, versionName **1.2.1-dev**. The retained signed APK uses the public development
+fixture key. [Build evidence](../report/build-1.2.1.json) and `SHA256SUMS` identify it;
+the final installed APK was checked byte for byte. No push or release was requested.
 
-## Reproduce on another machine
+Original-machine transport and tests live in `D:/Codex/ppe-reclaim-20261029/`:
+`edit.py`, `direct-upload.py`, `progress.py`, `build-candidate.py`, `test-candidate.py`,
+`test-progress.py`, `test-direct.py`, `test-router.py`, `final-device.py`. Recreate the
+transport through the pinned SDK elsewhere; those paths are not runtime dependencies.
+Private cache IDs, logs, videos and carriers are external. See the report for the
+separate successful-upload and final cleanup/restart candidate roots.
 
-1. Pull PPE. Keep authored application source in canonical XAX and Brainfuck. No Java,
-   Kotlin, Python or JS application helpers are required or shipped.
-2. Obtain XAX revision `0876b591f39908e98aa31f746ae2e26bb88c837e` into an external
-   tooling directory and validate every file in `toolchain.lock.json`. Current SDK
-   profiles do not substitute for this historical Android/libxposed target.
-3. Follow [REPRODUCE.md](REPRODUCE.md): verify stores, supply the unchanged ARM64 policy
-   executable to `build_module`, check Vector API 102, package resources using aapt2,
-   align, sign and verify. Use versionCode **26**, versionName **1.2.0-dev**.
-4. Verify all checksums before device work. Select the intended ADB device explicitly.
-   The tested device is Pixel 8 Pro, API 37, Photos 7.97.0.1000520730 / 52549361.
+## Native boundaries and recovery
 
-Original-machine transport/build/test drivers are external under
-`D:/Codex/ppe-auto-20261028/`. Temporary carriers, private cache identities, logs, UI dumps,
-protected videos and diagnostic tooling are outside Git. Recreate transport with the
-pinned SDK on another machine; those paths are not runtime dependencies.
+The scanner reads the active account cache with OPEN_READONLY and merges `dedup_key`
+aliases. Download, source-only Trash and selected permanent deletion retain 1.2.0's
+native bindings. The action queue drains before MediaStore publication. The new native
+SDK upload uses `cccb`/`ccxa`, an ordinary `cccp` blueprint, actual `cbzj` file fingerprint,
+`ccbz.r` byte callback and `tvo.a` finalization in `abiy.c`. Native Photos resolves auth;
+PPE does not export credentials or write its account SQL database directly.
 
-## Implemented boundaries
+Journal: Photos private `ppe_reclaim_journal_v1` preferences. Stages remain 0 download,
+1 protected, 2 Trash requested, 4 permanent deletion requested, 5 source absent,
+6 replacement published/waiting for upload, 7 complete. Exact size and reread SHA-256
+protect destructive steps. `replacement` follows the published local URI; `direct_key`
+is the authenticated response's cloud identity, which can differ from the old logical
+Boost key. `direct_complete` records native upload/finalization acknowledgement. Final
+completion also requires exact-size, active, uploaded cloud records with explicit zero
+charge. Existing 1.2.0 stage-6 journals can resume with no repeated deletion.
 
-The scan reads the active account's `remote_media` cache with OPEN_READONLY and merges
-aliases by `dedup_key`. Selection uses the same identity, fixing duplicated rows and
-the disabled-action bug. Real cached positive candidates were checked without reclaiming
-them. The authorized dummy completed the automatic native transaction and zero-charge
-verification; see the report for the ordinary-dummy test limitation.
+Progress includes the file/index, seven stages, measured bytes, waits and safe persisted
+status. Account/pause guards cancel at native byte callbacks or the next checkpoint.
+The worker remains in-process; restart recovery is manual. Verified recovery files
+remain in Photos private `files/ppe_reclaim_recovery/` even after success.
 
-The worker uses native logical media from `media`, features loaded through `yxq.v`,
-`PhotoDownloadTask`, `pht` remote-only Trash, `bney` selected Trash deletion and
-`UploadInBackgroundManagerImpl$StartBackgroundUpload` with MANUAL_BACKUP. Required native
-feature sets must be loaded before Trash calls. The native action queue must drain
-before replacement publication. No browser RPCs, credential extraction or direct
-Photos database writes are used.
-
-Recovery journal: Photos private `ppe_reclaim_journal_v1` preferences. Stages:
-0 download, 1 protected, 2 Trash requested, 4 permanent deletion requested,
-5 source absent, 6 replacement published/waiting for backup, 7 complete.
-Protection requires exact length and stable re-read SHA-256. Photos source keys are
-opaque: the published replacement is indexed and verified using its own native identity.
-The source and replacement keys may differ, and Photos can reconcile a provisional
-local key after upload. Verification refreshes identity from the stable published URI. Recovery files remain in Photos private `files/ppe_reclaim_recovery/`;
-they are retained even after success. Resume after process restart is manual.
-
-## Remaining limits and useful follow-up work
-
-Full fresh cloud-library enumeration and cloud thumbnails remain unavailable. Native
-cache observations do not guarantee server freshness or account-wide savings. The
-worker is in-process; arbitrary process kills, account switching, network failure and
-disk-full conditions have not all been exercised as a full failure matrix. Tested
-restart/update recovery covers pending native operation and post-deletion upload stages.
-
-Ordinary reuploads lose the Video Boost processing flag. Photos can infer stale native
-Boost state from local metadata or the filename; do not recreate format-2 flags to hide
-this consequence. The description and confirmation warn users explicitly. A future UI
-could expose private recovery-copy management and richer pending-job details.
+The real selected video recovered successfully with zero charged bytes. The final build
+restored completion across APK update/restart without another upload. Full fresh cloud
+enumeration, thumbnails, account-wide quota proof, recovery-file management and an
+exhaustive live failure matrix remain outside this scope. Ordinary reuploads lose the
+Video Boost processing flag; old local mappings can still infer Boost from metadata.

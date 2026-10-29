@@ -1,0 +1,36 @@
+{
+  "checks": [
+    "Persisted selected video completed at stage 7",
+    "Completed progress survives APK update and Photos restart",
+    "Progress remains attached below the page title",
+    "No automatic reupload or repeated cloud deletion on reopening",
+    "Read-only cached scan finishes",
+    "Scan excludes the successfully reclaimed ordinary video",
+    "Remaining cached candidates stay available",
+    "No selection disables Reclaim",
+    "A remaining selectable row is rendered",
+    "Selecting the remaining video enables Reclaim",
+    "Confirmation retains permanent deletion and lost processing flag notices",
+    "Canceled confirmation preserves the selection",
+    "Canceled confirmation leaves completed journal untouched",
+    "Installed version is 1.2.1-dev / 27",
+    "Installed APK matches retained final artifact",
+    "Existing settings are preserved",
+    "Startup policy and backup probes pass without a fatal exception"
+  ],
+  "module_root": "e7501c953cfa6b8927405d184fb44408d4a30f56aa4297e0ab6a4087283f82d6",
+  "signed_sha256": "7ea3a7dbec03c1e0c7843c37e4f9b46fd096bc08b61e8353ae9b276e51b643a6",
+  "unique_chargeable_candidates": 2,
+  "other_real_videos_reclaimed_by_ui_test": 0,
+  "confirmation_canceled": true,
+  "settings_preserved": {
+    "enabled": "true",
+    "pixel_xl_backup": "true",
+    "detect_video_boost": "true",
+    "storage_saver_backup": "false",
+    "storage_saver_model": "6",
+    "verbose": "false"
+  },
+  "transport": "Wireless ADB",
+  "scope": "Recovered the user-selected previously deleted real video from stage 6; no repeated deletion; one remaining candidate selected only for canceled UI confirmation."
+}

@@ -1,0 +1,19 @@
+{
+  "module_root": "e7501c953cfa6b8927405d184fb44408d4a30f56aa4297e0ab6a4087283f82d6",
+  "bytecode_verifier": "-Xverify:all",
+  "result": "Router invariants: 60 passed; concurrent operations: 400 passed",
+  "compiled_callbacks": [
+    "routeBegin",
+    "routeResume",
+    "routeFinalize",
+    "routeRequest",
+    "routeHeadersObserve",
+    "routeQueue"
+  ],
+  "operation_correlation": "Opaque per-operation token; same fingerprint/different token and null-token rejection verified",
+  "eligibility": "Actual compiled rejection paths; positive ARM64 policy and native upload recorded separately in video-boost-0.6.1.json",
+  "concurrent_operations": 400,
+  "host_fixtures_only": true,
+  "native_google_photos_network_test": false,
+  "actual_policy_eligibility_execution": "Positive device path recorded separately in video-boost-0.6.1.json; packaged ARM64 policy unchanged"
+}

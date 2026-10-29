@@ -1,6 +1,6 @@
 # Video Boost behavior
 
-Development build **1.2.0-dev** adds automatic [Video Boost Storage Reclaim](VIDEO_BOOST_RECLAIM.md).
+Development build **1.2.1-dev** repairs reupload and adds progress to automatic [Video Boost Storage Reclaim](VIDEO_BOOST_RECLAIM.md).
 After explicit selection and confirmation, it verifies a full-quality recovery copy,
 deletes only the selected cloud original and its Trash copy, then reuploads the same
 bytes. The replacement loses its Video Boost processing flag. The scan uses cached

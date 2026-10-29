@@ -1,30 +1,21 @@
-# Status — 1.2.0-dev / 26
+# Status — 1.2.1-dev / 27
 
-Checked 28 October 2026. Automatic Video Boost Storage Reclaim is implemented and installed
-on the connected Pixel 8 Pro. The workflow protects and verifies the download, deletes only
-the selected cloud source and its Trash item, publishes the same bytes and explicitly
-requests native backup. It waits for the uploaded replacement to report zero charged bytes.
-Reuploaded videos lose their Video Boost processing flag; the page and confirmation say so.
+Checked 29 October 2026 via wireless ADB on Pixel 8 Pro. The failed real-video reclaim
+is recovered: the exact 64,743,523-byte file uploaded through Photos' native SDK, and
+its ordinary cloud record reports zero charged bytes. The protected and published
+SHA-256 match. No deletion was repeated from the persisted post-deletion journal.
 
-The duplicate-list bug was two cloud aliases per logical video. Scan and selection now use
-`dedup_key`: four aliases become two videos and 264,060,478 unique cached charged bytes.
-Checking a row enables Reclaim; deselecting disables it. An interrupted journal enables
-Resume. The worker keeps protected local recovery files, including after success.
+The page now shows seven steps, current file/queue position, measured copy/upload
+bytes, waiting state and persisted status. Completion survives APK update/restart
+without resubmitting the video. Reuploaded videos lose their Video Boost processing
+flag. Scan deduplication, selection, canceled confirmation and preserved settings pass.
 
-The authorized dummy passed the automatic native transaction and restart recovery in a
-temporary development artifact. The restored cloud record reports zero charge, exact
-15,935,452-byte size and ordinary format; the published local file's SHA-256 matches the
-original and it fully decodes as 147 4K AV1 frames. This automatic run began after the earlier charged-dummy
-UI experiment, so it does not independently prove charged-positive automatic recovery.
-Real positive candidates were scanned and selected for final UI checks, not reclaimed.
-
-Final canonical source and APK checks pass, including Vector API 102, v2 signature,
-225 compiled reclaim checks and 60 router invariants / 400 concurrent operations.
-Routing/policy inputs and stored settings are preserved. Full fresh cloud enumeration,
-account-wide quota proof and an exhaustive network/disk/process failure matrix remain
-outside the demonstrated scope. See the [current report](reclaim-1.2.0.md),
-[feature guide](../docs/VIDEO_BOOST_RECLAIM.md) and [evidence index](../docs/EVIDENCE.md).
-Earlier reports remain dated snapshots of their own builds.
+Final source/APKs pass canonical and API 102 checks, v2 signature verification,
+225 reclaim checks, 25 progress checks, 15 callback/cancel fixture checks, 60 router
+invariants and 400 concurrent host operations. Seventeen final device checks pass.
+The policy/router remain unchanged. Read the [repair report](reclaim-1.2.1.md) for
+candidate provenance, the local identity distinction and limits. Full fresh enumeration,
+account-wide quota audit and exhaustive live failure injection remain unproven.
 
 ## Retained release and backend evidence
 
@@ -42,7 +33,7 @@ Vector 2.2 / 3080 / API 102.
 | Startup identity | Exact Photos/API/ABI gate; 13 Build fields, 45 property reads, five additive 2016 flags; real model captured before spoof; backup probe passes |
 | Selective Video Boost | Native BLANFORD hint + trusted MediaStore metadata + strict VB-02.MAIN + compiled BF policy 2; six exact hooks, private finalization queue, opaque operation-token correlation |
 | Native upload evidence | Genuine manual and automatic raw uploads completed with remote format 1; native headers/client prepared; Pixel XL probe still passed afterward |
-| Completed output | Two independent local/remote format-2 matches; both 2160×3840 AV1 files fully decoded on-device, 128 and 134 frames, clean end-of-stream |
+| Completed output | Two independent local/remote format-2 matches; both 2160Ã—3840 AV1 files fully decoded on-device, 128 and 134 frames, clean end-of-stream |
 | Per-item quota | Disabled original/boosted: 11,401,750 / 8,176,531 charged bytes. Enabled: 0 / 7,039,859. Capture-time module states confirmed by user |
 | Ordinary backup | Generated JPEGs uploaded manually and automatically with matching reported dimensions/size and zero charged bytes; prior generated MP4 checks retained |
 | 0.6.5 Storage Saver | Pixel 2, 3 XL, 3a XL, 4 XL, 4a, 5 and 5a identities applied on-device; Photos client eligibility confirmed for Pixel 2 to Pixel 5; Pixel 5a not eligible per Photos (PIXEL_2021_MIDYEAR); uploads and quota untested |

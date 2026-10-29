@@ -1,13 +1,21 @@
 # Evidence index
 
-Current development build: **1.2.0-dev / 26**, checked 28 October 2026. It implements
-automatic selected-video download, protection, source-only permanent deletion and ordinary
-reupload, with native backup and zero-charge completion checks. Scan results and selections
-use logical content identity. Reuploaded videos lose their Video Boost processing flag.
-The [current report](../report/reclaim-1.2.0.md) distinguishes final UI checks, a temporary
-development artifact's automatic dummy transaction and retained older backend evidence.
+Current development build: **1.2.1-dev / 27**, checked 29 October 2026. Native SDK
+reupload recovered the real selected video from its post-deletion journal; the ordinary
+cloud copy reports exact size and zero charge. Progress now includes seven stages,
+measured bytes and persistent feedback. [The report](../report/reclaim-1.2.1.md) separates
+the successful upload candidate from final cancellation/cleanup and restart checks.
 
-## Current build
+| Current report | What it establishes |
+|---|---|
+| [Repair report](../report/reclaim-1.2.1.md) | Failure diagnosis, native SDK upload, progress and limitations |
+| [Build](../report/build-1.2.1.json) / [audit](../report/reclaim-audit-1.2.1.json) | Final canonical source/APKs, API 102 and unchanged policy/router |
+| [Recovery receipt](../report/reclaim-recovery-1.2.1.json) | Real upload acknowledgement, stage 7, exact bytes/hash and zero-charge cloud metadata |
+| [Final device](../report/reclaim-final-device-1.2.1.json) | 17 checks including restart completion, selection/cancel, settings and installed APK |
+| [Reclaim](../report/reclaim-offline-1.2.1.json) / [progress](../report/reclaim-progress-offline-1.2.1.json) / [callback](../report/reclaim-upload-offline-1.2.1.json) | 225, 25 and 15 compiled host checks, with fixture scope documented |
+| [Router](../report/router-offline-1.2.1.json) | 60 invariants and 400 concurrent operations |
+
+## Earlier 1.2.0 and retained evidence
 
 The [automatic native dummy transaction](../report/reclaim-automatic-device-1.2.0.json)
 completed with zero cached charge; the published 4K AV1 file matches the protected copy's

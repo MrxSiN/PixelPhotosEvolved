@@ -1,0 +1,7 @@
+{
+  "module_root": "e7501c953cfa6b8927405d184fb44408d4a30f56aa4297e0ab6a4087283f82d6",
+  "result": "Compiled reclaim classification, sort, filter and identity-selection checks: 225 passed",
+  "failures": 0,
+  "execution": "actual compiled XAX JVM functions; host fixtures, no Google cloud simulation",
+  "bytecode_verifier": "-Xverify:all"
+}

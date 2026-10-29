@@ -88,14 +88,17 @@ Videos processed with Video Boost count toward your Google Account storage, even
 unlimited backup option is on. See [Video Boost](docs/VIDEO_BOOST.md) for how an upload is
 recognised and routed.
 
-The local development build is **1.2.0-dev / 26**. The
+The local development build is **1.2.1-dev / 27**. The
 [Reclaim page](docs/VIDEO_BOOST_RECLAIM.md) runs download → protect and verify →
 cloud deletion → permanent deletion of that selected Trash item → ordinary reupload.
 It reports completion after Photos records an uploaded replacement with zero charged
 bytes. The scan uses Photos' cache and cannot establish full library coverage.
 Reuploaded videos **lose their Video Boost processing flag**; grouping and playback
-indicators may change. An interrupted job keeps a recovery copy and can be resumed.
-See the [implementation and device report](report/reclaim-1.2.0.md).
+indicators may change. A seven-step progress bar shows the current file and live copy/upload
+bytes when available. The last stage and status survive restart; interrupted jobs retain a
+recovery copy and can be resumed. The 1.2.1 fix uploads the verified file through Photos’
+native uploader when background backup skips an old processed-video identity.
+See the [implementation and device report](report/reclaim-1.2.1.md).
 
 </details>
 
