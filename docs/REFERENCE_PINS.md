@@ -4,7 +4,7 @@
 |---|---|---|
 | Google Photos Toolkit research | `6db9ab355e4797327e4078cf87a2b6994d36cf73` | Web enumeration/metadata identity and quota concepts inspected for Reclaim; no code or browser authentication copied; Android cache access independently verified |
 | Current XAX module SDK | `054262b0af4b40d45b61feafa07612cf87708e7d` | 1.2.2 compile and canonical roundtrip; `module_sdk` file hashes |
-| Historical XAX policy/construction SDK | `0876b591f39908e98aa31f746ae2e26bb88c837e` | Frozen policy producer / initial construction; `policy_sdk` hashes |
+| Historical XAX construction SDK | `0876b591f39908e98aa31f746ae2e26bb88c837e` | Initial construction only; the policy is now built by current BBC |
 | DexKit 2.3.0 | tag `2.3.0`, `c9cd12a14b75409bebd2f73e4dfc5ff575df3eb8` | Published AAR/JNI plus D8 dependency DEX; exact artifact hashes in lock |
 | BBC checkout | `53783953fd87cbc9308b108d187b7f3fcfedc06d` | Updated 2026-10-29; format-2 frontend not substituted for frozen policy |
 | XAX-MCP checkout | `27ffb9491bfe69000b3ce9744b2b689a4d594a3e` | Already current; immutable embedded XAX af376e8 pin unchanged; not used for this Android edit |

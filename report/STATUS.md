@@ -1,40 +1,86 @@
-# Status — 1.2.2-dev / 28
+# Status — 1.1.0 / 36
 
-Development build **1.2.2-dev / 28** restores the profile entry and full settings
-page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a
-read-only native Video Boost state observer. Backup identity, selective upload routing
-and Storage Reclaim remain gated to **7.97.0.1000520730 / 52549361**; on 7.98 they are
-inactive. The settings page shows this limitation and disables the reclaim action.
-No upload, deletion or reclaim was initiated by this compatibility check.
+**1.1.0** (versionCode 36) is the release build of 1.5.0-dev: the same module, with the version name
+set to 1.1.0. Build: [build-1.1.0.json](build-1.1.0.json).
 
-The updated XAX compiler builds the 235-function canonical module. All 392 compiled
-checks and 400 concurrent router operations pass. Device checks confirm one profile
-card above Your data, full settings, diagnostics, disabled unsupported reclaim,
-Back/reopen and unchanged preferences/journal. DexKit closes its bridge after scan.
-No live native state event or cloud transaction on 7.98 was exercised.
-See [profile/device report](profile-1.2.2.md), [build](build-1.2.2.json),
-[regressions](regression-1.2.2.json) and [dependency update](dependency-update-20261029.json).
+## 1.5.0-dev / 36
 
-## Retained 1.2.1 result (Photos 7.97)
+**1.5.0-dev / 36** adds nine UI languages (简体中文, 繁體中文, Español, Português, Русский, 日本語,
+한국어, Bahasa Indonesia, Bahasa Melayu) using standard Android resources. It also fixes the profile
+card, which never appeared when Photos ran in a language other than English. A device log review led
+to four optimizations:
+- the 586 ms startup DexKit compatibility scan no longer runs when every symbol is resolved;
+- policy results are memoized instead of forking a process per probe;
+- the per-TextView `getIdentifier` call on the main thread is gone;
+- translated strings are cached.
 
-# Status — 1.2.1-dev / 27
+A backup mode change now offers **Restart now**, which closes and reopens Photos in one tap. This
+was checked on the device for Original → Storage Saver → Original.
 
-Checked 29 October 2026 via wireless ADB on Pixel 8 Pro. The failed real-video reclaim
-is recovered: the exact 64,743,523-byte file uploaded through Photos' native SDK, and
-its ordinary cloud record reports zero charged bytes. The protected and published
-SHA-256 match. No deletion was repeated from the persisted post-deletion journal.
+In an A/B of 10 cold starts per build, Photos used 7.3% less CPU in its first 8 s (−1.17 s). Launch
+time and memory were within noise.
 
-The page now shows seven steps, current file/queue position, measured copy/upload
-bytes, waiting state and persisted status. Completion survives APK update/restart
-without resubmitting the video. Reuploaded videos lose their Video Boost processing
-flag. Scan deduplication, selection, canceled confirmation and preserved settings pass.
+Checked in English, Simplified Chinese and Japanese: settings, Reclaim, diagnostics, backup probe and
+self-tests. The READMEs are now available in all ten languages. See the
+[languages and performance report](i18n-perf-1.5.0.md) and [build](build-1.5.0.json).
 
-Final source/APKs pass canonical and API 102 checks, v2 signature verification,
-225 reclaim checks, 25 progress checks, 15 callback/cancel fixture checks, 60 router
-invariants and 400 concurrent host operations. Seventeen final device checks pass.
-The policy/router remain unchanged. Read the [repair report](reclaim-1.2.1.md) for
-candidate provenance, the local identity distinction and limits. Full fresh enumeration,
-account-wide quota audit and exhaustive live failure injection remain unproven.
+## 1.4.1-dev / 33
+
+**1.4.1-dev / 33** removes the last classes pinned to Photos 7.98. New DexKit rules find the
+router's stage-4 client-info class and its protobuf message, and the backup-offer caller. On 7.98
+every symbol now comes from DexKit (`pinned fill 0, differ 0`): 1671 ms on the first start, 2 ms
+from the cache. The backup probe passes. The Reclaim page gains shorter labels, a Material 3
+confirmation dialog, a per-video progress card and a history list. The dialog was opened and
+cancelled on the device with no crash. A full reclaim run with the new progress and history views
+has not been done yet. See the [DexKit report](dexkit-1.4.1.md) and [build](build-1.4.1.json).
+
+## 1.4.0-dev / 32
+
+**1.4.0-dev / 32** resolves obfuscated Photos classes at runtime with DexKit instead of
+pinning them to one Photos build. Version-independent rules, validated on 7.97 and 7.98, resolve
+75 of 78 classes. On 7.98 the first scan takes 528 ms with 0 disagreements against the verified
+names, and later starts use a 1–2 ms cache. The backend gate is now "all required symbols
+resolved". Three classes were still pinned to 7.98 (fixed in 1.4.1).
+
+## 1.3.2-dev / 31
+
+**1.3.2-dev / 31** removes ten unused or redundant functions (dead code, the hidden back button,
+a duplicate button factory and a redundant guard): 263 → 252 functions. No behaviour change
+is intended. All 228 lookups resolve on 7.98, and the device regression passes (startup hooks,
+backup probe, settings, diagnostics, Reclaim scan, selection, viewer, back). See
+[build](build-1.3.2.json).
+
+The policy executable is now built by current BBC (BFX format 2). It matches the retired
+BFX-1 build on 21,480 device vectors and passes the in-app self-tests.
+
+**Reclaim works on 7.98.** The test video went from 37,104,159 charged bytes to a re-uploaded
+copy with 0 charged bytes. The first upload attempt timed out; Resume completed it. See the
+[reclaim report](reclaim-7.98-1.3.2.md).
+
+## 1.3.1-dev / 30
+
+**1.3.1-dev / 30** removes the page back arrow (system back is kept, and stays above the
+account sheet). Pixel model is greyed out while Unlimited Original Quality is on, and the
+Video Boost description is corrected. Video Boost Storage Reclaim is rebuilt: overflow menu,
+summary card, scan toggle, thumbnail rows with real metadata, empty states, and a bottom
+action bar pinned on screen. Checked on 7.98 in light and dark themes; no reclaim was run. See
+the [UI report](ui-1.3.1.md) and [build](build-1.3.1.json).
+
+## 1.3.0-dev / 29
+
+Development build **1.3.0-dev / 29** ports every backend hook to Photos
+**7.98.0.1007591100 / 52591217**. Backup identity, Unlimited Storage Saver, the Video Boost
+router and state observer, and Storage Reclaim are active again. The backup offer probe passes
+for Pixel XL and Pixel 5. A read-only Reclaim scan read 74,145 cached records. Diagnostics shows
+the right version, descriptions follow Photos' punctuation, and Reclaim uses Photos'
+MaterialButton. No upload, deletion or reclaim was run. 7.97 is inactive in this build. See the
+[port report](port-1.3.0.md), [symbol map](symbols-7.98-1.3.0.json) and
+[build](build-1.3.0.json).
+
+## Earlier development builds
+
+- 1.2.2-dev / 28 (Photos 7.98 profile/settings and DexKit discovery): [profile report](profile-1.2.2.md)
+- 1.2.1-dev / 27 (Photos 7.97 reclaim recovery and progress): [reclaim report](reclaim-1.2.1.md)
 
 ## Retained release and backend evidence
 

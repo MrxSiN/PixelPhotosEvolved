@@ -1,0 +1,626 @@
+{
+ "anchors": {
+  "abin": [
+   "SqliteDatabaseInTransaction is being accessed by multiple threads. original=%s, current=%s.",
+   "Not inside a transaction."
+  ],
+  "abiy": [
+   " while transaction already open in ",
+   "Starting transaction in "
+  ],
+  "abza": [
+   "Onboarding cancelled by user with valid login accounts.",
+   "ConversionDialog"
+  ],
+  "acaz": [
+   "Cannot set ondemand memory opt in state for invalid accountId",
+   "minimizedHeaderView"
+  ],
+  "acnx": [
+   "DownloadFeature{canDownload=",
+   ", hasBeenDownloaded="
+  ],
+  "ajzn": [
+   "AllMediaId(idValue="
+  ],
+  "alsa": [
+   "{inLockedFolder="
+  ],
+  "baxa": [
+   "com.google.android.apps.photos.PIXEL_2019_MIDYEAR_PRELOAD",
+   "com.google.android.feature.PIXEL_2020_MIDYEAR_EXPERIENCE"
+  ],
+  "baxs": [
+   "PixelOfferDetail{pixelModelName=",
+   ", pixelExperience="
+  ],
+  "behj": [
+   "ResolvedMediaFeature{"
+  ],
+  "bnes": [
+   "TrashMedia{accountId=",
+   ", mediaTableId="
+  ],
+  "bney": [
+   "Failed to delete photos from trash",
+   "Failed to resolve medias in batch."
+  ],
+  "cawc": [
+   "Timestamp{utcTimestamp="
+  ],
+  "cbte": [
+   "TaskResult(message=%s, age=%s, errorCode=%d, exception=%s)",
+   "TaskResult(message=%s, age=%s, extras=%s)"
+  ],
+  "cbug": [
+   "pragma foreign_key_list("
+  ],
+  "cbuy": [
+   "Cannot perform this operation because a nested transaction is in progress.",
+   "SqliteDatabaseWrapper.stringForQuery"
+  ],
+  "cbzj": [
+   "Incorrect fingerprint size: ",
+   "MediaFingerprint{hex: "
+  ],
+  "ccad": [
+   "BatchMediaItemCreator"
+  ],
+  "ccai": [
+   "CompressedMediasPojo{compressedMediaForOriginalUri=",
+   ", compressedMediaForEditedUri="
+  ],
+  "ccbt": [
+   "Failed to decode media item"
+  ],
+  "cccj": [
+   "Unable to create resume token for an aborted commit. Persisting MediaItemBlueprint",
+   "Unable to parse the blueprint, ignoring"
+  ],
+  "cccp": [
+   "editedMediaFingerprint can only be specified if uriOfEditedBytes is specified",
+   "at least one of originalUri or editedUri must be specified"
+  ],
+  "cccx": [
+   "The edited fingerprint do not match the contents of the edited file",
+   "The requested fingerprint doesn't match the contents of the file"
+  ],
+  "ccdb": [
+   "CNDE edited bytes uploaded, but local EditEntry or EditList was null during finalization. DedupKey: %s",
+   "upload failed (initial response didn't get valid location url)"
+  ],
+  "ccxa": [
+   "Parsing parameters failed in getProto(). You probably want to call some Tink register function for ",
+   "Cannot create KeysetManager: key cannot be serialized"
+  ],
+  "cdbs": [
+   "Cannot obtain authentication token",
+   "HttpOperation"
+  ],
+  "cdmo": [
+   "Invalid ContextWrapper -- If this is a Robolectric test, have you called ActivityController.create()?",
+   "Binder is already attached to context %s, cannot use %s."
+  ],
+  "coti": [
+   "mergeFrom(MessageLite) can only merge messages of the same type.",
+   "Reading from byte array should not throw IOException."
+  ],
+  "cxmy": [
+   "MAGIC_EDITOR_UPLOAD_BEFORE_EDIT",
+   "ANDROID_SEND_INTENT_HANDLER"
+  ],
+  "cygl": [
+   "SAVE_PARTNER_SHARED_ITEMS_FROM_PHOTO_ONE_UP_OPTIMISTIC",
+   "ACCEPT_PARTNER_SHARE_COLLECTION_SUGGESTION_OPTIMISTIC"
+  ],
+  "noz": [
+   "ActiveAccountUtils"
+  ],
+  "pgo": [
+   ", burstIdentifier="
+  ],
+  "pht": [
+   "Attempt to trash remote media %s without dedup key",
+   "cannot move 0 medias to trash."
+  ],
+  "tmi": [
+   "SELECTIVE_BACKUP_PROMO_HALF_SHEET_ELIGIBILITY_PROVIDER",
+   "User has not seen any AB-off promo."
+  ],
+  "trc": [
+   "CANCELLED_BY_OPTIMISTIC_ACTION",
+   "ACCOUNT_STORAGE_FULL"
+  ],
+  "tvo": [
+   "ItemUploadDbProcMgr"
+  ],
+  "uxc": [
+   "NeedsUpload(error="
+  ],
+  "uxe": [
+   "PermanentlyFailedProcessing"
+  ],
+  "uxg": [
+   "ReadyToPlay"
+  ],
+  "uxh": [
+   "Uploading"
+  ],
+  "wae": [
+   "XRAY_LUMOS_PROMO_ELIGIBILITY"
+  ],
+  "wgj": [
+   "User has reach limit for Clifford impressions",
+   "Clifford replaced with Kirby for non-members"
+  ],
+  "yvn": [
+   "Already added as optional: %s"
+  ],
+  "yvp": [
+   "Feature request does not contain feature : ",
+   "FeaturesRequest{required="
+  ],
+  "yxq": [
+   "All medias must be handled by the same provider.",
+   "MediaCollectionProvider missing for: "
+  ],
+  "aahm": [
+   "PHOTOSPHERE",
+   "ANIMATION"
+  ],
+  "amud": [
+   "LOCAL_REMOTE",
+   "LOCAL_ONLY"
+  ],
+  "cgpw": [
+   "expectedSize",
+   "index"
+  ],
+  "tqv": [
+   "Unknown policy",
+   "unknown id: "
+  ],
+  "cqfs": [
+   "\u0002\u0001\u0001\u041b\u0002\u1009"
+  ]
+ },
+ "rules": [
+  {
+   "target": "abix",
+   "kind": "m",
+   "from": "abiy",
+   "sig": [
+    "V",
+    "=cbuy",
+    "Landroid/database/sqlite/SQLiteTransactionListener;",
+    "?"
+   ]
+  },
+  {
+   "target": "abzm",
+   "kind": "named-m",
+   "from": "acaz",
+   "name": "p",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "bawz",
+   "kind": "decl",
+   "sig": [
+    "=baxa"
+   ],
+   "ctor": false,
+   "abstract": true,
+   "static": false
+  },
+  {
+   "target": "baxf",
+   "kind": "decl",
+   "sig": [
+    "=baxa"
+   ],
+   "ctor": false,
+   "abstract": false,
+   "static": false
+  },
+  {
+   "target": "baxu",
+   "kind": "caller",
+   "callee": "baxs",
+   "callee_sig": [
+    "V",
+    "Ljava/lang/String;",
+    "=baxa",
+    "Z"
+   ],
+   "sig": [
+    "=baxs"
+   ]
+  },
+  {
+   "target": "bnda",
+   "kind": "iface",
+   "from": "bney"
+  },
+  {
+   "target": "calu",
+   "kind": "named-m",
+   "from": "bnes",
+   "name": "f",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "caly",
+   "kind": "m",
+   "from": "alsa",
+   "sig": [
+    "Z",
+    "?"
+   ]
+  },
+  {
+   "target": "calz",
+   "kind": "m",
+   "from": "yxq",
+   "sig": [
+    "?",
+    "Landroid/content/Context;",
+    "*",
+    "=yvp"
+   ]
+  },
+  {
+   "target": "ccbu",
+   "kind": "m",
+   "from": "ccad",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "ccbx",
+   "kind": "m",
+   "from": "ccdb",
+   "sig": [
+    "V",
+    "?"
+   ]
+  },
+  {
+   "target": "ccbz",
+   "kind": "named-f",
+   "from": "ccdb",
+   "name": "o",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "cccb",
+   "kind": "decl",
+   "sig": [
+    "V",
+    "=ccbz"
+   ],
+   "ctor": false,
+   "abstract": false,
+   "static": false
+  },
+  {
+   "target": "cccq",
+   "kind": "m",
+   "from": "ccbu",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "cnct",
+   "kind": "named-f",
+   "from": "cccp",
+   "name": "r",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "alzs",
+   "kind": "count",
+   "ret": "=cnct",
+   "k": 3
+  },
+  {
+   "target": "cnfl",
+   "kind": "m",
+   "from": "tvo",
+   "sig": [
+    "V",
+    "I",
+    "=abin",
+    "Ljava/lang/String;",
+    "?"
+   ]
+  },
+  {
+   "target": "cnew",
+   "kind": "named-f",
+   "from": "cnfl",
+   "name": "e",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "cnes",
+   "kind": "named-f",
+   "from": "cnew",
+   "name": "A",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "cnxj",
+   "kind": "m",
+   "from": "pht",
+   "sig": [
+    "*",
+    "I",
+    "Ljava/util/Collection;",
+    "=amud",
+    "I",
+    "?"
+   ]
+  },
+  {
+   "target": "tnk",
+   "kind": "decl",
+   "sig": [
+    "V",
+    "I",
+    "J",
+    "=trc",
+    "Z"
+   ],
+   "ctor": false,
+   "abstract": true,
+   "static": false
+  },
+  {
+   "target": "tpx",
+   "kind": "count",
+   "ret": "=tqv",
+   "k": 2
+  },
+  {
+   "target": "tqx",
+   "kind": "decl",
+   "sig": [
+    "V",
+    "Ljava/lang/String;",
+    "I",
+    "=cxmy"
+   ],
+   "ctor": true,
+   "abstract": false,
+   "static": false
+  },
+  {
+   "target": "uxi",
+   "kind": "super",
+   "from": "uxc"
+  },
+  {
+   "target": "uxf",
+   "kind": "sub",
+   "base": "uxi",
+   "string": "Processing"
+  },
+  {
+   "target": "uxk",
+   "kind": "decl",
+   "sig": [
+    "=uxi",
+    "=caly"
+   ],
+   "ctor": false,
+   "abstract": false,
+   "static": false
+  },
+  {
+   "target": "ywm",
+   "kind": "m",
+   "from": "bnda",
+   "sig": [
+    "?",
+    "I",
+    "Ljava/util/Collection;",
+    "=amud"
+   ]
+  },
+  {
+   "target": "yxd",
+   "kind": "f",
+   "from": "bnes",
+   "sig": [
+    "?"
+   ]
+  },
+  {
+   "target": "bnwx",
+   "kind": "decl",
+   "sig": [
+    "=cqfs"
+   ],
+   "ctor": false,
+   "abstract": false,
+   "static": false
+  }
+ ],
+ "map797": {
+  "aahm": "aahm",
+  "abin": "abin",
+  "abix": "abix",
+  "abiy": "abiy",
+  "ajzn": "ajzn",
+  "alzs": "alzs",
+  "amud": "amud",
+  "baxa": "baxa",
+  "baxf": "baxf",
+  "baxs": "baxs",
+  "baxu": "baxu",
+  "bnda": "bnda",
+  "bnes": "bnes",
+  "bney": "bney",
+  "bnwx": "bnwx",
+  "calu": "calu",
+  "caly": "caly",
+  "calz": "calz",
+  "cawc": "cawc",
+  "cbte": "cbte",
+  "cbug": "cbug",
+  "cbuy": "cbuy",
+  "cbzj": "cbzj",
+  "ccad": "ccad",
+  "ccai": "ccai",
+  "ccbt": "ccbt",
+  "ccbu": "ccbu",
+  "ccbx": "ccbx",
+  "ccbz": "ccbz",
+  "cccb": "cccb",
+  "cccj": "cccj",
+  "cccp": "cccp",
+  "cccq": "cccq",
+  "cccx": "cccx",
+  "ccdb": "ccdb",
+  "ccxa": "ccxa",
+  "cdbs": "cdbs",
+  "cdmo": "cdmo",
+  "cnes": "cnes",
+  "cnew": "cnew",
+  "cnfl": "cnfl",
+  "cnxj": "cnxj",
+  "cqfs": "cqfs",
+  "cxmy": "cxmy",
+  "noz": "noz",
+  "pgo": "pgo",
+  "pht": "pht",
+  "tnk": "tnk",
+  "tpx": "tpx",
+  "tqv": "tqv",
+  "tqx": "tqx",
+  "trc": "trc",
+  "tvo": "tvo",
+  "uxc": "uxc",
+  "uxe": "uxe",
+  "uxf": "uxf",
+  "uxg": "uxg",
+  "uxh": "uxh",
+  "uxi": "uxi",
+  "uxk": "uxk",
+  "yvn": "yvn",
+  "yvp": "yvp",
+  "ywm": "ywm",
+  "yxd": "yxd",
+  "yxq": "yxq",
+  "cygl": "cygl",
+  "acnx": "acnx",
+  "alsa": "alsa",
+  "behj": "behj",
+  "abzm": "abzm",
+  "abza": "abza",
+  "wae": "wae",
+  "wgj": "wgj",
+  "tmi": "tmi",
+  "coti": "coti",
+  "bawz": "bawz",
+  "cnct": "cnct",
+  "cgpw": "cgpw",
+  "acaz": "acaz"
+ },
+ "map798": {
+  "aahm": "aaex",
+  "abin": "abfx",
+  "abix": "abgh",
+  "abiy": "abgi",
+  "ajzn": "ajzf",
+  "alzs": "alzn",
+  "amud": "amtm",
+  "baxa": "bahk",
+  "baxf": "baho",
+  "baxs": "baic",
+  "baxu": "baie",
+  "bnda": "bmnr",
+  "bnes": "bmpk",
+  "bney": "bmpp",
+  "bnwx": "bnif",
+  "calu": "bzxx",
+  "caly": "bzyb",
+  "calz": "bzyc",
+  "cawc": "caie",
+  "cbte": "cbep",
+  "cbug": "cbfs",
+  "cbuy": "cbgl",
+  "cbzj": "cbkw",
+  "ccad": "cbld",
+  "ccai": "cbli",
+  "ccbt": "cbmt",
+  "ccbu": "cbmu",
+  "ccbx": "cbmx",
+  "ccbz": "cbmz",
+  "cccb": "cbnb",
+  "cccj": "cbnj",
+  "cccp": "cbnp",
+  "cccq": "cbnq",
+  "cccx": "cbnx",
+  "ccdb": "cbob",
+  "ccxa": "ccie",
+  "cdbs": "ccmw",
+  "cdmo": "ccxt",
+  "cnes": "cmmb",
+  "cnew": "cmmf",
+  "cnfl": "cmmu",
+  "cnxj": "cnes",
+  "cqfs": "cpmz",
+  "cxmy": "cwuo",
+  "noz": "nmo",
+  "pgo": "pdw",
+  "pht": "pfc",
+  "tnk": "tlg",
+  "tpx": "tnx",
+  "tqv": "tov",
+  "tqx": "tox",
+  "trc": "tpc",
+  "tvo": "ttp",
+  "uxc": "uvh",
+  "uxe": "uvj",
+  "uxf": "uvk",
+  "uxg": "uvl",
+  "uxh": "uvm",
+  "uxi": "uvn",
+  "uxk": "uvp",
+  "yvn": "ysm",
+  "yvp": "yso",
+  "ywm": "ytl",
+  "yxd": "yud",
+  "yxq": "ytx",
+  "cygl": "cxnv",
+  "acnx": "aclf",
+  "alsa": "alrx",
+  "behj": "bdrm",
+  "abzm": "abwr",
+  "abza": "abwg",
+  "wae": "vxt",
+  "wgj": "wdv",
+  "tmi": "tkd",
+  "coti": "coap",
+  "bawz": "bahj",
+  "cnct": "cmkb",
+  "cgpw": "cgbs",
+  "acaz": "abyb"
+ }
+}

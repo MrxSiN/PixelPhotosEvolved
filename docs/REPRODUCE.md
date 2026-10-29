@@ -1,9 +1,75 @@
-# Current build — 1.2.2-dev / 28
+# Release 1.1.0 / 36
+
+The 1.5.0-dev carrier from the steps below is passed through `release.py IN OUT 1.5.0-dev 1.1.0`. This
+replaces the in-app version text and the manifest versionName. It is then built with
+`build.py OUT out 1.1.0`. The release workflow requires the tag to equal `v` plus the APK versionName.
+Root and hashes are in [build-1.1.0.json](../report/build-1.1.0.json).
+
+## 1.5.0-dev / 36
+
+1.4.1 plus three steps:
+- `ui135.py`: localization;
+- `ui136.py`: device optimizations, and sets versionCode 36;
+- `ui137.py`: the Restart now prompt.
+
+The run order is `port798.py` → `ui130.py` → `ui132.py` → `ui133.py` → `ui134.py` → `ui135.py` →
+`ui136.py` → `ui137.py` → `build.py`. The cold-start A/B rebuilt 1.4.1 unchanged as versionCode 35
+(`abbench.py`).
+
+`ui135.py` uses `i18nscan.py` to find user-visible string constants and the translation table
+`i18n_tr.py`. It writes `module/res/values/ui_strings.xml` and `module/res/values-*/strings.xml`
+(pass `module/res` as its third argument). Root and hashes are in
+[build-1.5.0.json](../report/build-1.5.0.json).
+
+## 1.4.1-dev / 33
+
+1.4.0 with three more DexKit rules (no pinned classes left) and the new Reclaim screens
+(`ui134.py`). `dexparse.py` now decodes DEX strings as modified UTF-8. `derive.py` adds a last-resort
+anchor: a NUL-free piece of a non-printable string, matched with `Contains`. `rules2str.py` ships
+it as a JSON literal. The rules are [dexkit-rules-1.4.1.json](../report/dexkit-rules-1.4.1.json).
+The run order is `port798.py` → `ui130.py` → `ui132.py` → `ui133.py` → `ui134.py` → `build.py`.
+Root and hashes are in [build-1.4.1.json](../report/build-1.4.1.json).
+
+## 1.4.0-dev / 32
+
+1.3.2 plus `ui133.py` (DexKit symbol resolution). Rules come from `derive.py`, run against the
+7.97 and 7.98 DEX models (`dexparse.py`), and are encoded by `rules2str.py`. The committed copy
+is `dexkit-rules-1.4.0.json` (superseded by 1.4.1). The run order is
+`port798.py` → `ui130.py` → `ui132.py` → `ui133.py` → `build.py`. `callcheck.py` verifies
+`call.direct` types before building. Root and hashes are in
+[build-1.4.0.json](../report/build-1.4.0.json).
+
+## 1.3.2-dev / 31
+
+Same as 1.3.1, with `ui132.py` in place of `ui131.py`. It is `ui131.py` plus the cuts: it
+drops the header back button and its wiring with renumbering, and removes functions that are
+no longer reachable. Root and hashes are in [build-1.3.2.json](../report/build-1.3.2.json).
+
+## 1.3.1-dev / 30
+
+1.3.0 plus `ui131.py`, which applies the UI edits with `jb.py`. `jb.py` is a small builder
+that emits carrier blocks with automatic JVM checkcasts, and new functions are placed callees
+first. The run order is `port798.py` → `ui130.py` → `ui131.py` → `build.py`. Root and hashes
+are in [build-1.3.1.json](../report/build-1.3.1.json).
+
+## 1.3.0-dev / 29
+
+Same XAX pin, inputs and packaging as 1.2.2 below; only the canonical module changed
+(root in [build-1.3.0.json](../report/build-1.3.0.json)). The 1.2.2 store, raw APK and
+signed APK were first rebuilt bit-for-bit as a toolchain check. The external transport is in
+`D:/Codex/ppe-798-20261029/tools/`: `dexparse.py`, `match.py`, `mapall.py`, `verify.py`,
+`chain.py` (7.97→7.98 symbol mapping), `port798.py` (constant retarget), `ui130.py`
+(UI edits), `staticcheck.py` (lookup replay against a dex model) and `build.py`
+(construct → build → aapt2 → notices → zipalign → fixture sign). The symbol map is
+committed as [symbols-7.98-1.3.0.json](../report/symbols-7.98-1.3.0.json).
+Use versionCode **29**, versionName **1.3.0-dev**.
+
+## 1.2.2-dev / 28
 
 The current module uses XAX **054262b0af4b40d45b61feafa07612cf87708e7d**.
 Extract that exact Git revision outside this repository, and validate every file
 under `module_sdk.files` in [toolchain.lock.json](../toolchain.lock.json).
-The older `policy_sdk` pin reproduces the unchanged BFX-1 policy/process only.
+The policy executable is built by current BBC; see "Policy executable" below.
 Use Python compiler transport externally with bytecode caches disabled. Authored
 application logic remains canonical XAX/Brainfuck; no transport or foreign-language
 source belongs inside this repo, including ignored paths.
@@ -48,87 +114,21 @@ contains `build-candidate.py`, `test-profile.py`, `test-reclaim.py`, `test-progr
 transport. The module builds directly from XAX; D8 is used only for third-party
 dependency bytecode. Host fixtures do not prove Google cloud behavior on 7.98.
 
-## Historical instructions (through 1.2.1; use policy_sdk for old pins)
+## Policy executable (Brainfuck, current BBC)
 
-# Reproducing a build
+The policy source is `policy/pixel_photos_policy.bf`. Build it with BBC at the revision in
+[toolchain.lock.json](../toolchain.lock.json) (`bbc`), from the BBC checkout:
 
-## Reclaim development build (1.2.1-dev / 27)
+```text
+build\bbc.exe compile android-arm64 -O1 ppepolicy < pixel_photos_policy.bf
+build\bbc.exe emit-bfx -O1 < pixel_photos_policy.bf > pixel_photos_policy.bfx
+```
 
-Start with the [portable handoff](RECLAIM_HANDOFF.md). The canonical module and both APKs
-include native SDK reupload and persistent seven-step/byte progress. Current roots,
-hashes and API 102 checks are in [build-1.2.1.json](../report/build-1.2.1.json).
-Use versionCode **27**, versionName **1.2.1-dev**. The signed APK uses the public fixture key.
-
-External original-machine transport lives in `D:/Codex/ppe-reclaim-20261029/`: `edit.py`,
-`direct-upload.py`, `progress.py`, `build-candidate.py`, `test-candidate.py`,
-`test-progress.py`, `test-direct.py`, `test-router.py`, `final-device.py`. The edit transport
-loaded the baseline graph, constructed and fully verified the canonical store, checked
-carrier roundtrip equality, then saved atomically with `Workspace.save`. No current
-native XAX-MCP transaction edit is claimed for this historical Android graph.
-
-Keep transport, carriers, host fixtures and all conventional tooling outside the repo,
-including ignored files. XAX and Brainfuck remain authoritative; router functions,
-Brainfuck policy, native executable and SDK lock are unchanged. See the
-[audit](../report/reclaim-audit-1.2.1.json), [repair/device report](../report/reclaim-1.2.1.md)
-and [compiled progress checks](../report/reclaim-progress-offline-1.2.1.json).
-Older reports retain their dated scope. General reproduction follows below.
-
-## Toolchain
-
-Use XAX revision **0876b591f39908e98aa31f746ae2e26bb88c837e**, including its
-historical android-libxposed JVM profile. Extract the committed revision into an
-external directory and validate every file against
-[toolchain.lock.json](../toolchain.lock.json): 75 SDK source hashes, Vector table
-and public test signer fixture. A different/dirty working tree is not equivalent.
-
-The tested external SDK is D:/Codex/ppe-work-20261023/build/xax-sdk. Python 3.13
-is compiler transport; JDK 17 runs host fixtures. Android SDK platform android-37.0
-and build-tools 37.0.0 supply inspection and signature tools. The module build uses
-XAX directly, without Java/Kotlin application source, Gradle or D8. Conventional
-languages used by external test tooling are not application source.
-
-## Canonical sources and build
-
-1. Load and verify all three stores with the pinned StoreReader/verify_store:
-   module/pixel_photos_module.xax, module/policy_process.xax and
-   policy/pixel_photos_policy.xax.
-2. Resolve the policy-process module entry/function/AArch64 target and call
-   xax_linux_aarch64.compile_linux_aarch64_executable. Its bytes must exactly
-   match module/libppepolicy.so.
-3. Call xax_android_libxposed_jvm.build_module with that executable supplied under
-   its BLAKE3 digest. Compare with module/pixel_photos_module-unsigned.apk and run
-   xax_vector against the pinned API 102 table.
-4. Add the label, description, icon and versionName. The pinned XAX target emits a
-   manifest without them and no resource table, so compile [module/res](../module/res)
-   with aapt2 (build-tools 36.0.0, android-37.0 android.jar), link it with a manifest
-   that repeats the XAX manifest values plus `android:label`, `android:description`,
-   `android:icon`/`roundIcon` and `versionName`, and replace only AndroidManifest.xml
-   while adding resources.arsc and res/. Every XAX entry stays byte for byte.
-5. Sign externally with a chosen capability. The committed signed APK uses
-   the SDK's **public fixture test key**; the [release workflow](../.github/workflows/release.yml)
-   re-signs it with the release key on a `v*` tag, publishes the GitHub release and
-   mirrors it to the Xposed Modules Repository. Verify with Android apksigner v2 checks.
-6. Compare roots/hashes with [build evidence](../report/build-1.0.0.json), then
-   verify [SHA256SUMS](../SHA256SUMS). The unsigned artifact and native executable
-   reproduce exactly; signed and unsigned APKs serve different purposes.
-
-The `.so` is **ET_EXEC / AArch64**, extracted and invoked through stdio.
-It has no JNI/native module entry and must not be passed to System.loadLibrary.
-
-## Brainfuck pipeline
-
-The pinned BBC bounded frontend is compiler/compiler.bf, SHA-256
-89e87c42d870e879c4dbbf2ec578da2823351566d3e7d25801f29b5804446b2a.
-Run it with a 65,536-cell wrapping-byte reference interpreter, EOF-as-zero,
-u16le source length + exact policy bytes + final byte 1. Reject errors. The result
-must match the included 3,289-byte BFX: BFX NUL, format 1, status 0, 3,279 commands.
-
-This is the historical reproducible frontend, not BBC's newer native CLI.
-The pinned historical importer entry
-cbbd3d0c7dcc26908b6b967d8792b2dbc7c4cda8d3180276588ae04a8e1c50b5
-produced the canonical policy. The process store contains the same decision
-function. The APK executes the compiled ARM64 decision, not an interpreter.
-See [ABI](../policy/ABI.md) and [baseline BBC evidence](../report/baseline/bbc-0.4.0.json).
+`ppepolicy` is `module/libppepolicy.so`, a static ARM64 stdio executable (not JNI).
+`ppepolicy.xax` is BBC's verified XAX build snapshot, kept as `policy/pixel_photos_policy.xax`.
+The BFX is format 2 (`-O1` fold). The stdio ABI is unchanged ([ABI](../policy/ABI.md)). On the
+device, 21,480 input vectors give byte-identical output to the retired BFX-1 executable.
+The module build takes the executable by its BLAKE3 digest.
 
 ## Editing and tests
 

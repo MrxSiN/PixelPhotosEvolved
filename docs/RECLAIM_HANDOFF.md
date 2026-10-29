@@ -14,7 +14,7 @@ Current canonical implementation: **235 functions**, root
 [profile report](../report/profile-1.2.2.md).
 Use current `module_sdk` in the lock (XAX `054262b0af4b40d45b61feafa07612cf87708e7d`), plus
 `module/libppepolicy.so`, `module/libdexkit.so` and `module/deps/dexkit-2.3.0.dex`.
-The historical policy compiler is separately pinned as `policy_sdk`.
+The policy executable is built by current BBC (`bbc` pin in toolchain.lock.json).
 Original-machine construction/build/tests are external under
 `D:/Codex/ppe-profile-20261029/`; no runtime depends on those paths.
 `edit.py` expects the original 219-function baseline, so do not rerun it against

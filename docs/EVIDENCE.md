@@ -1,4 +1,19 @@
-# Current compatibility evidence
+# Current evidence — 1.3.0 to 1.5.0
+
+Release **1.1.0** (versionCode 36, built from 1.5.0-dev) on Photos **7.98.0.1007591100 / 52591217**. Every hooked Photos
+class is found by DexKit, and the UI is available in ten languages. [Status](../report/STATUS.md)
+summarises each build.
+
+| Report | What it establishes |
+|---|---|
+| [Languages and performance 1.5.0](../report/i18n-perf-1.5.0.md) / [build](../report/build-1.5.0.json) | Ten UI languages, profile card in non-English Photos, startup and frame-path optimizations |
+| [DexKit 1.4.1](../report/dexkit-1.4.1.md) / [rules](../report/dexkit-rules-1.4.1.json) / [build](../report/build-1.4.1.json) | All classes resolved at runtime, no pinned names left |
+| [Build 1.4.0](../report/build-1.4.0.json) | First DexKit-resolved build |
+| [Reclaim on 7.98](../report/reclaim-7.98-1.3.2.md) / [build](../report/build-1.3.2.json) | Test video reclaimed from 37,104,159 charged bytes to 0 |
+| [UI 1.3.1](../report/ui-1.3.1.md) / [build](../report/build-1.3.1.json) | Reworked settings and Reclaim page |
+| [Port 1.3.0](../report/port-1.3.0.md) / [symbols](../report/symbols-7.98-1.3.0.json) / [build](../report/build-1.3.0.json) | Hooks ported from 7.97 to 7.98 |
+
+# Earlier compatibility evidence
 
 Development build **1.2.2-dev / 28** restores the profile entry and full settings
 page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a

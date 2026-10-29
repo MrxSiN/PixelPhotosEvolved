@@ -1,0 +1,17 @@
+{
+ "version": "1.4.0-dev",
+ "version_code": 32,
+ "module_root": "a7dee88ee6bc9d03ce9a0cf6f0bb2336e47f0c7496102e109ec489069913e6af",
+ "module_sha256": "2224b3e18f224d7798735161633c1d09b50e3c990dced3eb6d4da07fa63b0caa",
+ "unsigned_sha256": "58df7bc370ae74ae437a5d987a37da64fced00c4e68f4fa0429b0cf34f76c818",
+ "signed_sha256": "3c37a5d824e50b06c2c2d36a9dbdfee7ef33dd6c0f50ea5dc2ab9894054557eb",
+ "policy_executable_sha256": "d0dbc3ba98a1bba6835529e29020c9f5cddae6808b78fd417acd1764875a5308",
+ "xax": "054262b0af4b40d45b61feafa07612cf87708e7d",
+ "functions": 356,
+ "device": {
+  "first_scan": "75 of 78 classes via DexKit, 528 ms, 0 disagreements with the verified 7.98 names; 3 pinned",
+  "cached_start": "1-2 ms",
+  "regression": "router, identity, Video Boost observer and backup offer hooks installed; backup probe passed; settings, diagnostics, reclaim scan"
+ },
+ "signer": "XAX public development fixture (not a release key)"
+}

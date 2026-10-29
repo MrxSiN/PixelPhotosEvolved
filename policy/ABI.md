@@ -1,18 +1,11 @@
 # Policy ABI
 
-Current module: 0.6.1. ABI 1 and policy bytes are unchanged from the validated
-0.4.0 baseline. Fresh BBC output
-reproduces exactly; 18,187 independent BF vectors and 128 packaged ARM64 device
-vectors pass. XAX additionally rejects policy bytes above 4 and editing bytes
-above 2. See [offline vectors](../report/baseline/offline-0.4.0.json),
-[ARM64 vectors](../report/baseline/device-policy-0.4.0.json) and
-[BBC reproduction](../report/baseline/bbc-0.4.0.json).
-
-Canonical source is pixel_photos_policy.bf, compiled by BBC to BFX, imported to
-canonical XAX and compiled to ARM64. The native helper is a stdio executable,
-not JNI. The XAX bridge requires an array of exactly eleven bytes, exit status
-zero and exactly two output bytes within two seconds. Bridge errors retain
-native behavior.
+The policy is `pixel_photos_policy.bf`, compiled by current BBC (`bbc compile android-arm64 -O1`)
+to a static ARM64 stdio executable (`module/libppepolicy.so`); see the `bbc` pin in
+[toolchain.lock.json](../toolchain.lock.json). ABI 1 and the policy source are unchanged since
+the validated 0.4.0 baseline. On the device, 21,480 vectors give byte-identical output to the
+earlier BFX-1 build. The XAX bridge requires an array of exactly eleven bytes, exit status zero
+and exactly two output bytes within two seconds. Bridge errors keep native behaviour.
 
 | Byte | Field | Meaning |
 |---|---|---|

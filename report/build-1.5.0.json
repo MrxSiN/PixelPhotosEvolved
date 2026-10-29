@@ -1,0 +1,22 @@
+{
+ "version": "1.5.0-dev",
+ "version_code": 36,
+ "module_root": "e4c2924e4c4f63a35dc43706757f6d5f35d3c773f11bcb78cd99227e6e560a6e",
+ "module_sha256": "2562d0923ade46b633fda291c4f2118cfc6f5e855d2ee787f41955e780d09974",
+ "unsigned_sha256": "1ebaaa9ee5a5ffa99191da78e5dd3ce1ee5c26fd1fa77173fdfa912e31518118",
+ "signed_sha256": "0a6408057b95916e986b2183fa23df8aeddc8bc12f8efd20930cec6b67320ec5",
+ "policy_executable_sha256": "d0dbc3ba98a1bba6835529e29020c9f5cddae6808b78fd417acd1764875a5308",
+ "xax": "054262b0af4b40d45b61feafa07612cf87708e7d",
+ "functions": 594,
+ "languages": ["en", "zh-Hans", "zh-Hant", "es", "pt", "ru", "ja", "ko", "id", "ms"],
+ "device": {
+  "symbols": "cache 1-2 ms; after a Photos reinstall DexKit rescan 1779 ms; pinned fill 0, differ 0, missing none",
+  "cold_start_ab": "10 cold launches each vs 1.4.1 rebuilt as versionCode 35: Photos CPU in the first 8 s 16.04 s -> 14.87 s (-1.17 s, -7.3%); launch time 884 -> 876 ms and PSS 465 -> 459 MB, both within noise. Measured on the build before the restart button (ui137), which only adds code that runs after a settings change. Raw data: ab-cold-start-1.5.0.jsonl",
+  "restart": "Original -> Storage Saver -> Original via Restart now: new Photos process on the home screen within 5 s each time, reported identity Pixel 5 then Pixel XL, backup probe passed after each; Later keeps the process and only saves the setting",
+  "startup": "DexKit compatibility scan no longer runs when the backend gate passes",
+  "policy": "repeat backup probes 3-8 ms instead of about 100 ms (memoized policy results)",
+  "ui": "settings, Reclaim and diagnostics checked in English, Simplified Chinese and Japanese; profile card found in all three",
+  "regression": "router, identity, Video Boost observer and backup offer hooks installed; backup probe passed; policy self-tests passed"
+ },
+ "signer": "XAX public development fixture (not a release key)"
+}

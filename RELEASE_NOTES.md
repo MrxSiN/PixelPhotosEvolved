@@ -1,21 +1,46 @@
-## Unreleased: 1.2.2-dev / 28
+## 1.1.0
 
-Development build **1.2.2-dev / 28** restores the profile entry and full settings
-page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a
-read-only native Video Boost state observer. Backup identity, selective upload routing
-and Storage Reclaim remain gated to **7.97.0.1000520730 / 52549361**; on 7.98 they are
-inactive. The settings page shows this limitation and disables the reclaim action.
-No upload, deletion or reclaim was initiated by this compatibility check.
+Support for Google Photos 7.98, a rebuilt Video Boost Storage Reclaim, ten languages, and a module
+that keeps working across Photos updates.
 
-- Resolve profile resource IDs by name and preserve single-card placement.
-- Show saved settings and diagnostics with an unsupported-host banner; prevent old
-  native probes and disable the reclaim action on unsupported hosts.
-- Bundle DexKit 2.3.0, native ARM64 JNI and dependency DEX; discover state signatures
-  asynchronously and close the bridge on success/failure. Observe state without
-  changing the original return value or native upload/reclaim gates.
-- Build with XAX 054262b; fast-forward BBC/XAX and verify XAX-MCP is current.
-- Preserve the historical BFX-1 policy binaries. Include dependency notices/licenses.
-- 392 compiled checks, 400 concurrency cases and profile/settings device checks pass.
+### What's new
+- **Google Photos 7.98 support.** Unlimited Original Quality, Unlimited Storage Saver, Video Boost
+  uploads and Storage Reclaim all work on Photos 7.98.0.1007591100.
+- **Survives Photos updates.** PPE finds the Photos classes it hooks with DexKit at runtime, so most
+  Photos updates need no new module build. If something can't be found, Photos keeps its own
+  behaviour and **Compatibility & diagnostics** shows what is unavailable.
+- **Video Boost Storage Reclaim, rebuilt.**
+  - Scan for boosted videos that use storage, select them, and reclaim. PPE downloads each video,
+    deletes the cloud copy (also from Trash) and uploads it again with your Backup setting.
+  - A confirmation dialog explains each step, a progress card shows the current video and step, and
+    a history list keeps past results.
+  - A safe copy stays on the phone until each video is done, and an interrupted run can be resumed.
+- **Ten languages.** English, 简体中文, 繁體中文, Español, Português, Русский, 日本語, 한국어,
+  Bahasa Indonesia and Bahasa Melayu. PPE follows the phone language or the per-app language set for
+  Google Photos.
+- **Restart now.** Changing the backup mode offers a one-tap restart of Photos instead of a manual
+  force-stop. It isn't offered while Reclaim is running.
+- **Cleaner settings.**
+  - No back arrow.
+  - Pixel model is greyed out while Unlimited Original Quality is on.
+  - The Video Boost description is corrected.
+  - Shorter labels throughout.
+
+### Fixes and performance
+- The PPE card now appears in the profile menu when Photos is in any language, not only English.
+- About 7% less CPU in Photos' first seconds after launch:
+  - A redundant compatibility scan no longer runs at every start.
+  - Repeat policy checks are cached instead of starting a process each time.
+  - A per-label resource lookup was removed from the main thread.
+- The Brainfuck policy is now built by current BBC (BFX format 2), with output identical to before.
+
+### Requirements
+Android 17 (API 37) ARM64, libxposed API 102 (tested with Vector 2.2), Google Photos
+7.98.0.1007591100 (tested). Scope: `com.google.android.apps.photos`. After installing or updating,
+force-stop Google Photos and open it again.
+
+Reuploaded videos lose their Video Boost tags and links. Google decides backup eligibility and how
+storage is counted, on its servers. Check your account storage after enabling a backup option.
 
 ## Retained 1.0.0 release notes
 

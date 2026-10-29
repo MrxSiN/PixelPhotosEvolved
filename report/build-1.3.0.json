@@ -1,0 +1,12 @@
+{
+ "version": "1.3.0-dev",
+ "version_code": 29,
+ "module_root": "cf41fa0daf3018fea77f03b9a4e24be66ffdf388028c6bc6d2695e035d361973",
+ "module_sha256": "f83bceee5a14384699145b47f6569f784d056cf576015a38ce7d9e658a0da10e",
+ "unsigned_sha256": "559d74798a00daeb832166f4790d15e8cc0e425fb53ca941221b44cfdb1c2a68",
+ "signed_sha256": "5de9445c5532f52b480505167a3af3098ece0d062fa5010c603a3aa65fee32ee",
+ "base_root_1_2_2": "b3e0625442a4cb43cd0b4206abd05dda0c2d5b7981299ddf9ccf9fdd65a08c34",
+ "xax": "054262b0af4b40d45b61feafa07612cf87708e7d",
+ "toolchain_check": "1.2.2 store, raw APK and signed APK rebuilt bit-for-bit before editing",
+ "signer": "XAX public development fixture (not a release key)"
+}

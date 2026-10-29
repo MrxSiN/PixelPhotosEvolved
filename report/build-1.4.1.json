@@ -1,0 +1,17 @@
+{
+ "version": "1.4.1-dev",
+ "version_code": 33,
+ "module_root": "2110a9c50493ce93156421a168d4580b3808dd226a3a826845c1ab78a8da7db6",
+ "module_sha256": "c9eaa59bd261a061522367630960bc490ede62c3f8cd434c37e0499b1698b084",
+ "unsigned_sha256": "53af731a5787acf25896dd8b29679c978683a42c6e6f658f6e9586b819071f08",
+ "signed_sha256": "a34b5974ba5b03d3fdd89c31e00212bc101120a0319974653c902a5a7f797d11",
+ "policy_executable_sha256": "d0dbc3ba98a1bba6835529e29020c9f5cddae6808b78fd417acd1764875a5308",
+ "xax": "054262b0af4b40d45b61feafa07612cf87708e7d",
+ "functions": 365,
+ "device": {
+  "first_scan": "all 79 classes plus 4 derived entries via DexKit, 1671 ms; pinned fill 0, differ 0, missing none",
+  "cached_start": "2 ms",
+  "regression": "router, identity, Video Boost observer and backup offer hooks installed; backup probe passed; Reclaim scan, selection and the new confirmation dialog (cancelled) with no crash"
+ },
+ "signer": "XAX public development fixture (not a release key)"
+}
