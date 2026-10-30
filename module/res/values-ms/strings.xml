@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"Pada peranti"</string>
     <string name="ppe_ca260d2edb73">"Memuat turun setiap video, memadamkan salinan awan, kemudian memuat naiknya semula supaya tidak menggunakan storan."</string>
     <string name="ppe_b3b27f0491df">"Salinan selamat kekal pada telefon sehingga selesai. Kualiti penuh dikekalkan; teg Video Boost hilang."</string>
+    <string name="ppe_c2db7a561c59">"Identiti Video Boost"</string>
+    <string name="ppe_f1e76573bac4">"Dimuat naik sebagai {m}"</string>
+    <string name="ppe_645c4f2315ca">"Muat naik terakhir: {m}"</string>
+    <string name="ppe_f86272d37341">"Belum selesai. "</string>
 </resources>

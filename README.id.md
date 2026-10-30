@@ -92,7 +92,7 @@ Video yang diproses dengan Video Boost dihitung dalam penyimpanan Akun Google An
 pencadangan tanpa batas aktif. Lihat [Video Boost](docs/VIDEO_BOOST.md) (dalam bahasa Inggris) tentang
 cara upload dikenali dan diarahkan.
 
-Build pengembangan lokal adalah **1.1.0 / 36**. [Halaman klaim ulang](docs/VIDEO_BOOST_RECLAIM.md)
+Build pengembangan lokal adalah **1.1.1 / 37**. [Halaman klaim ulang](docs/VIDEO_BOOST_RECLAIM.md)
 (dalam bahasa Inggris) meminta konfirmasi, lalu memproses satu video sekaligus: download → periksa →
 hapus salinan cloud → hapus dari Sampah → upload lagi → periksa penyimpanan. Kartu progres menampilkan
 video dan langkah saat ini, dan daftar riwayat menyimpan hasil sebelumnya. Salinan aman tetap di ponsel

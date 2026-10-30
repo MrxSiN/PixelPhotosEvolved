@@ -1,6 +1,6 @@
 # Current evidence — 1.3.0 to 1.5.0
 
-Release **1.1.0** (versionCode 36, built from 1.5.0-dev) on Photos **7.98.0.1007591100 / 52591217**. Every hooked Photos
+Release **1.1.1** (versionCode 37; 1.1.0 was built from 1.5.0-dev) on Photos **7.98.0.1007591100 / 52591217**. Every hooked Photos
 class is found by DexKit, and the UI is available in ten languages. [Status](../report/STATUS.md)
 summarises each build.
 

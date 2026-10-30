@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"在设备上"</string>
     <string name="ppe_ca260d2edb73">"下载每个视频，删除云端副本，然后重新上传，使其不再占用存储空间。"</string>
     <string name="ppe_b3b27f0491df">"完成前手机上会保留一份安全副本。画质保持不变，但会丢失 Video Boost 标记。"</string>
+    <string name="ppe_c2db7a561c59">"Video Boost 身份"</string>
+    <string name="ppe_f1e76573bac4">"上传身份：{m}"</string>
+    <string name="ppe_645c4f2315ca">"上次上传：{m}"</string>
+    <string name="ppe_f86272d37341">"未完成。"</string>
 </resources>

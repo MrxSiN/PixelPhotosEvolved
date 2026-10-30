@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"端末内"</string>
     <string name="ppe_ca260d2edb73">"各動画をダウンロードしてクラウドのコピーを削除し、再アップロードして容量を使用しないようにします。"</string>
     <string name="ppe_b3b27f0491df">"完了するまで安全なコピーがスマートフォンに残ります。画質はそのままで、Video Boost のタグは失われます。"</string>
+    <string name="ppe_c2db7a561c59">"Video Boost の端末情報"</string>
+    <string name="ppe_f1e76573bac4">"{m} としてアップロード"</string>
+    <string name="ppe_645c4f2315ca">"前回のアップロード：{m}"</string>
+    <string name="ppe_f86272d37341">"未完了。"</string>
 </resources>

@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"En el dispositivo"</string>
     <string name="ppe_ca260d2edb73">"Descarga cada vídeo, elimina la copia de la nube y lo vuelve a subir para que deje de usar almacenamiento."</string>
     <string name="ppe_b3b27f0491df">"Se guarda una copia segura en el teléfono hasta terminar. Se mantiene la calidad; se pierden las etiquetas de Video Boost."</string>
+    <string name="ppe_c2db7a561c59">"Identidad de Video Boost"</string>
+    <string name="ppe_f1e76573bac4">"Se sube como {m}"</string>
+    <string name="ppe_645c4f2315ca">"Última subida: {m}"</string>
+    <string name="ppe_f86272d37341">"Sin completar. "</string>
 </resources>

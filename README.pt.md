@@ -92,7 +92,7 @@ Os vídeos processados com o Video Boost contam no armazenamento da sua Conta do
 opção de backup ilimitado ativada. Veja [Video Boost](docs/VIDEO_BOOST.md) (em inglês) para saber como
 um envio é reconhecido e encaminhado.
 
-O build de desenvolvimento local é **1.1.0 / 36**. A [página de recuperação](docs/VIDEO_BOOST_RECLAIM.md)
+O build de desenvolvimento local é **1.1.1 / 37**. A [página de recuperação](docs/VIDEO_BOOST_RECLAIM.md)
 (em inglês) pede confirmação e depois trabalha um vídeo por vez: baixar → verificar → excluir a cópia na
 nuvem → limpar da lixeira → enviar de novo → verificar o armazenamento. Um card de progresso mostra o
 vídeo e a etapa atuais, e um histórico guarda os resultados anteriores. Uma cópia segura fica no

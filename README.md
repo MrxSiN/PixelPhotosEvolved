@@ -92,7 +92,7 @@ Videos processed with Video Boost count toward your Google Account storage, even
 unlimited backup option is on. See [Video Boost](docs/VIDEO_BOOST.md) for how an upload is
 recognised and routed.
 
-The current release is **1.1.0** (versionCode 36). The [Reclaim page](docs/VIDEO_BOOST_RECLAIM.md)
+The current release is **1.1.1** (versionCode 37). The [Reclaim page](docs/VIDEO_BOOST_RECLAIM.md)
 asks for confirmation, then works one video at a time: download → check → delete the cloud copy
 → clear it from Trash → upload again → check storage. A progress card shows the current video and
 step, and a history list keeps past results. A safe copy stays on the phone until each video is

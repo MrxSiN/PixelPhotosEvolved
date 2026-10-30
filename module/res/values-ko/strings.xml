@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"기기에 있음"</string>
     <string name="ppe_ca260d2edb73">"각 동영상을 다운로드하고 클라우드 사본을 삭제한 다음 다시 업로드하여 저장용량을 사용하지 않게 합니다."</string>
     <string name="ppe_b3b27f0491df">"완료될 때까지 안전한 사본이 휴대전화에 보관됩니다. 화질은 유지되며 Video Boost 태그는 사라집니다."</string>
+    <string name="ppe_c2db7a561c59">"Video Boost 기기 정보"</string>
+    <string name="ppe_f1e76573bac4">"{m}(으)로 업로드"</string>
+    <string name="ppe_645c4f2315ca">"마지막 업로드: {m}"</string>
+    <string name="ppe_f86272d37341">"완료되지 않음. "</string>
 </resources>

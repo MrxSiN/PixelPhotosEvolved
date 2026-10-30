@@ -92,7 +92,7 @@ Video yang diproses dengan Video Boost dikira dalam storan Akaun Google anda, wa
 tanpa had dihidupkan. Lihat [Video Boost](docs/VIDEO_BOOST.md) (dalam bahasa Inggeris) tentang cara
 muat naik dikenal pasti dan dihalakan.
 
-Binaan pembangunan setempat ialah **1.1.0 / 36**. [Halaman tuntutan semula](docs/VIDEO_BOOST_RECLAIM.md)
+Binaan pembangunan setempat ialah **1.1.1 / 37**. [Halaman tuntutan semula](docs/VIDEO_BOOST_RECLAIM.md)
 (dalam bahasa Inggeris) meminta pengesahan, kemudian memproses satu video pada satu masa: muat turun →
 semak → padam salinan awan → kosongkan daripada Sampah → muat naik semula → semak storan. Kad kemajuan
 menunjukkan video dan langkah semasa, dan senarai sejarah menyimpan keputusan terdahulu. Salinan selamat

@@ -1,13 +1,13 @@
 {
  "version": "1.1.1",
  "version_code": 37,
- "built_from": "1.1.0 carrier with ui138.py (Reclaim page, Material 3 Expressive pass), then release.py 1.1.0 -> 1.1.1",
- "module_root": "4c7b849acd51a1996ef2954743b79cdfc739b66830e8b863ba8b68d23c976d86",
- "module_sha256": "46b378dedd466e073c00263242b1dcb7269820021b10573712da271207a14b20",
- "unsigned_sha256": "b7ef2b80a808b773d3db5b72ee3cd76944f7ab03d0c5627f54b130f6e98db73d",
- "signed_sha256": "a0d4baa4cf5af054ff22dec5830b953fdbb448e49fe1dea7e230d98beedd93cc",
+ "built_from": "1.1.0 carrier with ui138.py (Reclaim page redesign, Video Boost identity fix, Reclaim finalization fix, diagnostics row), then release.py 1.1.0 -> 1.1.1",
+ "module_root": "1df48676842326d0ff3871bcc8b59d6a6797c2d79960d4c1aa60373975f1395e",
+ "module_sha256": "0a741dcca6d92d8300686a9bbc40ad4f2dd3f594784628dce4ffae9cab3f181c",
+ "unsigned_sha256": "c0de28f5c2b51b03c4d58ec5c0c0b1c20955c8f8bad7e8f42a26445c9c5e7a55",
+ "signed_sha256": "4527d39d62b083df06887c4f10063a9f97a4948bdc96344f58a6a4acf675ae8f",
  "policy_executable_sha256": "d0dbc3ba98a1bba6835529e29020c9f5cddae6808b78fd417acd1764875a5308",
  "xax": "054262b0af4b40d45b61feafa07612cf87708e7d",
- "device": "installed on Pixel 8 Pro, Photos 7.98.0.1007591100 (debug-signed for testing): Reclaim page opens, full scan of 74,148 items with the wavy scan indicator, history, sort buttons and bottom-bar selection icons checked; no crashes",
+ "device": "Pixel 8 Pro, Photos 7.98.0.1007591100, debug-signed for testing. Verified: Video Boost VB-02.MAIN uploads log 'native model Pixel 8 Pro' after a Reclaim scan; two module-on and two module-off Boost recordings compared in Photos' database; six videos reclaimed to 0 charged bytes; Reclaim page, scan indicator, summary, sort, selection bar, progress spinner and history checked on screen. Not yet exercised on the device: the redesigned confirmation dialog, the progress card thumbnail and byte-based indicator, the equal-width sort row and the owner-check hook in Reclaim finalization.",
  "signer": "XAX public development fixture; the release workflow re-signs with the release key"
 }

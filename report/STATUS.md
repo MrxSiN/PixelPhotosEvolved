@@ -1,14 +1,20 @@
 # Status — 1.1.1 / 37
 
-**1.1.1** (versionCode 37) redesigns the Video Boost Storage Reclaim page in the Material 3 Expressive
-style. Engine logic is unchanged. Build: [build-1.1.1.json](build-1.1.1.json). Screenshot:
-[reclaim-1.1.1.png](../docs/screenshots/reclaim-1.1.1.png) (a test build that forces selectable
-videos so the bottom bar shows).
+**1.1.1** (versionCode 37) fixes Video Boost upload routing and Reclaim finalization, adds a Video
+Boost identity row to Compatibility & diagnostics, and redesigns the Reclaim page. Build:
+[build-1.1.1.json](build-1.1.1.json). Screenshot: [reclaim-1.1.1.png](../docs/screenshots/reclaim-1.1.1.png).
 
-Checked on a Pixel 8 Pro with Photos 7.98: the page opens, a full scan of 74,148 items shows the wavy
-indicator and then the checked count, history renders, sort buttons re-sort, and the selection icons
-respond. Not yet seen on screen: the wavy reclaim progress bar and a populated video list, because no
-boosted video currently uses storage.
+- **Video Boost identity.** The startup capture of the phone's model ran again on every Reclaim
+  scan and page build in the 7.98 port, after the Pixel XL identity was applied, so Video Boost
+  uploads went out as Pixel XL. It now runs once. On the device a VB-02.MAIN upload made after a
+  Reclaim scan logged `native model Pixel 8 Pro`; two module-on recordings had free covers and
+  charged boosted videos, two module-off recordings had charged covers.
+- **Reclaim finalization.** Photos' MediaActorVerifier rejected some reupload replies
+  (`NON_MATCHING_GAIA_BACKEND_GAIA_ID_INVALID`). It is now accepted only on the thread running
+  PPE's own write. Six test videos were reclaimed to 0 charged bytes, each stored once.
+- **Not yet exercised on the device:** the new confirmation dialog, the progress card thumbnail and
+  byte-based indicator, the equal-width sort row and the owner-check hook during a reclaim. They
+  are the first things to check in the next version.
 
 ## 1.1.0 / 36
 

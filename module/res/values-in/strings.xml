@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"Di perangkat"</string>
     <string name="ppe_ca260d2edb73">"Mendownload setiap video, menghapus salinan cloud, lalu menguploadnya lagi agar tidak memakai penyimpanan."</string>
     <string name="ppe_b3b27f0491df">"Salinan aman tetap di ponsel sampai selesai. Kualitas penuh tetap terjaga; tag Video Boost hilang."</string>
+    <string name="ppe_c2db7a561c59">"Identitas Video Boost"</string>
+    <string name="ppe_f1e76573bac4">"Diupload sebagai {m}"</string>
+    <string name="ppe_645c4f2315ca">"Upload terakhir: {m}"</string>
+    <string name="ppe_f86272d37341">"Belum selesai. "</string>
 </resources>

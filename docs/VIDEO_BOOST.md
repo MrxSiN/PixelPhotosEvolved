@@ -1,5 +1,15 @@
 # Video Boost behavior
 
+## 1.1.1
+
+Only the raw **VB-02.MAIN** upload of a Video Boost recording is sent with the phone's own
+identity; covers and all other uploads use the Pixel XL identity, and Reclaim reuploads follow the
+Backup setting. In 1.1.0 the captured real model was overwritten with "Pixel XL" once the Reclaim
+page opened or a scan ran, so later Video Boost uploads were sent as Pixel XL. 1.1.1 captures the
+model once. Every Video Boost upload logs `Video Boost upload: native model <model>`, and
+**Compatibility & diagnostics** shows a **Video Boost identity** row (captured model, last upload,
+status) so a regression after a Photos update is visible.
+
 Development build **1.2.2-dev / 28** restores the profile entry and full settings
 page on Photos **7.98.0.1007591100 / 52591217**. DexKit 2.3.0 discovers and installs a
 read-only native Video Boost state observer. Backup identity, selective upload routing

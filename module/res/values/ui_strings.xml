@@ -227,4 +227,8 @@
     <string name="ppe_72a3fb88fe94">"On device"</string>
     <string name="ppe_ca260d2edb73">"Downloads each video, deletes the cloud copy, then uploads it again so it stops using storage."</string>
     <string name="ppe_b3b27f0491df">"A safe copy stays on your phone until it's done. Full quality is kept; Video Boost tags are lost."</string>
+    <string name="ppe_c2db7a561c59">"Video Boost identity"</string>
+    <string name="ppe_f1e76573bac4">"Uploads as {m}"</string>
+    <string name="ppe_645c4f2315ca">"Last upload: {m}"</string>
+    <string name="ppe_f86272d37341">"Not completed. "</string>
 </resources>

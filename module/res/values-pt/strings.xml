@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"No dispositivo"</string>
     <string name="ppe_ca260d2edb73">"Baixa cada vídeo, exclui a cópia na nuvem e o envia de novo para que deixe de usar armazenamento."</string>
     <string name="ppe_b3b27f0491df">"Uma cópia segura fica no smartphone até terminar. A qualidade é mantida; as marcações do Video Boost são perdidas."</string>
+    <string name="ppe_c2db7a561c59">"Identidade do Video Boost"</string>
+    <string name="ppe_f1e76573bac4">"Envia como {m}"</string>
+    <string name="ppe_645c4f2315ca">"Último envio: {m}"</string>
+    <string name="ppe_f86272d37341">"Não concluído. "</string>
 </resources>

@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"На устройстве"</string>
     <string name="ppe_ca260d2edb73">"Скачивает каждое видео, удаляет облачную копию и загружает его заново, чтобы оно не занимало место."</string>
     <string name="ppe_b3b27f0491df">"Безопасная копия хранится на телефоне до завершения. Качество сохраняется, метки Video Boost теряются."</string>
+    <string name="ppe_c2db7a561c59">"Идентификация Video Boost"</string>
+    <string name="ppe_f1e76573bac4">"Загрузка как {m}"</string>
+    <string name="ppe_645c4f2315ca">"Последняя загрузка: {m}"</string>
+    <string name="ppe_f86272d37341">"Не завершено. "</string>
 </resources>

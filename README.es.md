@@ -92,7 +92,7 @@ Los vídeos procesados con Video Boost cuentan para el almacenamiento de tu cuen
 esté activada una opción de copia ilimitada. Consulta [Video Boost](docs/VIDEO_BOOST.md) (en inglés)
 para ver cómo se reconoce y enruta una subida.
 
-La versión de desarrollo local es **1.1.0 / 36**. La [página de recuperación](docs/VIDEO_BOOST_RECLAIM.md)
+La versión de desarrollo local es **1.1.1 / 37**. La [página de recuperación](docs/VIDEO_BOOST_RECLAIM.md)
 (en inglés) pide confirmación y luego trabaja vídeo a vídeo: descargar → comprobar → eliminar la copia
 de la nube → vaciarla de la papelera → volver a subir → comprobar el almacenamiento. Una tarjeta de
 progreso muestra el vídeo y el paso actuales, y un historial guarda los resultados anteriores. Se

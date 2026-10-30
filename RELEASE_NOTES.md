@@ -1,23 +1,36 @@
 ## 1.1.1
 
-A redesigned Video Boost Storage Reclaim page in the Material 3 Expressive style.
+Video Boost uploads work as intended again, Reclaim finishes reliably, and the Reclaim page is
+redesigned in the Material 3 Expressive style.
+
+### Fixes
+- **Video Boost uploads.** After the Reclaim page was opened or a scan ran, Video Boost uploads were
+  sent with the Pixel XL identity instead of the phone's own, so Google treated them as unlimited
+  Original quality uploads. The phone's real model is now captured once at startup and kept.
+  Each Video Boost upload logs the model it was sent with.
+- **Reclaim finishing.** A reclaim could stop after the upload with "Something went wrong" when
+  Photos' account check on the server reply failed. PPE now accepts that check for its own write,
+  so the new copy is recorded and linked to the video on the phone.
+- **Reclaim page crash.** Opening the page could close Google Photos. Fixed.
 
 ### What's new
-- **Summary.** Storage in use is shown as a large number, with the selected size next to it once
-  videos are selected. One line below shows how many photos and videos the scan checked, or a
-  status that matters (scan progress, errors). Repeated and outdated lines are gone.
-- **Scan.** The button reads **Scan Video Boost**. A wavy progress indicator runs while scanning.
-- **Videos.** The section appears only when a scan finds videos that use storage. Newest, Oldest,
-  Largest and Smallest buttons sort the list. Each video is its own card with a larger thumbnail.
-- **Selection.** Select all, Deselect all and Invert selection are icon buttons in the bottom action
-  bar, next to **Reclaim selected**. The bar shows whenever videos can be selected, and Reclaim stays
-  disabled until something is selected. The old overflow menu is gone.
-- **Progress.** Reclaim progress uses Photos' own Material 3 progress indicator and is shown only
-  while a reclaim runs or can be resumed.
-- **History.** Each entry shows the date and size, then "On device" on its own line, then the
-  result. Thumbnails are larger.
-- **About reclaim** is two short lines.
-- New text is translated into all ten languages.
+- **Compatibility & diagnostics** has a **Video Boost identity** row: the model Video Boost uploads
+  are sent as, the model of the last upload, and whether it matches the phone.
+- **Summary.** Storage in use as a large number, with the selected size next to it. One line below
+  shows how many photos and videos the scan checked, or a status that matters.
+- **Scan.** **Scan Video Boost**, with a wavy indicator while scanning.
+- **Videos.** Shown once a scan finds videos that use storage. **Newest**, **Oldest**, **Largest**
+  and **Smallest** sort the list; each video is its own card with a larger thumbnail.
+- **Selection.** **Select all**, **Deselect all** and **Invert selection** sit next to **Reclaim
+  selected** in the bottom bar, which shows only while you pick videos. The overflow menu is gone.
+- **Confirmation.** A new dialog with the amount to free, the four steps and the cautions.
+- **Progress.** The card shows the current video's thumbnail, step and bytes. Its circular
+  indicator fills during download and upload and spins on the other steps. **Pause** and
+  **Resume** are in the card.
+- **History.** Date and size, "On device" on its own line, and a short result ("Cloud copy
+  replaced." or "Not completed."). Thumbnails come from the phone, or from the cloud copy when the
+  phone has none.
+- **About reclaim** is two short lines. New text is translated into all ten languages.
 
 ## 1.1.0
 

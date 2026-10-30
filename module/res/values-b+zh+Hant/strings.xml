@@ -228,4 +228,8 @@
     <string name="ppe_72a3fb88fe94">"在裝置上"</string>
     <string name="ppe_ca260d2edb73">"下載每部影片，刪除雲端副本，然後重新上傳，使其不再佔用儲存空間。"</string>
     <string name="ppe_b3b27f0491df">"完成前手機上會保留一份安全副本。畫質保持不變，但會遺失 Video Boost 標記。"</string>
+    <string name="ppe_c2db7a561c59">"Video Boost 身分"</string>
+    <string name="ppe_f1e76573bac4">"上傳身分：{m}"</string>
+    <string name="ppe_645c4f2315ca">"上次上傳：{m}"</string>
+    <string name="ppe_f86272d37341">"未完成。"</string>
 </resources>
