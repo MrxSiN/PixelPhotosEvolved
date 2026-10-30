@@ -218,4 +218,14 @@
     <string name="ppe_2ded55753483">"|正在上傳 Video Boost 影片。"</string>
     <string name="ppe_1cde97bc0b3e">"|Video Boost 上傳已就緒。這些上傳可能會計入你的儲存空間。"</string>
     <string name="ppe_8589dbf4b0d8">"|Video Boost 上傳使用 Google 相簿的標準行為。"</string>
+    <string name="ppe_f5c11bfab77f">"雲端副本已取代。"</string>
+    <string name="ppe_607f1c10b194">"掃描 Video Boost"</string>
+    <string name="ppe_408207fe8a6e">"已檢查 {n} 張相片和影片"</string>
+    <string name="ppe_d0442824723c">"最新"</string>
+    <string name="ppe_c47bb88fdba7">"最舊"</string>
+    <string name="ppe_7cf7e8e599e8">"最大"</string>
+    <string name="ppe_c513b8692285">"最小"</string>
+    <string name="ppe_72a3fb88fe94">"在裝置上"</string>
+    <string name="ppe_ca260d2edb73">"下載每部影片，刪除雲端副本，然後重新上傳，使其不再佔用儲存空間。"</string>
+    <string name="ppe_b3b27f0491df">"完成前手機上會保留一份安全副本。畫質保持不變，但會遺失 Video Boost 標記。"</string>
 </resources>

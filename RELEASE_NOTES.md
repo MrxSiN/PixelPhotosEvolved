@@ -1,3 +1,24 @@
+## 1.1.1
+
+A redesigned Video Boost Storage Reclaim page in the Material 3 Expressive style.
+
+### What's new
+- **Summary.** Storage in use is shown as a large number, with the selected size next to it once
+  videos are selected. One line below shows how many photos and videos the scan checked, or a
+  status that matters (scan progress, errors). Repeated and outdated lines are gone.
+- **Scan.** The button reads **Scan Video Boost**. A wavy progress indicator runs while scanning.
+- **Videos.** The section appears only when a scan finds videos that use storage. Newest, Oldest,
+  Largest and Smallest buttons sort the list. Each video is its own card with a larger thumbnail.
+- **Selection.** Select all, Deselect all and Invert selection are icon buttons in the bottom action
+  bar, next to **Reclaim selected**. The bar shows whenever videos can be selected, and Reclaim stays
+  disabled until something is selected. The old overflow menu is gone.
+- **Progress.** Reclaim progress uses Photos' own Material 3 progress indicator and is shown only
+  while a reclaim runs or can be resumed.
+- **History.** Each entry shows the date and size, then "On device" on its own line, then the
+  result. Thumbnails are larger.
+- **About reclaim** is two short lines.
+- New text is translated into all ten languages.
+
 ## 1.1.0
 
 Support for Google Photos 7.98, a rebuilt Video Boost Storage Reclaim, ten languages, and a module

@@ -218,4 +218,14 @@
     <string name="ppe_2ded55753483">"|Mengupload video Video Boost."</string>
     <string name="ppe_1cde97bc0b3e">"|Upload Video Boost siap. Ini mungkin dihitung dalam penyimpanan Anda."</string>
     <string name="ppe_8589dbf4b0d8">"|Upload Video Boost memakai perilaku standar Google Foto."</string>
+    <string name="ppe_f5c11bfab77f">"Salinan cloud diganti."</string>
+    <string name="ppe_607f1c10b194">"Pindai Video Boost"</string>
+    <string name="ppe_408207fe8a6e">"{n} foto dan video diperiksa"</string>
+    <string name="ppe_d0442824723c">"Terbaru"</string>
+    <string name="ppe_c47bb88fdba7">"Terlama"</string>
+    <string name="ppe_7cf7e8e599e8">"Terbesar"</string>
+    <string name="ppe_c513b8692285">"Terkecil"</string>
+    <string name="ppe_72a3fb88fe94">"Di perangkat"</string>
+    <string name="ppe_ca260d2edb73">"Mendownload setiap video, menghapus salinan cloud, lalu menguploadnya lagi agar tidak memakai penyimpanan."</string>
+    <string name="ppe_b3b27f0491df">"Salinan aman tetap di ponsel sampai selesai. Kualitas penuh tetap terjaga; tag Video Boost hilang."</string>
 </resources>

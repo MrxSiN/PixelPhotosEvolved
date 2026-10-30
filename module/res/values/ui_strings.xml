@@ -217,4 +217,14 @@
     <string name="ppe_2ded55753483">"|Uploading a Video Boost video."</string>
     <string name="ppe_1cde97bc0b3e">"|Video Boost uploads are ready. They may count toward your storage."</string>
     <string name="ppe_8589dbf4b0d8">"|Video Boost uploads use standard Google Photos behavior."</string>
+    <string name="ppe_f5c11bfab77f">"Cloud copy replaced."</string>
+    <string name="ppe_607f1c10b194">"Scan Video Boost"</string>
+    <string name="ppe_408207fe8a6e">"Checked {n} photos and videos"</string>
+    <string name="ppe_d0442824723c">"Newest"</string>
+    <string name="ppe_c47bb88fdba7">"Oldest"</string>
+    <string name="ppe_7cf7e8e599e8">"Largest"</string>
+    <string name="ppe_c513b8692285">"Smallest"</string>
+    <string name="ppe_72a3fb88fe94">"On device"</string>
+    <string name="ppe_ca260d2edb73">"Downloads each video, deletes the cloud copy, then uploads it again so it stops using storage."</string>
+    <string name="ppe_b3b27f0491df">"A safe copy stays on your phone until it's done. Full quality is kept; Video Boost tags are lost."</string>
 </resources>

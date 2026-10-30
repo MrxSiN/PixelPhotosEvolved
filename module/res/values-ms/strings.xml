@@ -218,4 +218,14 @@
     <string name="ppe_2ded55753483">"|Memuat naik video Video Boost."</string>
     <string name="ppe_1cde97bc0b3e">"|Muat naik Video Boost sedia. Ini mungkin dikira dalam storan anda."</string>
     <string name="ppe_8589dbf4b0d8">"|Muat naik Video Boost menggunakan tingkah laku standard Google Foto."</string>
+    <string name="ppe_f5c11bfab77f">"Salinan awan diganti."</string>
+    <string name="ppe_607f1c10b194">"Imbas Video Boost"</string>
+    <string name="ppe_408207fe8a6e">"{n} foto dan video disemak"</string>
+    <string name="ppe_d0442824723c">"Terbaru"</string>
+    <string name="ppe_c47bb88fdba7">"Terlama"</string>
+    <string name="ppe_7cf7e8e599e8">"Terbesar"</string>
+    <string name="ppe_c513b8692285">"Terkecil"</string>
+    <string name="ppe_72a3fb88fe94">"Pada peranti"</string>
+    <string name="ppe_ca260d2edb73">"Memuat turun setiap video, memadamkan salinan awan, kemudian memuat naiknya semula supaya tidak menggunakan storan."</string>
+    <string name="ppe_b3b27f0491df">"Salinan selamat kekal pada telefon sehingga selesai. Kualiti penuh dikekalkan; teg Video Boost hilang."</string>
 </resources>

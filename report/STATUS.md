@@ -1,4 +1,16 @@
-# Status — 1.1.0 / 36
+# Status — 1.1.1 / 37
+
+**1.1.1** (versionCode 37) redesigns the Video Boost Storage Reclaim page in the Material 3 Expressive
+style. Engine logic is unchanged. Build: [build-1.1.1.json](build-1.1.1.json). Screenshot:
+[reclaim-1.1.1.png](../docs/screenshots/reclaim-1.1.1.png) (a test build that forces selectable
+videos so the bottom bar shows).
+
+Checked on a Pixel 8 Pro with Photos 7.98: the page opens, a full scan of 74,148 items shows the wavy
+indicator and then the checked count, history renders, sort buttons re-sort, and the selection icons
+respond. Not yet seen on screen: the wavy reclaim progress bar and a populated video list, because no
+boosted video currently uses storage.
+
+## 1.1.0 / 36
 
 **1.1.0** (versionCode 36) is the release build of 1.5.0-dev: the same module, with the version name
 set to 1.1.0. Build: [build-1.1.0.json](build-1.1.0.json).

@@ -1,0 +1,13 @@
+{
+ "version": "1.1.1",
+ "version_code": 37,
+ "built_from": "1.1.0 carrier with ui138.py (Reclaim page, Material 3 Expressive pass), then release.py 1.1.0 -> 1.1.1",
+ "module_root": "4c7b849acd51a1996ef2954743b79cdfc739b66830e8b863ba8b68d23c976d86",
+ "module_sha256": "46b378dedd466e073c00263242b1dcb7269820021b10573712da271207a14b20",
+ "unsigned_sha256": "b7ef2b80a808b773d3db5b72ee3cd76944f7ab03d0c5627f54b130f6e98db73d",
+ "signed_sha256": "a0d4baa4cf5af054ff22dec5830b953fdbb448e49fe1dea7e230d98beedd93cc",
+ "policy_executable_sha256": "d0dbc3ba98a1bba6835529e29020c9f5cddae6808b78fd417acd1764875a5308",
+ "xax": "054262b0af4b40d45b61feafa07612cf87708e7d",
+ "device": "installed on Pixel 8 Pro, Photos 7.98.0.1007591100 (debug-signed for testing): Reclaim page opens, full scan of 74,148 items with the wavy scan indicator, history, sort buttons and bottom-bar selection icons checked; no crashes",
+ "signer": "XAX public development fixture; the release workflow re-signs with the release key"
+}

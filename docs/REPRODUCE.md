@@ -1,3 +1,10 @@
+# Release 1.1.1 / 37
+
+The 1.1.0 carrier (the output of `release.py` below) is passed through
+`ui138.py IN OUT module/res`, then `release.py OUT OUT2 1.1.0 1.1.1` and `build.py OUT2 out 1.1.1`.
+`ui138.py` sets versionCode 37 and appends its new strings to `module/res/values*/` (only strings
+that are not there yet). Root and hashes are in [build-1.1.1.json](../report/build-1.1.1.json).
+
 # Release 1.1.0 / 36
 
 The 1.5.0-dev carrier from the steps below is passed through `release.py IN OUT 1.5.0-dev 1.1.0`. This

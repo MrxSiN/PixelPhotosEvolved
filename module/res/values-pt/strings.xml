@@ -218,4 +218,14 @@
     <string name="ppe_2ded55753483">"|Enviando um vídeo do Video Boost."</string>
     <string name="ppe_1cde97bc0b3e">"|Os envios do Video Boost estão prontos. Eles podem contar no seu armazenamento."</string>
     <string name="ppe_8589dbf4b0d8">"|Os envios do Video Boost usam o comportamento padrão do Google Fotos."</string>
+    <string name="ppe_f5c11bfab77f">"Cópia na nuvem substituída."</string>
+    <string name="ppe_607f1c10b194">"Verificar Video Boost"</string>
+    <string name="ppe_408207fe8a6e">"{n} fotos e vídeos verificados"</string>
+    <string name="ppe_d0442824723c">"Mais recentes"</string>
+    <string name="ppe_c47bb88fdba7">"Mais antigos"</string>
+    <string name="ppe_7cf7e8e599e8">"Maiores"</string>
+    <string name="ppe_c513b8692285">"Menores"</string>
+    <string name="ppe_72a3fb88fe94">"No dispositivo"</string>
+    <string name="ppe_ca260d2edb73">"Baixa cada vídeo, exclui a cópia na nuvem e o envia de novo para que deixe de usar armazenamento."</string>
+    <string name="ppe_b3b27f0491df">"Uma cópia segura fica no smartphone até terminar. A qualidade é mantida; as marcações do Video Boost são perdidas."</string>
 </resources>

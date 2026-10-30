@@ -218,4 +218,14 @@
     <string name="ppe_2ded55753483">"|Video Boost 동영상 업로드 중입니다."</string>
     <string name="ppe_1cde97bc0b3e">"|Video Boost 업로드가 준비되었습니다. 저장용량에 포함될 수 있습니다."</string>
     <string name="ppe_8589dbf4b0d8">"|Video Boost 업로드는 Google 포토의 기본 동작을 사용합니다."</string>
+    <string name="ppe_f5c11bfab77f">"클라우드 사본을 교체했습니다."</string>
+    <string name="ppe_607f1c10b194">"Video Boost 스캔"</string>
+    <string name="ppe_408207fe8a6e">"사진 및 동영상 {n}개 확인함"</string>
+    <string name="ppe_d0442824723c">"최신순"</string>
+    <string name="ppe_c47bb88fdba7">"오래된순"</string>
+    <string name="ppe_7cf7e8e599e8">"큰 크기순"</string>
+    <string name="ppe_c513b8692285">"작은 크기순"</string>
+    <string name="ppe_72a3fb88fe94">"기기에 있음"</string>
+    <string name="ppe_ca260d2edb73">"각 동영상을 다운로드하고 클라우드 사본을 삭제한 다음 다시 업로드하여 저장용량을 사용하지 않게 합니다."</string>
+    <string name="ppe_b3b27f0491df">"완료될 때까지 안전한 사본이 휴대전화에 보관됩니다. 화질은 유지되며 Video Boost 태그는 사라집니다."</string>
 </resources>
