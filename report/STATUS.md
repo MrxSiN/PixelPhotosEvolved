@@ -1,4 +1,20 @@
-# Status — 1.1.1 / 37
+# Status — 1.1.2 / 38
+
+**1.1.2** (versionCode 38) supports Google Photos 7.99.0.1007655401 (`52617560`). Build:
+[build-1.1.2.json](build-1.1.2.json).
+
+- **Cause.** In 7.99 the two strings that identified the Reclaim uploader class (`ccxa`) are in two
+  different classes, so DexKit missed it. Every hook required every symbol, so the log showed
+  `missing [ccxa]` and `Unsupported Photos / Android / ABI`, and PPE did nothing.
+- **Startup gate.** Startup now checks only Android 17, 64-bit and arm64-v8a before it applies the
+  Pixel XL Build identity, the system feature flags and the Video Boost router, as Pixelify does.
+  Hooks that use Photos classes keep their own checks. A test with `ccxa` removed from the symbol
+  cache still installed the identity and the router.
+- **ccxa.** A new DexKit rule finds the one class that declares `ccbt m(cccq)` (7.99: `bmkr`).
+  Its upload and cancel method names (7.98 `z`/`A`, 7.99 `d`/`e`) are found by their shape.
+- **Not yet exercised on 7.99:** a Video Boost recording upload and a Reclaim run.
+
+## 1.1.1 / 37
 
 **1.1.1** (versionCode 37) fixes Video Boost upload routing and Reclaim finalization, adds a Video
 Boost identity row to Compatibility & diagnostics, and redesigns the Reclaim page. Build:

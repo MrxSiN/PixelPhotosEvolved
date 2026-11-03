@@ -1,3 +1,17 @@
+## 1.1.2
+
+Works with Google Photos 7.99.
+
+### Fixes
+- **Photos 7.99.** Photos 7.99 moved one class PPE looks up, and PPE then turned every feature off,
+  including Unlimited Original Quality. PPE now finds that class in 7.99.
+- **Updates no longer turn off backup.** Like Pixelify, the Pixel XL identity only changes Android's
+  device information, so PPE now applies it on every Photos version. Video Boost routing still checks
+  its own Photos classes before it starts. Features that need a Photos class PPE can't find stay off
+  on their own.
+- **Reclaim upload names.** The Reclaim uploader's method names are now found by their shape instead
+  of being fixed to one Photos version.
+
 ## 1.1.1
 
 Video Boost uploads work as intended again, Reclaim finishes reliably, and the Reclaim page is

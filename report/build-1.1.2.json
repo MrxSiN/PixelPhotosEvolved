@@ -1,0 +1,13 @@
+{
+ "version": "1.1.2",
+ "version_code": 38,
+ "built_from": "1.1.1 carrier with port799.py (startup identity gated on SDK/ABI only; DexKit rule D`ccxa`0`0`0`=ccbt^=cccq; Reclaim uploader method names resolved by shape as #cxz/#cxa; rule cache signature rules-799ccxa0d001), then release.py 1.1.1 -> 1.1.2",
+ "module_root": "f7511fab109bfc610630691d2090203cd45de7ccbe0a959bde38f56cce4cbf4d",
+ "module_sha256": "593b3fc62bc703699e8fb7c17dea058f4d1dd1222ad9fcbb5876fddf5a9ffa8b",
+ "unsigned_sha256": "8a20b536548ad67a5ab4a2caad4dd31027b452d3e305ff1c4489e80f25daee96",
+ "signed_sha256": "49bc49fe33deebc9c588a9872b5e8d2f6a9c4e5d056c29b9e987d2fd40d63724",
+ "policy_executable_sha256": "d0dbc3ba98a1bba6835529e29020c9f5cddae6808b78fd417acd1764875a5308",
+ "xax": "054262b0af4b40d45b61feafa07612cf87708e7d",
+ "device": "Pixel 8 Pro, Photos 7.99.0.1007655401 (52617560), debug-signed for testing. Verified in logcat: DexKit scan 85 entries, missing [] (ccxa=bmkr, #cxz=d, #cxa=e); Scoped Video Boost router installed; Reported device Pixel XL; backup offer hooks installed; Video Boost state observer installed; backup probe passed; profile card inserted. With ccxa removed from the symbol cache, the Pixel XL identity and Video Boost router still installed. Not yet exercised: a Video Boost recording upload and a Reclaim run on 7.99.",
+ "signer": "XAX public development fixture; the release workflow re-signs with the release key"
+}
