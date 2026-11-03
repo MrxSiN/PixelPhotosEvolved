@@ -1,4 +1,13 @@
-# Status — 1.1.2 / 38
+# Status — 1.2.0-dev / 39
+
+**1.2.0-dev** (versionCode 39, development build) adds **Library Tools** on Google Photos 7.99:
+the profile card becomes a **Pixel Photos Evolved** section with **Backup** (the existing page,
+renamed) and **Library Tools** (Storage Analyzer, Smart Filter, Album Organizer). The tools are
+read-only and use Photos' on-phone metadata cache. See [LIBRARY_TOOLS.md](../docs/LIBRARY_TOOLS.md)
+and [build-1.2.0-dev.json](build-1.2.0-dev.json). Album writes, deletion, thumbnails and selection
+are not built. Release notes and READMEs for a 1.2.0 release are not updated yet.
+
+## 1.1.2 / 38 (previous release)
 
 **1.1.2** (versionCode 38) supports Google Photos 7.99.0.1007655401 (`52617560`). Build:
 [build-1.1.2.json](build-1.1.2.json).
