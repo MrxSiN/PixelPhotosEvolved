@@ -1,40 +1,51 @@
 # Library Tools (1.2.0-dev)
 
-Photos profile page → **Pixel Photos Evolved** → **Backup** or **Library Tools**. Backup is the
-existing settings page, unchanged. Library Tools has three read-only pages.
+Photos profile page → **Pixel Photos Evolved** → **Backup**, **Library Tools** or
+**Compatibility & diagnostics** (moved here from the Backup page). Backup is the existing settings
+page. Library Tools has three pages that read the active account's metadata cache Photos keeps on
+the phone (`gphotos<N>.db`, opened read-only) on a background thread. This is not a scan of the
+whole Google Account. Nothing in the library is written or deleted.
 
-All three read the active account's metadata cache that Photos keeps on the phone
-(`gphotos<N>.db`, opened read-only) on a background thread. This is **not** a scan of the whole
-Google Account, and every page says so. Nothing is written, uploaded or deleted. If Photos' classes
-or the cache cannot be resolved, a page says the records are not available.
+Library rows are `remote_media` rows with `is_canonical=1 OR is_canonical_copy=1` (album copies
+excluded); a Video Boost pair shows once (its `VB-02.MAIN`), as in Photos.
 
 ## Storage Analyzer
-Lists only media whose `quota_charged_bytes` is above zero (media that use storage), with totals
-per photo, video and other, a count of records with unknown storage, and the number of records
-checked. Sort: largest, smallest, newest, oldest. Show: all, photos, videos. First 50 rows.
+Total of `quota_charged_bytes` above zero, a card with photos / videos / other / unknown, the
+number of library records checked, and the media that use storage. Sort pill: Size or Date taken
+(tap again to flip the direction). Show: all media, photos, videos. Refresh.
 
 ## Smart Filter
-Filters over the same records, combined with AND: type, storage, size, date taken, duration,
-resolution, name contains (bound, escaped `LIKE`, case-insensitive) and sort. Size, date, duration
-and resolution are presets that cycle on tap. First 50 matches.
+Name search plus filter chips (type, storage, size, date taken, duration, resolution), each with a
+menu, combined with AND; sort row. First 200 matches.
 
 ## Album Organizer
-Lists visible albums (collections of type 1 that are not hidden or soft-deleted) with item count,
-private/shared and, for shared albums, whether you own them (linked envelope owner). Opening an
-album shows its first 50 items. Per-album counts match Photos' stored `total_items`.
+Visible albums (collections of type 1, not hidden or soft-deleted) as covers with item counts and
+"Shared", filtered All / Shared with me / My albums (envelope owner = viewer) and sorted by most
+recent photo, last modified or title (Photos' own labels). An album opens as its own page.
 
-## Not built, on purpose
-- Creating albums, adding or removing media: no verified write path in Photos 7.99.
-- "Not in any album": a media record holds one `collection_id`, so membership in several albums,
-  or in none, cannot be confirmed from the cache.
-- Album, backup-quality and regular-expression filters; thumbnails and selection.
-- Move to Trash and permanent deletion, the confirmation flow and the operation journal. No
-  general-media code path touches Video Boost Reclaim or uploads.
+## Grid, viewer, selection, download
+Media show in a Photos-style grid: day headers, month headers from 6 columns, pinch for 2–9
+columns, video length badge. Thumbnails and full images come from the item's lh3 URL with the
+account's OAuth token (`photos.image.readonly`).
+
+- Tap: a full-screen viewer over the grid's own items (the stock viewer resolves stacks and swipes
+  the whole library). Swipe between results, pinch / double-tap zoom, swipe down or Back to close.
+  Videos are copied to Photos' cache, then played. "Open in Google Photos" opens the stock viewer
+  through the `link/photo` deep link; a one-shot hook keeps Photos' Home (and this page) alive.
+- Hold: selection mode; **Download** saves each original (`=d`, videos `=dv`) to
+  `Download/Pixel Photos Evolved`; **Download as ZIP** saves one archive there.
+
+## Not built
+- Creating albums, adding or removing media, moving to Trash, permanent deletion: no verified write
+  path in Photos 7.99.
+- "Not in any album": a media record holds one `collection_id`.
+- Album, backup-quality and regular-expression filters.
 
 ## Checked on a Pixel 8 Pro, Photos 7.99
-Totals and filters were compared with a copy of the account database (74,181 records): 4K or
-higher 38,444; before 2025 64,479; name "elden" 112; albums 439 (363 private, 76 shared); an
-album of 518 items showed 518. Not exercised: other UI languages, TalkBack, landscape, font scale.
+Counts against a copy of the account database: 31,857 library items; Video Boost item using
+6.4 MB; 439 visible albums; an album of 518 items showed 518. Viewer, zoom, video playback,
+selection, Download and Download as ZIP (archive verified) tested on device. Not exercised: light
+theme, other UI languages, TalkBack, landscape, font scale, long videos.
 
 The idea of reading media metadata and albums comes from Google Photos Toolkit (MIT, xob0t); no
 code or browser RPC from it is used (see [ATTRIBUTION.md](ATTRIBUTION.md)).
