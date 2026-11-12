@@ -28,7 +28,9 @@ updated yet.
 - **Issue #2 (Android 13 crash).** `Character.toString(int)` (API 34+) is replaced by
   `StringBuilder.appendCodePoint`, which exists on every supported API level.
 - **Not ported:** Library Tools "Add to album" resolves fixed 7.99 names and stays hidden on 8.0.
-- **Toolchain.** Built with XAX `ed1961b` (its Python reference compiler now lives in
+- **Toolchain (2026-11-12).** XAX `65bce1e` and BBC `d18339c`: the module store and both APKs, and the policy
+  `.so`, `.bfx` and `.xax`, are byte-identical to the previous toolchain's.
+- **Toolchain (previous).** Built with XAX `ed1961b` (its Python reference compiler now lives in
   `compiler/reference/`; store and APK are byte-identical to the `054262b0` build) and BBC `240c658`.
   The new policy executable matches the previous one on 6,000 device vectors; on-device self-tests pass.
 - **Reclaim History thumbnails.** Four causes fixed: the cloud fetch was unauthenticated (HTTP 403), rows

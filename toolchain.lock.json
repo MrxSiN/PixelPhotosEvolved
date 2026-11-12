@@ -1,12 +1,12 @@
 {
   "module_sdk": {
     "repository": "https://github.com/MrxSiN/XAX",
-    "revision": "ed1961b18f448c98e366e4767eec662de422eae1",
-    "scope": "Module compiler: compiler/reference (Python reference compiler) of XAX ed1961b; builds the store and APK byte-identically to 054262b0",
+    "revision": "65bce1e8cedad9df50a57af58e1799aebcf72bf0",
+    "scope": "Module compiler: compiler/reference (Python reference compiler) of XAX 65bce1e; builds the store and APKs byte-identically to the ed1961b build (checked 2026-11-12)",
     "files": {
       "compiler/reference/blake3.py": "bc819aaf00be9054a88db0707c94bf0a535a6c538e2ab529788df8630ec7bd03",
       "compiler/reference/xax_aarch64.py": "acc639bbeba73fc4ef694da969485e3e49fe8b0cc3a28d53bae4c0aae87871dd",
-      "compiler/reference/xax_aarch64_regalloc.py": "90c7401d162581fe18375b3e5c3d76e9bcdf2072d2d66589b542b4e30766b026",
+      "compiler/reference/xax_aarch64_regalloc.py": "e2524f01e27e51a249801889a7341cef4f2dbe783ae6e8e822e11f59ec50f9b5",
       "compiler/reference/xax_accelerator.py": "cdb6cc11064124e3d3c143022777da16a76c9cab10cd59e987fcca5c35f9fcec",
       "compiler/reference/xax_android.py": "0be32dc660b468aaaffec5ea8d5effe6b1755282ec2897381575db45e8972fdb",
       "compiler/reference/xax_android_bfc.py": "91cb606ff7edf20d4c65ef88d9115770efee16c8ad17e89388cd136dc3821778",
@@ -42,7 +42,7 @@
       "compiler/reference/xax_manifest.py": "85ed75ea6812241d45ed92bdee2d5af866d6a3a9a007c3dff90d6dde1bd6f56f",
       "compiler/reference/xax_native_blake3.py": "60ae34d694091ddd47c4eb34879260360b1f8558d2444b0b89235607fc1c5699",
       "compiler/reference/xax_optimizer.py": "2a481ab96033cd9d60566230120a93b9c48ec0af2cb7a53dd628147312631043",
-      "compiler/reference/xax_pe.py": "c6bb5ccea6ec434ceb2ca58e4b2cd5cdc15a4ede83a6b5ef0714588dbcc38f78",
+      "compiler/reference/xax_pe.py": "6f2f6c84ea83250f76e5f012411cb08cc86b6859783c493e80c8de1da0ba4ac5",
       "compiler/reference/xax_platform.py": "639fbb9f33532afe458ef9d4dddf403110464c9d99bf701f93491aab8d8c8b6d",
       "compiler/reference/xax_prefetch.py": "70eb7ba0344819138f768a17626d28ac01d4b4c8d8dabf3f3fdeda608d6feed0",
       "compiler/reference/xax_ranges.py": "eb212e92c38bda63c8d5bd4612e67e24c99b6408b94946200b618f20af998d82",
@@ -57,14 +57,14 @@
       "compiler/reference/xax_wasm_legacy.py": "6537430c97363661f8918e61568937fe0a4081ac0c7e8f60b203c744cf304dfa",
       "compiler/reference/xax_web.py": "94df3382ec70c462b0c9cb0f168732d8e11eaed8f8207fac4623a05f3fd93378",
       "compiler/reference/xax_workspace.py": "ea751e2f56cfe560ea3cb981ca505bf4552c18636b32f34d0ba568727c112920",
-      "compiler/reference/xax_x86_64.py": "9e6199c870109b288f7b418911e297180f057c0f3dfa4ed60b786e94e2800e5a",
-      "compiler/reference/xax_x86_64_regalloc.py": "c029a651717b2afe6fadd11a4fd796a005af46222b47bb8f76429abd9429c60e",
+      "compiler/reference/xax_x86_64.py": "fc0263f6f0b6c8456fd0b76f8146a0faf6b759fdde92bc00428dedb7a5b46e3e",
+      "compiler/reference/xax_x86_64_regalloc.py": "ac3d0788f8725f474bf9a0c5f4d23d08afae9cc9aa5b029390ab91ac68510b21",
       "compiler/reference/xax_x86_64_views.py": "2fa638e32ef7e41ec8fb625f86a080995e70f21fa586461298b04d0f8fed16a7"
     }
   },
   "bbc": {
     "repository": "https://github.com/MrxSiN/BBC",
-    "revision": "240c658affa25b69cd1d793f72203ceacc6d4365",
+    "revision": "d18339c41811f2d0a9d8b89789977182a7c05882",
     "bbc_exe_sha256": "de9a2c5f65312a493f615f5c06f90761a5d3bf1971f460fe37113c8a6a71e405",
     "bbc_android_arm64_xax_sha256": "edebd63e0da60d79f6eaec2fc19155e19a341daaf74cd1761b50b3c278345606",
     "command": "bbc.exe compile android-arm64 -O1 ppepolicy < policy/pixel_photos_policy.bf; bbc.exe emit-bfx -O1",
@@ -179,6 +179,23 @@
     "XAX-MCP": {
       "path": "D:\\GitHub\\XAX-MCP",
       "after": "1e5cf66",
+      "action": "git pull --ff-only"
+    }
+  },
+  "checkouts_checked_2026_11_12": {
+    "BBC": {
+      "path": "D:\\GitHub\\BBC",
+      "after": "d18339c41811f2d0a9d8b89789977182a7c05882",
+      "action": "git pull --ff-only"
+    },
+    "XAX": {
+      "path": "D:\\GitHub\\XAX",
+      "after": "65bce1e8cedad9df50a57af58e1799aebcf72bf0",
+      "action": "git pull --ff-only"
+    },
+    "XAX-MCP": {
+      "path": "D:\\GitHub\\XAX-MCP",
+      "after": "a2f2936",
       "action": "git pull --ff-only"
     }
   }
