@@ -230,14 +230,6 @@
     <string name="ppe_645c4f2315ca">"Last upload: {m}"</string>
     <string name="ppe_f86272d37341">"Not completed. "</string>
     <string name="ppe_5536679a0b6f">"Library Tools"</string>
-    <string name="ppe_7a59062988af">"Storage Analyzer"</string>
-    <string name="ppe_24a06911106a">"Find photos and videos using Google Account storage."</string>
-    <string name="ppe_47d2592ed1b0">"Smart Filter"</string>
-    <string name="ppe_0b2ef7d0bce3">"Find media using advanced search and filtering."</string>
-    <string name="ppe_f57c63b3a1e7">"Album Organizer"</string>
-    <string name="ppe_17c45fb79d47">"Organize photos and videos into albums."</string>
-    <string name="ppe_56e3badc4e6c">"Refresh"</string>
-    <string name="ppe_5421d33a6629">"Show: {s}"</string>
     <string name="ppe_46719875dd35">"All media"</string>
     <string name="ppe_c8b2e864eccb">"Photos"</string>
     <string name="ppe_6e6a6f2086bb">"Other"</string>
@@ -277,10 +269,7 @@
     <string name="ppe_f4fc21d8667c">"1080p or higher"</string>
     <string name="ppe_94dc24201791">"Under 1080p"</string>
     <string name="ppe_56553100b028">"Reset filters"</string>
-    <string name="ppe_bfcac4f471c3">"Name contains"</string>
     <string name="ppe_881b831dd1c0">"{n} items"</string>
-    <string name="ppe_50d0d8dd11a9">"Shared"</string>
-    <string name="ppe_745defaeeb0d">"Untitled album"</string>
     <string name="ppe_19884f402ffe">"1 item"</string>
     <string name="ppe_a479c9c34e87">"Download"</string>
     <string name="ppe_c538de8b48f3">"Download as ZIP"</string>
@@ -292,4 +281,16 @@
     <string name="ppe_bbfa773e5a63">"Close"</string>
     <string name="ppe_b52b36b7269f">"Back"</string>
     <string name="ppe_5d12bd53552c">"Play"</string>
+    <string name="ppe_5d281c34bf83">"Any album"</string>
+    <string name="ppe_0f4b09391663">"In an album"</string>
+    <string name="ppe_deb8829265c9">"Not in any album"</string>
+    <string name="ppe_3effab75ab75">"Choose an album"</string>
+    <string name="ppe_4cd31b4cd5b6">"Total size"</string>
+    <string name="ppe_6d1704748e0c">"Expanded"</string>
+    <string name="ppe_0084e8faecb6">"Collapsed"</string>
+    <string name="ppe_6371b592b127">"None of these are on this device"</string>
+    <string name="ppe_ef454d1ef84c">"Add to {album}?"</string>
+    <string name="ppe_bb75c129e0f5">"Added to {album}"</string>
+    <string name="ppe_29f7d37c6a3e">"Couldn't add to {album}"</string>
+    <string name="ppe_61cc55aa0453">"Add"</string>
 </resources>

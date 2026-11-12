@@ -2,12 +2,64 @@
 
 **1.2.0-dev** (versionCode 39, development build) adds **Library Tools** on Google Photos 7.99:
 the profile card becomes a **Pixel Photos Evolved** section with **Backup** (the existing page,
-renamed), **Library Tools** (Storage Analyzer, Smart Filter, Album Organizer) and **Compatibility &
+renamed), **Library Tools** (one Smart Filter page with a storage summary and an album filter) and **Compatibility &
 diagnostics**. The tools read Photos' on-phone metadata cache, show media in a Photos-style grid with
 their own viewer, and can download selected originals or a ZIP. See
 [LIBRARY_TOOLS.md](../docs/LIBRARY_TOOLS.md) and [build-1.2.0-dev.json](build-1.2.0-dev.json).
 Album writes and deletion are not built. Release notes and READMEs for a 1.2.0 release are not
 updated yet.
+
+### Google Photos 8.0 (8.0.0.1011730683, `52642450`)
+
+- **Cause of "PPE could not match this Google Photos version".** 8.0 renamed the field that held
+  `ccbz` (`o` -> `p`), so the name-pinned DexKit rule `M`ccbz`ccdb`f`o`?` failed, and `cccb`
+  (found through `ccbz`) failed with it. Every feature was gated on all symbols, so backup identity
+  was switched off too.
+- **ccbz.** Found without member names: it is the only class that declares an abstract
+  `void (long, long, long, boolean)` method (7.99 `bntb`, 8.0 `bpfe`). A cold DexKit scan on 8.0
+  resolves all 85 symbols.
+- **Backup gate by hook.** The backup offer hooks install when their own symbols resolve, and the
+  Backup page warning and toggle lock depend on whether those hooks actually installed, not on
+  every symbol. Checked on the device: no warning on 8.0; with a backup symbol removed from the
+  cache the warning appears.
+- **Upload and Reclaim.** All 207 reflective lookups (backup, Video Boost upload, Reclaim upload,
+  cancel and finalization) resolve against the 8.0 dex with the live symbol table. A Video Boost
+  recording upload and a Reclaim run have not been exercised on 8.0.
+- **Issue #2 (Android 13 crash).** `Character.toString(int)` (API 34+) is replaced by
+  `StringBuilder.appendCodePoint`, which exists on every supported API level.
+- **Not ported:** Library Tools "Add to album" resolves fixed 7.99 names and stays hidden on 8.0.
+- **Toolchain.** Built with XAX `ed1961b` (its Python reference compiler now lives in
+  `compiler/reference/`; store and APK are byte-identical to the `054262b0` build) and BBC `240c658`.
+  The new policy executable matches the previous one on 6,000 device vectors; on-device self-tests pass.
+- **Reclaim History thumbnails.** Four causes fixed: the cloud fetch was unauthenticated (HTTP 403), rows
+  kept the address of the deleted safe copy, parallel lookups shared one database connection, and the
+  page queried the signed-out account database until a scan ran. Lookup is now by the entry's keys
+  (indexed), then by any copy of the same video (name before `.VB-`). Videos with no copy left in Photos
+  keep the placeholder.
+- **Library Tools** has a page title like Backup.
+- **Photos members found by DexKit, not by name.** The 77 reflective lookups in the backup, upload, Reclaim
+  and trash hooks that used literal obfuscated member names now read names the DexKit scan resolves from
+  member rules (shape plus an anchor: a string the method uses, a member it calls, a kept class that calls
+  it or writes the field, a field it is copied into, an enum constant name). On 8.0 all rules resolve in
+  the same scan (about 1 s in total) to the names the code used before, except the upload-queue method
+  8.0 renamed, which now resolves to its new name. Literal fallback names, the pinned symbol table of an
+  old Photos version and the device profiles' enum field letters were removed; a member that is not found
+  stays missing and its feature fails closed.
+- **Add to album** works again on 8.0: its 17 classes and 11 members are found by DexKit rules (strings
+  such as `AddToCollectionParams{accountId=`, kept classes, and signatures of found classes). The
+  selection sheet shows the action and the album row; no album was changed during testing.
+- **Video Boost router without literal names (2026-11-12).** The 25 field and method names the upload router
+  hooks read or wrote are now found at runtime: by the declared type of a field on a class the scan already
+  found (header provider, request, builder, Context, List), by an enum constant (`BLANFORD`), by three DexKit
+  member rules (original Uri, the item's request getter, its result pair; new anchor `r:@CLASS` = read by a
+  kept class), and protobuf fields by field number from the message's own message info. The router installs
+  only when every name resolves and logs them (`Video Boost router fields: hdr=o req=d ...`).
+- **Fixed: Video Boost User-Agent never applied on 8.0.** The router stored the native header context under
+  the uploader's field `n`, which on 8.0 is no longer the header provider that the headers hook looks it up
+  by (`o` is). The key is now the uploader's field of the header provider's type. Not yet exercised with a
+  Video Boost recording upload.
+- **Still literal:** three `ppeDM(object.getClass(), "a")` calls, two method-name comparisons and one class
+  name (`amcw`) in the Reclaim owner check.
 
 ## 1.1.2 / 38 (previous release)
 

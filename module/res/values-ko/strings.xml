@@ -231,14 +231,6 @@
     <string name="ppe_645c4f2315ca">"마지막 업로드: {m}"</string>
     <string name="ppe_f86272d37341">"완료되지 않음. "</string>
     <string name="ppe_5536679a0b6f">"라이브러리 도구"</string>
-    <string name="ppe_7a59062988af">"저장용량 분석기"</string>
-    <string name="ppe_24a06911106a">"Google 계정 저장용량을 사용하는 사진과 동영상을 찾습니다."</string>
-    <string name="ppe_47d2592ed1b0">"스마트 필터"</string>
-    <string name="ppe_0b2ef7d0bce3">"고급 검색 및 필터로 미디어를 찾습니다."</string>
-    <string name="ppe_f57c63b3a1e7">"앨범 정리"</string>
-    <string name="ppe_17c45fb79d47">"사진과 동영상을 앨범으로 정리합니다."</string>
-    <string name="ppe_56e3badc4e6c">"새로고침"</string>
-    <string name="ppe_5421d33a6629">"표시: {s}"</string>
     <string name="ppe_46719875dd35">"모든 미디어"</string>
     <string name="ppe_c8b2e864eccb">"사진"</string>
     <string name="ppe_6e6a6f2086bb">"기타"</string>
@@ -278,10 +270,7 @@
     <string name="ppe_f4fc21d8667c">"1080p 이상"</string>
     <string name="ppe_94dc24201791">"1080p 미만"</string>
     <string name="ppe_56553100b028">"필터 초기화"</string>
-    <string name="ppe_bfcac4f471c3">"이름에 포함"</string>
     <string name="ppe_881b831dd1c0">"{n}개"</string>
-    <string name="ppe_50d0d8dd11a9">"공유됨"</string>
-    <string name="ppe_745defaeeb0d">"제목 없는 앨범"</string>
     <string name="ppe_19884f402ffe">"1개"</string>
     <string name="ppe_a479c9c34e87">"다운로드"</string>
     <string name="ppe_c538de8b48f3">"ZIP으로 다운로드"</string>
@@ -293,4 +282,16 @@
     <string name="ppe_bbfa773e5a63">"닫기"</string>
     <string name="ppe_b52b36b7269f">"뒤로"</string>
     <string name="ppe_5d12bd53552c">"재생"</string>
+    <string name="ppe_5d281c34bf83">"앨범 제한 없음"</string>
+    <string name="ppe_0f4b09391663">"앨범에 있음"</string>
+    <string name="ppe_deb8829265c9">"앨범에 없음"</string>
+    <string name="ppe_3effab75ab75">"앨범 선택"</string>
+    <string name="ppe_4cd31b4cd5b6">"총 크기"</string>
+    <string name="ppe_6d1704748e0c">"펼쳐짐"</string>
+    <string name="ppe_0084e8faecb6">"접힘"</string>
+    <string name="ppe_6371b592b127">"이 기기에 있는 항목이 없습니다"</string>
+    <string name="ppe_ef454d1ef84c">"'{album}'에 추가하시겠습니까?"</string>
+    <string name="ppe_bb75c129e0f5">"'{album}'에 추가됨"</string>
+    <string name="ppe_29f7d37c6a3e">"'{album}'에 추가할 수 없음"</string>
+    <string name="ppe_61cc55aa0453">"추가"</string>
 </resources>

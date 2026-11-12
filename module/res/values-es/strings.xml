@@ -231,14 +231,6 @@
     <string name="ppe_645c4f2315ca">"Última subida: {m}"</string>
     <string name="ppe_f86272d37341">"Sin completar. "</string>
     <string name="ppe_5536679a0b6f">"Herramientas de la biblioteca"</string>
-    <string name="ppe_7a59062988af">"Analizador de almacenamiento"</string>
-    <string name="ppe_24a06911106a">"Encuentra las fotos y vídeos que usan el almacenamiento de tu cuenta de Google."</string>
-    <string name="ppe_47d2592ed1b0">"Filtro inteligente"</string>
-    <string name="ppe_0b2ef7d0bce3">"Encuentra contenido con búsqueda y filtros avanzados."</string>
-    <string name="ppe_f57c63b3a1e7">"Organizador de álbumes"</string>
-    <string name="ppe_17c45fb79d47">"Organiza fotos y vídeos en álbumes."</string>
-    <string name="ppe_56e3badc4e6c">"Actualizar"</string>
-    <string name="ppe_5421d33a6629">"Mostrar: {s}"</string>
     <string name="ppe_46719875dd35">"Todo el contenido"</string>
     <string name="ppe_c8b2e864eccb">"Fotos"</string>
     <string name="ppe_6e6a6f2086bb">"Otros"</string>
@@ -278,10 +270,7 @@
     <string name="ppe_f4fc21d8667c">"1080p o superior"</string>
     <string name="ppe_94dc24201791">"Menos de 1080p"</string>
     <string name="ppe_56553100b028">"Restablecer filtros"</string>
-    <string name="ppe_bfcac4f471c3">"El nombre contiene"</string>
     <string name="ppe_881b831dd1c0">"{n} elementos"</string>
-    <string name="ppe_50d0d8dd11a9">"Compartido"</string>
-    <string name="ppe_745defaeeb0d">"Álbum sin título"</string>
     <string name="ppe_19884f402ffe">"1 elemento"</string>
     <string name="ppe_a479c9c34e87">"Descargar"</string>
     <string name="ppe_c538de8b48f3">"Descargar como ZIP"</string>
@@ -293,4 +282,16 @@
     <string name="ppe_bbfa773e5a63">"Cerrar"</string>
     <string name="ppe_b52b36b7269f">"Atrás"</string>
     <string name="ppe_5d12bd53552c">"Reproducir"</string>
+    <string name="ppe_5d281c34bf83">"Cualquier álbum"</string>
+    <string name="ppe_0f4b09391663">"En un álbum"</string>
+    <string name="ppe_deb8829265c9">"En ningún álbum"</string>
+    <string name="ppe_3effab75ab75">"Elegir un álbum"</string>
+    <string name="ppe_4cd31b4cd5b6">"Tamaño total"</string>
+    <string name="ppe_6d1704748e0c">"Expandido"</string>
+    <string name="ppe_0084e8faecb6">"Contraído"</string>
+    <string name="ppe_6371b592b127">"Ninguno de estos elementos está en este dispositivo"</string>
+    <string name="ppe_ef454d1ef84c">"¿Añadir a {album}?"</string>
+    <string name="ppe_bb75c129e0f5">"Añadido a {album}"</string>
+    <string name="ppe_29f7d37c6a3e">"No se pudo añadir a {album}"</string>
+    <string name="ppe_61cc55aa0453">"Añadir"</string>
 </resources>

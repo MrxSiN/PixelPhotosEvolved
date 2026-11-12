@@ -231,14 +231,6 @@
     <string name="ppe_645c4f2315ca">"Последняя загрузка: {m}"</string>
     <string name="ppe_f86272d37341">"Не завершено. "</string>
     <string name="ppe_5536679a0b6f">"Инструменты библиотеки"</string>
-    <string name="ppe_7a59062988af">"Анализ хранилища"</string>
-    <string name="ppe_24a06911106a">"Находите фото и видео, занимающие место в аккаунте Google."</string>
-    <string name="ppe_47d2592ed1b0">"Умный фильтр"</string>
-    <string name="ppe_0b2ef7d0bce3">"Находите медиафайлы с помощью расширенного поиска и фильтров."</string>
-    <string name="ppe_f57c63b3a1e7">"Упорядочение альбомов"</string>
-    <string name="ppe_17c45fb79d47">"Упорядочивайте фото и видео по альбомам."</string>
-    <string name="ppe_56e3badc4e6c">"Обновить"</string>
-    <string name="ppe_5421d33a6629">"Показать: {s}"</string>
     <string name="ppe_46719875dd35">"Все медиафайлы"</string>
     <string name="ppe_c8b2e864eccb">"Фото"</string>
     <string name="ppe_6e6a6f2086bb">"Другое"</string>
@@ -278,10 +270,7 @@
     <string name="ppe_f4fc21d8667c">"1080p и выше"</string>
     <string name="ppe_94dc24201791">"Ниже 1080p"</string>
     <string name="ppe_56553100b028">"Сбросить фильтры"</string>
-    <string name="ppe_bfcac4f471c3">"Название содержит"</string>
     <string name="ppe_881b831dd1c0">"Элементов: {n}"</string>
-    <string name="ppe_50d0d8dd11a9">"Общий"</string>
-    <string name="ppe_745defaeeb0d">"Альбом без названия"</string>
     <string name="ppe_19884f402ffe">"1 элемент"</string>
     <string name="ppe_a479c9c34e87">"Скачать"</string>
     <string name="ppe_c538de8b48f3">"Скачать как ZIP"</string>
@@ -293,4 +282,16 @@
     <string name="ppe_bbfa773e5a63">"Закрыть"</string>
     <string name="ppe_b52b36b7269f">"Назад"</string>
     <string name="ppe_5d12bd53552c">"Воспроизвести"</string>
+    <string name="ppe_5d281c34bf83">"Любой альбом"</string>
+    <string name="ppe_0f4b09391663">"В альбоме"</string>
+    <string name="ppe_deb8829265c9">"Не в альбомах"</string>
+    <string name="ppe_3effab75ab75">"Выбрать альбом"</string>
+    <string name="ppe_4cd31b4cd5b6">"Общий размер"</string>
+    <string name="ppe_6d1704748e0c">"Развернуто"</string>
+    <string name="ppe_0084e8faecb6">"Свернуто"</string>
+    <string name="ppe_6371b592b127">"Этих объектов нет на этом устройстве"</string>
+    <string name="ppe_ef454d1ef84c">"Добавить в «{album}»?"</string>
+    <string name="ppe_bb75c129e0f5">"Добавлено в «{album}»"</string>
+    <string name="ppe_29f7d37c6a3e">"Не удалось добавить в «{album}»"</string>
+    <string name="ppe_61cc55aa0453">"Добавить"</string>
 </resources>

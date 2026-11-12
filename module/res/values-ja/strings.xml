@@ -231,14 +231,6 @@
     <string name="ppe_645c4f2315ca">"前回のアップロード：{m}"</string>
     <string name="ppe_f86272d37341">"未完了。"</string>
     <string name="ppe_5536679a0b6f">"ライブラリツール"</string>
-    <string name="ppe_7a59062988af">"ストレージ分析"</string>
-    <string name="ppe_24a06911106a">"Google アカウントの容量を使用している写真と動画を探します。"</string>
-    <string name="ppe_47d2592ed1b0">"スマートフィルタ"</string>
-    <string name="ppe_0b2ef7d0bce3">"高度な検索とフィルタでメディアを探します。"</string>
-    <string name="ppe_f57c63b3a1e7">"アルバム整理"</string>
-    <string name="ppe_17c45fb79d47">"写真と動画をアルバムに整理します。"</string>
-    <string name="ppe_56e3badc4e6c">"更新"</string>
-    <string name="ppe_5421d33a6629">"表示：{s}"</string>
     <string name="ppe_46719875dd35">"すべてのメディア"</string>
     <string name="ppe_c8b2e864eccb">"写真"</string>
     <string name="ppe_6e6a6f2086bb">"その他"</string>
@@ -278,10 +270,7 @@
     <string name="ppe_f4fc21d8667c">"1080p 以上"</string>
     <string name="ppe_94dc24201791">"1080p 未満"</string>
     <string name="ppe_56553100b028">"フィルタをリセット"</string>
-    <string name="ppe_bfcac4f471c3">"名前に含む"</string>
     <string name="ppe_881b831dd1c0">"{n} 件"</string>
-    <string name="ppe_50d0d8dd11a9">"共有"</string>
-    <string name="ppe_745defaeeb0d">"無題のアルバム"</string>
     <string name="ppe_19884f402ffe">"1 件"</string>
     <string name="ppe_a479c9c34e87">"ダウンロード"</string>
     <string name="ppe_c538de8b48f3">"ZIP でダウンロード"</string>
@@ -293,4 +282,16 @@
     <string name="ppe_bbfa773e5a63">"閉じる"</string>
     <string name="ppe_b52b36b7269f">"戻る"</string>
     <string name="ppe_5d12bd53552c">"再生"</string>
+    <string name="ppe_5d281c34bf83">"アルバム指定なし"</string>
+    <string name="ppe_0f4b09391663">"アルバムにある"</string>
+    <string name="ppe_deb8829265c9">"どのアルバムにもない"</string>
+    <string name="ppe_3effab75ab75">"アルバムを選択"</string>
+    <string name="ppe_4cd31b4cd5b6">"合計サイズ"</string>
+    <string name="ppe_6d1704748e0c">"展開済み"</string>
+    <string name="ppe_0084e8faecb6">"折りたたみ済み"</string>
+    <string name="ppe_6371b592b127">"これらはこのデバイスにありません"</string>
+    <string name="ppe_ef454d1ef84c">"「{album}」に追加しますか？"</string>
+    <string name="ppe_bb75c129e0f5">"「{album}」に追加しました"</string>
+    <string name="ppe_29f7d37c6a3e">"「{album}」に追加できませんでした"</string>
+    <string name="ppe_61cc55aa0453">"追加"</string>
 </resources>
