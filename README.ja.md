@@ -15,7 +15,7 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-7.98.0-3DDC84?style=for-the-badge)](#互換性)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#互換性)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#ビルド)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
@@ -26,7 +26,7 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 
 > [!NOTE]
 > **Android 17（API 37）、Pixel 8 Pro、Vector 2.2 / libxposed API 102 上の Google フォト
-> 7.98.0.1007591100（`52591217`）でテスト済み。** PPE はフックするフォトのクラスをすべて DexKit で
+> 8.0.0.1011730683（`52642450`）でテスト済み。** PPE はフックするフォトのクラスをすべて DexKit で
 > 見つけるため、ほとんどのフォトの更新ではモジュールを再ビルドする必要がありません。クラスが見つからない
 > 場合、フォトは本来の動作を維持し、**互換性と診断** に利用できない機能が表示されます。
 > 詳しくは [DexKit レポート](report/dexkit-1.4.1.md)（英語）をご覧ください。
@@ -91,12 +91,25 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 無制限バックアップのオプションがオンでも、Video Boost で処理された動画は Google アカウントの保存容量に
 含まれます。アップロードの識別と振り分けについては [Video Boost](docs/VIDEO_BOOST.md)（英語）をご覧ください。
 
-ローカルの開発ビルドは **1.1.2 / 38** です。[回収ページ](docs/VIDEO_BOOST_RECLAIM.md)（英語）は確認を
+ローカルの開発ビルドは **1.1.3 / 39** です。[回収ページ](docs/VIDEO_BOOST_RECLAIM.md)（英語）は確認を
 求めた後、動画を 1 本ずつ処理します: ダウンロード → 確認 → クラウドのコピーを削除 → ゴミ箱から削除 →
 再アップロード → 容量を確認。進行状況カードに現在の動画とステップが表示され、履歴に過去の結果が残ります。
 各動画の処理が完了するまで安全なコピーがスマートフォンに残り、中断した処理は再開できます。スキャンはフォトの
 キャッシュを使うため、ライブラリ全体を網羅しているとは限りません。詳しくは
 [回収レポート](report/reclaim-7.98-1.3.2.md)（英語）をご覧ください。
+
+</details>
+
+<details open>
+<summary><b>🗂 ライブラリツール</b></summary>
+<br>
+
+| ツール | 内容 |
+|---|---|
+| **スマートフィルタ** | ライブラリ全体を種類・ストレージ・サイズ・日付・アルバムで絞り込み、合計サイズと選択分が使うアカウントの保存容量を表示します。端末上のフォトのキャッシュを読むだけで、何も変更しません。 |
+| **グリッドとビューア** | フォトと同じ形のグリッドとビューア：共有、編集、アルバムに追加、ゴミ箱、ダウンロード、そして人物・アルバム・場所を含む情報シート。 |
+
+詳しくは [Library Tools](docs/LIBRARY_TOOLS.md)（英語）。
 
 </details>
 
@@ -106,6 +119,7 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 
 | Android | Google フォト | デバイス | 状態 |
 |---|---|---|---|
+| 17（API 37） | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: すべてのクラスとメンバーを DexKit で検出、バックアップ・Video Boost ルーター・ライブラリツールを実機で確認 |
 | 17（API 37） | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: すべてのクラスを DexKit で検出、バックアップのプローブに合格、テスト動画で回収を確認済み（1.3.2） |
 | 17 QPR1（CP3A.261005.005） | 7.97.0.1000520730 | Pixel 8 Pro | このビルドの DEX で DexKit ルールを検証済み。実機での最終テストは 1.2.2-dev |
 
@@ -130,7 +144,7 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 
 - Android 17（API 37）、ARM64。APK は Android 13 以降にインストールできますが、フックが有効になるのは Android 17 のみです
 - **libxposed API 102** に対応した Xposed フレームワーク（Vector 2.2 でテスト済み）
-- Google フォト 7.98.0.1007591100（テスト済み）。DexKit ルールで必要なクラスをすべて解決できれば、他のビルドでも動作します（結果は「互換性と診断」に表示されます）
+- Google フォト 8.0.0.1011730683（テスト済み）。DexKit ルールで必要なクラスをすべて解決できれば、他のビルドでも動作します（結果は「互換性と診断」に表示されます）
 
 ## インストール
 

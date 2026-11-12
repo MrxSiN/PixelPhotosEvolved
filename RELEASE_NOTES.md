@@ -1,3 +1,34 @@
+## 1.1.3
+
+Works with Google Photos 8.0 and adds **Library Tools**.
+
+### Fixes
+- **Android 13 crash (#2).** Opening the Pixel Photos Evolved card closed Google Photos on Android 13:
+  the module called `Character.toString(int)`, which Android 13 does not have. It now builds the text
+  another way, and every build is checked so that it calls nothing newer than Android 13.
+- **Photos 8.0.** Photos 8.0 renamed one field PPE used to find a class, and PPE then turned every
+  feature off. That class is now found without member names.
+- **Video Boost uploads on 8.0.** The phone's own User-Agent was not applied to Video Boost uploads on
+  Photos 8.0, because the router looked up its upload context under a field that 8.0 moved.
+- **No fixed Photos names.** Every Photos class, method and field PPE uses is now found on the phone
+  (DexKit rules, field types, protobuf field numbers). A missing one turns off only its own feature.
+
+### What's new
+- **Pixel Photos Evolved section** in the profile menu, with **Backup**, **Library Tools** and
+  **Compatibility & diagnostics**.
+- **Library Tools.** Your whole library, filtered by type, storage, size, date and album, with the
+  total size and the account storage each selection uses (#1). It reads Photos' own cache on the
+  phone and changes nothing until you act.
+- **Grid and viewer** like Google Photos: day headers, pinch to change columns, select by holding.
+  The viewer has the date and place, the album, Share, Edit, Add to, Trash and Download, and an Info
+  sheet with People, Albums and the place. Swipe the sheet down to close it.
+- **Add to album** and **Download** (originals or one ZIP) for selected items.
+
+### Not included yet
+- Deleting or re-uploading ordinary photos and videos to free storage (only Video Boost Reclaim
+  does this).
+- The favourite star and the map in the Info sheet.
+
 ## 1.1.2
 
 Works with Google Photos 7.99.

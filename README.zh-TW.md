@@ -15,7 +15,7 @@ Google 相簿 → 你的個人資料相片 → **Pixel Photos Evolved**。
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-7.98.0-3DDC84?style=for-the-badge)](#相容性)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#相容性)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#建置)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
@@ -26,7 +26,7 @@ Google 相簿 → 你的個人資料相片 → **Pixel Photos Evolved**。
 
 > [!NOTE]
 > **已在 Android 17（API 37）、Pixel 8 Pro、Vector 2.2 / libxposed API 102 上搭配 Google 相簿
-> 7.98.0.1007591100（`52591217`）測試。** PPE 透過 DexKit 尋找它要掛鉤的每個相簿類別，因此大多數相簿
+> 8.0.0.1011730683（`52642450`）測試。** PPE 透過 DexKit 尋找它要掛鉤的每個相簿類別，因此大多數相簿
 > 更新不需要重新建置模組。如果找不到某個類別，相簿會維持原本的行為，**相容性與診斷**頁面會顯示哪些功能無法使用。
 > 詳情請參閱 [DexKit 報告](report/dexkit-1.4.1.md)（英文）。
 
@@ -87,10 +87,23 @@ Google 相簿 → 你的個人資料相片 → **Pixel Photos Evolved**。
 即使開啟了無限備份選項，經 Video Boost 處理的影片仍會計入你的 Google 帳戶儲存空間。上傳如何被辨識和轉送，
 請參閱 [Video Boost](docs/VIDEO_BOOST.md)（英文）。
 
-本機開發版本為 **1.1.2 / 38**。[回收頁面](docs/VIDEO_BOOST_RECLAIM.md)（英文）會先要求確認，然後逐一處理影片：
+本機開發版本為 **1.1.3 / 39**。[回收頁面](docs/VIDEO_BOOST_RECLAIM.md)（英文）會先要求確認，然後逐一處理影片：
 下載 → 檢查 → 刪除雲端副本 → 從垃圾桶清除 → 重新上傳 → 檢查儲存空間。進度卡片會顯示目前的影片和步驟，記錄清單會保留過去的結果。
 每部影片完成前，手機上都會保留一份安全副本，中斷的工作可以繼續。掃描使用相簿的快取，因此無法保證涵蓋整個媒體庫。
 詳情請參閱 [回收報告](report/reclaim-7.98-1.3.2.md)（英文）。
+
+</details>
+
+<details open>
+<summary><b>🗂 媒體庫工具</b></summary>
+<br>
+
+| 工具 | 作用 |
+|---|---|
+| **智慧篩選** | 依類型、儲存空間、大小、日期和相簿篩選整個媒體庫，並顯示總大小和所選內容佔用的帳戶儲存空間。只讀取手機上相簿的快取，不做任何變更。 |
+| **格狀檢視和檢視器** | 與 Google 相簿一致的格狀檢視和檢視器：分享、編輯、新增至相簿、移至垃圾桶和下載，以及包含人物、相簿和地點的資訊面板。 |
+
+請參閱 [Library Tools](docs/LIBRARY_TOOLS.md)（英文）。
 
 </details>
 
@@ -100,6 +113,7 @@ Google 相簿 → 你的個人資料相片 → **Pixel Photos Evolved**。
 
 | Android | Google 相簿 | 裝置 | 狀態 |
 |---|---|---|---|
+| 17（API 37） | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3：所有類別和成員均由 DexKit 找到；備份、Video Boost 路由和媒體庫工具已在裝置上檢查 |
 | 17（API 37） | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0：所有類別皆由 DexKit 找到，備份探測通過，回收已在測試影片上驗證（1.3.2） |
 | 17 QPR1（CP3A.261005.005） | 7.97.0.1000520730 | Pixel 8 Pro | DexKit 規則已針對此版本的 DEX 驗證；最後一次實機測試為 1.2.2-dev |
 
@@ -121,7 +135,7 @@ Google 相簿 → 你的個人資料相片 → **Pixel Photos Evolved**。
 
 - Android 17（API 37），ARM64。APK 可安裝於 Android 13 以上，但掛鉤只會在 Android 17 上啟用
 - 支援 **libxposed API 102** 的 Xposed 框架（已使用 Vector 2.2 測試）
-- Google 相簿 7.98.0.1007591100（已測試）；只要 DexKit 規則能解析出所有必要的類別，其他版本也可使用（相容性與診斷頁面會顯示結果）
+- Google 相簿 8.0.0.1011730683（已測試）；只要 DexKit 規則能解析出所有必要的類別，其他版本也可使用（相容性與診斷頁面會顯示結果）
 
 ## 安裝
 

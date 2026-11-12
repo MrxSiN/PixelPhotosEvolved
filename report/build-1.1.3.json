@@ -1,0 +1,14 @@
+{
+ "version": "1.1.3",
+ "versionCode": 39,
+ "photos": "8.0.0.1011730683",
+ "storeRoot": "3ef4be83a8d11472191ea6f4dbe8490a5b9b6ac73d0ca3c143315c15344faae2",
+ "sha256": {
+  "module/pixel_photos_module.xax": "e4ecba6ccb63a03f4bfde9da69d32360efc468be79e9e5cb851d8f517d2f7790",
+  "module/pixel_photos_module-unsigned.apk": "9acb9ca39b2bda13adc55795ab3f9896162941b67ad325cfad4b6a0b1df23695",
+  "module/pixel_photos_module-signed.apk": "14932c70b161654fd00cdb8b0f7ecfc283ad0669cfd1b3d5983899d434b70b37"
+ },
+ "signing": "public XAX fixture key (development build)",
+ "device": "Pixel 8 Pro, Photos 8.0, libxposed via Vector",
+ "notes": "docs/LIBRARY_TOOLS.md"
+}

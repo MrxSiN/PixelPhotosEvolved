@@ -15,7 +15,7 @@ Google Фото → фото профиля → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-7.98.0-3DDC84?style=for-the-badge)](#совместимость)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#совместимость)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#сборка)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
@@ -25,7 +25,7 @@ Google Фото → фото профиля → **Pixel Photos Evolved**.
 ---
 
 > [!NOTE]
-> **Проверено с Google Фото 7.98.0.1007591100 (`52591217`) на Android 17 (API 37), Pixel 8 Pro,
+> **Проверено с Google Фото 8.0.0.1011730683 (`52642450`) на Android 17 (API 37), Pixel 8 Pro,
 > Vector 2.2 / libxposed API 102.** PPE находит через DexKit каждый класс Фото, который перехватывает,
 > поэтому большинство обновлений Фото не требуют новой сборки модуля. Если класс не найден, Фото
 > работают как обычно, а раздел **Совместимость и диагностика** показывает, что недоступно.
@@ -92,7 +92,7 @@ activity настроек. Его страница открывается из �
 резервное копирование. Как распознаётся и направляется загрузка, описано в
 [Video Boost](docs/VIDEO_BOOST.md) (на английском).
 
-Локальная сборка для разработки — **1.1.2 / 38**. [Страница освобождения места](docs/VIDEO_BOOST_RECLAIM.md)
+Локальная сборка для разработки — **1.1.3 / 39**. [Страница освобождения места](docs/VIDEO_BOOST_RECLAIM.md)
 (на английском) запрашивает подтверждение и обрабатывает видео по одному: скачивание → проверка →
 удаление облачной копии → очистка корзины → повторная загрузка → проверка хранилища. Карточка прогресса
 показывает текущее видео и шаг, а история хранит прошлые результаты. Безопасная копия остаётся на
@@ -102,12 +102,26 @@ activity настроек. Его страница открывается из �
 
 </details>
 
+<details open>
+<summary><b>🗂 Инструменты библиотеки</b></summary>
+<br>
+
+| Инструмент | Что делает |
+|---|---|
+| **Умный фильтр** | Фильтрует всю библиотеку по типу, хранилищу, размеру, дате и альбому и показывает общий размер и место в аккаунте, которое занимает выборка. Читает кэш Google Фото на телефоне и ничего не меняет. |
+| **Сетка и просмотр** | Сетка и просмотр как в Google Фото: Поделиться, Изменить, Добавить в альбом, Корзина и Скачать, а также панель сведений с людьми, альбомами и местом. |
+
+Подробнее: [Library Tools](docs/LIBRARY_TOOLS.md) (на английском).
+
+</details>
+
 ---
 
 ## Совместимость
 
 | Android | Google Фото | Устройство | Состояние |
 |---|---|---|---|
+| 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: DexKit находит все классы и члены; резервное копирование, маршрутизатор Video Boost и Инструменты библиотеки проверены на устройстве |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: все классы найдены через DexKit, проверка резервного копирования пройдена, освобождение места проверено на тестовом видео (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | Правила DexKit проверены на DEX этой сборки; последняя проверка на устройстве — 1.2.2-dev |
 
@@ -134,7 +148,7 @@ activity настроек. Его страница открывается из �
 
 - Android 17 (API 37), ARM64. APK устанавливается начиная с Android 13, но перехваты включаются только на Android 17
 - Фреймворк Xposed с **libxposed API 102** (проверено с Vector 2.2)
-- Google Фото 7.98.0.1007591100 (проверено); другие сборки работают, если правила DexKit находят все нужные классы (результат показан в разделе «Совместимость и диагностика»)
+- Google Фото 8.0.0.1011730683 (проверено); другие сборки работают, если правила DexKit находят все нужные классы (результат показан в разделе «Совместимость и диагностика»)
 
 ## Установка
 

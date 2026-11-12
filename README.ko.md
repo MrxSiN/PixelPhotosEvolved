@@ -15,7 +15,7 @@ Google 포토 → 프로필 사진 → **Pixel Photos Evolved**
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-7.98.0-3DDC84?style=for-the-badge)](#호환성)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#호환성)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#빌드)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
@@ -26,7 +26,7 @@ Google 포토 → 프로필 사진 → **Pixel Photos Evolved**
 
 > [!NOTE]
 > **Android 17(API 37), Pixel 8 Pro, Vector 2.2 / libxposed API 102에서 Google 포토
-> 7.98.0.1007591100(`52591217`)으로 테스트했습니다.** PPE는 후킹하는 모든 포토 클래스를 DexKit으로
+> 8.0.0.1011730683(`52642450`)으로 테스트했습니다.** PPE는 후킹하는 모든 포토 클래스를 DexKit으로
 > 찾기 때문에 대부분의 포토 업데이트에서 모듈을 새로 빌드할 필요가 없습니다. 클래스를 찾지 못하면 포토는
 > 기본 동작을 유지하며, **호환성 및 진단**에서 사용할 수 없는 기능을 확인할 수 있습니다.
 > 자세한 내용은 [DexKit 보고서](report/dexkit-1.4.1.md)(영문)를 참고하세요.
@@ -90,12 +90,25 @@ Google 포토 → 프로필 사진 → **Pixel Photos Evolved**
 무제한 백업 옵션을 사용 중이어도 Video Boost로 처리된 동영상은 Google 계정 저장용량에 포함됩니다.
 업로드를 식별하고 전송하는 방법은 [Video Boost](docs/VIDEO_BOOST.md)(영문)를 참고하세요.
 
-로컬 개발 빌드는 **1.1.2 / 38**입니다. [회수 페이지](docs/VIDEO_BOOST_RECLAIM.md)(영문)는 확인을 요청한 후
+로컬 개발 빌드는 **1.1.3 / 39**입니다. [회수 페이지](docs/VIDEO_BOOST_RECLAIM.md)(영문)는 확인을 요청한 후
 동영상을 하나씩 처리합니다: 다운로드 → 확인 → 클라우드 사본 삭제 → 휴지통에서 삭제 → 다시 업로드 →
 저장용량 확인. 진행 상황 카드에 현재 동영상과 단계가 표시되고, 기록 목록에 이전 결과가 남습니다. 각 동영상이
 완료될 때까지 안전한 사본이 휴대전화에 보관되며, 중단된 작업은 재개할 수 있습니다. 검색은 포토의 캐시를
 사용하므로 전체 라이브러리를 포함한다고 보장할 수 없습니다. 자세한 내용은
 [회수 보고서](report/reclaim-7.98-1.3.2.md)(영문)를 참고하세요.
+
+</details>
+
+<details open>
+<summary><b>🗂 라이브러리 도구</b></summary>
+<br>
+
+| 도구 | 기능 |
+|---|---|
+| **스마트 필터** | 전체 라이브러리를 유형, 저장공간, 크기, 날짜, 앨범으로 필터링하고 총 크기와 선택 항목이 사용하는 계정 저장공간을 보여줍니다. 휴대전화의 포토 캐시만 읽으며 아무것도 변경하지 않습니다. |
+| **그리드와 뷰어** | 포토와 같은 그리드와 뷰어: 공유, 수정, 앨범에 추가, 휴지통, 다운로드, 그리고 인물·앨범·장소가 담긴 정보 시트. |
+
+자세한 내용은 [Library Tools](docs/LIBRARY_TOOLS.md)(영문)를 참고하세요.
 
 </details>
 
@@ -105,6 +118,7 @@ Google 포토 → 프로필 사진 → **Pixel Photos Evolved**
 
 | Android | Google 포토 | 기기 | 상태 |
 |---|---|---|---|
+| 17(API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: 모든 클래스와 멤버를 DexKit으로 찾음, 백업·Video Boost 라우터·라이브러리 도구를 기기에서 확인 |
 | 17(API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: 모든 클래스를 DexKit으로 찾음, 백업 확인 통과, 테스트 동영상으로 회수 확인(1.3.2) |
 | 17 QPR1(CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | 이 빌드의 DEX로 DexKit 규칙 검증; 기기에서 마지막으로 테스트한 버전은 1.2.2-dev |
 
@@ -129,7 +143,7 @@ Google 포토 → 프로필 사진 → **Pixel Photos Evolved**
 
 - Android 17(API 37), ARM64. APK는 Android 13부터 설치되지만 후크는 Android 17에서만 사용 설정됩니다
 - **libxposed API 102**를 지원하는 Xposed 프레임워크(Vector 2.2로 테스트)
-- Google 포토 7.98.0.1007591100(테스트됨). DexKit 규칙이 필요한 모든 클래스를 찾으면 다른 빌드에서도 작동합니다(결과는 호환성 및 진단에 표시됨)
+- Google 포토 8.0.0.1011730683(테스트됨). DexKit 규칙이 필요한 모든 클래스를 찾으면 다른 빌드에서도 작동합니다(결과는 호환성 및 진단에 표시됨)
 
 ## 설치
 

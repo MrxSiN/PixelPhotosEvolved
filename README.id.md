@@ -15,7 +15,7 @@ Google Foto → foto profil Anda → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-7.98.0-3DDC84?style=for-the-badge)](#kompatibilitas)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#kompatibilitas)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#build)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
@@ -25,7 +25,7 @@ Google Foto → foto profil Anda → **Pixel Photos Evolved**.
 ---
 
 > [!NOTE]
-> **Diuji dengan Google Foto 7.98.0.1007591100 (`52591217`) di Android 17 (API 37), Pixel 8 Pro,
+> **Diuji dengan Google Foto 8.0.0.1011730683 (`52642450`) di Android 17 (API 37), Pixel 8 Pro,
 > Vector 2.2 / libxposed API 102.** PPE menemukan setiap class Foto yang di-hook dengan DexKit,
 > sehingga sebagian besar update Foto tidak memerlukan build modul baru. Jika sebuah class tidak
 > ditemukan, Foto tetap berperilaku seperti biasa dan **Kompatibilitas & diagnostik** menampilkan apa
@@ -92,7 +92,7 @@ Video yang diproses dengan Video Boost dihitung dalam penyimpanan Akun Google An
 pencadangan tanpa batas aktif. Lihat [Video Boost](docs/VIDEO_BOOST.md) (dalam bahasa Inggris) tentang
 cara upload dikenali dan diarahkan.
 
-Build pengembangan lokal adalah **1.1.2 / 38**. [Halaman klaim ulang](docs/VIDEO_BOOST_RECLAIM.md)
+Build pengembangan lokal adalah **1.1.3 / 39**. [Halaman klaim ulang](docs/VIDEO_BOOST_RECLAIM.md)
 (dalam bahasa Inggris) meminta konfirmasi, lalu memproses satu video sekaligus: download → periksa →
 hapus salinan cloud → hapus dari Sampah → upload lagi → periksa penyimpanan. Kartu progres menampilkan
 video dan langkah saat ini, dan daftar riwayat menyimpan hasil sebelumnya. Salinan aman tetap di ponsel
@@ -102,12 +102,26 @@ sehingga tidak dapat memastikan seluruh galeri tercakup. Lihat
 
 </details>
 
+<details open>
+<summary><b>🗂 Alat Galeri</b></summary>
+<br>
+
+| Alat | Fungsinya |
+|---|---|
+| **Filter Pintar** | Memfilter seluruh galeri menurut jenis, penyimpanan, ukuran, tanggal, dan album, dengan ukuran total dan penyimpanan akun yang dipakai setiap pilihan. Membaca cache Google Foto di ponsel dan tidak mengubah apa pun. |
+| **Petak dan penampil** | Petak dan penampil seperti Google Foto: Bagikan, Edit, Tambahkan ke album, Sampah, dan Download, serta lembar info dengan Orang, Album, dan tempat. |
+
+Lihat [Library Tools](docs/LIBRARY_TOOLS.md) (bahasa Inggris).
+
+</details>
+
 ---
 
 ## Kompatibilitas
 
 | Android | Google Foto | Perangkat | Status |
 |---|---|---|---|
+| 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: semua class dan member ditemukan oleh DexKit; pencadangan, router Video Boost, dan Alat Galeri diperiksa di perangkat |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: semua class ditemukan oleh DexKit, uji pencadangan lulus, klaim ulang diverifikasi dengan video uji (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | Aturan DexKit divalidasi terhadap DEX build ini; terakhir diuji di perangkat dengan 1.2.2-dev |
 
@@ -134,7 +148,7 @@ sehingga tidak dapat memastikan seluruh galeri tercakup. Lihat
 
 - Android 17 (API 37), ARM64. APK dapat dipasang mulai Android 13, tetapi hook hanya aktif di Android 17
 - Framework Xposed dengan **libxposed API 102** (diuji dengan Vector 2.2)
-- Google Foto 7.98.0.1007591100 (diuji); build lain berfungsi jika aturan DexKit menemukan semua class yang diperlukan (hasilnya ditampilkan di Kompatibilitas &amp; diagnostik)
+- Google Foto 8.0.0.1011730683 (diuji); build lain berfungsi jika aturan DexKit menemukan semua class yang diperlukan (hasilnya ditampilkan di Kompatibilitas &amp; diagnostik)
 
 ## Pemasangan
 

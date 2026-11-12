@@ -15,7 +15,7 @@ Google Fotos → tu foto de perfil → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-7.98.0-3DDC84?style=for-the-badge)](#compatibilidad)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#compatibilidad)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#compilación)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
@@ -25,7 +25,7 @@ Google Fotos → tu foto de perfil → **Pixel Photos Evolved**.
 ---
 
 > [!NOTE]
-> **Probado con Google Fotos 7.98.0.1007591100 (`52591217`) en Android 17 (API 37), Pixel 8 Pro,
+> **Probado con Google Fotos 8.0.0.1011730683 (`52642450`) en Android 17 (API 37), Pixel 8 Pro,
 > Vector 2.2 / libxposed API 102.** PPE encuentra con DexKit cada clase de Fotos que intercepta, así
 > que la mayoría de las actualizaciones de Fotos no necesitan una nueva versión del módulo. Si no
 > encuentra una clase, Fotos mantiene su comportamiento y **Compatibilidad y diagnóstico** muestra qué
@@ -92,7 +92,7 @@ Los vídeos procesados con Video Boost cuentan para el almacenamiento de tu cuen
 esté activada una opción de copia ilimitada. Consulta [Video Boost](docs/VIDEO_BOOST.md) (en inglés)
 para ver cómo se reconoce y enruta una subida.
 
-La versión de desarrollo local es **1.1.2 / 38**. La [página de recuperación](docs/VIDEO_BOOST_RECLAIM.md)
+La versión de desarrollo local es **1.1.3 / 39**. La [página de recuperación](docs/VIDEO_BOOST_RECLAIM.md)
 (en inglés) pide confirmación y luego trabaja vídeo a vídeo: descargar → comprobar → eliminar la copia
 de la nube → vaciarla de la papelera → volver a subir → comprobar el almacenamiento. Una tarjeta de
 progreso muestra el vídeo y el paso actuales, y un historial guarda los resultados anteriores. Se
@@ -102,12 +102,26 @@ Consulta el [informe de recuperación](report/reclaim-7.98-1.3.2.md) (en inglés
 
 </details>
 
+<details open>
+<summary><b>🗂 Herramientas de biblioteca</b></summary>
+<br>
+
+| Herramienta | Qué hace |
+|---|---|
+| **Filtro inteligente** | Filtra toda la biblioteca por tipo, almacenamiento, tamaño, fecha y álbum, con el tamaño total y el almacenamiento de la cuenta que usa cada selección. Lee la caché de Google Fotos en el teléfono y no cambia nada. |
+| **Cuadrícula y visor** | Una cuadrícula y un visor como los de Google Fotos: Compartir, Editar, Añadir a álbum, Papelera y Descargar, y una hoja de información con Personas, Álbumes y el lugar. |
+
+Consulta [Library Tools](docs/LIBRARY_TOOLS.md) (en inglés).
+
+</details>
+
 ---
 
 ## Compatibilidad
 
 | Android | Google Fotos | Dispositivo | Estado |
 |---|---|---|---|
+| 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: DexKit encuentra todas las clases y miembros; copia de seguridad, enrutador de Video Boost y Herramientas de biblioteca comprobados en el dispositivo |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: DexKit encuentra todas las clases, la prueba de copia pasa, recuperación verificada con un vídeo de prueba (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | Reglas de DexKit validadas con el DEX de esta versión; última prueba en el dispositivo con 1.2.2-dev |
 
@@ -134,7 +148,7 @@ Consulta el [informe de recuperación](report/reclaim-7.98-1.3.2.md) (en inglés
 
 - Android 17 (API 37), ARM64. El APK se instala desde Android 13, pero los hooks solo se activan en Android 17
 - Un framework Xposed con **libxposed API 102** (probado con Vector 2.2)
-- Google Fotos 7.98.0.1007591100 (probado); otras versiones funcionan si las reglas de DexKit resuelven todas las clases necesarias (Compatibilidad y diagnóstico muestra el resultado)
+- Google Fotos 8.0.0.1011730683 (probado); otras versiones funcionan si las reglas de DexKit resuelven todas las clases necesarias (Compatibilidad y diagnóstico muestra el resultado)
 
 ## Instalación
 

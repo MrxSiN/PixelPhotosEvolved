@@ -1,4 +1,8 @@
-# Status — 1.2.0-dev / 39
+# Status — 1.1.3 / 39
+
+**1.1.3** (versionCode 39) supports Google Photos 8.0.0.1011730683 and ships Library Tools, the
+Photos-style viewer and the Android 13 fix for issue #2. Build: [build-1.1.3.json](build-1.1.3.json).
+The sections below were written while it was the 1.2.0-dev build.
 
 **1.2.0-dev** (versionCode 39, development build) adds **Library Tools** on Google Photos 7.99:
 the profile card becomes a **Pixel Photos Evolved** section with **Backup** (the existing page,

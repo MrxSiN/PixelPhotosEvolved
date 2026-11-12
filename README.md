@@ -15,7 +15,7 @@ Google Photos → your profile picture → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-7.98.0-3DDC84?style=for-the-badge)](#compatibility)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#compatibility)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#build)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
@@ -25,7 +25,7 @@ Google Photos → your profile picture → **Pixel Photos Evolved**.
 ---
 
 > [!NOTE]
-> **Tested with Google Photos 7.98.0.1007591100 (`52591217`) on Android 17 (API 37),
+> **Tested with Google Photos 8.0.0.1011730683 (`52642450`) on Android 17 (API 37),
 > Pixel 8 Pro, Vector 2.2 / libxposed API 102.** PPE finds every Photos class it hooks with
 > DexKit, so most Photos updates need no new module build. If a class can't be found, Photos
 > keeps its own behaviour and **Compatibility &amp; diagnostics** shows what is unavailable.
@@ -92,12 +92,25 @@ Videos processed with Video Boost count toward your Google Account storage, even
 unlimited backup option is on. See [Video Boost](docs/VIDEO_BOOST.md) for how an upload is
 recognised and routed.
 
-The current release is **1.1.2** (versionCode 38). The [Reclaim page](docs/VIDEO_BOOST_RECLAIM.md)
+The current release is **1.1.3** (versionCode 39). The [Reclaim page](docs/VIDEO_BOOST_RECLAIM.md)
 asks for confirmation, then works one video at a time: download → check → delete the cloud copy
 → clear it from Trash → upload again → check storage. A progress card shows the current video and
 step, and a history list keeps past results. A safe copy stays on the phone until each video is
 done, and an interrupted run can be resumed. The scan uses Photos' cache, so it cannot prove full
 library coverage. See the [reclaim report](report/reclaim-7.98-1.3.2.md).
+
+</details>
+
+<details open>
+<summary><b>🗂 Library Tools</b></summary>
+<br>
+
+| Tool | What it does |
+|---|---|
+| **Smart Filter** | Filters the whole library by type, storage, size, date and album, with the total size and the account storage each selection uses. Reads Photos' own cache on the phone and changes nothing. |
+| **Grid and viewer** | A Photos-style grid and viewer: Share, Edit, Add to album, Trash and Download, and an Info sheet with People, Albums and the place. |
+
+See [Library Tools](docs/LIBRARY_TOOLS.md).
 
 </details>
 
@@ -107,6 +120,7 @@ library coverage. See the [reclaim report](report/reclaim-7.98-1.3.2.md).
 
 | Android | Google Photos | Device | Status |
 |---|---|---|---|
+| 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: every class and member found by DexKit; backup, Video Boost router and Library Tools checked on the device |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: all classes found by DexKit, backup probe passes, Reclaim verified on a test video (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | DexKit rules validated against this build's DEX; last tested on the device with 1.2.2-dev |
 
@@ -133,7 +147,7 @@ library coverage. See the [reclaim report](report/reclaim-7.98-1.3.2.md).
 - Android 17 (API 37), ARM64. The APK installs from Android 13, but the hooks only switch on for
   Android 17
 - An Xposed framework with **libxposed API 102** (tested with Vector 2.2)
-- Google Photos 7.98.0.1007591100 (tested); other builds work when the DexKit rules resolve every required class (Compatibility &amp; diagnostics shows the result)
+- Google Photos 8.0.0.1011730683 (tested); other builds work when the DexKit rules resolve every required class (Compatibility &amp; diagnostics shows the result)
 
 ## Install
 
