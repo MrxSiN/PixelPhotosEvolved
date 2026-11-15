@@ -115,9 +115,26 @@ height; the tile crops them), so the bitmap in the tapped cell is also the viewe
 - Tap: a full-screen viewer over the grid's own items (the stock viewer resolves stacks and swipes
   the whole library). Opening is a shared-element zoom: the image starts covering the cell, clipped
   to what the cell shows, and grows to fit the screen; the cell's own bitmap is shown at once and
-  cross-fades to the sharp image (no blank frame; Back or swipe-down reverses the zoom when the
-  first item is still showing). Swipe between results, pinch / double-tap zoom, swipe down or Back to
-  close. Videos are copied to Photos' cache, then played. "Open in Google Photos" opens the stock
+  cross-fades to the sharp image (no blank frame; Back or swipe-down zooms back into the tile of the
+  item now shown while that tile is on screen, else fades). Swipe between results, pinch / double-tap zoom, swipe down or Back to
+  close. Videos are copied to Photos' cache, then played.
+- Motion copied from screen recordings of the stock one-up (2026-11-15): open / close zoom 200 ms
+  fast-out-slow-in; bars fade linearly in 200 ms, a single tap toggles them only after the 300 ms
+  double-tap timeout; double tap zooms 2.5x around the tapped point and hides the bars. Swiping is a
+  pager: both pages follow the finger with a 24 dp gap and settle in 260 ms (half a page or a quick
+  flick goes on). Dragging down shrinks the image with the finger, fades only the black backdrop
+  (the grid shows through) and hides the bars; letting go past 32 dp closes into the tile, otherwise
+  it springs back. The Info sheet carries the image on its top edge while it opens, closes or is dragged.
+- Grid pinch, like the Photos tab (2026-11-16): spread/pinch with two fingers anywhere on the grid (tiles,
+  headers or gaps). The grid scales with the fingers; past 0.8x / 1.25x it switches between the day layout
+  (4 columns, day + place headers) and the month layout (5 columns, month headers): the old layout shrinks
+  or grows and fades out over the new one, 250 ms, with the content under the fingers kept in place. There is
+  a rubber band when no layout exists in that direction. Tiles keep their picture across the switch (both
+  layouts use the day-size thumbnail).
+- Selection sheet, like Photos' action panel (2026-11-16): it opens to a peek (actions + "Share To", 209 dp)
+  and is as tall as the screen minus 114 dp. A drag from anywhere on it moves it between collapsed (actions
+  only, 120 dp), peek and full; a fling goes one stop, a slow release goes to the nearest. Touching the grid
+  collapses it, and X or Back slides it away. "Open in Google Photos" opens the stock
   viewer through the `link/photo` deep link; a one-shot hook keeps Photos' Home (and this page)
   alive.
 - Viewer images are screen sized (`=s<longest screen edge>-no`, 2992 px here, about 0.4-1.5 MB, not
