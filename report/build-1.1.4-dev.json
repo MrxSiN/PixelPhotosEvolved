@@ -2,11 +2,11 @@
  "version": "1.1.4-dev",
  "versionCode": 39,
  "photos": "8.0.0.1011730683",
- "storeRoot": "fa963ecaada58f901113481663b7e9295f348b67934bb13e0cb918a8780d7b19",
+ "storeRoot": "623e167fe6286d52a650cd96400e2d5007743fd0c52616f0d8a69ac8b84f82a4",
  "sha256": {
-  "module/pixel_photos_module.xax": "68d48de3b247a2ccc5166ae2baf07e5f155ece0cda13ddee93db296e6297af0c",
-  "module/pixel_photos_module-unsigned.apk": "e1a66f2443cb2236a98255317405b1c303fac495065b6ef56e7dedf0587804a7",
-  "module/pixel_photos_module-signed.apk": "19725290265366069e7b77df7e9f37886b3af5e8bce8687af5016697c8ad384b"
+  "module/pixel_photos_module.xax": "2378c20d36768af8f7435ad42b0f9722e412a0aa0785c911cb0abd393b3a958d",
+  "module/pixel_photos_module-unsigned.apk": "a76368e8a53a79845f582f1c55e21b6e7ccc52ec80ce268291647c06ab6dddfe",
+  "module/pixel_photos_module-signed.apk": "b6637705aabd84dd9d390516dfc69c7c6d3ad3da6f2f259468df38f912f898b9"
  },
  "signing": "public XAX fixture key (development build)",
  "device": "Pixel 8 Pro, Photos 8.0, libxposed via Vector",

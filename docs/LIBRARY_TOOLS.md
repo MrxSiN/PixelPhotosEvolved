@@ -126,8 +126,12 @@ height; the tile crops them), so the bitmap in the tapped cell is also the viewe
   (the grid shows through) and hides the bars; letting go past 32 dp closes into the tile, otherwise
   it springs back. The Info sheet carries the image on its top edge while it opens, closes or is dragged.
 - Grid pinch, like the Photos tab (2026-11-16): spread/pinch with two fingers anywhere on the grid (tiles,
-  headers or gaps). The grid scales with the fingers; past 0.8x / 1.25x it switches between the day layout
-  (4 columns, day + place headers) and the month layout (5 columns, month headers): the old layout shrinks
+  headers or gaps). The grid scales with the fingers; past 0.8x / 1.25x it steps between three layouts: large
+  (two photos per row sized by their real aspect ratios, a wide item or a day's odd last item full width), day
+  (4 columns, day + place headers) and month (5 columns, month headers). Spreading on the large layout opens the
+  touched photo, as in Photos. Once a day's header scrolls under the top of the page, its date and place float
+  in a pill there, with Photos' round grid-controls button (Comfortable / Day / Month, Photos' own labels) beside
+  it; both fade away when the first header is back in view. The old layout shrinks
   or grows and fades out over the new one, 250 ms, with the content under the fingers kept in place. There is
   a rubber band when no layout exists in that direction. Tiles keep their picture across the switch (both
   layouts use the day-size thumbnail).
