@@ -231,7 +231,6 @@
     <string name="ppe_645c4f2315ca">"Último envio: {m}"</string>
     <string name="ppe_f86272d37341">"Não concluído. "</string>
     <string name="ppe_5536679a0b6f">"Ferramentas da biblioteca"</string>
-    <string name="ppe_46719875dd35">"Toda a mídia"</string>
     <string name="ppe_c8b2e864eccb">"Fotos"</string>
     <string name="ppe_6e6a6f2086bb">"Outros"</string>
     <string name="ppe_d01d900383e4">"Foto"</string>
@@ -243,15 +242,12 @@
     <string name="ppe_4fdda2a0828b">"Lendo os registros do Photos…"</string>
     <string name="ppe_947b49c807ff">"Mostrando {n} de {m}"</string>
     <string name="ppe_9b115c99b1da">"Sem nome"</string>
-    <string name="ppe_3deb74565196">"Tipo"</string>
     <string name="ppe_9e092dda4f0e">"Armazenamento"</string>
     <string name="ppe_b7152342a267">"Tamanho"</string>
-    <string name="ppe_76edfcab69bd">"Data da captura"</string>
     <string name="ppe_1370004da76f">"Duração"</string>
     <string name="ppe_516aae52959d">"Resolução"</string>
     <string name="ppe_f8a67179bdff">"Qualquer armazenamento"</string>
     <string name="ppe_6d28fe88a113">"Qualquer tamanho"</string>
-    <string name="ppe_1d6db9d23a9c">"Qualquer data"</string>
     <string name="ppe_4303876fecbb">"Qualquer duração"</string>
     <string name="ppe_47efa5d4c257">"Qualquer resolução"</string>
     <string name="ppe_7e73a362f261">"Pelo menos 10 MB"</string>
@@ -259,10 +255,6 @@
     <string name="ppe_24b792e31c11">"Pelo menos 500 MB"</string>
     <string name="ppe_406a6e47863b">"Pelo menos 1 GB"</string>
     <string name="ppe_180aee79e62c">"Menos de 1 MB"</string>
-    <string name="ppe_6b32985251a1">"Últimos 30 dias"</string>
-    <string name="ppe_3cf4d8d7b9bc">"Último ano"</string>
-    <string name="ppe_d6f06599e815">"Mais de 1 ano"</string>
-    <string name="ppe_0ac91cc67f2b">"Antes de 2025"</string>
     <string name="ppe_85b5e6e24e63">"Mais de 1 minuto"</string>
     <string name="ppe_cb04375a065f">"Mais de 10 minutos"</string>
     <string name="ppe_49bfaee471aa">"Menos de 10 segundos"</string>
@@ -287,11 +279,16 @@
     <string name="ppe_deb8829265c9">"Em nenhum álbum"</string>
     <string name="ppe_3effab75ab75">"Escolher um álbum"</string>
     <string name="ppe_4cd31b4cd5b6">"Tamanho total"</string>
-    <string name="ppe_6d1704748e0c">"Expandido"</string>
-    <string name="ppe_0084e8faecb6">"Recolhido"</string>
     <string name="ppe_6371b592b127">"Nenhum destes itens está neste dispositivo"</string>
     <string name="ppe_ef454d1ef84c">"Adicionar a {album}?"</string>
     <string name="ppe_bb75c129e0f5">"Adicionado a {album}"</string>
     <string name="ppe_29f7d37c6a3e">"Não foi possível adicionar a {album}"</string>
     <string name="ppe_61cc55aa0453">"Adicionar"</string>
+    <string name="ppe_041a5dec481d">"Formato"</string>
+    <string name="ppe_3edf10d08d37">"Qualquer formato"</string>
+    <string name="ppe_3c1105bd2b2a">"Megapixels"</string>
+    <string name="ppe_308111b04825">"40 MP ou mais"</string>
+    <string name="ppe_e47c62e98b29">"12 MP ou mais"</string>
+    <string name="ppe_e0295756cc46">"Menos de 12 MP"</string>
+    <string name="ppe_c911d8abf224">"Menos de 2 MP"</string>
 </resources>

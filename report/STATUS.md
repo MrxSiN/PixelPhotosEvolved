@@ -4,6 +4,34 @@
 Photos-style viewer and the Android 13 fix for issue #2. Build: [build-1.1.3.json](build-1.1.3.json).
 The sections below were written while it was the 1.2.0-dev build.
 
+**1.1.4-dev** (versionCode 39, development build, [build-1.1.4-dev.json](build-1.1.4-dev.json)) redesigns
+the top of Library Tools and speeds it up. Details in [LIBRARY_TOOLS.md](../docs/LIBRARY_TOOLS.md).
+
+- **Layout.** Busy bar under the title, then the summary card (size, "Showing n of m", photos /
+  videos bar, Photos / Videos legend that is the type filter), then one controls row: clear (only
+  while a filter is on), chips Storage, Size, Format, Megapixels (photos) or Duration and Resolution
+  (videos), Albums, and a fixed sort button. Chips change in place with M3 Expressive motion; menus
+  are Expressive (tonal selected row). EXECUTED on the Pixel 8 Pro (screenshots, screen recordings).
+- **Filters.** Type is Photos' own type codes (photos include panoramas and animations). New Format
+  filter (format families found in the library). Date taken and "Storage unknown" removed: no row of
+  either test account has a NULL `quota_charged_bytes` (75,058 rows). EXECUTED on device; 40 MP or
+  more returned 422 items, equal to the database count (MEASURED).
+- **Busy bar.** Shown for every query; when the data is there it fills to the end and folds away.
+- **Performance.** MEASURED on the Pixel 8 Pro unless noted:
+  - first read 11.3 s -> 3.9 s with a dropped page cache, 0.35 s warm (memory-mapped reads);
+  - per filter change, totals + rows statements instead of one window-aggregate statement:
+    83 -> 30 ms (PC, warm); a Photos / Videos toggle reuses the cached totals;
+  - main thread per filter change: chip row 23-27 -> 1-4 ms, card 16-27 -> 4-10 ms, grid built in
+    2 ms slices instead of 123 ms at once; missed frames per filter change 2-3 of ~120;
+  - resource-name lookups cached for the whole module; reflective method lookups cached.
+- **Fixes found on the way.** Grid day headers split one day into "Monday" and "Mon, Nov 9"
+  (elapsed hours instead of calendar days); the build's API gate now also fails on framework members
+  the SDK does not have.
+- **Toolchain.** Built with XAX at the pinned 65bce1e (the local checkout had moved; 56/56 lock hashes
+  checked). Latest commits checked on 2026-11-15 and recorded in toolchain.lock.json; pins unchanged.
+- NOT RUN: other languages on device, the album picker sheet, pinch zoom, the BBC policy vector check
+  (the policy library is unchanged). Release notes and READMEs are not updated for a release yet.
+
 **1.2.0-dev** (versionCode 39, development build) adds **Library Tools** on Google Photos 7.99:
 the profile card becomes a **Pixel Photos Evolved** section with **Backup** (the existing page,
 renamed), **Library Tools** (one Smart Filter page with a storage summary and an album filter) and **Compatibility &

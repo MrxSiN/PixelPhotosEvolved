@@ -230,7 +230,6 @@
     <string name="ppe_645c4f2315ca">"Last upload: {m}"</string>
     <string name="ppe_f86272d37341">"Not completed. "</string>
     <string name="ppe_5536679a0b6f">"Library Tools"</string>
-    <string name="ppe_46719875dd35">"All media"</string>
     <string name="ppe_c8b2e864eccb">"Photos"</string>
     <string name="ppe_6e6a6f2086bb">"Other"</string>
     <string name="ppe_d01d900383e4">"Photo"</string>
@@ -242,15 +241,12 @@
     <string name="ppe_4fdda2a0828b">"Reading Photos' records..."</string>
     <string name="ppe_947b49c807ff">"Showing {n} of {m}"</string>
     <string name="ppe_9b115c99b1da">"Unnamed"</string>
-    <string name="ppe_3deb74565196">"Type"</string>
     <string name="ppe_9e092dda4f0e">"Storage"</string>
     <string name="ppe_b7152342a267">"Size"</string>
-    <string name="ppe_76edfcab69bd">"Date taken"</string>
     <string name="ppe_1370004da76f">"Duration"</string>
     <string name="ppe_516aae52959d">"Resolution"</string>
     <string name="ppe_f8a67179bdff">"Any storage"</string>
     <string name="ppe_6d28fe88a113">"Any size"</string>
-    <string name="ppe_1d6db9d23a9c">"Any date"</string>
     <string name="ppe_4303876fecbb">"Any length"</string>
     <string name="ppe_47efa5d4c257">"Any resolution"</string>
     <string name="ppe_7e73a362f261">"At least 10 MB"</string>
@@ -258,10 +254,6 @@
     <string name="ppe_24b792e31c11">"At least 500 MB"</string>
     <string name="ppe_406a6e47863b">"At least 1 GB"</string>
     <string name="ppe_180aee79e62c">"Under 1 MB"</string>
-    <string name="ppe_6b32985251a1">"Last 30 days"</string>
-    <string name="ppe_3cf4d8d7b9bc">"Last year"</string>
-    <string name="ppe_d6f06599e815">"Older than 1 year"</string>
-    <string name="ppe_0ac91cc67f2b">"Before 2025"</string>
     <string name="ppe_85b5e6e24e63">"Over 1 minute"</string>
     <string name="ppe_cb04375a065f">"Over 10 minutes"</string>
     <string name="ppe_49bfaee471aa">"Under 10 seconds"</string>
@@ -286,11 +278,16 @@
     <string name="ppe_deb8829265c9">"Not in any album"</string>
     <string name="ppe_3effab75ab75">"Choose an album"</string>
     <string name="ppe_4cd31b4cd5b6">"Total size"</string>
-    <string name="ppe_6d1704748e0c">"Expanded"</string>
-    <string name="ppe_0084e8faecb6">"Collapsed"</string>
     <string name="ppe_6371b592b127">"None of these are on this device"</string>
     <string name="ppe_ef454d1ef84c">"Add to {album}?"</string>
     <string name="ppe_bb75c129e0f5">"Added to {album}"</string>
     <string name="ppe_29f7d37c6a3e">"Couldn't add to {album}"</string>
     <string name="ppe_61cc55aa0453">"Add"</string>
+    <string name="ppe_041a5dec481d">"Format"</string>
+    <string name="ppe_3edf10d08d37">"Any format"</string>
+    <string name="ppe_3c1105bd2b2a">"Megapixels"</string>
+    <string name="ppe_308111b04825">"40 MP or more"</string>
+    <string name="ppe_e47c62e98b29">"12 MP or more"</string>
+    <string name="ppe_e0295756cc46">"Under 12 MP"</string>
+    <string name="ppe_c911d8abf224">"Under 2 MP"</string>
 </resources>

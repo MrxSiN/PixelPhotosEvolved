@@ -231,7 +231,6 @@
     <string name="ppe_645c4f2315ca">"마지막 업로드: {m}"</string>
     <string name="ppe_f86272d37341">"완료되지 않음. "</string>
     <string name="ppe_5536679a0b6f">"라이브러리 도구"</string>
-    <string name="ppe_46719875dd35">"모든 미디어"</string>
     <string name="ppe_c8b2e864eccb">"사진"</string>
     <string name="ppe_6e6a6f2086bb">"기타"</string>
     <string name="ppe_d01d900383e4">"사진"</string>
@@ -243,15 +242,12 @@
     <string name="ppe_4fdda2a0828b">"Photos 기록을 읽는 중…"</string>
     <string name="ppe_947b49c807ff">"{m}개 중 {n}개 표시"</string>
     <string name="ppe_9b115c99b1da">"이름 없음"</string>
-    <string name="ppe_3deb74565196">"유형"</string>
     <string name="ppe_9e092dda4f0e">"저장용량"</string>
     <string name="ppe_b7152342a267">"크기"</string>
-    <string name="ppe_76edfcab69bd">"촬영 날짜"</string>
     <string name="ppe_1370004da76f">"길이"</string>
     <string name="ppe_516aae52959d">"해상도"</string>
     <string name="ppe_f8a67179bdff">"저장용량 제한 없음"</string>
     <string name="ppe_6d28fe88a113">"크기 제한 없음"</string>
-    <string name="ppe_1d6db9d23a9c">"날짜 제한 없음"</string>
     <string name="ppe_4303876fecbb">"길이 제한 없음"</string>
     <string name="ppe_47efa5d4c257">"해상도 제한 없음"</string>
     <string name="ppe_7e73a362f261">"10MB 이상"</string>
@@ -259,10 +255,6 @@
     <string name="ppe_24b792e31c11">"500MB 이상"</string>
     <string name="ppe_406a6e47863b">"1GB 이상"</string>
     <string name="ppe_180aee79e62c">"1MB 미만"</string>
-    <string name="ppe_6b32985251a1">"최근 30일"</string>
-    <string name="ppe_3cf4d8d7b9bc">"지난 1년"</string>
-    <string name="ppe_d6f06599e815">"1년 이상 지남"</string>
-    <string name="ppe_0ac91cc67f2b">"2025년 이전"</string>
     <string name="ppe_85b5e6e24e63">"1분 초과"</string>
     <string name="ppe_cb04375a065f">"10분 초과"</string>
     <string name="ppe_49bfaee471aa">"10초 미만"</string>
@@ -287,11 +279,16 @@
     <string name="ppe_deb8829265c9">"앨범에 없음"</string>
     <string name="ppe_3effab75ab75">"앨범 선택"</string>
     <string name="ppe_4cd31b4cd5b6">"총 크기"</string>
-    <string name="ppe_6d1704748e0c">"펼쳐짐"</string>
-    <string name="ppe_0084e8faecb6">"접힘"</string>
     <string name="ppe_6371b592b127">"이 기기에 있는 항목이 없습니다"</string>
     <string name="ppe_ef454d1ef84c">"'{album}'에 추가하시겠습니까?"</string>
     <string name="ppe_bb75c129e0f5">"'{album}'에 추가됨"</string>
     <string name="ppe_29f7d37c6a3e">"'{album}'에 추가할 수 없음"</string>
     <string name="ppe_61cc55aa0453">"추가"</string>
+    <string name="ppe_041a5dec481d">"형식"</string>
+    <string name="ppe_3edf10d08d37">"모든 형식"</string>
+    <string name="ppe_3c1105bd2b2a">"메가픽셀"</string>
+    <string name="ppe_308111b04825">"40MP 이상"</string>
+    <string name="ppe_e47c62e98b29">"12MP 이상"</string>
+    <string name="ppe_e0295756cc46">"12MP 미만"</string>
+    <string name="ppe_c911d8abf224">"2MP 미만"</string>
 </resources>

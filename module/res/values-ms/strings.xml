@@ -231,7 +231,6 @@
     <string name="ppe_645c4f2315ca">"Muat naik terakhir: {m}"</string>
     <string name="ppe_f86272d37341">"Belum selesai. "</string>
     <string name="ppe_5536679a0b6f">"Alat Pustaka"</string>
-    <string name="ppe_46719875dd35">"Semua media"</string>
     <string name="ppe_c8b2e864eccb">"Foto"</string>
     <string name="ppe_6e6a6f2086bb">"Lain-lain"</string>
     <string name="ppe_d01d900383e4">"Foto"</string>
@@ -243,15 +242,12 @@
     <string name="ppe_4fdda2a0828b">"Membaca rekod Photos…"</string>
     <string name="ppe_947b49c807ff">"Memaparkan {n} daripada {m}"</string>
     <string name="ppe_9b115c99b1da">"Tanpa nama"</string>
-    <string name="ppe_3deb74565196">"Jenis"</string>
     <string name="ppe_9e092dda4f0e">"Storan"</string>
     <string name="ppe_b7152342a267">"Saiz"</string>
-    <string name="ppe_76edfcab69bd">"Tarikh diambil"</string>
     <string name="ppe_1370004da76f">"Tempoh"</string>
     <string name="ppe_516aae52959d">"Resolusi"</string>
     <string name="ppe_f8a67179bdff">"Mana-mana storan"</string>
     <string name="ppe_6d28fe88a113">"Mana-mana saiz"</string>
-    <string name="ppe_1d6db9d23a9c">"Mana-mana tarikh"</string>
     <string name="ppe_4303876fecbb">"Mana-mana tempoh"</string>
     <string name="ppe_47efa5d4c257">"Mana-mana resolusi"</string>
     <string name="ppe_7e73a362f261">"Sekurang-kurangnya 10 MB"</string>
@@ -259,10 +255,6 @@
     <string name="ppe_24b792e31c11">"Sekurang-kurangnya 500 MB"</string>
     <string name="ppe_406a6e47863b">"Sekurang-kurangnya 1 GB"</string>
     <string name="ppe_180aee79e62c">"Kurang daripada 1 MB"</string>
-    <string name="ppe_6b32985251a1">"30 hari lepas"</string>
-    <string name="ppe_3cf4d8d7b9bc">"Tahun lepas"</string>
-    <string name="ppe_d6f06599e815">"Lebih 1 tahun lepas"</string>
-    <string name="ppe_0ac91cc67f2b">"Sebelum 2025"</string>
     <string name="ppe_85b5e6e24e63">"Lebih 1 minit"</string>
     <string name="ppe_cb04375a065f">"Lebih 10 minit"</string>
     <string name="ppe_49bfaee471aa">"Kurang daripada 10 saat"</string>
@@ -287,11 +279,16 @@
     <string name="ppe_deb8829265c9">"Tiada dalam mana-mana album"</string>
     <string name="ppe_3effab75ab75">"Pilih album"</string>
     <string name="ppe_4cd31b4cd5b6">"Saiz keseluruhan"</string>
-    <string name="ppe_6d1704748e0c">"Dikembangkan"</string>
-    <string name="ppe_0084e8faecb6">"Dilipat"</string>
     <string name="ppe_6371b592b127">"Tiada yang disimpan pada peranti ini"</string>
     <string name="ppe_ef454d1ef84c">"Tambah ke {album}?"</string>
     <string name="ppe_bb75c129e0f5">"Ditambah ke {album}"</string>
     <string name="ppe_29f7d37c6a3e">"Tidak dapat menambah ke {album}"</string>
     <string name="ppe_61cc55aa0453">"Tambah"</string>
+    <string name="ppe_041a5dec481d">"Format"</string>
+    <string name="ppe_3edf10d08d37">"Sebarang format"</string>
+    <string name="ppe_3c1105bd2b2a">"Megapiksel"</string>
+    <string name="ppe_308111b04825">"40 MP atau lebih"</string>
+    <string name="ppe_e47c62e98b29">"12 MP atau lebih"</string>
+    <string name="ppe_e0295756cc46">"Bawah 12 MP"</string>
+    <string name="ppe_c911d8abf224">"Bawah 2 MP"</string>
 </resources>

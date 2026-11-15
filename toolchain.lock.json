@@ -198,5 +198,22 @@
       "after": "a2f2936",
       "action": "git pull --ff-only"
     }
+  },
+  "checkouts_checked_2026_11_15": {
+    "XAX": {
+      "latest": "897002e506069d7e13063353fb3baabe36ceba5d",
+      "action": "git fetch (no pull)",
+      "pin": "module_sdk stays 65bce1e: 1.1.4-dev was built and checked with it (56/56 lock hashes); moving it is a separate reviewed change"
+    },
+    "BBC": {
+      "latest": "0039cccc8fdfec12ba59cd570121cd0992b92673",
+      "action": "git fetch (no pull)",
+      "pin": "bbc unchanged: the policy library was not rebuilt"
+    },
+    "XAX-MCP": {
+      "latest": "abc12e43150befffe32a1f3957e2b9d984e8fb8c",
+      "action": "git fetch (no pull)",
+      "pin": "not used by this build"
+    }
   }
 }

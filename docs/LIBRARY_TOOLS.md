@@ -10,16 +10,41 @@ Library rows are `remote_media` rows with `is_canonical=1 OR is_canonical_copy=1
 excluded); a Video Boost pair shows once (its `VB-02.MAIN`), as in Photos.
 
 ## Smart Filter
-- The page has no title: it opens with the filter chips (type, storage, size, date taken, duration,
-  resolution, album), each with a menu, combined with AND; sort row (newest, oldest, largest,
-  smallest). First 200 matches. There is no search box: Photos' search (people, places, things) is
-  server side and the phone's cache cannot answer it, so none is offered. A chip or sort change shows
-  at once with a progress indicator while the query runs; the old results stay until the new ones
-  fade in.
-- **Summary card** under the chips, for the current result: the `size_bytes` total and item count,
-  expandable to photos / videos / other (size and count each) and the number with unknown charged
-  storage. A second line, "Using storage", shows the total of `quota_charged_bytes` above zero and its
-  item count only when it is non-zero. `quota_charged_bytes` is Photos' own per-item figure and says
+- Under the page title: the busy bar (its own slot, so nothing moves), the summary card, then one
+  controls row: a clear button at the left (only while a filter is on; it slides in and out), the
+  filter chips in order Storage, Size, Format, the photo or video chips, Albums (scrolling), and the
+  sort button fixed at the right (newest, oldest, largest, smallest; tonal when not newest first).
+  The row is built once per page and changes in place: a chip's colour and check mark morph, chips
+  that appear or leave slide, nothing is rebuilt. Menus are M3 Expressive (rounded surface, the
+  selected row a tonal pill with a check mark; they unfold from the chip). Filters combine with AND.
+  First 200 matches.
+  - **Type** has no chip: the card's Photos / Videos legend selects it (a second tap clears it).
+    Photos are Photos' type codes 1, 3 and 4 (panoramas and animations count as photos), videos 2.
+  - **Format**: the format families found in the library, by name, most common first (JPEG =
+    .jpg .jpeg, HEIC = .heic .heif, RAW = .dng .cr2 .nef ..., MP4 = .mp4 .m4v, MOV, PNG, GIF ...),
+    listed for the current type. A format of one kind sets the type (MP4 sets Videos).
+  - **Megapixels** (photos and panoramas only): 40 MP or more, 12 MP or more, under 12 MP,
+    under 2 MP. **Duration** and **Resolution** (videos only). A chip that leaves its context is
+    hidden and its filter cleared, so no filter applies unseen.
+  - Storage, size and album as below. There is no date filter.
+- There is no search box: Photos' search (people, places, things) is server side and the phone's
+  cache cannot answer it, so none is offered. A filter or sort change shows at once. Every query
+  shows the busy bar the same way: an indeterminate wave grows in; when the data is there (after at
+  least 350 ms on screen) it turns determinate and fills to the end, holds, and folds away. The old
+  results stay until the new ones fade in.
+- The first read after opening builds the temp tables from a full scan of `remote_media`: the
+  columns it needs sit after the `protobuf` blob (column 15, about 194 MB on the main test account),
+  so SQLite walks every row's overflow pages, i.e. the whole ~600 MB file. The read-only connection
+  uses memory-mapped reads (`PRAGMA mmap_size`), so the kernel reads ahead: 11.3 s before, 3.9 s
+  with a dropped page cache and 0.35 s warm on the Pixel 8 Pro.
+- **Summary card** under the title, for the current result: the `size_bytes` total with "Showing n of
+  m", a bar of the photos / videos share of the filtered library, and the Photos / Videos legend with
+  size and count of each (the type filter). The legend always shows both types' real numbers for the
+  other filters; the type not selected is only dimmed. A footnote shows "Using storage" (the total of
+  `quota_charged_bytes` above zero and its item count) only when non-zero. The Storage chip offers
+  any, using and not using storage; there is no "unknown" option: the column may be NULL, but not
+  one row of either test account was (75,058 rows, 2026-11-15), and a NULL row would still show
+  under any storage. `quota_charged_bytes` is Photos' own per-item figure and says
   nothing about how full the account is: on the main test account every library row has 0 while
   Photos' profile shows 6.08 GB of 17 GB used, so there the "Using storage" line never appears and the
   Storage chip's "Using storage" option returns nothing; on the second test account 3 photos have
@@ -29,8 +54,11 @@ excluded); a Video Boost pair shows once (its `VB-02.MAIN`), as in Photos.
   an adapter whose own filter narrows it as you type, 439 rows are never rebuilt).
 - The filter runs on TEMP tables of the read-only connection: the library rows (without the protobuf
   blob) and the album memberships are copied once when the page is opened (`sf_lib`, `sf_alb`), and
-  every filter or sort change is one statement over them, with window aggregates (`COUNT(*) OVER()`,
-  `SUM(...) OVER()`) for the card before `LIMIT 200`. Nothing is written to Photos' database; the
+  every filter or sort change runs two statements over them: per-type totals for the filters without
+  the type (cached per filter until the temp tables are rebuilt, so a Photos / Videos toggle skips
+  it) and the shown rows with the type, `LIMIT 200`, whose location-label subquery runs for those
+  rows only. (It was one statement with eleven window aggregates and the label subquery for every
+  matching row: 83 ms, now 30 ms on the main library, PC, warm.) Nothing is written to Photos' database; the
   temp tables live and die with the connection (kept while the page is in use, closed on Back and
   after 2 minutes without a request), so rows Photos adds meanwhile show after the next opening. The
   filter (SQL and bound arguments) is built on the main thread, the work runs on a single thread
