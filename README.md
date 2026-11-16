@@ -102,15 +102,15 @@ library coverage. See the [reclaim report](report/reclaim-7.98-1.3.2.md).
 </details>
 
 <details open>
-<summary><b>🗂 Library Tools</b></summary>
+<summary><b>🗂 Library Manager</b></summary>
 <br>
 
 | Tool | What it does |
 |---|---|
 | **Smart Filter** | Filters the whole library by type, storage, size, date and album, with the total size and the account storage each selection uses. Reads Photos' own cache on the phone and changes nothing. |
-| **Grid and viewer** | A Photos-style grid and viewer: Share, Edit, Add to album, Trash and Download, and an Info sheet with People, Albums and the place. |
+| **Grid and viewer** | A Photos-style grid and viewer: Share, Edit, Add to album, Trash and Download, and an Info sheet with People, Albums and the place. Photos' scrubber with the year column, and Refresh to re-read the library without losing the filters. |
 
-See [Library Tools](docs/LIBRARY_TOOLS.md).
+See [Library Manager](docs/LIBRARY_TOOLS.md).
 
 </details>
 

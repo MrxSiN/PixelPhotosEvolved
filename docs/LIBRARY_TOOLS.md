@@ -1,8 +1,8 @@
-# Library Tools (1.2.0-dev)
+# Library Manager (1.2.0-dev)
 
-Photos profile page → **Pixel Photos Evolved** → **Backup**, **Library Tools** or
+Photos profile page → **Pixel Photos Evolved** → **Backup**, **Library Manager** or
 **Compatibility & diagnostics** (moved here from the Backup page). Backup is the existing settings
-page. Library Tools opens one page, **Smart Filter**, which reads the active account's metadata cache
+page. Library Manager (called Library Tools until 1.1.4-dev) opens one page, **Smart Filter**, which reads the active account's metadata cache
 Photos keeps on the phone (`gphotos<N>.db`, opened read-only) on a background thread. This is not a
 scan of the whole Google Account. Nothing in the library is written or deleted.
 
@@ -111,13 +111,85 @@ columns, video length badge. Thumbnails and full images come from the item's lh3
 account's OAuth token (`photos.image.readonly`). Grid thumbnails keep the photo's aspect and are
 sized by the short side (`=s<1.5 x tile x long/short>-no`, at most 1280 px, from the row's width and
 height; the tile crops them), so the bitmap in the tapped cell is also the viewer's placeholder.
+A tile still loading is a square grey cell, as in Photos (the rounded shape is only the selection clip).
+
+- How many results: tapping "Showing 200 of 32,248" on the card (it carries the chips' chevron) opens the chips'
+  own menu, right-aligned under it: Show 100 / 200 / 500 / 1,000 / 2,000 / Show all N, the options at or above the
+  filtered total folded into that "Show all N" (on Videos: 100, 200, 500, 1,000, Show all 1,137). The pick re-runs the
+  query with that limit and is kept in `pixel_photos_evolved.xml` (`lt_limit`, default 200).
+- The grid keeps only the rows near the screen (2026-11-17). The result is laid out once as numbers (each row's top,
+  first item, item count or "header"), and the grid holds a spacer, the rows within one screen of the viewport (kept
+  until they are two screens away) and a spacer, about five screens of rows whatever the result size. Rows are made
+  as they come near and dropped (with their queued thumbnail requests) as they leave; the selection, the day check and
+  the pill read the item list, not the rows. Show all (32,248 items) opens at once and scrolls smoothly.
+  History: Show all first built every tile at once (seconds of view creation on the UI thread, then an ANR kill);
+  then the grid was built ahead of the viewport only, but as one long list of rows: 14-15% janky frames in a 40-fling
+  test deep into the library (2,000 items: 2.7-3.9%).
+- Frames, 40 flings deep into Show all (`dumpsys gfxinfo`, Pixel 8 Pro, 120 Hz, 2026-11-17): day layout 0.02% and
+  0.03% janky (1 of 5,766 and 2 of 5,754 frames), 99th percentile 10-11 ms; comfortable layout 0.00% (0 of 2,075),
+  10 ms. Before: 14-15%. With the scrubber added (it follows every scroll): 0.11% and 0.09% (6 of 5,316, 5 of
+  5,401), 99th percentile 11-12 ms.
+- Refresh (2026-11-17), the round icon at the right of the title: re-reads Photos' records and runs the current
+  filters, sort and result limit again (nothing is reset). The page keeps a snapshot of the library (temporary tables
+  made once per database connection), so items Photos added or removed after the page first opened only showed after
+  Photos restarted; Refresh rebuilds that snapshot first. Checked: Videos filter on, Refresh, still "Showing 1,137 of
+  1,137" and the grid filled again.
+- Scrubber, like the Photos tab (measured on the stock 8.0 app 2026-11-17: screen recordings, lossless screenshots and
+  Photos' own `photos_list_fastscroll_new_scrubber_*` dimensions): a thumb at the right edge (46 dp tall, 35 dp on
+  screen, rounded on the left, up / down arrows) appears once the list leaves its top and stays (no fade-out, as in
+  Photos); its place follows the scroll on a track at Photos' screen positions. Dragging it scrolls the list to the
+  same place; while held, a "Mar 2025" bubble (14 sp, 16 / 8 dp padding) rides 24 dp left of the thumb and the years
+  stand in a column at their place on the track (12 sp pills; a year that would overlap the one above is left out, as
+  Photos does), and a tick (the VIRTUAL_KEY haptic Photos uses) marks every month change. Letting go fades bubble and
+  years (150 ms). The page's own thin scroll indicator is gone. Side by side with the stock app the thumb sits at the
+  same height and the year column lines up (2026 at the same row, 2020 dropped in both); the thumb and bubble grey is
+  the nearest dynamic colour to Photos' (#33302f here against #323136; this page's own surfaces are warmer).
+  Frames while dragging the thumb top to bottom and back (40 px steps): 1.1-1.6% janky, 99th percentile 23-24 ms
+  (stock Photos, same drag: 9.1%, 27 ms); while held only the rows on screen are made.
+- Switching layout keeps its place (2026-11-17): the row under the fingers (pinch) or at the list's top (grid
+  controls menu) stays where it was, found in the new layout's row list. Before, the pinch guessed by 1 / columns^2
+  and missed by weeks between the comfortable and day layouts (Mar 23 -> Feb 7); the menu did not anchor at all
+  (Day at July 2025 -> Month at April 2023). Checked: Day -> Month -> Day by pinch and by the menu, the same
+  Sep 21, 2023 rows under the fingers / at the top each time.
+- A day's date and place are one line each, ending in "..." when too long (the row model gives every header the same
+  height).
+- Performance pass over the grid, pill and scrubber (2026-11-17), measured on the same Pixel 8 Pro:
+  - Per tile built: the selection look (two reflective scale animations) only runs while something is selected; the
+    rounded image outline is one shared drawable (no reflective corner radius per tile); the day thumbnail size is
+    computed once per fill, not from the display metrics twice per tile; `gRows.indexOf` (a 32k-item scan, twice
+    per tile) is an identity-map lookup.
+  - Per scroll pass: the window pass reads the row model instead of `Class.forName` / `isInstance` per row, rows
+    leaving the grid are told apart by the model, and the screen-position array, screen height and header colour
+    are reused instead of re-read or re-allocated.
+  - Day check and header tap: the day's items come from the model (its first and next header), not a scan of every
+    row comparing date strings; the month layout's check now reads the month (it compared the day before).
+  - Scrubber: the thumb moves by an integer `scrollTo` of its holder (no reflective float setter per move), the
+    finger's y is one cached reflective call (was two, with a key string built each time), its arithmetic is plain
+    64-bit integer math (was boxing through `Integer`), and a month or year label is formatted only when the position
+    leaves the current month / year (a calendar span check; was a `Date` and a format on every move). The year column
+    formats once per year instead of once per header row.
+  - Memory: the model's four arrays are trimmed to their size (they are built at 2n + 3 entries).
+  - Measured after: 40 flings deep into Show all 0.09% and 0.10% janky (5 of 5,355, 3 of 3,060), 99th percentile
+    12 ms; scrubbing top to bottom and back 0.75-1.25% (was 1.1-1.6%), 99th percentile 24-30 ms. Executable
+    (`classes*.dex`): 3,454,528 bytes, 1,036 more than before the pass (the model-based day functions).
+- Thumbnail loading (2026-11-16): stack samples of a cold open showed the three loader threads waiting on the network
+  nearly all the time and the UI thread idle. Now eight loader threads at background priority, and grid
+  thumbnails are kept on disk (`cacheDir/ppe-th`, one file per thumbnail URL, about 150 KB each; trimmed at start
+  when over 150 MB). First screen filled after a cold process start: about 4.4 s before, 3.0 s with an empty disk
+  cache, 1.5 s with it filled; after a fling, about 3 s of grey cells before, none now.
+- Memory: a tile more than two screens above or three below the viewport lets its bitmap go and reloads it when it
+  comes near; items after the first 200 are requested only near the viewport, by the window pass (at most every 90 ms; asking
+  from every row made mid-fling queued the rows passed by: about 12 s of grey cells after a long fling, 3 s without). Flinging through 2,000 items kept
+  the native heap at about 295-322 MB (200 loaded tiles used to add about 150 MB, never released).
+- Frames during a cold open with scrolling (page cache dropped): 0.73-1.01% janky, 99th percentile 28-34 ms
+  before; 0.71-0.74%, 21-23 ms now; with 2,000 items 3.9%, 32 ms (building the tiles).
 
 - Tap: a full-screen viewer over the grid's own items (the stock viewer resolves stacks and swipes
   the whole library). Opening is a shared-element zoom: the image starts covering the cell, clipped
   to what the cell shows, and grows to fit the screen; the cell's own bitmap is shown at once and
   cross-fades to the sharp image (no blank frame; Back or swipe-down zooms back into the tile of the
   item now shown while that tile is on screen, else fades). Swipe between results, pinch / double-tap zoom, swipe down or Back to
-  close. Videos are copied to Photos' cache, then played.
+  close. Videos are copied to Photos' cache, then played (see Video below).
 - Motion copied from screen recordings of the stock one-up (2026-11-15): open / close zoom 200 ms
   fast-out-slow-in; bars fade linearly in 200 ms, a single tap toggles them only after the 300 ms
   double-tap timeout; double tap zooms 2.5x around the tapped point and hides the bars. Swiping is a
@@ -168,8 +240,38 @@ height; the tile crops them), so the bitmap in the tapped cell is also the viewe
   runs Photos' MoveToTrash for the item (device and Google Account, scope `LOCAL_REMOTE`).
 - Info: **People** (face clusters of the item, `search_clusters` type 0) and **Albums** (cover, title,
   item count) after the caption, as in Photos. Dragging the sheet down at its top closes it.
-- Not built: the favourite star (no verified write path) and the inline map (the Maps view's lifecycle
+- Map previews (2026-11-16), as in Photos: under the place row of Info and under "Location / View Map" in the selection
+  sheet, a lite-mode Google map: 156 dp card, 24 dp corners, the item's photo in a round dark marker whose pointer marks
+  the place (the selection map adds a white ring dot), the attribution kept in a clipped overhang as on the stock card.
+  Photos' own night style (raw `photos_mapexplore_dark_style`) is applied when the map is ready (lite mode ignores the
+  options' colour scheme); Info is always dark, the selection map follows the sheet's surface colour. Scale: Info zoom
+  12, selection fitted to the selected items' places, at most 9 (same towns and labels as the stock maps on the
+  device). Tapping a map does what Open in Maps / View Map does. Found without obfuscated names: MapView,
+  GoogleMapOptions, CameraPosition and LatLng keep theirs (public constructors); MapView's create step and
+  getMapAsync are DexKit member rules (#map.create: the void() calling a void(Bundle); #map.async: the method with
+  "getMapAsync() must be called on the main thread"); the style call is GoogleMap's only method taking a Parcelable
+  made from a String. Not built: the pencil (edit location) next to the place, no verified write path.
+- Not built: the favourite star (no verified write path); earlier note on the inline map (the Maps view's lifecycle
   methods are obfuscated); "Open in Maps" stays. Trash was checked up to its confirmation only.
+
+## Video (Photos 8.0 one-up, 2026-11-16)
+Measured on the stock one-up (uiautomator bounds and screen recordings) and matched to the pixel on a
+Pixel 8 Pro (button row, time, track and action row at the same y as stock):
+- No play button in the middle. A video plays as soon as it is shown; a video opens with the bars hidden,
+  and they hide when playback starts. The thumbnail stays on screen until the first frame.
+- Controls above the action row, fading with the bars: play / pause (48 dp, 4 dp from the left), mute
+  (48 dp, 4 dp from the right), "0:19 / 0:40" centred between them, and a slider: 8 dp track (white
+  played, #999999 left, outer corners 4 dp, inner 2 dp), a 4 x 44 dp white bar thumb with a 2 dp gap on
+  each side, a 4 dp stop dot at the end. Dragging the slider seeks. Photos' own strings for Play, Pause,
+  Mute and Unmute.
+- While it plays, the bars hide 5 s after the last interaction (stock measured 4.9 s). At the end the
+  bars come back with Play. With the bars hidden, a tap on a control only brings the bars back.
+- The video follows the image's pager, zoom and drag-down moves.
+- Downloads run one at a time and a request the user already swiped away is skipped; the last file is
+  reused when the same video is shown again. The whole file still downloads before it plays (MediaPlayer
+  cannot range-read the signed `=dv` stream): about 3 s for a 7 s clip, under 6 s for 40 s, here.
+- Not built: Key Moments (not in the cache database), Save as photo, playback speed, hour format for
+  videos of an hour or more.
 
 ## Not built
 - Search: see above.

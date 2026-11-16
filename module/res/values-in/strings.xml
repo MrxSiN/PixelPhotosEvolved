@@ -230,7 +230,6 @@
     <string name="ppe_f1e76573bac4">"Diupload sebagai {m}"</string>
     <string name="ppe_645c4f2315ca">"Upload terakhir: {m}"</string>
     <string name="ppe_f86272d37341">"Belum selesai. "</string>
-    <string name="ppe_5536679a0b6f">"Alat Pustaka"</string>
     <string name="ppe_c8b2e864eccb">"Foto"</string>
     <string name="ppe_6e6a6f2086bb">"Lainnya"</string>
     <string name="ppe_d01d900383e4">"Foto"</string>
@@ -291,4 +290,8 @@
     <string name="ppe_e47c62e98b29">"12 MP atau lebih"</string>
     <string name="ppe_e0295756cc46">"Di bawah 12 MP"</string>
     <string name="ppe_c911d8abf224">"Di bawah 2 MP"</string>
+    <string name="ppe_8b78be88b341">"Tampilkan {n}"</string>
+    <string name="ppe_62b01e8bc1d8">"Tampilkan semua ({n})"</string>
+    <string name="ppe_384bb07f4f9f">"Pengelola Pustaka"</string>
+    <string name="ppe_56e3badc4e6c">"Muat ulang"</string>
 </resources>

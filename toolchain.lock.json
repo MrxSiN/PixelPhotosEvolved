@@ -1,11 +1,11 @@
 {
   "module_sdk": {
     "repository": "https://github.com/MrxSiN/XAX",
-    "revision": "65bce1e8cedad9df50a57af58e1799aebcf72bf0",
-    "scope": "Module compiler: compiler/reference (Python reference compiler) of XAX 65bce1e; builds the store and APKs byte-identically to the ed1961b build (checked 2026-11-12)",
+    "revision": "a03a4274bbe31c01992898bf807f13930dfba596",
+    "scope": "Module compiler: compiler/reference (Python reference compiler) of XAX a03a427; builds the store and APKs byte-identically to the 65bce1e build (checked 2026-11-16)",
     "files": {
       "compiler/reference/blake3.py": "bc819aaf00be9054a88db0707c94bf0a535a6c538e2ab529788df8630ec7bd03",
-      "compiler/reference/xax_aarch64.py": "acc639bbeba73fc4ef694da969485e3e49fe8b0cc3a28d53bae4c0aae87871dd",
+      "compiler/reference/xax_aarch64.py": "4f8c8552dd9b4b7e31a18b75d0ce133b3198b047ad858139dfe54781659cb76a",
       "compiler/reference/xax_aarch64_regalloc.py": "e2524f01e27e51a249801889a7341cef4f2dbe783ae6e8e822e11f59ec50f9b5",
       "compiler/reference/xax_accelerator.py": "cdb6cc11064124e3d3c143022777da16a76c9cab10cd59e987fcca5c35f9fcec",
       "compiler/reference/xax_android.py": "0be32dc660b468aaaffec5ea8d5effe6b1755282ec2897381575db45e8972fdb",
@@ -20,9 +20,9 @@
       "compiler/reference/xax_artifact.py": "eca5b0a33adb11b5a6183418d7ad2cf9a7dd8bafe7eb9cf5d7bc45a4d576d676",
       "compiler/reference/xax_board.py": "60a02d438cca380436c6d044464cd61c355e1ee1fd91f1cf1b72fd8386d990ac",
       "compiler/reference/xax_bootstrap.py": "ae11727b40ffa3a7d42b4441794e74cc628e71d0fca553032c67bec6f20ce55d",
-      "compiler/reference/xax_build.py": "dae04597d64f60587c92db289d0b9f49e4a548321d2093db7030a6b08f9b41a4",
+      "compiler/reference/xax_build.py": "08c2768d4571b60dd4eb20616f5cb26ae63603af802d6a9b1e8a34baa23cb53d",
       "compiler/reference/xax_c_import.py": "4631408ba4dc1e62c45d5d7ba4c7a6e169e62d7f5c2006dd43ae3dd41622fd76",
-      "compiler/reference/xax_compiler.py": "375200ea9cac63d58fb6d1835074bf95d9babc8fa850d3292f86b93f82fc2858",
+      "compiler/reference/xax_compiler.py": "d336f603fec9dbd0e3069349f7142aea9245c9966735b54f8af669ea429a329f",
       "compiler/reference/xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
       "compiler/reference/xax_dex.py": "18b4f6b20abd18f8a231059c82ff7b752ebd609f4ae4253df23b7f9f73b56f3a",
       "compiler/reference/xax_dex_jvm.py": "acc5e3d6116495e4bfd3a49634c5eb4a3bf5446f880c5d16c85bd8854b3c0f1e",
@@ -57,8 +57,8 @@
       "compiler/reference/xax_wasm_legacy.py": "6537430c97363661f8918e61568937fe0a4081ac0c7e8f60b203c744cf304dfa",
       "compiler/reference/xax_web.py": "94df3382ec70c462b0c9cb0f168732d8e11eaed8f8207fac4623a05f3fd93378",
       "compiler/reference/xax_workspace.py": "ea751e2f56cfe560ea3cb981ca505bf4552c18636b32f34d0ba568727c112920",
-      "compiler/reference/xax_x86_64.py": "fc0263f6f0b6c8456fd0b76f8146a0faf6b759fdde92bc00428dedb7a5b46e3e",
-      "compiler/reference/xax_x86_64_regalloc.py": "ac3d0788f8725f474bf9a0c5f4d23d08afae9cc9aa5b029390ab91ac68510b21",
+      "compiler/reference/xax_x86_64.py": "3d151c2fe8b2c061e5cbabab581840ab2652fff24eb3a0c6c65ad729f6da0f88",
+      "compiler/reference/xax_x86_64_regalloc.py": "365e88499bd7d3d169210ac6fc467d8abb6bf6dce63f71b5ad38e1b0e1d4d3d8",
       "compiler/reference/xax_x86_64_views.py": "2fa638e32ef7e41ec8fb625f86a080995e70f21fa586461298b04d0f8fed16a7"
     }
   },
@@ -214,6 +214,18 @@
       "latest": "abc12e43150befffe32a1f3957e2b9d984e8fb8c",
       "action": "git fetch (no pull)",
       "pin": "not used by this build"
+    }
+  },
+  "checkouts_checked_2026_11_16": {
+    "XAX": {
+      "latest": "a03a4274bbe31c01992898bf807f13930dfba596",
+      "action": "git fetch; git archive",
+      "pin": "module_sdk moved 65bce1e -> a03a427: the 1.1.4-dev carrier builds a byte-identical pixel_photos_module.xax (03340092...) and unsigned APK (c6976a72...) with both; the reference changes since 65bce1e are aarch64/x86-64 backends and the self-host tool, not the DEX path"
+    },
+    "BBC": {
+      "latest": "0039cccc8fdfec12ba59cd570121cd0992b92673",
+      "action": "git fetch",
+      "pin": "bbc unchanged: commits since d18339c are documentation only; the policy library was not rebuilt"
     }
   }
 }

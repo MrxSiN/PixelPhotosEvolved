@@ -230,7 +230,6 @@
     <string name="ppe_f1e76573bac4">"上傳身分：{m}"</string>
     <string name="ppe_645c4f2315ca">"上次上傳：{m}"</string>
     <string name="ppe_f86272d37341">"未完成。"</string>
-    <string name="ppe_5536679a0b6f">"媒體庫工具"</string>
     <string name="ppe_c8b2e864eccb">"相片"</string>
     <string name="ppe_6e6a6f2086bb">"其他"</string>
     <string name="ppe_d01d900383e4">"相片"</string>
@@ -291,4 +290,8 @@
     <string name="ppe_e47c62e98b29">"1200 萬像素以上"</string>
     <string name="ppe_e0295756cc46">"低於 1200 萬像素"</string>
     <string name="ppe_c911d8abf224">"低於 200 萬像素"</string>
+    <string name="ppe_8b78be88b341">"顯示 {n} 項"</string>
+    <string name="ppe_62b01e8bc1d8">"全部顯示（{n} 項）"</string>
+    <string name="ppe_384bb07f4f9f">"媒體庫管理"</string>
+    <string name="ppe_56e3badc4e6c">"重新整理"</string>
 </resources>
