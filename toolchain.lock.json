@@ -1,8 +1,8 @@
 {
   "module_sdk": {
     "repository": "https://github.com/MrxSiN/XAX",
-    "revision": "a03a4274bbe31c01992898bf807f13930dfba596",
-    "scope": "Module compiler: compiler/reference (Python reference compiler) of XAX a03a427; builds the store and APKs byte-identically to the 65bce1e build (checked 2026-11-16)",
+    "revision": "28ddb813f1b4f66d97967a3f11d265247133fed1",
+    "scope": "Module compiler: compiler/reference (Python reference compiler) of XAX 28ddb81 (release 0038); with it the 1.1.4-dev carrier builds a byte-identical pixel_photos_module.xax and unsigned APK to the fa6d2ed / 7248ff4 build (checked 2026-11-19)",
     "files": {
       "compiler/reference/blake3.py": "bc819aaf00be9054a88db0707c94bf0a535a6c538e2ab529788df8630ec7bd03",
       "compiler/reference/xax_aarch64.py": "4f8c8552dd9b4b7e31a18b75d0ce133b3198b047ad858139dfe54781659cb76a",
@@ -22,8 +22,8 @@
       "compiler/reference/xax_bootstrap.py": "ae11727b40ffa3a7d42b4441794e74cc628e71d0fca553032c67bec6f20ce55d",
       "compiler/reference/xax_build.py": "08c2768d4571b60dd4eb20616f5cb26ae63603af802d6a9b1e8a34baa23cb53d",
       "compiler/reference/xax_c_import.py": "4631408ba4dc1e62c45d5d7ba4c7a6e169e62d7f5c2006dd43ae3dd41622fd76",
-      "compiler/reference/xax_compiler.py": "d336f603fec9dbd0e3069349f7142aea9245c9966735b54f8af669ea429a329f",
-      "compiler/reference/xax_construct.py": "5174a7d85dfcebad76279fe3cfe8bef277c3a7b0aec79f43f382b73ffaa78927",
+      "compiler/reference/xax_compiler.py": "5e26b709ead8c5bdf7232f3a1e425e6ea39dd7665ba0b9e8884527c944ae33c2",
+      "compiler/reference/xax_construct.py": "46bbac47d72b3ecc335c092c3b9b6127abded571a07ea8cef6f0681d799d316e",
       "compiler/reference/xax_dex.py": "18b4f6b20abd18f8a231059c82ff7b752ebd609f4ae4253df23b7f9f73b56f3a",
       "compiler/reference/xax_dex_jvm.py": "acc5e3d6116495e4bfd3a49634c5eb4a3bf5446f880c5d16c85bd8854b3c0f1e",
       "compiler/reference/xax_ed25519.py": "7b86174e16942e3c2a4cc6a0c042af479b729ee30a16e487d05a44eef71f4f44",
@@ -57,24 +57,24 @@
       "compiler/reference/xax_wasm_legacy.py": "6537430c97363661f8918e61568937fe0a4081ac0c7e8f60b203c744cf304dfa",
       "compiler/reference/xax_web.py": "94df3382ec70c462b0c9cb0f168732d8e11eaed8f8207fac4623a05f3fd93378",
       "compiler/reference/xax_workspace.py": "ea751e2f56cfe560ea3cb981ca505bf4552c18636b32f34d0ba568727c112920",
-      "compiler/reference/xax_x86_64.py": "3d151c2fe8b2c061e5cbabab581840ab2652fff24eb3a0c6c65ad729f6da0f88",
+      "compiler/reference/xax_x86_64.py": "3196f26976a844c61550305be88a829b6363aa9c0921396556172e68f7c67da0",
       "compiler/reference/xax_x86_64_regalloc.py": "365e88499bd7d3d169210ac6fc467d8abb6bf6dce63f71b5ad38e1b0e1d4d3d8",
       "compiler/reference/xax_x86_64_views.py": "2fa638e32ef7e41ec8fb625f86a080995e70f21fa586461298b04d0f8fed16a7"
     }
   },
   "bbc": {
     "repository": "https://github.com/MrxSiN/BBC",
-    "revision": "d18339c41811f2d0a9d8b89789977182a7c05882",
-    "bbc_exe_sha256": "de9a2c5f65312a493f615f5c06f90761a5d3bf1971f460fe37113c8a6a71e405",
+    "revision": "d40aededaf041ed760951ed62db16a5452dcd375",
+    "bbc_exe_sha256": "4b73ad612bcf6243a5795c1d1680bb2cc432019f066194a0edc3c4000cc410d8",
     "bbc_android_arm64_xax_sha256": "edebd63e0da60d79f6eaec2fc19155e19a341daaf74cd1761b50b3c278345606",
     "command": "bbc.exe compile android-arm64 -O1 ppepolicy < policy/pixel_photos_policy.bf; bbc.exe emit-bfx -O1",
     "outputs": {
-      "module/libppepolicy.so": "13dca03e095b9b9b197ad3e745b1941aa51772085ee53240d7475ea47af475c7",
+      "module/libppepolicy.so": "e4b1a2ea66bda643b5f19db6b488be514d246e5dddc27f3f5d46bb98cdab07e9",
       "policy/pixel_photos_policy.bfx": "8ddf926be37d5b7d54da6851082206e3cdb7dca8803c20508580fb5f8dbc5f4b",
-      "policy/pixel_photos_policy.xax": "7fc0c6793c7a892f2a0c66c884d700ff78ba5168a7fa701da58665ed98723656"
+      "policy/pixel_photos_policy.xax": "4fdbe2b166d4a570cc6dab6748c3d1d58ee607bb5354470fe34a3651275c177c"
     },
     "format": "BFX format 2 (-O1 fold), 1,602 instructions",
-    "equivalence": "6,000 device vectors (every op/mc/ws/cap/e combination with all flags set, plus 3,200 random) identical to the previous BBC 53783953 executable on a Pixel 8 Pro (2026-11-10); that executable matched the retired BFX-1 build on 21,480 vectors"
+    "equivalence": "BBC release 0037 (d40aede): BFX byte-identical; the android-arm64 executable differs from the d18339c build and was compared on a Pixel 8 Pro with the same 6,000 vectors (every op/mc/ws/cap/e combination with all flags set, plus 3,200 random): 6,000 identical, 0 differences (2026-11-19); the d18339c build had matched BBC 53783953 on these vectors and that one the retired BFX-1 build on 21,480"
   },
   "references": {
     "pixelify": "c4094f597ad6f8e0eab3a3653c4108279470cf62",
@@ -226,6 +226,35 @@
       "latest": "0039cccc8fdfec12ba59cd570121cd0992b92673",
       "action": "git fetch",
       "pin": "bbc unchanged: commits since d18339c are documentation only; the policy library was not rebuilt"
+    }
+  },
+  "checkouts_checked_2026_11_18": {
+    "XAX": {
+      "latest": "fa6d2edf9794eb7911e2944c793940faaa80fec3",
+      "action": "git fetch; git archive",
+      "pin": "module_sdk moved a03a427 -> fa6d2ed: the reference changes are two verifier/doc lines (ADR-406 catching-call ABIs listed as foreign, construct docstring); the DEX path is unchanged; checked: the 1.1.4-dev carrier builds a byte-identical pixel_photos_module.xax and unsigned APK with both pins"
+    },
+    "BBC": {
+      "latest": "0039cccc8fdfec12ba59cd570121cd0992b92673",
+      "action": "git fetch",
+      "pin": "bbc unchanged at d18339c: commits since are documentation and evidence only; the policy library was not rebuilt"
+    }
+  },
+  "checkouts_checked_2026_11_19": {
+    "XAX": {
+      "latest": "28ddb813f1b4f66d97967a3f11d265247133fed1",
+      "action": "git fetch; git archive",
+      "pin": "module_sdk moved fa6d2ed -> 28ddb81 (release 0038): xax_compiler.py, xax_x86_64.py changed; the 1.1.4-dev carrier builds byte-identical store and unsigned APK with both"
+    },
+    "BBC": {
+      "latest": "24d127ffebb3937f8af276b038dbf822fb9799bb",
+      "action": "git fetch; prebuilt build/bbc.exe (XAX_PIN.json release 0037)",
+      "pin": "bbc moved d18339c -> d40aede (release 0037): policy rebuilt; BFX identical, native executable equivalent on 6,000 device vectors. 24d127f (latest) only re-pins XAX 0038 and needs a rebuilt bbc.exe (XAX_PIN.json sha256 0ec701ee...), which was not bootstrapped here; the pin stays at d40aede until it is"
+    },
+    "XAX-MCP": {
+      "latest": "abc12e43150befffe32a1f3957e2b9d984e8fb8c",
+      "action": "git fetch",
+      "pin": "not used by this build (MCP transport and tool schemas only); no change needed here"
     }
   }
 }

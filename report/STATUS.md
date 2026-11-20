@@ -1,10 +1,14 @@
-# Status — 1.1.3 / 39
+# Status — 1.1.4 / 40
+
+**1.1.4** (versionCode 40) supports Google Photos 8.1.0.1020990585 and turns Library Tools into **Library
+Manager**: new filters, a search bar, Find duplicates, Export, Recover storage, pull to refresh and a faster
+first duplicate scan. Build: [build-1.1.4.json](build-1.1.4.json). The sections below were written while it was the
+1.1.4-dev build.
 
 **1.1.3** (versionCode 39) supports Google Photos 8.0.0.1011730683 and ships Library Tools, the
 Photos-style viewer and the Android 13 fix for issue #2. Build: [build-1.1.3.json](build-1.1.3.json).
-The sections below were written while it was the 1.2.0-dev build.
 
-**1.1.4-dev** (versionCode 39, development build, [build-1.1.4-dev.json](build-1.1.4-dev.json)) redesigns
+**1.1.4-dev** (versionCode 39, development build) redesigns
 the top of Library Tools and speeds it up. Details in [LIBRARY_TOOLS.md](../docs/LIBRARY_TOOLS.md).
 
 - **Layout.** Busy bar under the title, then the summary card (size, "Showing n of m", photos /
@@ -62,6 +66,10 @@ updated yet.
 - **Not ported:** Library Tools "Add to album" resolves fixed 7.99 names and stays hidden on 8.0.
 - **Toolchain (2026-11-12).** XAX `65bce1e` and BBC `d18339c`: the module store and both APKs, and the policy
   `.so`, `.bfx` and `.xax`, are byte-identical to the previous toolchain's.
+- **Performance (2026-11-20), EXECUTED on the Pixel 8 Pro:** cold start 179 ms to first frame, symbol cache 4 ms, hook
+  installation about 20 ms; Library Manager flings p50 5 ms / p99 12 ms, 0.18 % janky (unchanged by the float-setter
+  caches, whose savings are counted from the code, not measured). Details: docs/LIBRARY_TOOLS.md.
+- **Toolchain (2026-11-19).** XAX `28ddb81` (release 0038) and BBC `d40aede` (release 0037), EXECUTED: the 1.1.4-dev store and unsigned APK are byte-identical with XAX `fa6d2ed`, `7248ff4` and `28ddb81`; the rebuilt policy BFX is identical and the android-arm64 executable matched the previous one on 6,000 of 6,000 device vectors (Pixel 8 Pro). BBC `24d127f` (XAX 0038 pin) needs a rebuilt bbc.exe and is NOT RUN.
 - **Toolchain (previous).** Built with XAX `ed1961b` (its Python reference compiler now lives in
   `compiler/reference/`; store and APK are byte-identical to the `054262b0` build) and BBC `240c658`.
   The new policy executable matches the previous one on 6,000 device vectors; on-device self-tests pass.

@@ -15,10 +15,11 @@ Google Фото → фото профиля → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#совместимость)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.1.0-3DDC84?style=for-the-badge)](#совместимость)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#сборка)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?logo=githubsponsors&logoColor=fff&style=for-the-badge)](https://github.com/sponsors/MrxSiN)
 
 </div>
 
@@ -110,6 +111,9 @@ activity настроек. Его страница открывается из �
 |---|---|
 | **Умный фильтр** | Фильтрует всю библиотеку по типу, хранилищу, размеру, дате и альбому и показывает общий размер и место в аккаунте, которое занимает выборка. Читает кэш Google Фото на телефоне и ничего не меняет. |
 | **Сетка и просмотр** | Сетка и просмотр как в Google Фото: Поделиться, Изменить, Добавить в альбом, Корзина и Скачать, а также панель сведений с людьми, альбомами и местом. |
+| **Поиск дубликатов** | Точные копии, одинаковые имя и дата и похожие фото рядом, с предложенной лучшей версией. Пары RAW + JPEG не разбиваются; вы сами выбираете, что отправить в корзину. |
+| **Экспорт** | Всё, что подходит под фильтры, в оригинале: одна папка, папки по году / месяцу или по альбомам, с манифестами CSV / JSON, суммами SHA-256 и отчётом об ошибках. Пауза и продолжение. |
+| **Упорядочить альбомы** | Видно, в каких альбомах выбранные объекты; можно убрать их из своих альбомов, добавить сразу в несколько и найти объекты без альбома или в двух и более. |
 
 Подробнее: [Library Tools](docs/LIBRARY_TOOLS.md) (на английском).
 
@@ -121,6 +125,7 @@ activity настроек. Его страница открывается из �
 
 | Android | Google Фото | Устройство | Состояние |
 |---|---|---|---|
+| 17 (API 37) | 8.1.0.1020990585 | Pixel 8 Pro | 1.1.4: DexKit находит все классы и члены; Library Manager (снимок, альбомы, «Освободить хранилище» на одном объекте) проверен на устройстве |
 | 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: DexKit находит все классы и члены; резервное копирование, маршрутизатор Video Boost и Инструменты библиотеки проверены на устройстве |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: все классы найдены через DexKit, проверка резервного копирования пройдена, освобождение места проверено на тестовом видео (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | Правила DexKit проверены на DEX этой сборки; последняя проверка на устройстве — 1.2.2-dev |
@@ -195,6 +200,10 @@ aapt2 и подписать. [SHA256SUMS](SHA256SUMS) перечисляет в�
 
 [Состояние](report/STATUS.md) разделяет проверенное на устройстве, проверенное офлайн и непроверенное.
 [Указатель подтверждений](docs/EVIDENCE.md) ссылается на все отчёты (на английском).
+
+## Поддержка
+
+Если модуль вам полезен, можно [поддержать его разработку](https://github.com/sponsors/MrxSiN).
 
 ## Благодарности
 

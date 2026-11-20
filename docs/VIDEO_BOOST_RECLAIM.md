@@ -3,7 +3,9 @@
 Release **1.1.1 / 37** on Google Photos **7.98.0.1007591100**.
 
 Videos processed with Video Boost count toward your Google Account storage, even when an
-unlimited backup option is on. Reclaim downloads each selected video, deletes its cloud copy
+unlimited backup option is on. Since 1.1.4 the same engine also re-uploads ordinary photos and videos that use
+storage, started from Library Manager's **Recover storage** (see [Library Manager](LIBRARY_TOOLS.md)); their file
+name, MediaStore table and MIME type come from the item. Reclaim downloads each selected video, deletes its cloud copy
 (also from Trash) and uploads the same bytes again with your Backup setting, so the new copy
 stops using storage. Reuploaded videos keep their full quality but lose their Video Boost tags
 and links. Videos are not re-encoded.
@@ -44,6 +46,15 @@ reuploads that lookup fails although the item is in the account (`NON_MATCHING_G
 GAIA_ID_INVALID`). In 1.1.1 PPE accepts that check only for its own write, on the thread doing it;
 every other caller in Photos gets the real result. If a future Photos build changes the verifier,
 PPE leaves Photos' check in place and a failure stops the job as before.
+
+Until 1.1.4 the verifier class was looked up by its 7.98 name, which names another class from Photos 7.99
+on, so finalization failed there (seen on 8.1, 2026-11-18). It is now the only class using the string
+"Account store GAIA ID does not match backend GAIA ID" (a DexKit rule, symbol `actor.v`; 8.1 resolves it
+on the phone). PPE still checks the method's shape (two parameters, an enum result with `VERIFIED_OK`)
+before hooking; no match or no symbol leaves Photos' check in place.
+
+After the cloud delete, PPE now waits up to 30 seconds for Photos' records to drop the old copy before
+it reports "Delete not finished yet" (once it stopped a job that would have passed a few seconds later).
 
 ## Results
 

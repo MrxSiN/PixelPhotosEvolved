@@ -1,3 +1,47 @@
+## 1.1.4
+
+Works with Google Photos 8.1. **Library Tools** is now **Library Manager**.
+
+### What's new
+- **Smart Filter 2.0.** New filters: Kind (screenshots, creations, favorites), Camera (make and model, read from each
+  item's own record), Location (has / missing) and Uploaded (last 7 days ... over a year ago); Albums adds "In 2 or more
+  albums". A **search** bar at the bottom, as in Photos, finds file names, dates (`2024-05`), album titles and camera names.
+- **Find duplicates.** Exact copies, same name and date, and visually similar photos (a cached difference hash of each
+  photo taken within a minute of another), side by side with the suggested best version. RAW + JPEG pairs are never
+  suggested; nothing is selected for you, and at least one item of every group stays.
+- **Export.** What the filters match, as originals, into one folder, year / month folders or one folder per album, with
+  manifest.csv, manifest.json, SHA256SUMS.txt and a report of failed files. Pause any time; it resumes where it stopped,
+  even after Photos is closed. Useful as a checked copy before Recover storage.
+- **Recover storage.** Select items in Library Manager and tap **Recover storage** (after Download as ZIP). It shows how
+  many of them use your account storage and how much, then **Re-upload** sends them through the Reclaim engine (download,
+  delete the cloud copy and its own Trash copy, upload again with your Backup setting, check the new copy's storage use),
+  or **Move to trash** deletes them. Re-uploaded copies leave their albums, shared links and edits behind.
+- **Albums like Photos** for the album filter and Add to: All / Shared with me / My albums, Photos' sorts (Last modified,
+  Album title, Most recent photo) and a grid or list view. Albums other people shared with you are included.
+- **Info sheet:** People and Albums open Photos' own pages. The viewer's album chip shows "+N" for more albums.
+- **Pull to refresh** replaces the Refresh button.
+
+### Fixes
+- **Library Manager opened slowly** (up to 10 s and more with every item shown). It now keeps its own small snapshot of
+  Photos' records and refreshes it in the background only when they change: about a second with 32,000 items.
+- **Dialog buttons** (Add to album, Trash, Delete from device) were nearly invisible on the dark dialog.
+- **Albums made on the phone** could not be opened from Info (Photos refused their local key).
+- **Reclaim finalization on Photos 7.99 and later.** The last step of Reclaim and Recover storage could fail with an
+  account-check error: PPE looked for Photos' owner check under an old class name. It is now found on the phone.
+- **Reclaim waits for the delete.** A job no longer stops with "Delete not finished yet" while Photos is still syncing
+  the delete (up to 30 seconds).
+- **Move to trash of cloud-only items** (Duplicates, the viewer's Trash, Recover storage) failed: PPE asked Photos to
+  trash a device copy that did not exist. Items with no copy on the phone are now trashed from the account only.
+- **Library Manager counted items in Photos' trash** as library items, so a trashed duplicate stayed in the list. Trashed
+  items are now left out, and Duplicates refreshes a moment after Move to trash.
+- **Find duplicates > Similar photos is about 5 times faster the first time:** about 3½ minutes instead of about 18 for
+  25,000 photos. Later scans only check new photos, as before.
+- **Less work per animation frame.** Library Manager's animations (fades, slides, the scrubber and the day pill) no
+  longer create throwaway objects on each update, and unused code is left out of the module.
+- **Pull to refresh no longer blocks the filter chips.** After a pull let go before it refreshed, the chips could not be
+  scrolled sideways.
+- **Recover storage toast** says "1 item" for one item and where progress is: Backup > Video Boost Storage Reclaim.
+
 ## 1.1.3
 
 Works with Google Photos 8.0 and adds **Library Tools**.
