@@ -15,10 +15,11 @@ Google Fotos → tu foto de perfil → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#compatibilidad)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.1.0-3DDC84?style=for-the-badge)](#compatibilidad)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#compilación)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?logo=githubsponsors&logoColor=fff&style=for-the-badge)](https://github.com/sponsors/MrxSiN)
 
 </div>
 
@@ -110,6 +111,8 @@ Consulta el [informe de recuperación](report/reclaim-7.98-1.3.2.md) (en inglés
 |---|---|
 | **Filtro inteligente** | Filtra toda la biblioteca por tipo, almacenamiento, tamaño, fecha y álbum, con el tamaño total y el almacenamiento de la cuenta que usa cada selección. Lee la caché de Google Fotos en el teléfono y no cambia nada. |
 | **Cuadrícula y visor** | Una cuadrícula y un visor como los de Google Fotos: Compartir, Editar, Añadir a álbum, Papelera y Descargar, y una hoja de información con Personas, Álbumes y el lugar. |
+| **Buscar duplicados** | Copias exactas, mismo nombre y fecha, y fotos parecidas lado a lado, con la mejor versión sugerida. Los pares RAW + JPEG se conservan; tú eliges qué va a la papelera. |
+| **Exportar** | Lo que coincide con los filtros, en originales: una carpeta, carpetas por año / mes o por álbum, con manifiestos CSV / JSON, sumas SHA-256 e informe de fallos. Pausa y reanuda. |
 
 Consulta [Library Tools](docs/LIBRARY_TOOLS.md) (en inglés).
 
@@ -121,6 +124,7 @@ Consulta [Library Tools](docs/LIBRARY_TOOLS.md) (en inglés).
 
 | Android | Google Fotos | Dispositivo | Estado |
 |---|---|---|---|
+| 17 (API 37) | 8.1.0.1020990585 | Pixel 8 Pro | 1.1.4: DexKit encuentra todas las clases y miembros; Library Manager (instantánea, álbumes, Recuperar almacenamiento en un elemento) comprobado en el dispositivo |
 | 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: DexKit encuentra todas las clases y miembros; copia de seguridad, enrutador de Video Boost y Herramientas de biblioteca comprobados en el dispositivo |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: DexKit encuentra todas las clases, la prueba de copia pasa, recuperación verificada con un vídeo de prueba (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | Reglas de DexKit validadas con el DEX de esta versión; última prueba en el dispositivo con 1.2.2-dev |
@@ -195,6 +199,10 @@ XAX, añadir los recursos con aapt2 y firmar. [SHA256SUMS](SHA256SUMS) enumera t
 
 El [estado](report/STATUS.md) separa lo comprobado en el dispositivo, lo comprobado sin conexión y lo no
 probado. El [índice de pruebas](docs/EVIDENCE.md) enlaza todos los informes (en inglés).
+
+## Apoyo
+
+Si el módulo te resulta útil, puedes [patrocinar su desarrollo](https://github.com/sponsors/MrxSiN).
 
 ## Créditos
 

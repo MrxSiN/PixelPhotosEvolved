@@ -15,10 +15,11 @@ Google Foto → gambar profil anda → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#keserasian)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.1.0-3DDC84?style=for-the-badge)](#keserasian)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#bina)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?logo=githubsponsors&logoColor=fff&style=for-the-badge)](https://github.com/sponsors/MrxSiN)
 
 </div>
 
@@ -110,6 +111,9 @@ Imbasan menggunakan cache Foto, jadi ia tidak dapat memastikan seluruh pustaka d
 |---|---|
 | **Penapis Pintar** | Menapis seluruh pustaka mengikut jenis, storan, saiz, tarikh dan album, dengan jumlah saiz dan storan akaun yang digunakan oleh setiap pilihan. Membaca cache Google Foto pada telefon dan tidak mengubah apa-apa. |
 | **Grid dan pemapar** | Grid dan pemapar seperti Google Foto: Kongsi, Edit, Tambah pada album, Sampah dan Muat turun, serta helaian maklumat dengan Orang, Album dan tempat. |
+| **Cari pendua** | Salinan tepat, nama dan tarikh sama, dan foto yang serupa bersebelahan, dengan versi terbaik dicadangkan. Pasangan RAW + JPEG kekal; anda pilih apa yang dialih ke sampah. |
+| **Eksport** | Hasil penapis dalam bentuk asal ke satu folder, folder tahun / bulan atau mengikut album, dengan manifes CSV / JSON, checksum SHA-256 dan laporan kegagalan. Boleh dijeda dan disambung. |
+| **Susun album** | Lihat album yang mengandungi item terpilih, alih keluar daripada album anda, tambah pada beberapa album sekali gus, dan cari item tanpa album atau dalam dua atau lebih. |
 
 Lihat [Library Tools](docs/LIBRARY_TOOLS.md) (bahasa Inggeris).
 
@@ -121,6 +125,7 @@ Lihat [Library Tools](docs/LIBRARY_TOOLS.md) (bahasa Inggeris).
 
 | Android | Google Foto | Peranti | Status |
 |---|---|---|---|
+| 17 (API 37) | 8.1.0.1020990585 | Pixel 8 Pro | 1.1.4: semua kelas dan ahli ditemui oleh DexKit; Library Manager (petikan, album, Pulihkan storan pada satu item) disemak pada peranti |
 | 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: semua kelas dan ahli ditemui oleh DexKit; sandaran, penghala Video Boost dan Alat Pustaka disemak pada peranti |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: semua kelas ditemui oleh DexKit, ujian sandaran lulus, tuntutan semula disahkan dengan video ujian (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | Peraturan DexKit disahkan terhadap DEX binaan ini; kali terakhir diuji pada peranti dengan 1.2.2-dev |
@@ -196,6 +201,10 @@ tandatangani. [SHA256SUMS](SHA256SUMS) menyenaraikan setiap fail yang disimpan.
 
 [Status](report/STATUS.md) memisahkan apa yang disemak pada peranti, apa yang disemak di luar talian dan
 apa yang belum diuji. [Indeks bukti](docs/EVIDENCE.md) memaut setiap laporan (dalam bahasa Inggeris).
+
+## Sokongan
+
+Jika modul ini berguna kepada anda, anda boleh [menaja pembangunannya](https://github.com/sponsors/MrxSiN).
 
 ## Penghargaan
 

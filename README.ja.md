@@ -15,10 +15,11 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#互換性)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.1.0-3DDC84?style=for-the-badge)](#互換性)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#ビルド)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?logo=githubsponsors&logoColor=fff&style=for-the-badge)](https://github.com/sponsors/MrxSiN)
 
 </div>
 
@@ -108,6 +109,9 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 |---|---|
 | **スマートフィルタ** | ライブラリ全体を種類・ストレージ・サイズ・日付・アルバムで絞り込み、合計サイズと選択分が使うアカウントの保存容量を表示します。端末上のフォトのキャッシュを読むだけで、何も変更しません。 |
 | **グリッドとビューア** | フォトと同じ形のグリッドとビューア：共有、編集、アルバムに追加、ゴミ箱、ダウンロード、そして人物・アルバム・場所を含む情報シート。 |
+| **重複を検索** | 完全なコピー、名前と日付が同じもの、似た写真を並べて表示し、おすすめの 1 枚を示します。RAW + JPEG のペアは残し、ゴミ箱に移すものは自分で選びます。 |
+| **エクスポート** | フィルタに一致するものをオリジナルで、1 つのフォルダ、年 / 月ごと、またはアルバムごとに保存。CSV / JSON マニフェスト、SHA-256、失敗レポート付き。一時停止と再開に対応。 |
+| **アルバムを整理** | 選択したアイテムがどのアルバムにあるかを表示し、自分のアルバムから削除、複数のアルバムに一括追加、アルバムにないものや 2 つ以上にあるものを検索。 |
 
 詳しくは [Library Tools](docs/LIBRARY_TOOLS.md)（英語）。
 
@@ -119,6 +123,7 @@ Google フォト → プロフィール写真 → **Pixel Photos Evolved**
 
 | Android | Google フォト | デバイス | 状態 |
 |---|---|---|---|
+| 17（API 37） | 8.1.0.1020990585 | Pixel 8 Pro | 1.1.4: DexKit ですべてのクラスとメンバーを検出。Library Manager（スナップショット、アルバム、保存容量の回復は 1 件で実行）を実機で確認 |
 | 17（API 37） | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: すべてのクラスとメンバーを DexKit で検出、バックアップ・Video Boost ルーター・ライブラリツールを実機で確認 |
 | 17（API 37） | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: すべてのクラスを DexKit で検出、バックアップのプローブに合格、テスト動画で回収を確認済み（1.3.2） |
 | 17 QPR1（CP3A.261005.005） | 7.97.0.1000520730 | Pixel 8 Pro | このビルドの DEX で DexKit ルールを検証済み。実機での最終テストは 1.2.2-dev |
@@ -190,6 +195,10 @@ UI テキストは Android 標準の文字列リソースにあります。英�
 
 [ステータス](report/STATUS.md) では、実機で確認したこと、オフラインで確認したこと、未テストのことを区別しています。
 [検証記録の索引](docs/EVIDENCE.md) からすべてのレポート（英語）にアクセスできます。
+
+## サポート
+
+このモジュールが役に立ったら、[開発を支援](https://github.com/sponsors/MrxSiN)できます。
 
 ## クレジット
 

@@ -15,17 +15,18 @@ Google Photos → your profile picture → **Pixel Photos Evolved**.
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#compatibility)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.1.0-3DDC84?style=for-the-badge)](#compatibility)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#build)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?logo=githubsponsors&logoColor=fff&style=for-the-badge)](https://github.com/sponsors/MrxSiN)
 
 </div>
 
 ---
 
 > [!NOTE]
-> **Tested with Google Photos 8.0.0.1011730683 (`52642450`) on Android 17 (API 37),
+> **Tested with Google Photos 8.1.0.1020990585 on Android 17 (API 37),
 > Pixel 8 Pro, Vector 2.2 / libxposed API 102.** PPE finds every Photos class it hooks with
 > DexKit, so most Photos updates need no new module build. If a class can't be found, Photos
 > keeps its own behaviour and **Compatibility &amp; diagnostics** shows what is unavailable.
@@ -102,15 +103,19 @@ library coverage. See the [reclaim report](report/reclaim-7.98-1.3.2.md).
 </details>
 
 <details open>
-<summary><b>🗂 Library Tools</b></summary>
+<summary><b>🗂 Library Manager</b></summary>
 <br>
 
 | Tool | What it does |
 |---|---|
-| **Smart Filter** | Filters the whole library by type, storage, size, date and album, with the total size and the account storage each selection uses. Reads Photos' own cache on the phone and changes nothing. |
-| **Grid and viewer** | A Photos-style grid and viewer: Share, Edit, Add to album, Trash and Download, and an Info sheet with People, Albums and the place. |
+| **Smart Filter** | Filters the whole library by type, storage, size, format, kind (screenshots, creations, favorites), camera, location, upload date and album, with a search bar at the bottom for names, dates, albums and cameras, with the total size and the account storage each selection uses. Reads a snapshot of Photos' own cache on the phone, so it opens in about a second even with 32,000 items. |
+| **Grid and viewer** | A Photos-style grid and viewer: Share, Edit, Add to album, Trash and Download, and an Info sheet with People, Albums and the place (each opens Photos' own page). Photos' scrubber with the year column, and pull to refresh to re-read the library without losing the filters. |
+| **Albums** | Photos' album picker for the album filter and Add to: All / Shared with me / My albums, Photos' sorts, and a grid or list view. Shared albums included. |
+| **Recover storage** | For selected items that use account storage: re-upload them through the Reclaim engine (download, delete the cloud copy, upload again with your Backup setting, check the result) or move them to trash. |
+| **Find duplicates** | Exact copies, same name and date, and visually similar photos side by side, with the suggested best version. RAW + JPEG pairs stay whole; you pick what goes to trash. |
+| **Export** | What the filters match, as originals, in one folder, year / month folders or per album, with CSV / JSON manifests, SHA-256 checksums and a failure report. Pause and resume. |
 
-See [Library Tools](docs/LIBRARY_TOOLS.md).
+See [Library Manager](docs/LIBRARY_TOOLS.md).
 
 </details>
 
@@ -120,6 +125,7 @@ See [Library Tools](docs/LIBRARY_TOOLS.md).
 
 | Android | Google Photos | Device | Status |
 |---|---|---|---|
+| 17 (API 37) | 8.1.0.1020990585 | Pixel 8 Pro | 1.1.4: every class and member found by DexKit; Library Manager (snapshot, albums, Recover storage on one item) checked on the device |
 | 17 (API 37) | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3: every class and member found by DexKit; backup, Video Boost router and Library Tools checked on the device |
 | 17 (API 37) | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0: all classes found by DexKit, backup probe passes, Reclaim verified on a test video (1.3.2) |
 | 17 QPR1 (CP3A.261005.005) | 7.97.0.1000520730 | Pixel 8 Pro | DexKit rules validated against this build's DEX; last tested on the device with 1.2.2-dev |
@@ -194,6 +200,10 @@ stores, build the policy executable and module APK with XAX, add the resources w
 
 [Status](report/STATUS.md) separates what was checked on the device, what was checked offline and
 what is untested. [Evidence index](docs/EVIDENCE.md) links every report.
+
+## Support
+
+If the module is useful to you, you can [sponsor its development](https://github.com/sponsors/MrxSiN).
 
 ## Credits
 

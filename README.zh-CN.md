@@ -15,10 +15,11 @@ Google 相册 → 您的个人资料照片 → **Pixel Photos Evolved**。
 [![Release](https://img.shields.io/github/v/release/MrxSiN/PixelPhotosEvolved?include_prereleases&color=5B3DF5&label=release&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Downloads](https://img.shields.io/github/downloads/MrxSiN/PixelPhotosEvolved/total?color=3DDC84&logo=android&logoColor=fff&style=for-the-badge)](https://github.com/MrxSiN/PixelPhotosEvolved/releases)
 [![Android](https://img.shields.io/badge/Android-17%20QPR1-3DDC84?logo=android&logoColor=fff&style=for-the-badge)](https://developer.android.com)
-[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.0.0-3DDC84?style=for-the-badge)](#兼容性)
+[![Google Photos](https://img.shields.io/badge/Google%20Photos-8.1.0-3DDC84?style=for-the-badge)](#兼容性)
 [![libxposed](https://img.shields.io/badge/libxposed-API%20102-5B3DF5?style=for-the-badge)](https://github.com/libxposed/api)
 [![Source](https://img.shields.io/badge/source-XAX%20%2B%20Brainfuck-5B3DF5?style=for-the-badge)](#构建)
 [![Licence](https://img.shields.io/github/license/MrxSiN/PixelPhotosEvolved?color=5B3DF5&style=for-the-badge)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?logo=githubsponsors&logoColor=fff&style=for-the-badge)](https://github.com/sponsors/MrxSiN)
 
 </div>
 
@@ -102,6 +103,8 @@ Google 相册 → 您的个人资料照片 → **Pixel Photos Evolved**。
 |---|---|
 | **智能筛选** | 按类型、存储空间、大小、日期和相册筛选整个媒体库，并显示总大小和所选内容占用的帐号存储空间。只读取手机上相册的缓存，不做任何更改。 |
 | **网格和查看器** | 与 Google 相册一致的网格和查看器：分享、编辑、添加到相册、移到回收站和下载，以及包含人物、相册和地点的信息面板。 |
+| **查找重复项** | 并排显示完全相同的副本、名称和日期相同的项目以及相似照片，并建议最佳版本。RAW + JPEG 配对保持完整；移至回收站的项目由您选择。 |
+| **导出** | 将符合筛选条件的项目以原始文件导出到一个文件夹、按年 / 月或按影集的文件夹，附带 CSV / JSON 清单、SHA-256 校验和与失败报告。可暂停和继续。 |
 
 参见 [Library Tools](docs/LIBRARY_TOOLS.md)（英文）。
 
@@ -113,6 +116,7 @@ Google 相册 → 您的个人资料照片 → **Pixel Photos Evolved**。
 
 | Android | Google 相册 | 设备 | 状态 |
 |---|---|---|---|
+| 17（API 37） | 8.1.0.1020990585 | Pixel 8 Pro | 1.1.4：DexKit 找到所有类和成员；已在设备上检查 Library Manager（快照、影集、对 1 个项目恢复存储空间） |
 | 17（API 37） | 8.0.0.1011730683 | Pixel 8 Pro | 1.1.3：所有类和成员均由 DexKit 找到；备份、Video Boost 路由和媒体库工具已在设备上检查 |
 | 17（API 37） | 7.98.0.1007591100 | Pixel 8 Pro | 1.5.0：所有类均由 DexKit 找到，备份探测通过，回收已在测试视频上验证（1.3.2） |
 | 17 QPR1（CP3A.261005.005） | 7.97.0.1000520730 | Pixel 8 Pro | DexKit 规则已针对此版本的 DEX 验证；最后一次真机测试为 1.2.2-dev |
@@ -175,6 +179,10 @@ XAX SDK；常规构建工具放在仓库之外。[复现构建](docs/REPRODUCE.m
 ## 证据
 
 [状态](report/STATUS.md) 区分了在设备上检查过的、离线检查过的和尚未测试的内容。[证据索引](docs/EVIDENCE.md) 链接所有报告（英文）。
+
+## 支持
+
+如果这个模块对你有用，可以[赞助它的开发](https://github.com/sponsors/MrxSiN)。
 
 ## 致谢
 

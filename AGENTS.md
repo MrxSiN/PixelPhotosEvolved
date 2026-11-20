@@ -4,7 +4,8 @@
 - The whole project is written in **Brainfuck and XAX only**. Module code is an XAX carrier
   (`module/pixel_photos_module.xax`); the backup policy is Brainfuck compiled with BBC
   (`policy/`, `module/libppepolicy.so`). Add no other source language to this repository.
-- Build and porting helpers are transport tooling and live outside the repository.
+- Build and porting helpers are transport tooling: they live in the git-ignored `build/` folder
+  (`build/build.sh`), never in a commit.
 
 ## No hard-coded Photos names
 - Never hard-code obfuscated Google Photos names (classes, methods, fields, builder letters,
@@ -29,9 +30,6 @@
 - **Law of Demeter:** talk only to immediate friends, not to the innards of other objects.
 - **Boy Scout Rule:** leave the code cleaner than you found it.
 - **Separation of Concerns:** each part addresses one concern.
-
-## Tools
-- BBC, XAX and XAX-MCP (XAX pinned in `toolchain.lock.json`); adb (module log: logcat tag `PixelPhotosEvolved`)
 
 <!-- ecosystem-policy v1 (2026-11-13): identical in every MrxSiN first-party repository. Change it everywhere in one coordinated set of PRs, never in one repository alone. -->
 ## Ecosystem rules (v1)

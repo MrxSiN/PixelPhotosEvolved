@@ -1,0 +1,14 @@
+{
+ "version": "1.1.4",
+ "versionCode": 40,
+ "photos": "8.1.0.1020990585",
+ "storeRoot": "7be7b3f3352ff4d24b0b5c4f0ffcc9a0a071e4f8e8d704f2b3660eb42ae4a212",
+ "sha256": {
+  "module/pixel_photos_module.xax": "cc7a61b7400e4972e2b88edb095ef641350b3de4cb019903050bf97fb9aca2d2",
+  "module/pixel_photos_module-unsigned.apk": "0a8da9b18dc7e02f3b98bff036954ac6710409ea3337891b8fd6fcb05c5e52ae",
+  "module/pixel_photos_module-signed.apk": "0f9241049c3eb25ff933e7d8bd7ca53875c96d7bcd5d7f1c0741be07861d000c"
+ },
+ "signing": "public XAX fixture key (development build)",
+ "device": "Pixel 8 Pro, Photos 8.1, libxposed via Vector",
+ "notes": "docs/LIBRARY_TOOLS.md (Library Manager: filters, duplicates, export, search bar, performance)"
+}
