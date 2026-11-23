@@ -1,4 +1,11 @@
-# Status — 1.1.4 / 40
+# Status — 1.1.5 / 41
+
+**1.1.5** (versionCode 41) fixes Recover storage stopping for good at Step 2/7 ([issue #5](https://github.com/MrxSiN/PixelPhotosEvolved/issues/5)):
+Step 2 downloads the original itself and accepts it only when its SHA-1 equals Photos' dedup key; a failed download skips
+that item (nothing deleted) and the queue goes on. The Reclaim page shows every item's state, steps and proof. Build:
+[build-1.1.5.json](build-1.1.5.json); details in [VIDEO_BOOST_RECLAIM.md](../docs/VIDEO_BOOST_RECLAIM.md).
+
+## 1.1.4 / 40
 
 **1.1.4** (versionCode 40) supports Google Photos 8.1.0.1020990585 and turns Library Tools into **Library
 Manager**: new filters, a search bar, Find duplicates, Export, Recover storage, pull to refresh and a faster

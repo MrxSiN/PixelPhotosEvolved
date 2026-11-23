@@ -38,6 +38,50 @@ and links. Videos are not re-encoded.
 - The last step checks Photos' records for the new copy's storage use. Google decides the final
   storage use, and Google's storage page can take a while to update.
 
+## Download step (1.1.5)
+
+Step 2 (download) takes the original from, in order:
+1. a copy already on the phone (Photos' `local_media` row with the same dedup key and size);
+2. PPE's own signed-in download of the original (`=d`, videos `=dv`; 20 s connect and 60 s read
+   timeouts, 3 tries 2 s and 4 s apart). It is used only when the file's SHA-1 equals the item's
+   dedup key and its length equals the item's size, so it is the original file, byte for byte
+   (Google's `=d` bytes hash to Photos' `dedup_key`, checked on the phone 2026-11-23);
+3. Photos' own download task, waited for up to 5 minutes, as before.
+
+Nothing has been deleted at this step. If it fails for a reason other than Pause or an account
+switch, the item is **skipped**: it keeps step 0, its journal entry records the reason (`status`)
+and the number of failed runs (`fails`), and the next item starts. The run ends with "Done. N items
+were skipped and left unchanged. Tap Resume to retry them." Resume retries them first. After 3 failed
+runs an item is marked `excluded`: it stays in the journal unchanged (never counted as done) and no
+longer keeps Resume or a new Recover storage waiting; select it again to retry it. From step 3 on
+(a verified copy exists, deletes follow) a failure still stops the job, as before.
+
+## Progress and items (1.1.5)
+
+- **Progress card:** under the current item, seven step bars (done, now, stopped, paused) and a checklist of what
+  is already proven for it: where the original came from ("Copy found on this phone", "Downloaded from Google, checked
+  byte for byte" or "Downloaded by Google Photos"), "Same SHA-1 as Google's original", "Safe copy kept on this phone",
+  "Old cloud copy removed" and "Uploaded again".
+- **Items** (was History): "k of n done", a bar of done / skipped / left, and filter chips with counts (All, In
+  progress, Done, Skipped). Each row shows the thumbnail, name, size and state ("Step 3 of 7 · Removing from cloud",
+  "Waiting", the reason it was skipped), the item's own step bars, a status pill and, for the item being downloaded,
+  its download bar. 40 rows at a time; Show more adds 40. The list refreshes while a job runs (at most once a second, so a fast queue does not freeze the page).
+  When nothing runs or can be resumed, the Progress card is hidden.
+- **Tap an item:** its seven steps with what each did (the source, the SHA-1 check) or why it stopped, and its
+  details: file, size, dedup key, SHA-256 of the safe copy, the safe copy's path (or "Not created yet"), source,
+  failed attempts and last update; all selectable. For an item still at step 1 while nothing runs, **Skip this item**
+  excludes it (as after 3 failed runs) and **Retry** clears its failures. Nothing else on the page changes the journal.
+
+Items are identified by account and dedup key everywhere (journal, recovery file name
+`<account>_<sha256(dedup)><ext>`, download source), never by file name, so different photos with
+the same name (`IMAG0002.jpg` three times) are separate items. The direct download's staging file
+is one path in Photos' cache (one item at a time) and is deleted after every item. Logcat tag
+`PixelPhotosEvolved` shows `Reclaim download: ...` for the chosen source and `Reclaim skipped ...`
+with the reason. While the worker runs, progress text is written to the journal at most once a second (every
+step's own result is still committed at once); the end of a run writes the rest. Item thumbnails look up the cloud copy by
+its dedup keys only; the file-name fallback is kept for Video Boost names (`.VB-`), so a same-name photo never lends its
+thumbnail.
+
 ## Finalization
 
 After the upload, PPE asks Photos to record the new cloud copy and link the local video to it.
@@ -57,6 +101,10 @@ After the cloud delete, PPE now waits up to 30 seconds for Photos' records to dr
 it reports "Delete not finished yet" (once it stopped a job that would have passed a few seconds later).
 
 ## Results
+
+1.1.5 (2026-11-23, Pixel 8 Pro, Photos 8.1): an animation (4.5 MB) and a cinematic video (780 KB) from Library
+Manager > Recover storage both took the direct download (exact SHA-1), finished all seven steps, and Photos' records show
+0 bytes charged for each; see [build record](../report/build-1.1.5-dev.json).
 
 On a Pixel 8 Pro with Photos 7.98, six boosted test recordings were reclaimed: each new copy is
 charged 0 bytes and stored once in Photos' database. See the

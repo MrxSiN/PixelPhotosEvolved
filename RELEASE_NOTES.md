@@ -1,3 +1,25 @@
+## 1.1.5
+
+### What's new
+- **See what Reclaim is doing, item by item.** The Progress card shows the current item's seven steps and a checklist of
+  what is already proven (where the original came from, same SHA-1 as Google's original, safe copy kept, old cloud copy
+  removed, uploaded again). History is now **Items**: done / skipped / left at a glance, filter chips with counts, and
+  every item with its state, step bars and status; the item being downloaded shows its download bar. Tap an item for its
+  step timeline, hashes, safe copy location and attempts, and to **Skip** or **Retry** an item that has not started.
+
+### Fixes
+- **Recover storage could stop for good at Step 2/7 (Downloading)** ([#5](https://github.com/MrxSiN/PixelPhotosEvolved/issues/5)).
+  One item whose download never finished stopped the whole queue, and Resume started again at that same item. Step 2
+  now downloads the original itself first (timeouts, 3 tries) and uses it only when it is the original byte for byte
+  (SHA-1 equals Photos' dedup key, same size); Photos' own download task is the fallback. If the download still fails, that
+  item is skipped with its reason in the journal (nothing was deleted for it) and the queue goes on; Resume retries skipped
+  items, and after 3 failed runs an item stops holding up Resume and new Recover storage jobs. Later steps still stop the
+  job on any failure.
+- **Reclaim page and thumbnails were slow, and a thumbnail could be another photo's.** An item whose keys Photos no
+  longer had was looked up by file name, a scan of the whole library database for every row. Only Video Boost names use
+  that lookup now; with 400 items a run took about 18 s before and 7 to 9 s after. Progress text is written to the journal
+  at most once a second while a job runs.
+
 ## 1.1.4
 
 Works with Google Photos 8.1. **Library Tools** is now **Library Manager**.
