@@ -1,3 +1,13 @@
+## 1.1.6 (unreleased)
+
+### Fixes
+- **Recover storage saved a new copy on the phone on every run for items it could not reclaim**
+  ([#5](https://github.com/MrxSiN/PixelPhotosEvolved/issues/5)). For an edited (or compressed) item Google Photos only
+  has the edited version, so Step 2 can never get the original. After PPE's own download proved that, Photos' download
+  task still ran: it saved another device copy every run and waited 5 minutes for a match that could not come. Now the
+  item is excluded at once with the reason shown on the item ("Google Photos only has an edited or compressed version of
+  this item, not the original"), Photos' download task is not started, and nothing is deleted.
+
 ## 1.1.5
 
 ### What's new

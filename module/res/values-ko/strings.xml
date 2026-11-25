@@ -385,4 +385,5 @@
     <string name="ppe_5a29585e3fea">"실패 횟수"</string>
     <string name="ppe_cf1b91677c42">"마지막 업데이트"</string>
     <string name="ppe_6da13addb000">"출처"</string>
+    <string name="ppe_43690e1c957e">"제외됨: Google 포토에 이 항목의 원본이 없고 편집본 또는 압축본만 있습니다. 삭제된 항목은 없습니다."</string>
 </resources>
