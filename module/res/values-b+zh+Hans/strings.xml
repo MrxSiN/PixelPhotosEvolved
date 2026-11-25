@@ -385,4 +385,5 @@
     <string name="ppe_5a29585e3fea">"失败次数"</string>
     <string name="ppe_cf1b91677c42">"上次更新"</string>
     <string name="ppe_6da13addb000">"来源"</string>
+    <string name="ppe_43690e1c957e">"已排除：Google 相册只有此项的编辑版或压缩版，没有原件。未删除任何内容。"</string>
 </resources>

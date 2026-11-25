@@ -384,4 +384,5 @@
     <string name="ppe_5a29585e3fea">"Attempts"</string>
     <string name="ppe_cf1b91677c42">"Last update"</string>
     <string name="ppe_6da13addb000">"Source"</string>
+    <string name="ppe_43690e1c957e">"Excluded: Google Photos only has an edited or compressed version of this item, not the original. Nothing was deleted."</string>
 </resources>

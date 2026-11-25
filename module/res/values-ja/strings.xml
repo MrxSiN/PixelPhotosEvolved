@@ -385,4 +385,5 @@
     <string name="ppe_5a29585e3fea">"失敗回数"</string>
     <string name="ppe_cf1b91677c42">"最終更新"</string>
     <string name="ppe_6da13addb000">"取得元"</string>
+    <string name="ppe_43690e1c957e">"除外しました: Google フォトにはこのアイテムの編集版または圧縮版しかなく、元のファイルがありません。何も削除されていません。"</string>
 </resources>

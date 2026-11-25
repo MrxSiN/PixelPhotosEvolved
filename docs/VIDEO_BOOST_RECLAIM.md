@@ -48,6 +48,14 @@ Step 2 (download) takes the original from, in order:
    (Google's `=d` bytes hash to Photos' `dedup_key`, checked on the phone 2026-11-23);
 3. Photos' own download task, waited for up to 5 minutes, as before.
 
+When step 2 downloads the whole file and its bytes are not the original, Google Photos has only an
+edited or compressed version of the item (for an edited photo `=d` serves the edited render: checked
+on the phone 2026-11-25, 186,586 bytes and another SHA-1 for an item whose original is 178,566
+bytes). Photos' download task would save those same bytes as one more copy on the phone on every
+run and never match, so it is not started: the item is `excluded` at once with the reason "Excluded:
+Google Photos only has an edited or compressed version of this item, not the original. Nothing was
+deleted."
+
 Nothing has been deleted at this step. If it fails for a reason other than Pause or an account
 switch, the item is **skipped**: it keeps step 0, its journal entry records the reason (`status`)
 and the number of failed runs (`fails`), and the next item starts. The run ends with "Done. N items
